@@ -2,31 +2,23 @@ import React from 'react';
 import Summary from './Summary';
 import Controls from './Controls';
 import EntryTable from './EntryTable';
-import Utils from '../helpers.js';
+import Utils from '../helpers';
+import Entries from '../entries';
 
 var App = React.createClass({
     getInitialState: function() {
         return {
             calories: 520,
             date: '2016-01-05',
-            entries: {
-                entry1: {
-                    type: 'Food',
-                    description: 'Bagel',
-                    calories: 400,
-                    date: '2016-01-05',
-                    time: '12:34'
-                },
-                entry2: {
-                    type: 'Food',
-                    description: 'OJ',
-                    calories: 120,
-                    date: '2016-01-05',
-                    time: '12:34'
-                }
-            }
+            entries: {}
         }
     },
+
+    componentDidMount: function() {
+        this.state.entries = Entries;
+        this.setState({entries: this.state.entries});
+    },
+
     deleteEntry: function(key) {
         delete this.state.entries[key];
         this.setState({entries : this.state.entries});

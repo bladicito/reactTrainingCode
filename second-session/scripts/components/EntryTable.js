@@ -3,6 +3,12 @@ import EntryTableRow from './EntryTableRow';
 
 var EntryTable = React.createClass({
     renderEntryTableRow: function(key) {
+        var entry = this.props.entries[key];
+
+        if(this.props.date !== entry.date) {
+            return false;
+        }
+
         return (
             <EntryTableRow
                 key={key}
