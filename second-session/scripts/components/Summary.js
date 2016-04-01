@@ -5,14 +5,17 @@ var Summary = React.createClass({
     render: function() {
         return (
             <h1>
-                <div className="date">
-                    {Utils.prettyDate(this.props.date)}
+                <div className="goals">
+                    Goals Scored: {this.props.goals}
                 </div>
-                <div className="calories">
-                    {this.props.calories}
+                <div className="assists">
+                    Assists in season: {this.props.assists}
                 </div>
-                <div className="label">
-                    calories left
+                <div className="yellow-cards">
+                    Yellow cards in Season: {this.props.yellowCards}
+                </div>
+                <div className="red-cards">
+                    Red cards in Season: {this.props.redCards}
                 </div>
             </h1>
         )
