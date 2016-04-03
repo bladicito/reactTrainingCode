@@ -35,6 +35,67 @@ let helpers = {
         }
 
         return maxCalories - calories;
+    },
+
+    nameToImageShield : function(name) {
+        var imagePath;
+        switch (name) {
+            case 'Werder Bremen' :
+                imagePath = 'build/svg/werder.svg';
+                break;
+            case 'Bayern Muenchen' :
+                imagePath = 'build/svg/bayern.svg';
+                break;
+            case 'Hertha BSC' :
+                imagePath = 'build/svg/hertha.svg';
+                break;
+            case 'VfL Wolfsburg' :
+                imagePath = 'build/svg/wolfsburg.svg';
+                break;
+            case 'Hamburger SV' :
+                imagePath = 'build/svg/hamburg.svg';
+                break;
+            case '1.FC Kaiserlautern' :
+                imagePath = 'build/svg/kaiserlautern.svg';
+                break;
+            case 'SSV Ulm 1846' :
+                imagePath = 'build/svg/svv_ulm.svg';
+                break;
+            case 'SC Freiburg' :
+                imagePath = 'build/svg/freiburg.svg';
+                break;
+            case '1860 Muenchen' :
+                imagePath = 'build/svg/1860_muenchen.svg';
+                break;
+            case 'Bor. Dortmund' :
+                imagePath = 'build/svg/borusia_dortmund.svg';
+                break;
+            case 'Hansa Rostock' :
+                imagePath = 'build/svg/hansa_rostock.svg';
+                break;
+            case 'E. Frankfurt' :
+                imagePath = 'build/svg/eintracht_frankfurt.svg';
+                break;
+            case 'Arm. Bielefeld' :
+                imagePath = 'build/svg/arminia_bielefeld.svg';
+                break;
+            case 'Bay. Leverkusen' :
+                imagePath = 'build/svg/bayer_leverkusen.svg';
+                break;
+            case 'FC Schalke 04' :
+                imagePath = 'build/svg/schalke04.svg';
+                break;
+            case 'VfB Stuttgart' :
+                imagePath = 'build/svg/stuttgart.svg';
+                break;
+            case 'Unterhaching' :
+                imagePath = 'build/svg/unterhaching.svg';
+                break;
+            case 'MSV Duisburg' :
+                imagePath = 'build/svg/duisburg.svg';
+                break;
+        }
+        return imagePath;
     }
 };
 

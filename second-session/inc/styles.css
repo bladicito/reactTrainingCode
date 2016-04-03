@@ -10,80 +10,13 @@ body {
     font-family: -apple-system-font, "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     margin: 0;
-    padding: 1em;
-}
-a {
-    text-decoration: none;
-}
-h1 {
-    font-weight: normal;
-    margin: 0;
-}
-select {
-
-
-    
-
-}
-button, input, select, .button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 0;
-    border-style: solid;
-    border-width: 1px;
-}
-input:focus, select:focus {
-    outline-offset: -2px;
-    outline-style: solid;
-    outline-width: 2px;
-}
-.page {
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -ms-transition-duration: 1s;
-    transition-duration: 1s;
-    -webkit-transition-property: opacity;
-    -moz-transition-property: opacity;
-    -ms-transition-property: opacity;
-    transition-property: opacity;
-    opacity: 1;
-    padding: 1em;
-    position: relative;
-    z-index: 1;
-}
-.message {
-    text-align: center;
-}
-.hello {
-    display: none;
+    padding: 0;
 }
 
-/*COLORS*/
 
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-html, a, button, select, .button, .page {
-    background-color: white;
-    color: black;
-}
-input, select, button {
-    border-color: #A6A6A6;
-}
-a, button, .button {
-    color: #F20F90;
-}
-input:focus, select:focus {
-    outline-color: #F20F90;
-}
-.no-touch a:hover, .no-touch button:hover, .no-touch .button:hover,
-.no-touch a:focus, .no-touch button:focus, .no-touch .button:focus,
-.touch a.active, .touch button.active, .touch .button.active {
-    background-color: #F20F90;
-    border-color: #F20F90;
-    color: white;
-    outline: none;
-}
+
+
+
 table, tr, th, td {
     border-color: #EEE;
 }
@@ -342,3 +275,96 @@ table.foods td:nth-child(3) {
         display: table-cell;
     }
 }
+
+
+.shield__mini {
+    width: 20px;
+    height: auto;
+    max-height: 20px;
+}
+.icon {
+    width: 20px;
+    height: auto;
+}
+
+.icon--goal, .icon--assist, .icon--yellow-card {
+    width: 15px;
+    height: auto;
+}
+
+.icon--yellow-card {
+    fill: yellow;
+}
+
+.werder-bremen{
+    background-color: #009252;
+    color: #fff;
+}
+
+.mod-summary {
+    padding: 20px 0 20px 0;
+}
+
+.werder-bremen .summary__title{
+    background-color: #003d22;
+    color: #fff;
+}
+.werder-bremen .summary__title h2{
+
+}
+
+
+.werder-bremen .summary__content{
+    background-color: #009252;
+    color: #fff;
+}
+
+
+.mod-summary h1 {
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+    font-family:'HelveticaNeueW01-Thin';
+}
+
+.mod-summary h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 60px 0 0 0 ;
+    font-family:'HelveticaNeueW01-Thin';
+}
+.summary-shield {
+    width: 300px;
+    height: auto;
+}
+
+.summary-shield-header {
+    width: 80px;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.summary-shield-header a {
+    display: inline-block;
+}
+
+.mod-summary .mod-main-picture {
+    display: inline;
+}
+.mod-summary .mod-main-picture img {
+    margin: 0 10px;
+}
+
+
+.summary-shield-header a  i, .summary-shield-header a img{
+    display: inline-block;
+}
+
+.summary__title a {
+    font-size: 70px;
+}
+.summary__title a:first-child {
+    margin-right: 50px;
+}
+

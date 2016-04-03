@@ -41,6 +41,16 @@ gulp.task('images',function(){
         .pipe(gulp.dest('./build/css/images'))
 });
 
+gulp.task('pics',function(){
+    gulp.src('inc/img/*.png')
+        .pipe(gulp.dest('./build/img/'))
+});
+
+gulp.task('svg',function(){
+    gulp.src('inc/img/*.svg')
+        .pipe(gulp.dest('./build/svg/'))
+});
+
 /*
  Browser Sync
  */
@@ -103,7 +113,7 @@ gulp.task('scripts', function() {
 });
 
 // run 'scripts' task first, then watch for future changes
-gulp.task('default', ['images','styles','scripts','browser-sync'], function() {
+gulp.task('default', ['images', 'pics', 'svg', 'styles','scripts','browser-sync'], function() {
     gulp.watch('css/**/*', ['styles']); // gulp watch for stylus changes
     return buildScript('main.js', true); // browserify watch for JS changes
 });

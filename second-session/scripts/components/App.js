@@ -1,6 +1,5 @@
 import React from 'react';
 import Summary from './Summary';
-import Controls from './Controls';
 import EntryTable from './EntryTable';
 import Utils from '../helpers';
 import Entries from '../entries';
@@ -15,6 +14,10 @@ var App = React.createClass({
             redCards    : '',
             toDate      : '',
             playedMinutes : '',
+            mainPicture : 'build/img/werder1999.png',
+            clubShieldPicture: 'build/svg/werder.svg' ,
+            club        : 'werder-bremen',
+            season      : '1999 - 2000',
             entries     : {}
         }
     },
@@ -27,45 +30,48 @@ var App = React.createClass({
             playedMinutes = 0
         ;
 
-        for(var x = 0; x < entries.length; x++) {
-            if(typeof(entries[x].assists) !== 'undefined' && entries[x].assists.trim() !== '') {
-              assists += parseInt(entries[x].assists)
+        Object.keys(entries).map(function(currentValue) {
+            if(typeof(entries[currentValue].assists) !== 'undefined' && entries[currentValue].assists.trim() !== '') {
+                assists += parseInt(entries[currentValue].assists)
             }
-
-            if(typeof(entries[x].goals) !== 'undefined' && entries[x].goals.trim() !== '') {
-                goals += parseInt(entries[x].goals)
+    
+            if(typeof(entries[currentValue].goals) !== 'undefined' && entries[currentValue].goals.trim() !== '') {
+                goals += parseInt(entries[currentValue].goals)
             }
-
-            if(typeof(entries[x].yellowCard) !== 'undefined' && entries[x].yellowCard.trim() !== '') {
-                yellowCards += parseInt(entries[x].yellowCard)
+    
+            if(typeof(entries[currentValue].yellowCard) !== 'undefined' && entries[currentValue].yellowCard.trim() !== '') {
+                yellowCards += parseInt(entries[currentValue].yellowCard)
             }
-
-            if(typeof(entries[x].redCards) !== 'undefined' && entries[x].redCards.trim() !== '') {
-                redCards += parseInt(entries[x].redCards)
+    
+            if(typeof(entries[currentValue].redCards) !== 'undefined' && entries[currentValue].redCards.trim() !== '') {
+                redCards += parseInt(entries[currentValue].redCards)
             }
-
-            if(typeof(entries[x].redCards) !== 'undefined' && entries[x].redCards.trim() !== '') {
-                redCards += parseInt(entries[x].redCards)
+    
+            if(typeof(entries[currentValue].redCards) !== 'undefined' && entries[currentValue].redCards.trim() !== '') {
+                redCards += parseInt(entries[currentValue].redCards)
             }
-
-            if(typeof(entries[x].playedMinutes) !== 'undefined' && entries[x].playedMinutes.trim() !== '') {
-                playedMinutes += parseInt(entries[x].playedMinutes)
+    
+            if(typeof(entries[currentValue].playedMinutes) !== 'undefined' && entries[currentValue].playedMinutes.trim() !== '') {
+                playedMinutes += parseInt(entries[currentValue].playedMinutes)
             }
+            
+        });
+        
 
+        this.setState({
+            assists         : assists,
+            goals           : goals,
+            yellowCards     : yellowCards,
+            redCards        : redCards,
+            playedMinutes   : playedMinutes
+        });
 
-        }
-
-        this.setState({assists: assists});
-        this.setState({goals: goals});
-        this.setState({yellowCards: yellowCards});
-        this.setState({redCards: redCards});
-        this.setState({playedMinutes: playedMinutes});
     },
 
     componentDidMount: function() {
         this.state.entries = Entries;
         this.initSummary(this.state.entries);
-        this.setState({entries: this.state.entries});
+        this.setState({entries: this.state.entries});;
     },
 
     deleteEntry: function(key) {
@@ -84,18 +90,26 @@ var App = React.createClass({
 
     render: function() {
         return (
-            <section className="home">
+            <section className="main">
                 <Summary goals         ={this.state.goals}
                          assists       ={this.state.assists}
                          yellowCards   ={this.state.yellowCards}
                          redCards      ={this.state.redCards}
                          playedMinutes ={this.state.playedMinutes}
+                         mainPicture   ={this.state.mainPicture}
+                         club          ={this.state.club}
+                         season        ={this.state.season}
+                         clubShieldPicture = {this.state.clubShieldPicture}
+                         entries       = {this.state.entries}
                 />
-                <Controls setDate={this.setDate}/>
                 <EntryTable entries={this.state.entries}/>
             </section>
         )
     }
 });
+
+
+
+
 
 export default App;
