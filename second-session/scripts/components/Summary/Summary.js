@@ -1,7 +1,10 @@
 import React from 'react';
-import Utils from '../helpers';
-import MainPicture from './MainPicture';
-import Entries from '../entries';
+
+import MainPicture from '../MainPicture/MainPicture';
+import Controls from    '../controls/controls';
+import Entries from     '../../entries';
+import Utils from       '../../helpers';
+
 
 var Summary = React.createClass({
 
@@ -67,9 +70,16 @@ var Summary = React.createClass({
             <MainPicture mainImageSrc={sourcePicture} cssClass={cssClass}/>
         )
     },
+
+    getControls : function(prevSeason, nextSeason) {
+        return (
+            <Controls prevSeason={prevSeason} nextSeason={nextSeason}/>
+        )
+    },
+
     render: function() {
         return (
-            <div className={this.props.club + ' mod-summary'}>
+            <div className={this.props.club + ' component component-summary'}>
                 <div className="summary__title">
                     <div className="container">
                         <div className="row">
@@ -87,14 +97,7 @@ var Summary = React.createClass({
 
                             </div>
                             <div className="col-md-4">
-                                <a href="#">
-                                    <i className="fa fa-angle-left"></i>
-                                    {this.getPicture(this.props.clubShieldPicture, 'summary-shield-header')}
-                                </a>
-                                <a href="#">
-                                    {this.getPicture('build/svg/bayern.svg', 'summary-shield-header')}
-                                    <i className="fa fa-angle-right"></i>
-                                </a>
+                                {this.getControls(this.props.prevSeason, this.props.nextSeason )}
                             </div>
                         </div>
                     </div>

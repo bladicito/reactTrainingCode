@@ -1,5 +1,5 @@
 import React from 'react';
-import EntryTableRow from './EntryTableRow';
+import EntryTableRow from '../EntryTableRow/EntryTableRow'
 
 
 var EntryTable = React.createClass({
@@ -10,8 +10,8 @@ var EntryTable = React.createClass({
     },
     render: function() {
         return (
-            <section className="home entries">
-                <table>
+            <section className="component component-entry-table">
+                <table className="table">
                     <thead>
                     <tr>
                         <th className="text">Date</th>
@@ -23,10 +23,9 @@ var EntryTable = React.createClass({
                         <th className="text"><img src="build/svg/yellow-card.svg" className="icon icon--yellow-card"/></th>
                         <th className="text"><img src="build/svg/yellow-red-card.svg" className="icon icon--yellow-card"/></th>
                         <th className="text"><img src="build/svg/red-card.svg" className="icon icon--yellow-card"/></th>
-                        <th className="text">Played Minutes</th>
-                        <th className="text">In Game on minute</th>
-                        <th className="text">Out on minute</th>
-
+                        <th className="text"><i className="fa fa-clock-o"></i></th>
+                        <th className="text"><i className="fa fa-arrow-right"></i>&nbsp;<i className="fa fa-clock-o"></i></th>
+                        <th className="text"><i className="fa fa-arrow-left"></i>&nbsp;<i className="fa fa-clock-o"></i></th>
                     </tr>
                     </thead>
                     <tbody>

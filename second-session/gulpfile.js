@@ -8,6 +8,8 @@ var source              = require('vinyl-source-stream'),
     watchify            = require('watchify'),
     notify              = require('gulp-notify'),
     stylus              = require('gulp-stylus'),
+    less                = require('gulp-less'),
+    concat              = require('gulp-concat'),
     autoprefixer        = require('gulp-autoprefixer'),
     uglify              = require('gulp-uglify'),
     rename              = require('gulp-rename'),
@@ -17,32 +19,51 @@ var source              = require('vinyl-source-stream'),
     historyApiFallback  = require('connect-history-api-fallback')
 ;
 
+var stylesCss = [
+    'styles/libraries/*.css',
+    'styles/elements/*.css',
+    'styles/plugins/*.css',
+    'temp/css/styles.css'
+];
+
+var lessFiles = [
+    'styles/libraries/*.less',
+    'styles/elements/*.less',
+    'styles/plugins/*.less',
+    'scripts/components/**/css/*.less'
+];
 
 
-gulp.task('styles',function() {
-    // move over fonts
-
-    gulp.src('css/fonts/**.*')
-        .pipe(gulp.dest('build/css/fonts'))
-
-    // Compiles CSS
-    gulp.src('css/style.styl')
-        .pipe(stylus())
-        .pipe(autoprefixer())
-        .pipe(gulp.dest('./build/css/'))
-        .pipe(reload({stream:true}))
+gulp.task('concatenateLessFiles', function() {
+    return gulp.src(lessFiles)
+        .pipe(concat('styles.less'))
+        .pipe(gulp.dest('temp/less/'))
 });
+
+gulp.task('lessToCss', ['concatenateLessFiles'], function() {
+    return gulp.src('temp/less/*.less')
+        .pipe(less())
+        .pipe(rename({dirname : ''}))
+        .pipe(gulp.dest('temp/css/'))
+});
+
+gulp.task('concatenateCss', ['lessToCss'], function() {
+    return gulp.src(stylesCss)
+        .pipe(concat('styles.css'))
+        .pipe(gulp.dest('build/css'))
+});
+
 
 /*
  Images
  */
 gulp.task('images',function(){
-    gulp.src('css/images/**')
+    return gulp.src('css/images/**')
         .pipe(gulp.dest('./build/css/images'))
 });
 
 gulp.task('pics',function(){
-    gulp.src('inc/img/*.png')
+   return gulp.src('inc/img/*.png')
         .pipe(gulp.dest('./build/img/'))
 });
 
@@ -112,8 +133,12 @@ gulp.task('scripts', function() {
     return buildScript('main.js', false); // this will run once because we set watch to false
 });
 
-// run 'scripts' task first, then watch for future changes
-gulp.task('default', ['images', 'pics', 'svg', 'styles','scripts','browser-sync'], function() {
-    gulp.watch('css/**/*', ['styles']); // gulp watch for stylus changes
+
+gulp.task('default', ['images', 'pics', 'svg', 'concatenateCss', 'scripts','browser-sync'], function() {
+    gulp.watch('scripts/components/**/css/*.less', ['concatenateCss']);
+    gulp.watch('styles/**/*.less', ['concatenateCss']);
+    gulp.watch('scripts/components/**/css/*.less', ['concatenateCss']);
+    gulp.watch('scripts/components/**/*.js', ['scripts']);
+
     return buildScript('main.js', true); // browserify watch for JS changes
 });

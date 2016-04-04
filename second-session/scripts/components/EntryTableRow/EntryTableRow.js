@@ -1,6 +1,6 @@
 import React from 'react';
-import Shield from './Shield';
-import Helpers from '../helpers';
+import Shield from '../Shield/Shield';
+import Helpers from '../../helpers';
 
 var EntryTableRow = React.createClass({
     nameToImageShield : function(name) {
@@ -15,7 +15,7 @@ var EntryTableRow = React.createClass({
         var entry = this.props.entry;
 
         return (
-            <tr>
+            <tr className="component component-entry-table-row">
                 <td className="text">{entry.date}</td>
                 <td className="text">{this.nameToImageShield(entry.home)}</td>
                 <td className="text">{this.nameToImageShield(entry.away)}</td>

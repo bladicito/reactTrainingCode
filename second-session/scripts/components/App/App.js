@@ -1,8 +1,8 @@
-import React from 'react';
-import Summary from './Summary';
-import EntryTable from './EntryTable';
-import Utils from '../helpers';
-import Entries from '../entries';
+import React from       'react';
+import Summary from     '../Summary/Summary';
+import EntryTable from  '../EntryTable/EntryTable';
+import Utils from       '../../helpers';
+import Entries from     '../../entries';
 
 var App = React.createClass({
     getInitialState: function() {
@@ -17,7 +17,9 @@ var App = React.createClass({
             mainPicture : 'build/img/werder1999.png',
             clubShieldPicture: 'build/svg/werder.svg' ,
             club        : 'werder-bremen',
-            season      : '1999 - 2000',
+            nextSeason  : 'build/svg/bayern.svg',
+            prevSeason  : 'build/svg/werder.svg',
+            season      : '3',
             entries     : {}
         }
     },
@@ -90,20 +92,23 @@ var App = React.createClass({
 
     render: function() {
         return (
-            <section className="main">
-                <Summary goals         ={this.state.goals}
-                         assists       ={this.state.assists}
-                         yellowCards   ={this.state.yellowCards}
-                         redCards      ={this.state.redCards}
-                         playedMinutes ={this.state.playedMinutes}
-                         mainPicture   ={this.state.mainPicture}
-                         club          ={this.state.club}
-                         season        ={this.state.season}
+            <div className="main-claudio-pizarro">
+                <Summary goals             = {this.state.goals}
+                         assists           = {this.state.assists}
+                         yellowCards       = {this.state.yellowCards}
+                         redCards          = {this.state.redCards}
+                         playedMinutes     = {this.state.playedMinutes}
+                         mainPicture       = {this.state.mainPicture}
+                         club              = {this.state.club}
+                         season            = {this.state.season}
                          clubShieldPicture = {this.state.clubShieldPicture}
-                         entries       = {this.state.entries}
+                         entries           = {this.state.entries}
+                         nextSeason        = {this.state.nextSeason}
+                         prevSeason        = {this.state.prevSeason}
+
                 />
                 <EntryTable entries={this.state.entries}/>
-            </section>
+            </div>
         )
     }
 });
