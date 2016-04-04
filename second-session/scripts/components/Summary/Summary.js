@@ -18,16 +18,18 @@ var Summary = React.createClass({
         google.charts.load('current', {packages: ['corechart', 'line']});
         google.charts.setOnLoadCallback(drawCurveTypes);
 
-        var seasonGoalsData =  [];
+        var seasonGoalsData =  [],
+            entries = Entries.season5.matches
+        ;
 
 
 
-        for(var single in Entries) {
-            if(Entries.hasOwnProperty(single)) {
-                if (Entries[single].goals.trim() !== '' &&  typeof(Entries[single].goals) !== 'undefined') {
-                    seasonGoalsData.push([new Date(Entries[single].date), parseInt(Entries[single].goals, 10)]);
+        for(var single in entries) {
+            if(entries.hasOwnProperty(single)) {
+                if (entries[single].goals.trim() !== '' &&  typeof(entries[single].goals) !== 'undefined') {
+                    seasonGoalsData.push([new Date(entries[single].date), parseInt(entries[single].goals, 10)]);
                 } else {
-                    seasonGoalsData.push([new Date(Entries[single].date), 0]);
+                    seasonGoalsData.push([new Date(entries[single].date), 0]);
                 }
             }
         }

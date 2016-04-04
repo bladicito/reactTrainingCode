@@ -4,6 +4,8 @@ import EntryTable from  '../EntryTable/EntryTable';
 import Utils from       '../../helpers';
 import Entries from     '../../entries';
 
+console.log(Entries);
+
 var App = React.createClass({
     getInitialState: function() {
         return {
@@ -32,7 +34,11 @@ var App = React.createClass({
             playedMinutes = 0
         ;
 
+
+
         Object.keys(entries).map(function(currentValue) {
+            console.log(currentValue);
+
             if(typeof(entries[currentValue].assists) !== 'undefined' && entries[currentValue].assists.trim() !== '') {
                 assists += parseInt(entries[currentValue].assists)
             }
@@ -71,7 +77,7 @@ var App = React.createClass({
     },
 
     componentDidMount: function() {
-        this.state.entries = Entries;
+        this.state.entries = Entries.season5.matches;
         this.initSummary(this.state.entries);
         this.setState({entries: this.state.entries});;
     },
