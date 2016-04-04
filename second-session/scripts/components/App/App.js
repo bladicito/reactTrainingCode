@@ -4,40 +4,40 @@ import EntryTable from  '../EntryTable/EntryTable';
 import Utils from       '../../helpers';
 import Entries from     '../../entries';
 
-console.log(Entries);
 
 var App = React.createClass({
     getInitialState: function() {
         return {
-            goals       : '',
-            assists     : '',
-            games       : '',
-            yellowCards : '',
-            redCards    : '',
-            toDate      : '',
-            playedMinutes : '',
-            mainPicture : 'build/img/werder1999.png',
-            clubShieldPicture: 'build/svg/werder.svg' ,
-            club        : 'werder-bremen',
-            nextSeason  : 'build/svg/bayern.svg',
-            prevSeason  : 'build/svg/werder.svg',
-            season      : '3',
-            entries     : {}
+            defaultSeason       : 'season5',
+            currentSeason       : 'season5',
+            goals               : '',
+            assists             : '',
+            games               : '',
+            yellowCards         : '',
+            redCards            : '',
+            toDate              : '',
+            playedMinutes       : '',
+            mainPicture         : 'build/img/alianza.png',
+            clubShieldPicture   : 'build/svg/werder.svg' ,
+            club                : 'werder-bremen',
+            nextSeason          : 'build/svg/bayern.svg',
+            prevSeason          : 'build/svg/werder.svg',
+            season              : '3',
+            entries             : {}
         }
     },
 
-    initSummary : function(entries) {
-        var assists     = 0,
-            goals       = 0,
-            yellowCards = 0,
-            redCards    = 0,
-            playedMinutes = 0
+    initSummary : function(seasonData) {
+        var assists         = 0,
+            goals           = 0,
+            yellowCards     = 0,
+            redCards        = 0,
+            playedMinutes   = 0,
+            entries         = seasonData.matches
         ;
 
 
-
         Object.keys(entries).map(function(currentValue) {
-            console.log(currentValue);
 
             if(typeof(entries[currentValue].assists) !== 'undefined' && entries[currentValue].assists.trim() !== '') {
                 assists += parseInt(entries[currentValue].assists)
@@ -77,26 +77,24 @@ var App = React.createClass({
     },
 
     componentDidMount: function() {
-        this.state.entries = Entries.season5.matches;
-        this.initSummary(this.state.entries);
-        this.setState({entries: this.state.entries});;
+        this.state.seasonData       = Entries[this.state.defaultSeason];
+        this.state.currentSeason    = this.state.defaultSeason;
+
+
+        this.initSummary(this.state.seasonData);
+        this.setState({
+            seasonData: this.state.seasonData,
+            defaultSeason: this.state.defaultSeason,
+            currentSeason: this.state.currentSeason
+        });
     },
 
-    deleteEntry: function(key) {
-        delete this.state.entries[key];
-        this.setState({entries : this.state.entries});
-    },
 
-    setDate: function(offset) {
-        var date = new Date(this.state.date);
-        date.setUTCDate(date.getUTCDate() + offset);
-
-        this.state.date = Utils.storeDate(date);
-        this.setState({date: this.state.date});
-    },
 
 
     render: function() {
+        var seasonMatchesData = Entries[this.state.currentSeason].matches;
+
         return (
             <div className="main-claudio-pizarro">
                 <Summary goals             = {this.state.goals}
@@ -108,12 +106,13 @@ var App = React.createClass({
                          club              = {this.state.club}
                          season            = {this.state.season}
                          clubShieldPicture = {this.state.clubShieldPicture}
-                         entries           = {this.state.entries}
+                         seasonData        = {this.state.seasonData}
+                         currentSeason     = {this.state.currentSeason}
                          nextSeason        = {this.state.nextSeason}
                          prevSeason        = {this.state.prevSeason}
 
                 />
-                <EntryTable entries={this.state.entries}/>
+                <EntryTable seasonMatchesData={seasonMatchesData}/>
             </div>
         )
     }

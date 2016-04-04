@@ -4,11 +4,13 @@ import EntryTableRow from '../EntryTableRow/EntryTableRow'
 
 var EntryTable = React.createClass({
     renderEntryTableRow: function(entry, index) {
+
         return (
-            <EntryTableRow entry={this.props.entries[entry]} key={index}/>
+            <EntryTableRow entry={this.props.seasonMatchesData[entry]} key={index}/>
         )
     },
     render: function() {
+        var entries = this.props.seasonMatchesData.matches;
         return (
             <div className="component component-entry-table">
                 <div className="container">
@@ -30,7 +32,7 @@ var EntryTable = React.createClass({
                         </tr>
                         </thead>
                         <tbody>
-                        {Object.keys(this.props.entries).map(this.renderEntryTableRow)}
+                        {Object.keys(this.props.seasonMatchesData).map(this.renderEntryTableRow)}
                         </tbody>
                     </table>
                 </div>

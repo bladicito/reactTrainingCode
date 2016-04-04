@@ -2,33 +2,38 @@ let entries = {
     season1: {
         'country': 'Peru',
         'club': 'Deportivo Pesquero',
-        'year': '1996'
+        'year': '1996',
+        'mainImage' : 'alianza.png'
     },
 
     season2: {
         'country': 'Peru',
         'club': 'Deportivo Pesquero',
-        'year': '1997'
+        'year': '1997',
+        'mainImage' : 'alianza.png'
     },
 
     season3: {
         'country': 'Peru',
         'club': 'Alianza Lima',
-        'year': '1998'
+        'year': '1998',
+        'mainImage' : 'alianza.png'
     },
 
     season4: {
         'country': 'Peru',
         'club': 'Alianza Lima',
-        'year': '1999'
+        'year': '1999',
+        'mainImage' : 'alianza.png'
     },
 
     season5: {
         'country': 'Germany',
         'club': 'Werder Bremen',
         'year': '1999-200',
+        'mainImage' : 'werder1999.png',
         'matches': {
-            'entry1': {
+            entry1: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-08-28.',

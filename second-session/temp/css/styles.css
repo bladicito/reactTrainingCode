@@ -21,7 +21,7 @@
 .main-claudio-pizarro h4,
 .main-claudio-pizarro .h4 {
   font-family: 'HelveticaNeueW01-Thin', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1;
   color: #FFFFFF;
   margin: 0;
@@ -262,10 +262,25 @@
 }
 .component-main-picture {
   display: inline-block;
+  width: 100%;
 }
 .component-summary.werder-bremen {
   background-color: #009252;
 }
 .component-summary.werder-bremen .summary__title {
   background-color: #006737;
+}
+.component-summary .summary__image {
+  width: 100%;
+}
+.component-summary .summary__numbers {
+  font-size: 20px;
+  font-weight: 200;
+}
+.component-summary .summary__numbers .summary__numbers__item {
+  color: #006737;
+}
+.component-summary .summary__numbers .summary__numbers__item--label {
+  font-weight: 200;
+  color: #fff5cf;
 }

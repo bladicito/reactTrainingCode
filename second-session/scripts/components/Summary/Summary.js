@@ -3,7 +3,6 @@ import React from 'react';
 import MainPicture from '../MainPicture/MainPicture';
 import Controls from    '../controls/controls';
 import Entries from     '../../entries';
-import Utils from       '../../helpers';
 
 
 var Summary = React.createClass({
@@ -18,8 +17,10 @@ var Summary = React.createClass({
         google.charts.load('current', {packages: ['corechart', 'line']});
         google.charts.setOnLoadCallback(drawCurveTypes);
 
+
+
         var seasonGoalsData =  [],
-            entries = Entries.season5.matches
+            entries = Entries[this.props.currentSeason].matches
         ;
 
 
@@ -110,24 +111,27 @@ var Summary = React.createClass({
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
-                            {this.getPicture(this.props.mainPicture)}
+                            {this.getPicture(this.props.mainPicture, 'summary__image')}
                         </div>
                         <div className="col-md-6">
-                            <div className="goals">
-                                Goals Scored: {this.props.goals}
+                            <div className="summary__numbers">
+                                <div className="summary__numbers__item summary__numbers__item--goals">
+                                    <span className="summary__numbers__item--label">Goals</span> Scored: {this.props.goals}
+                                </div>
+                                <div className="summary__numbers__item  summary__numbers__item--assists">
+                                    <span className="summary__numbers__item--label">Assists in season:</span> {this.props.assists}
+                                </div>
+                                <div className="summary__numbers__item  summary__numbers__item--yellow-cards">
+                                    <span className="summary__numbers__item--label">Yellow cards in Season:</span> {this.props.yellowCards}
+                                </div>
+                                <div className="summary__numbers__item summary__numbers__item--red-cards">
+                                    <span className="summary__numbers__item--label">Red cards in Season:</span> {this.props.redCards}
+                                </div>
+                                <div className="summary__numbers__item  summary__numbers__item--played-minutes">
+                                    <span className="summary__numbers__item--label">Minutes played:</span> {this.props.playedMinutes}
+                                </div>
                             </div>
-                            <div className="assists">
-                                Assists in season: {this.props.assists}
-                            </div>
-                            <div className="yellow-cards">
-                                Yellow cards in Season: {this.props.yellowCards}
-                            </div>
-                            <div className="red-cards">
-                                Red cards in Season: {this.props.redCards}
-                            </div>
-                            <div className="played-minutes">
-                                Minutes played: {this.props.playedMinutes}
-                            </div>
+
                         </div>
                         <div className="col-md-3">
                             {this.getPicture(this.props.clubShieldPicture, 'summary-shield')}
