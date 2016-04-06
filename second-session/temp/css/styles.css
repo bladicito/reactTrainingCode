@@ -255,11 +255,6 @@
   height: auto;
   max-height: 15px;
 }
-.component-entry-table-row .shield__mini {
-  width: 15px;
-  height: auto;
-  max-height: 15px;
-}
 .component-main-picture {
   display: inline-block;
   width: 100%;
@@ -283,4 +278,9 @@
 .component-summary .summary__numbers .summary__numbers__item--label {
   font-weight: 200;
   color: #fff5cf;
+}
+.component-entry-table-row .shield__mini {
+  width: 15px;
+  height: auto;
+  max-height: 15px;
 }
