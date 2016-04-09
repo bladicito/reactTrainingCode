@@ -47,7 +47,7 @@ let helpers = {
 
     getDbRef: function(path){
         var path = path || '';
-        return new Firebase('claudiopizarro.firebaseIO.com/' + path);
+        return new Firebase('calories-calculator.firebaseIO.com/' + path);
     },
     safeEmail: function(email) {
         return email.replace(/[\.#$\[\]@]/g,'_');

@@ -61,10 +61,12 @@ var App = React.createClass({
     },
 
     setDate: function(offset) {
-        var date = new Date(this.state.date);
-        date.setUTCDate(date.getUTCDate() + offset);
+        var date          = new Date(this.state.date),
+            newDate       = date.setUTCDate(date.getUTCDate() + offset),
+            formattedDate = u.storeDate(new Date(newDate))
+        ;
 
-        this.setState.date = u.storeDate(date);
+        this.state.date = formattedDate;
         this.setState({
             date: this.state.date
         });
@@ -111,14 +113,7 @@ var App = React.createClass({
                 that.getEntries();
 
             });
-
         }
-
-
-
-
-
-
     },
     render: function() {
         var currentDate = u.currentDate();
@@ -138,10 +133,10 @@ var App = React.createClass({
 
         return (
             <section className="home">
-                <Summary date={this.state.date} entries={this.state.entries} />
-                <Controls setDate={this.setDate} />
+                <Summary    date={this.state.date} entries={this.state.entries} />
+                <Controls   setDate={this.setDate} />
                 <EntryTable date={this.state.date} entries={this.state.entries} deleteEntry={this.deleteEntry} />
-                <FoodForm date={currentDate} time={currentTime} addEntry={this.addEntry} />
+                <FoodForm   date={currentDate} time={currentTime} addEntry={this.addEntry} />
             </section>
         )
     }
