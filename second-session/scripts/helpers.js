@@ -94,6 +94,9 @@ let helpers = {
             case 'MSV Duisburg' :
                 imagePath = 'build/svg/duisburg.svg';
                 break;
+            case 'Bor. Monchengladbach' :
+                imagePath = 'build/svg/borusia_monchengladbach.svg';
+                break;
         }
         return imagePath;
     }

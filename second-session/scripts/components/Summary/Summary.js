@@ -13,7 +13,7 @@ var Summary = React.createClass({
 
     getPicture : function(sourcePicture, cssClass) {
         return (
-            <MainPicture mainImageSrc={sourcePicture} cssClass={cssClass}/>
+            <MainPicture mainImageSrc={'/build/img/' + sourcePicture} cssClass={cssClass}/>
         )
     },
 
@@ -54,7 +54,7 @@ var Summary = React.createClass({
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
-                            {this.getPicture(this.props.mainPicture, 'summary__image')}
+                            {this.getPicture(this.props.mainImage, 'summary__image')}
                         </div>
                         <div className="col-md-6">
                             <div className="summary__numbers">

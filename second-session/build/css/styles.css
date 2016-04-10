@@ -8855,6 +8855,11 @@ button.close {
   padding-bottom: 20px;
   background-color: #006737;
 }
+.component-donutchart.bayern-munich {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ff0040;
+}
 .component-entry-table .body__data {
   font-size: 12px;
 }
@@ -8928,6 +8933,36 @@ button.close {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.component-entry-table.bayern-munich {
+  background-color: #FFFFFF;
+}
+.component-entry-table.bayern-munich tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.component-entry-table.bayern-munich thead {
+  background-color: #ff0040;
+  color: #FFFFFF;
+}
+.component-entry-table.bayern-munich thead th {
+  border-left: 1px solid #ff0040;
+  border-bottom: 1px solid #ff0040;
+}
+.component-entry-table.bayern-munich thead th:last-child {
+  border-right: 1px solid #ff0040;
+}
+.component-entry-table.bayern-munich tbody tr:last-child td {
+  border-bottom: 1px solid #ff0040;
+}
+.component-entry-table.bayern-munich tbody td {
+  border-left: 1px solid #ff0040;
+}
+.component-entry-table.bayern-munich tbody td:last-child {
+  border-right: 1px solid #ff0040;
+}
+.component-entry-table.bayern-munich .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .component-entry-table .icon {
   width: 15px;
   height: auto;
@@ -8952,6 +8987,12 @@ button.close {
 .component-summary.werder-bremen .summary__title {
   background-color: #006737;
 }
+.component-summary.bayern-munich {
+  background-color: #c03;
+}
+.component-summary.bayern-munich .summary__title {
+  background-color: #ff0040;
+}
 .component-summary .summary__image {
   width: 100%;
 }
@@ -8960,7 +9001,7 @@ button.close {
   font-weight: 200;
 }
 .component-summary .summary__numbers .summary__numbers__item {
-  color: #006737;
+  color: #FFFFFF;
 }
 .component-summary .summary__numbers .summary__numbers__item--label {
   font-weight: 200;

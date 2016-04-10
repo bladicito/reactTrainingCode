@@ -24,7 +24,7 @@ var App = React.createClass({
             redCards            : '',
             toDate              : '',
             playedMinutes       : '',
-            mainPicture         : 'build/img/werder1999.png',
+            mainImage         : 'build/img/werder1999.png',
             club                : 'werder-bremen',
             entries             : {}
         }
@@ -82,6 +82,7 @@ var App = React.createClass({
     componentDidMount: function() {
         this.state.seasonData       = Entries[this.state.defaultSeason];
         this.state.currentSeason    = this.state.defaultSeason;
+        this.state.mainImage      = Entries[this.state.defaultSeason].mainImage;
 
         google.charts.load("current", {packages:["corechart"]});
 
@@ -91,6 +92,7 @@ var App = React.createClass({
 
         this.initSummary(this.state.seasonData);
         this.setState({
+            mainImage : this.state.mainImage,
             seasonData: this.state.seasonData,
             defaultSeason: this.state.defaultSeason,
             currentSeason: this.state.currentSeason
@@ -101,14 +103,20 @@ var App = React.createClass({
     updateDataSeason : function(newSeason) {
         this.state.currentSeason    = newSeason;
         this.state.seasonData       = Entries[this.state.currentSeason];
+        this.state.mainImage        = Entries[this.state.currentSeason].mainImage;
+        this.state.currentClub      = Entries[this.state.currentSeason].club;
+        this.state.currentClubCss   = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
         this.initSummary(this.state.seasonData);
 
-        this.updateCharts();
 
         this.setState({
+            mainImage       : this.state.mainImage,
             seasonData      : this.state.seasonData,
             defaultSeason   : this.state.defaultSeason,
-            currentSeason   : this.state.currentSeason
+            currentSeason   : this.state.currentSeason,
+            currentClub     : this.state.currentClub,
+            currentClubCss  : this.state.currentClubCss
+
         });
 
     },
@@ -132,7 +140,7 @@ var App = React.createClass({
                          yellowCards       = {this.state.yellowCards}
                          redCards          = {this.state.redCards}
                          playedMinutes     = {this.state.playedMinutes}
-                         mainPicture       = {this.state.mainPicture}
+                         mainImage         = {this.state.mainImage}
                          club              = {this.state.club}
                          season            = {this.state.season}
                          clubShieldPicture = {this.state.clubShieldPicture}

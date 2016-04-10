@@ -839,6 +839,9 @@
 @color-werder-bremen-main:      #009252;
 @color-werder-bremen-secondary: #006737;
 
+@color-bayern-munich-main:      #c03;
+@color-bayern-munich-secondary: #ff0040;
+
 
 //////////////////////////////////////////////////////////
 //
@@ -1467,6 +1470,12 @@
         background-color: @color-werder-bremen-secondary;
     }
 
+    &.bayern-munich {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: @color-bayern-munich-secondary;
+    }
+
 
 }
 .component-entry-table {
@@ -1476,6 +1485,15 @@
     &.werder-bremen {
         background-color: @color-white;
         .tableColorsForClub(@color-werder-bremen-secondary, @color-white);
+        .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &.bayern-munich {
+        background-color: @color-white;
+        .tableColorsForClub(@color-bayern-munich-secondary, @color-white);
         .container {
             padding-top: 20px;
             padding-bottom: 20px;
@@ -1603,6 +1621,7 @@
 }
 .component-summary {
     .werder-bremen();
+    .bayern-munich();
 
     .summary__image {
         width: 100%;
@@ -1614,7 +1633,7 @@
 
 
         .summary__numbers__item {
-            color: @color-werder-bremen-secondary   ;
+            color: @color-white;
         }
         .summary__numbers__item--label {
             font-weight: 200;
@@ -1630,6 +1649,15 @@
         background-color: @color-werder-bremen-main;
         .summary__title {
             background-color: @color-werder-bremen-secondary;
+        }
+    }
+}
+
+.bayern-munich() {
+    &.bayern-munich {
+        background-color: @color-bayern-munich-main;
+        .summary__title {
+            background-color: @color-bayern-munich-secondary;
         }
     }
 }
