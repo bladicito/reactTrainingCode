@@ -1,6 +1,8 @@
 import React from       'react';
 import Summary from     '../Summary/Summary';
 import EntryTable from  '../EntryTable/EntryTable';
+import LineChart from  '../LineChart/LineChart';
+import DonutCharts from  '../DonutCharts/DonutCharts';
 import Utils from       '../../helpers';
 import Entries from     '../../entries';
 
@@ -8,8 +10,13 @@ import Entries from     '../../entries';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            defaultSeason       : 'season5',
-            currentSeason       : 'season5',
+            defaultSeason       : 'season6',
+            currentSeason       : 'season6',
+            nextSeason          : 'season7',
+            prevSeason          : 'season5',
+            currentSeasonYear   : '1999 - 2000',
+            currentClub         : 'Werder Bremen',
+            currentClubCss      : 'Werder Bremen'.toLowerCase().replace(' ', '-'),
             goals               : '',
             assists             : '',
             games               : '',
@@ -17,12 +24,8 @@ var App = React.createClass({
             redCards            : '',
             toDate              : '',
             playedMinutes       : '',
-            mainPicture         : 'build/img/alianza.png',
-            clubShieldPicture   : 'build/svg/werder.svg' ,
+            mainPicture         : 'build/img/werder1999.png',
             club                : 'werder-bremen',
-            nextSeason          : 'build/svg/bayern.svg',
-            prevSeason          : 'build/svg/werder.svg',
-            season              : '3',
             entries             : {}
         }
     },
@@ -80,6 +83,11 @@ var App = React.createClass({
         this.state.seasonData       = Entries[this.state.defaultSeason];
         this.state.currentSeason    = this.state.defaultSeason;
 
+        google.charts.load("current", {packages:["corechart"]});
+
+
+
+
 
         this.initSummary(this.state.seasonData);
         this.setState({
@@ -87,13 +95,35 @@ var App = React.createClass({
             defaultSeason: this.state.defaultSeason,
             currentSeason: this.state.currentSeason
         });
+
     },
 
+    updateDataSeason : function(newSeason) {
+        this.state.currentSeason    = newSeason;
+        this.state.seasonData       = Entries[this.state.currentSeason];
+        this.initSummary(this.state.seasonData);
 
+        this.updateCharts();
+
+        this.setState({
+            seasonData      : this.state.seasonData,
+            defaultSeason   : this.state.defaultSeason,
+            currentSeason   : this.state.currentSeason
+        });
+
+    },
+
+    updateCharts : function() {
+        DonutCharts.startChartGeneral();
+        DonutCharts.startChartWithoutPiza();
+        DonutCharts.startChartWithPiza();
+    },
+    
 
 
     render: function() {
         var seasonMatchesData = Entries[this.state.currentSeason].matches;
+
 
         return (
             <div className="main-claudio-pizarro">
@@ -110,16 +140,17 @@ var App = React.createClass({
                          currentSeason     = {this.state.currentSeason}
                          nextSeason        = {this.state.nextSeason}
                          prevSeason        = {this.state.prevSeason}
-
+                         currentClub       = {this.state.currentClub}
+                         currentClubCss    = {this.state.currentClubCss}
+                         updateDataSeason  = {this.updateDataSeason}
                 />
-                <EntryTable seasonMatchesData={seasonMatchesData}/>
+                <LineChart  seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss} currentSeason/>
+                <DonutCharts seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss} currentSeasonYear={this.state.currentSeasonYear}/>
+                <EntryTable seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss}/>
             </div>
         )
     }
 });
-
-
-
 
 
 export default App;

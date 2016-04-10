@@ -8850,13 +8850,97 @@ button.close {
   margin-right: 20px;
   margin-left: 20px;
 }
-.component-entry-table thead {
-  background-color: #e0e0e0;
+.component-donutchart.werder-bremen {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006737;
+}
+.component-entry-table .body__data {
+  font-size: 12px;
+}
+.component-entry-table .header__data {
+  font-size: 13px;
+  text-align: center;
+}
+.component-entry-table .header__data--date {
+  width: 8.33%;
+}
+.component-entry-table .header__data--local {
+  width: 8.33%;
+}
+.component-entry-table .header__data--visit {
+  width: 8.33%;
+}
+.component-entry-table .header__data--score {
+  width: 8.33%;
+}
+.component-entry-table .header__data--goals {
+  width: 8.33%;
+}
+.component-entry-table .header__data--assists {
+  width: 8.33%;
+}
+.component-entry-table .header__data--cards-y {
+  width: 8.33%;
+}
+.component-entry-table .header__data--cards-ry {
+  width: 8.33%;
+}
+.component-entry-table .header__data--cards-r {
+  width: 8.33%;
+}
+.component-entry-table .header__data--played-mins {
+  width: 8.33%;
+}
+.component-entry-table .header__data--in-min-in {
+  width: 8.33%;
+}
+.component-entry-table .header__data--in-min-out {
+  width: 8.33%;
+}
+.component-entry-table.werder-bremen {
+  background-color: #FFFFFF;
+}
+.component-entry-table.werder-bremen tbody tr:nth-child(odd) {
+  background-color: #e6fff4;
+}
+.component-entry-table.werder-bremen thead {
+  background-color: #006737;
+  color: #FFFFFF;
+}
+.component-entry-table.werder-bremen thead th {
+  border-left: 1px solid #006737;
+  border-bottom: 1px solid #006737;
+}
+.component-entry-table.werder-bremen thead th:last-child {
+  border-right: 1px solid #006737;
+}
+.component-entry-table.werder-bremen tbody tr:last-child td {
+  border-bottom: 1px solid #006737;
+}
+.component-entry-table.werder-bremen tbody td {
+  border-left: 1px solid #006737;
+}
+.component-entry-table.werder-bremen tbody td:last-child {
+  border-right: 1px solid #006737;
+}
+.component-entry-table.werder-bremen .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .component-entry-table .icon {
   width: 15px;
   height: auto;
   max-height: 15px;
+}
+.component-entry-table-row .shield__mini {
+  width: 15px;
+  height: auto;
+  max-height: 15px;
+}
+.component-entry-table-row.data__row td {
+  font-size: 10px;
+  text-align: center;
 }
 .component-main-picture {
   display: inline-block;
@@ -8881,9 +8965,4 @@ button.close {
 .component-summary .summary__numbers .summary__numbers__item--label {
   font-weight: 200;
   color: #fff5cf;
-}
-.component-entry-table-row .shield__mini {
-  width: 15px;
-  height: auto;
-  max-height: 15px;
 }

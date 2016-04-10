@@ -8,63 +8,6 @@ import Entries from     '../../entries';
 var Summary = React.createClass({
 
     componentDidMount : function() {
-        this.startChart();
-
-    },
-
-
-    startChart : function() {
-        google.charts.load('current', {packages: ['corechart', 'line']});
-        google.charts.setOnLoadCallback(drawCurveTypes);
-
-
-
-        var seasonGoalsData =  [],
-            entries = Entries[this.props.currentSeason].matches
-        ;
-
-
-
-        for(var single in entries) {
-            if(entries.hasOwnProperty(single)) {
-                if (entries[single].goals.trim() !== '' &&  typeof(entries[single].goals) !== 'undefined') {
-                    seasonGoalsData.push([new Date(entries[single].date), parseInt(entries[single].goals, 10)]);
-                } else {
-                    seasonGoalsData.push([new Date(entries[single].date), 0]);
-                }
-            }
-        }
-
-
-
-        function drawCurveTypes() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('date', 'scored on');
-            data.addColumn('number', 'Goals scored');
-
-
-
-            data.addRows(seasonGoalsData);
-
-            var options = {
-                title: 'Goals scored during season 1990-2000',
-                hAxis: {
-                    title: 'Spieltag'
-                },
-                vAxis: {
-                    title: 'Goals',
-                    scaleType: 'continuous',
-                    ticks: [0, 1, 2, 3, 4]
-                },
-                colors: ['#009252'],
-                pointSize: 10,
-                pointShape: 'circle',
-                continuous: 'date'
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
 
     },
 
@@ -76,13 +19,13 @@ var Summary = React.createClass({
 
     getControls : function(prevSeason, nextSeason) {
         return (
-            <Controls prevSeason={prevSeason} nextSeason={nextSeason}/>
+            <Controls prevSeason={prevSeason} nextSeason={nextSeason} updateDataSeason={this.props.updateDataSeason}/>
         )
     },
 
     render: function() {
         return (
-            <div className={this.props.club + ' component component-summary'}>
+            <div className={'component component-summary ' + this.props.currentClubCss}>
                 <div className="summary__title">
                     <div className="container">
                         <div className="row">
@@ -135,11 +78,6 @@ var Summary = React.createClass({
                         </div>
                         <div className="col-md-3">
                             {this.getPicture(this.props.clubShieldPicture, 'summary-shield')}
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div id="chart_div"></div>
                         </div>
                     </div>
                 </div>

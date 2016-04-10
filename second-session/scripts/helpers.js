@@ -43,7 +43,7 @@ let helpers = {
             case 'Werder Bremen' :
                 imagePath = 'build/svg/werder.svg';
                 break;
-            case 'Bayern Muenchen' :
+            case 'Bayern Munich' :
                 imagePath = 'build/svg/bayern.svg';
                 break;
             case 'Hertha BSC' :
@@ -64,7 +64,7 @@ let helpers = {
             case 'SC Freiburg' :
                 imagePath = 'build/svg/freiburg.svg';
                 break;
-            case '1860 Muenchen' :
+            case '1860 Munich' :
                 imagePath = 'build/svg/1860_muenchen.svg';
                 break;
             case 'Bor. Dortmund' :

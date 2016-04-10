@@ -994,7 +994,7 @@
         }
     },
     "2001": {
-        "1": {
+        "entry1": {
             "date": "28.07.2001",
             "home": "Bor. M'gladbach",
             "away": "Bayern München",
@@ -1009,7 +1009,7 @@
             "outGameOnMin": "",
             "playedMinutes": ""
         },
-        "2": {
+        "entry2": {
             "date": "04.08.2001",
             "home": "Bayern München",
             "away": "FC Schalke 04",
@@ -1024,7 +1024,7 @@
             "outGameOnMin": "85",
             "playedMinutes": "85"
         },
-        "3": {
+        "entry3": {
             "date": "11.08.2001",
             "home": "Bay. Leverkusen",
             "away": "Bayern München",
@@ -1039,7 +1039,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "4": {
+        "entry4": {
             "date": "18.08.2001",
             "home": "Bayern München",
             "away": "FC St. Pauli",
@@ -1054,7 +1054,7 @@
             "outGameOnMin": "",
             "playedMinutes": ""
         },
-        "5": {
+        "entry5": {
             "date": "08.09.2001",
             "home": "Bor. Dortmund",
             "away": "Bayern München",
@@ -1069,7 +1069,7 @@
             "outGameOnMin": "",
             "playedMinutes": "12"
         },
-        "6": {
+        "entry6": {
             "date": "15.09.2001",
             "home": "Bayern München",
             "away": "SC Freiburg",
@@ -1084,7 +1084,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "7": {
+        "entry7": {
             "date": "22.09.2001",
             "home": "Energie Cottbus",
             "away": "Bayern München",
@@ -1099,7 +1099,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "8": {
+        "entry8": {
             "date": "30.09.2001",
             "home": "Bayern München",
             "away": "VfB Stuttgart",
@@ -1114,7 +1114,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "9": {
+        "entry9": {
             "date": "13.10.2001",
             "home": "1860 München",
             "away": "Bayern München",
@@ -1129,7 +1129,7 @@
             "outGameOnMin": "",
             "playedMinutes": "15"
         },
-        "10": {
+        "entry10": {
             "date": "20.10.2001",
             "home": "Bayern München",
             "away": "1.FC K'lautern",
@@ -1144,7 +1144,7 @@
             "outGameOnMin": "",
             "playedMinutes": "21"
         },
-        "11": {
+        "entry11": {
             "date": "27.10.2001",
             "home": "1.FC Köln",
             "away": "Bayern München",
@@ -1159,7 +1159,7 @@
             "outGameOnMin": "90",
             "playedMinutes": "90"
         },
-        "12": {
+        "entry12": {
             "date": "03.11.2001",
             "home": "Bayern München",
             "away": "Hamburger SV",
@@ -1174,7 +1174,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "13": {
+        "entry13": {
             "date": "17.11.2001",
             "home": "Werder Bremen",
             "away": "Bayern München",
@@ -1189,7 +1189,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "14": {
+        "entry14": {
             "date": "24.11.2001",
             "home": "Bayern München",
             "away": "1.FC Nürnberg",
@@ -1204,7 +1204,7 @@
             "outGameOnMin": "70",
             "playedMinutes": "70"
         },
-        "15": {
+        "entry15": {
             "date": "02.12.2001",
             "home": "Hertha BSC",
             "away": "Bayern München",
@@ -1219,7 +1219,7 @@
             "outGameOnMin": "",
             "playedMinutes": "17"
         },
-        "16": {
+        "entry16": {
             "date": "08.12.2001",
             "home": "Bayern München",
             "away": "VfL Wolfsburg",
@@ -1234,7 +1234,7 @@
             "outGameOnMin": "69",
             "playedMinutes": "69"
         },
-        "17": {
+        "entry17": {
             "date": "15.12.2001",
             "home": "Hansa Rostock",
             "away": "Bayern München",
@@ -1249,7 +1249,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "18": {
+        "entry18": {
             "date": "18.12.2001",
             "home": "Bayern München",
             "away": "Bor. M'gladbach",
@@ -1264,7 +1264,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "19": {
+        "entry19": {
             "date": "26.01.2002",
             "home": "FC Schalke 04",
             "away": "Bayern München",
@@ -1279,7 +1279,7 @@
             "outGameOnMin": "",
             "playedMinutes": "22"
         },
-        "20": {
+        "entry20": {
             "date": "03.02.2002",
             "home": "Bayern München",
             "away": "Bay. Leverkusen",
@@ -1294,7 +1294,7 @@
             "outGameOnMin": "",
             "playedMinutes": "12"
         },
-        "21": {
+        "entry21": {
             "date": "06.02.2002",
             "home": "FC St. Pauli",
             "away": "Bayern München",
@@ -1309,7 +1309,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "22": {
+        "entry22": {
             "date": "09.02.2002",
             "home": "Bayern München",
             "away": "Bor. Dortmund",
@@ -1324,7 +1324,7 @@
             "outGameOnMin": "",
             "playedMinutes": "15"
         },
-        "23": {
+        "entry23": {
             "date": "16.02.2002",
             "home": "SC Freiburg",
             "away": "Bayern München",
@@ -1339,7 +1339,7 @@
             "outGameOnMin": "",
             "playedMinutes": "8"
         },
-        "24": {
+        "entry24": {
             "date": "23.02.2002",
             "home": "Bayern München",
             "away": "Energie Cottbus",
@@ -1354,7 +1354,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "25": {
+        "entry25": {
             "date": "02.03.2002",
             "home": "VfB Stuttgart",
             "away": "Bayern München",
@@ -1369,7 +1369,7 @@
             "outGameOnMin": "",
             "playedMinutes": "21"
         },
-        "26": {
+        "entry26": {
             "date": "09.03.2002",
             "home": "Bayern München",
             "away": "1860 München",
@@ -1384,7 +1384,7 @@
             "outGameOnMin": "",
             "playedMinutes": "23"
         },
-        "27": {
+        "entry27": {
             "date": "16.03.2002",
             "home": "1.FC K'lautern",
             "away": "Bayern München",
@@ -1399,7 +1399,7 @@
             "outGameOnMin": "",
             "playedMinutes": "45"
         },
-        "28": {
+        "entry28": {
             "date": "23.03.2002",
             "home": "Bayern München",
             "away": "1.FC Köln",
@@ -1414,7 +1414,7 @@
             "outGameOnMin": "",
             "playedMinutes": ""
         },
-        "29": {
+        "entry29": {
             "date": "30.03.2002",
             "home": "Hamburger SV",
             "away": "Bayern München",
@@ -1429,7 +1429,7 @@
             "outGameOnMin": "",
             "playedMinutes": "19"
         },
-        "30": {
+        "entry30": {
             "date": "06.04.2002",
             "home": "Bayern München",
             "away": "Werder Bremen",
@@ -1444,7 +1444,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "31": {
+        "entry31": {
             "date": "13.04.2002",
             "home": "1.FC Nürnberg",
             "away": "Bayern München",
@@ -1459,7 +1459,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "32": {
+        "entry32": {
             "date": "20.04.2002",
             "home": "Bayern München",
             "away": "Hertha BSC",
@@ -1474,7 +1474,7 @@
             "outGameOnMin": "86",
             "playedMinutes": "86"
         },
-        "33": {
+        "entry33": {
             "date": "27.04.2002",
             "home": "VfL Wolfsburg",
             "away": "Bayern München",
@@ -1489,7 +1489,7 @@
             "outGameOnMin": "",
             "playedMinutes": "90"
         },
-        "34": {
+        "entry34": {
             "date": "04.05.2002",
             "home": "Bayern München",
             "away": "Hansa Rostock",
