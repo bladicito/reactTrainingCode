@@ -8,10 +8,14 @@ var LineChart = React.createClass({
 
     startChart : function() {
 
-        var entries         = this.props.seasonMatchesData,
-            seasonGoalsData = []
+        var _this           = this,
+            entries         = this.props.seasonMatchesData,
+            seasonGoalsData = [],
+            chartOutlet     = document.getElementById('chart_div')
         ;
         google.charts.setOnLoadCallback(drawCurveTypes);
+
+
 
 
         for(var single in entries) {
@@ -35,7 +39,7 @@ var LineChart = React.createClass({
             data.addRows(seasonGoalsData);
 
             var options = {
-                title: 'Goals scored during season 1990-2000',
+                title: 'Goals scored during season ' + _this.props.currentSeasonYear,
                 hAxis: {
                     title: 'Spieltag'
                 },
@@ -44,20 +48,20 @@ var LineChart = React.createClass({
                     scaleType: 'continuous',
                     ticks: [0, 1, 2, 3, 4]
                 },
-                colors: ['#009252'],
+                colors: [_this.props.currentClubColors.main],
                 pointSize: 10,
                 pointShape: 'circle',
                 continuous: 'date'
             };
 
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.LineChart(chartOutlet);
             chart.draw(data, options);
         }
     },
 
     render: function() {
         return (
-            <div className={'component component-linechart ' + this.props.currentClubCss}>
+            <div className={'component component-linechart ' + this.props.currentClubCss} >
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">

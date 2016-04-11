@@ -10,7 +10,6 @@ import Entries from     '../../entries';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            defaultSeason       : 'season6',
             currentSeason       : 'season6',
             nextSeason          : 'season7',
             prevSeason          : 'season5',
@@ -19,14 +18,12 @@ var App = React.createClass({
             currentClubCss      : 'Werder Bremen'.toLowerCase().replace(' ', '-'),
             goals               : '',
             assists             : '',
-            games               : '',
             yellowCards         : '',
             redCards            : '',
             toDate              : '',
             playedMinutes       : '',
-            mainImage         : 'build/img/werder1999.png',
-            club                : 'werder-bremen',
-            entries             : {}
+            mainImage           : 'build/img/werder1999.png',
+            club                : 'werder-bremen'
         }
     },
 
@@ -80,9 +77,9 @@ var App = React.createClass({
     },
 
     componentDidMount: function() {
-        this.state.seasonData       = Entries[this.state.defaultSeason];
-        this.state.currentSeason    = this.state.defaultSeason;
-        this.state.mainImage      = Entries[this.state.defaultSeason].mainImage;
+        this.state.seasonData        = Entries[this.state.currentSeason];
+        this.state.currentSeasonYear = Entries[this.state.currentSeason].year,
+        this.state.mainImage         = Entries[this.state.currentSeason].mainImage;
 
         google.charts.load("current", {packages:["corechart"]});
 
@@ -101,21 +98,23 @@ var App = React.createClass({
     },
 
     updateDataSeason : function(newSeason) {
-        this.state.currentSeason    = newSeason;
-        this.state.seasonData       = Entries[this.state.currentSeason];
-        this.state.mainImage        = Entries[this.state.currentSeason].mainImage;
-        this.state.currentClub      = Entries[this.state.currentSeason].club;
-        this.state.currentClubCss   = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
+        this.state.currentSeason        = newSeason;
+        this.state.currentSeasonYear    = Entries[this.state.currentSeason].year;
+        this.state.seasonData           = Entries[this.state.currentSeason];
+        this.state.mainImage            = Entries[this.state.currentSeason].mainImage;
+        this.state.currentClub          = Entries[this.state.currentSeason].club;
+        this.state.currentClubCss       = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
         this.initSummary(this.state.seasonData);
 
 
         this.setState({
-            mainImage       : this.state.mainImage,
-            seasonData      : this.state.seasonData,
-            defaultSeason   : this.state.defaultSeason,
-            currentSeason   : this.state.currentSeason,
-            currentClub     : this.state.currentClub,
-            currentClubCss  : this.state.currentClubCss
+            mainImage           : this.state.mainImage,
+            seasonData          : this.state.seasonData,
+            defaultSeason       : this.state.defaultSeason,
+            currentSeason       : this.state.currentSeason,
+            currentClub         : this.state.currentClub,
+            currentClubCss      : this.state.currentClubCss,
+            currentSeasonYear   : this.state.currentSeasonYear
 
         });
 
@@ -130,7 +129,9 @@ var App = React.createClass({
 
 
     render: function() {
-        var seasonMatchesData = Entries[this.state.currentSeason].matches;
+        var seasonMatchesData = Entries[this.state.currentSeason].matches,
+            clubColors        = Utils.getClubColors(this.state.currentClub);
+
 
 
         return (
@@ -141,19 +142,32 @@ var App = React.createClass({
                          redCards          = {this.state.redCards}
                          playedMinutes     = {this.state.playedMinutes}
                          mainImage         = {this.state.mainImage}
-                         club              = {this.state.club}
                          season            = {this.state.season}
                          clubShieldPicture = {this.state.clubShieldPicture}
                          seasonData        = {this.state.seasonData}
                          currentSeason     = {this.state.currentSeason}
+                         currentSeasonYear = {this.state.currentSeasonYear}
                          nextSeason        = {this.state.nextSeason}
                          prevSeason        = {this.state.prevSeason}
                          currentClub       = {this.state.currentClub}
                          currentClubCss    = {this.state.currentClubCss}
                          updateDataSeason  = {this.updateDataSeason}
                 />
-                <LineChart  seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss} currentSeason/>
-                <DonutCharts seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss} currentSeasonYear={this.state.currentSeasonYear}/>
+                <LineChart
+                    seasonMatchesData ={seasonMatchesData}
+                    currentClub       = {this.state.currentClub}
+                    currentClubCss    = {this.state.currentClubCss}
+                    currentSeason     = {this.state.currentSeason}
+                    currentSeasonYear = {this.state.currentSeasonYear}
+                    currentClubColors = {clubColors}
+                />
+                <DonutCharts
+                    seasonMatchesData   = {seasonMatchesData}
+                    currentClub         = {this.state.currentClub}
+                    currentClubCss      = {this.state.currentClubCss}
+                    currentSeasonYear   = {this.state.currentSeasonYear}
+                    currentClubColors   = {clubColors}
+                />
                 <EntryTable seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss}/>
             </div>
         )

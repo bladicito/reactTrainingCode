@@ -3,11 +3,11 @@ import MainPicture from '../MainPicture/MainPicture';
 import Entries from     '../../entries';
 import Helpers from       '../../helpers';
 
+
 var Controls = React.createClass({
     handleClickNextSeason : function(evt) {
         evt.preventDefault();
         this.props.updateDataSeason(this.props.nextSeason);
-
 
     },
 

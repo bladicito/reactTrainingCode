@@ -37,6 +37,21 @@ let helpers = {
         return maxCalories - calories;
     },
 
+    getClubColors : function(name) {
+        var objColors = {};
+        switch (name) {
+            case 'Werder Bremen' :
+                objColors.main      = '#009252';
+                objColors.secondary = '#006737';
+                break;
+            case 'Bayern Munich' :
+                objColors.main      = '#c03';
+                objColors.secondary = '#ff0040';
+        }
+
+        return objColors;
+    },
+
     nameToImageShield : function(name) {
         var imagePath;
         switch (name) {
