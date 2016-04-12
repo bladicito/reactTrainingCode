@@ -1014,7 +1014,7 @@ let entries = {
         'country'   : 'Germany',
         'club'      : 'Bayern Munich',
         'year'      : '2001 - 2002',
-        'mainImage' : 'bayern_2014.png',
+        'mainImage' : 'bayern2014.png',
         'matches'   : {
             'entry1': {
                 'date': '28.07.2001',

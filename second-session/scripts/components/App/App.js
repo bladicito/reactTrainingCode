@@ -13,17 +13,7 @@ var App = React.createClass({
             currentSeason       : 'season6',
             nextSeason          : 'season7',
             prevSeason          : 'season5',
-            currentSeasonYear   : '1999 - 2000',
-            currentClub         : 'Werder Bremen',
-            currentClubCss      : 'Werder Bremen'.toLowerCase().replace(' ', '-'),
-            goals               : '',
-            assists             : '',
-            yellowCards         : '',
-            redCards            : '',
-            toDate              : '',
-            playedMinutes       : '',
-            mainImage           : 'build/img/werder1999.png',
-            club                : 'werder-bremen'
+            currentClub         : 'Werder Bremen'
         }
     },
 
@@ -48,16 +38,14 @@ var App = React.createClass({
             }
     
             if(typeof(entries[currentValue].yellowCard) !== 'undefined' && entries[currentValue].yellowCard.trim() !== '') {
-                yellowCards += parseInt(entries[currentValue].yellowCard)
+                yellowCards ++;
             }
     
             if(typeof(entries[currentValue].redCards) !== 'undefined' && entries[currentValue].redCards.trim() !== '') {
-                redCards += parseInt(entries[currentValue].redCards)
+                redCards ++;
             }
     
-            if(typeof(entries[currentValue].redCards) !== 'undefined' && entries[currentValue].redCards.trim() !== '') {
-                redCards += parseInt(entries[currentValue].redCards)
-            }
+
     
             if(typeof(entries[currentValue].playedMinutes) !== 'undefined' && entries[currentValue].playedMinutes.trim() !== '') {
                 playedMinutes += parseInt(entries[currentValue].playedMinutes)
@@ -78,21 +66,24 @@ var App = React.createClass({
 
     componentDidMount: function() {
         this.state.seasonData        = Entries[this.state.currentSeason];
-        this.state.currentSeasonYear = Entries[this.state.currentSeason].year,
+        this.state.currentSeasonYear = Entries[this.state.currentSeason].year;
         this.state.mainImage         = Entries[this.state.currentSeason].mainImage;
+        this.state.currentClub       = Entries[this.state.currentSeason].club;
+        this.state.currentClubCss    = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
 
         google.charts.load("current", {packages:["corechart"]});
 
 
 
 
-
         this.initSummary(this.state.seasonData);
         this.setState({
-            mainImage : this.state.mainImage,
-            seasonData: this.state.seasonData,
-            defaultSeason: this.state.defaultSeason,
-            currentSeason: this.state.currentSeason
+            mainImage :     this.state.mainImage,
+            seasonData:     this.state.seasonData,
+            defaultSeason:  this.state.defaultSeason,
+            currentSeason:  this.state.currentSeason,
+            currentClub:    this.state.currentClub,
+            currentClubCss: this.state.currentClubCss
         });
 
     },

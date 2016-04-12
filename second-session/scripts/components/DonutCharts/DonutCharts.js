@@ -56,7 +56,13 @@ var DonutChart = React.createClass({
         Object.keys(seasonData).map(function(currentValue) {
             var currentGame = seasonData[currentValue];
 
+
+
+
             result = currentGame.result.split(':');
+            
+            console.log(_this.props.currentClub);
+
             if (currentGame.home === _this.props.currentClub) {
                 if (parseInt(result[0]) > parseInt(result[1])) {
                     matchesStats.won++;
@@ -82,6 +88,8 @@ var DonutChart = React.createClass({
             }
             matchesStats.amountGames++;
         });
+
+        console.log(matchesStats);
 
         return matchesStats;
 

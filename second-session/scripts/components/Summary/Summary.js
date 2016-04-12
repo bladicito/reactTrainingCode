@@ -39,7 +39,7 @@ var Summary = React.createClass({
 
                             </div>
                             <div className="col-md-4">
-                                <h2>Club: {this.props.currentClub.replace('-', ' ')}</h2>
+                                <h2>Club: {this.props.currentClub}</h2>
 
                             </div>
                             <div className="col-md-4">
