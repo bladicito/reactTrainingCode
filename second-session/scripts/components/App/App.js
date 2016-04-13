@@ -10,11 +10,32 @@ import Entries from     '../../entries';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            currentSeason       : 'season6',
+            currentSeason       : 'season7',
             nextSeason          : 'season7',
-            prevSeason          : 'season5',
-            currentClub         : 'Werder Bremen'
+            prevSeason          : 'season5'
         }
+    },
+
+    componentWillMount : function () {
+        google.charts.load("current", {packages:["corechart"]});
+
+        this.state.seasonData        = Entries[this.state.currentSeason];
+        this.state.currentSeasonYear = Entries[this.state.currentSeason].year;
+        this.state.mainImage         = Entries[this.state.currentSeason].mainImage;
+        this.state.currentClub       = Entries[this.state.currentSeason].club;
+        this.state.currentClubCss    = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
+
+
+        this.initSummary(this.state.seasonData);
+        this.setState({
+            mainImage :     this.state.mainImage,
+            seasonData:     this.state.seasonData,
+            defaultSeason:  this.state.defaultSeason,
+            currentSeason:  this.state.currentSeason,
+            currentClub:    this.state.currentClub,
+            currentClubCss: this.state.currentClubCss
+        });
+
     },
 
     initSummary : function(seasonData) {
@@ -52,7 +73,6 @@ var App = React.createClass({
             }
             
         });
-        
 
         this.setState({
             assists         : assists,
@@ -65,26 +85,7 @@ var App = React.createClass({
     },
 
     componentDidMount: function() {
-        this.state.seasonData        = Entries[this.state.currentSeason];
-        this.state.currentSeasonYear = Entries[this.state.currentSeason].year;
-        this.state.mainImage         = Entries[this.state.currentSeason].mainImage;
-        this.state.currentClub       = Entries[this.state.currentSeason].club;
-        this.state.currentClubCss    = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
 
-        google.charts.load("current", {packages:["corechart"]});
-
-
-
-
-        this.initSummary(this.state.seasonData);
-        this.setState({
-            mainImage :     this.state.mainImage,
-            seasonData:     this.state.seasonData,
-            defaultSeason:  this.state.defaultSeason,
-            currentSeason:  this.state.currentSeason,
-            currentClub:    this.state.currentClub,
-            currentClubCss: this.state.currentClubCss
-        });
 
     },
 

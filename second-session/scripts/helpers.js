@@ -56,61 +56,61 @@ let helpers = {
         var imagePath;
         switch (name) {
             case 'Werder Bremen' :
-                imagePath = 'build/svg/werder.svg';
+                imagePath = 'werder.svg';
                 break;
             case 'Bayern Munich' :
-                imagePath = 'build/svg/bayern.svg';
+                imagePath = 'bayern.svg';
                 break;
             case 'Hertha BSC' :
-                imagePath = 'build/svg/hertha.svg';
+                imagePath = 'hertha.svg';
                 break;
             case 'VfL Wolfsburg' :
-                imagePath = 'build/svg/wolfsburg.svg';
+                imagePath = 'wolfsburg.svg';
                 break;
             case 'Hamburger SV' :
-                imagePath = 'build/svg/hamburg.svg';
+                imagePath = 'hamburg.svg';
                 break;
             case '1.FC Kaiserlautern' :
-                imagePath = 'build/svg/kaiserlautern.svg';
+                imagePath = 'kaiserlautern.svg';
                 break;
             case 'SSV Ulm 1846' :
-                imagePath = 'build/svg/svv_ulm.svg';
+                imagePath = 'svv_ulm.svg';
                 break;
             case 'SC Freiburg' :
-                imagePath = 'build/svg/freiburg.svg';
+                imagePath = 'freiburg.svg';
                 break;
             case '1860 Munich' :
-                imagePath = 'build/svg/1860_muenchen.svg';
+                imagePath = '1860_muenchen.svg';
                 break;
             case 'Bor. Dortmund' :
-                imagePath = 'build/svg/borusia_dortmund.svg';
+                imagePath = 'borusia_dortmund.svg';
                 break;
             case 'Hansa Rostock' :
-                imagePath = 'build/svg/hansa_rostock.svg';
+                imagePath = 'hansa_rostock.svg';
                 break;
             case 'E. Frankfurt' :
-                imagePath = 'build/svg/eintracht_frankfurt.svg';
+                imagePath = 'eintracht_frankfurt.svg';
                 break;
             case 'Arm. Bielefeld' :
-                imagePath = 'build/svg/arminia_bielefeld.svg';
+                imagePath = 'arminia_bielefeld.svg';
                 break;
             case 'Bay. Leverkusen' :
-                imagePath = 'build/svg/bayer_leverkusen.svg';
+                imagePath = 'bayer_leverkusen.svg';
                 break;
             case 'FC Schalke 04' :
-                imagePath = 'build/svg/schalke04.svg';
+                imagePath = 'schalke04.svg';
                 break;
             case 'VfB Stuttgart' :
-                imagePath = 'build/svg/stuttgart.svg';
+                imagePath = 'stuttgart.svg';
                 break;
             case 'Unterhaching' :
-                imagePath = 'build/svg/unterhaching.svg';
+                imagePath = 'unterhaching.svg';
                 break;
             case 'MSV Duisburg' :
-                imagePath = 'build/svg/duisburg.svg';
+                imagePath = 'duisburg.svg';
                 break;
             case 'Bor. Monchengladbach' :
-                imagePath = 'build/svg/borusia_monchengladbach.svg';
+                imagePath = 'borusia_monchengladbach.svg';
                 break;
         }
         return imagePath;

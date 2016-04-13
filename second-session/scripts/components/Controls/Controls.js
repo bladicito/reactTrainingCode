@@ -17,9 +17,9 @@ var Controls = React.createClass({
 
     },
 
-    getPicture : function(sourcePicture, cssClass) {
+    getPicture : function(sourcePicture, cssClass, carpet) {
         return (
-            <MainPicture mainImageSrc={sourcePicture} cssClass={cssClass}/>
+            <MainPicture mainImageSrc={carpet + sourcePicture} cssClass={cssClass}/>
         )
     },
 
@@ -31,10 +31,10 @@ var Controls = React.createClass({
             <div className="component component-controls">
                 <a href="#" className="control control--left" onClick={this.handleClickPrevSeason}>
                     <i className="fa fa-angle-left controls__arrow controls__arrow--left"></i>
-                    <img src={imagePrev} className="controls--shield"/>
+                    {this.getPicture(imagePrev,  'controls--shield', '/build/svg/')}
                 </a>
                 <a href="#"  className="control control--right"  onClick={this.handleClickNextSeason}>
-                    <img src={imageNext} className="controls--shield"/>
+                    {this.getPicture(imageNext,  'controls--shield', '/build/svg/')}
                     <i className="fa fa-angle-right controls__arrow controls__arrow--right"></i>
                 </a>
             </div>

@@ -3,6 +3,7 @@ import React from 'react';
 import MainPicture from '../MainPicture/MainPicture';
 import Controls from    '../controls/controls';
 import Entries from     '../../entries';
+import Helpers from '../../helpers'
 
 
 var Summary = React.createClass({
@@ -11,9 +12,9 @@ var Summary = React.createClass({
 
     },
 
-    getPicture : function(sourcePicture, cssClass) {
+    getPicture : function(sourcePicture, cssClass, carpet) {
         return (
-            <MainPicture mainImageSrc={'/build/img/' + sourcePicture} cssClass={cssClass}/>
+            <MainPicture mainImageSrc={carpet + sourcePicture} cssClass={cssClass}/>
         )
     },
 
@@ -53,10 +54,10 @@ var Summary = React.createClass({
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3">
-                            {this.getPicture(this.props.mainImage, 'summary__image')}
+                        <div className="col-md-4">
+                            {this.getPicture(this.props.mainImage, 'summary__image', '/build/img/')}
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-4">
                             <div className="summary__numbers">
                                 <div className="summary__numbers__item summary__numbers__item--goals">
                                     <span className="summary__numbers__item--label">Goals</span> Scored: {this.props.goals}
@@ -76,8 +77,8 @@ var Summary = React.createClass({
                             </div>
 
                         </div>
-                        <div className="col-md-3">
-                            {this.getPicture(this.props.clubShieldPicture, 'summary-shield')}
+                        <div className="col-md-4">
+                            {this.getPicture(Helpers.nameToImageShield(this.props.currentClub), 'summary-shield', '/build/svg/')}
                         </div>
                     </div>
                 </div>

@@ -8837,6 +8837,10 @@ button.close {
 .component-controls .control {
   position: relative;
   display: inline-block;
+  width: 50%;
+}
+.component-controls .control > .component-main-picture {
+  width: auto;
 }
 .component-controls .control i {
   font-size: 50px;
@@ -8996,9 +9000,14 @@ button.close {
 .component-summary .summary__image {
   width: 100%;
 }
+.component-summary .summary-shield {
+  margin-top: 40px;
+}
 .component-summary .summary__numbers {
   font-size: 20px;
   font-weight: 200;
+  margin-top: 30px;
+  padding-left: 30px;
 }
 .component-summary .summary__numbers .summary__numbers__item {
   color: #FFFFFF;

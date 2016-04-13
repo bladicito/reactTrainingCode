@@ -31,7 +31,7 @@ var DonutChart = React.createClass({
             var options = {
                 title: 'Games in current season for ' + _this.props.currentClub,
                 pieHole: 0.4,
-                backgroundColor: '#009252',
+                backgroundColor: _this.props.currentClubColors.main,
                 legend : {
                     position: 'bottom'
                 }
@@ -60,7 +60,7 @@ var DonutChart = React.createClass({
 
 
             result = currentGame.result.split(':');
-            
+
             console.log(_this.props.currentClub);
 
             if (currentGame.home === _this.props.currentClub) {
@@ -212,7 +212,7 @@ var DonutChart = React.createClass({
                 },
                 backgroundColor : {
                     stroke: '#f2f2f2',
-                    fill: '#009252',
+                    fill: _this.props.currentClubColors.main,
                     strokeWidth: 0
                 },
                 chartArea: {
@@ -247,7 +247,7 @@ var DonutChart = React.createClass({
             var options = {
                 title: 'Games in current season for ' + _this.props.currentClub + ' without Pizarro',
                 pieHole: 0.4,
-                backgroundColor: '#009252',
+                backgroundColor: _this.props.currentClubColors.main,
                 legend : {
                     position: 'bottom'
                 }
@@ -264,7 +264,7 @@ var DonutChart = React.createClass({
         return (
             <div className={'component component-donutchart ' + this.props.currentClubCss}>
                 <div className="container">
-                    <h2>How did the team ?</h2>
+                    <h2>How did Claudio and the team do during season {this.props.currentSeasonYear} ?</h2>
                     <div className="row">
                         <div className="col-md-4">
                             <div className="chart chart__donut" id="donut-chart-general"></div>

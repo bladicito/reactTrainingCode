@@ -530,7 +530,7 @@ let entries = {
             entry1: {
                 'assists': '',
                 'away': 'Werder Bremen',
-                'date': '1999-08-28.',
+                'date': '1999-08-28',
                 'doubleYellowCard': '',
                 'goals': '',
                 'home': 'Hertha BSC',
@@ -1017,7 +1017,7 @@ let entries = {
         'mainImage' : 'bayern2014.png',
         'matches'   : {
             'entry1': {
-                'date': '28.07.2001',
+                'date': '2001.07.28',
                 'home': 'Bor. Monchengladbach',
                 'away': 'Bayern Munich',
                 'result': '1:0 ',
@@ -1032,7 +1032,7 @@ let entries = {
                 'playedMinutes': ''
             },
             'entry2': {
-                'date': '04.08.2001',
+                'date': '2001.08.04',
                 'home': 'Bayern Munich',
                 'away': 'FC Schalke 04',
                 'result': '3:0 ',
@@ -1047,7 +1047,7 @@ let entries = {
                 'playedMinutes': '85'
             },
             'entry3': {
-                'date': '11.08.2001',
+                'date': '2001.08.11',
                 'home': 'Bay. Leverkusen',
                 'away': 'Bayern Munich',
                 'result': '1:1 ',
@@ -1062,7 +1062,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry4': {
-                'date': '18.08.2001',
+                'date': '2001.08.18',
                 'home': 'Bayern Munich',
                 'away': 'FC St. Pauli',
                 'result': '2:0 ',
@@ -1077,7 +1077,7 @@ let entries = {
                 'playedMinutes': ''
             },
             'entry5': {
-                'date': '08.09.2001',
+                'date': '2001.09.08',
                 'home': 'Bor. Dortmund',
                 'away': 'Bayern Munich',
                 'result': '0:2 ',
@@ -1092,7 +1092,7 @@ let entries = {
                 'playedMinutes': '12'
             },
             'entry6': {
-                'date': '15.09.2001',
+                'date': '2001.09.15',
                 'home': 'Bayern Munich',
                 'away': 'SC Freiburg',
                 'result': '1:0 ',
@@ -1107,7 +1107,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry7': {
-                'date': '22.09.2001',
+                'date': '2001.09.22',
                 'home': 'Energie Cottbus',
                 'away': 'Bayern Munich',
                 'result': '0:3 ',
@@ -1122,7 +1122,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry8': {
-                'date': '30.09.2001',
+                'date': '2001.09.30',
                 'home': 'Bayern Munich',
                 'away': 'VfB Stuttgart',
                 'result': '4:0 ',
@@ -1137,7 +1137,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry9': {
-                'date': '13.10.2001',
+                'date': '2001.10.13',
                 'home': '1860 Munich',
                 'away': 'Bayern Munich',
                 'result': '1:5 ',
@@ -1152,7 +1152,7 @@ let entries = {
                 'playedMinutes': '15'
             },
             'entry10': {
-                'date': '20.10.2001',
+                'date': '2001.10.20',
                 'home': 'Bayern Munich',
                 'away': '1.FC Kaiserlautern',
                 'result': '4:1 ',
@@ -1167,7 +1167,7 @@ let entries = {
                 'playedMinutes': '21'
             },
             'entry11': {
-                'date': '27.10.2001',
+                'date': '2001.10.27',
                 'home': '1.FC Koeln',
                 'away': 'Bayern Munich',
                 'result': '0:2 ',
@@ -1182,7 +1182,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry12': {
-                'date': '03.11.2001',
+                'date': '2001.11.03',
                 'home': 'Bayern Munich',
                 'away': 'Hamburger SV',
                 'result': '3:0 ',
@@ -1197,7 +1197,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry13': {
-                'date': '17.11.2001',
+                'date': '2001.11.17',
                 'home': 'Werder Bremen',
                 'away': 'Bayern Munich',
                 'result': '1:0 ',
@@ -1212,7 +1212,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry14': {
-                'date': '24.11.2001',
+                'date': '2001.11.24',
                 'home': 'Bayern Munich',
                 'away': '1.FC Nuernberg',
                 'result': '0:0 ',
@@ -1227,7 +1227,7 @@ let entries = {
                 'playedMinutes': '70'
             },
             'entry15': {
-                'date': '02.12.2001',
+                'date': '2001.12.02',
                 'home': 'Hertha BSC',
                 'away': 'Bayern Munich',
                 'result': '2:1 ',
@@ -1242,7 +1242,7 @@ let entries = {
                 'playedMinutes': '17'
             },
             'entry16': {
-                'date': '08.12.2001',
+                'date': '2001.12.08',
                 'home': 'Bayern Munich',
                 'away': 'VfL Wolfsburg',
                 'result': '3:3 ',
@@ -1257,7 +1257,7 @@ let entries = {
                 'playedMinutes': '69'
             },
             'entry17': {
-                'date': '15.12.2001',
+                'date': '2001.12.15',
                 'home': 'Hansa Rostock',
                 'away': 'Bayern Munich',
                 'result': '1:0 ',
@@ -1272,7 +1272,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry18': {
-                'date': '18.12.2001',
+                'date': '2001.12.18',
                 'home': 'Bayern Munich',
                 'away': 'Bor. Monchengladbach',
                 'result': '0:0 ',
@@ -1287,7 +1287,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry19': {
-                'date': '26.01.2002',
+                'date': '2002.01.26',
                 'home': 'FC Schalke 04',
                 'away': 'Bayern Munich',
                 'result': '5:1 ',
@@ -1302,7 +1302,7 @@ let entries = {
                 'playedMinutes': '22'
             },
             'entry20': {
-                'date': '03.02.2002',
+                'date': '2002.02.03',
                 'home': 'Bayern Munich',
                 'away': 'Bay. Leverkusen',
                 'result': '2:0 ',
@@ -1317,7 +1317,7 @@ let entries = {
                 'playedMinutes': '12'
             },
             'entry21': {
-                'date': '06.02.2002',
+                'date': '2002.02.06',
                 'home': 'FC St. Pauli',
                 'away': 'Bayern Munich',
                 'result': '2:1 ',
@@ -1332,7 +1332,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry22': {
-                'date': '09.02.2002',
+                'date': '2002.02.09',
                 'home': 'Bayern Munich',
                 'away': 'Bor. Dortmund',
                 'result': '1:1 ',
@@ -1347,7 +1347,7 @@ let entries = {
                 'playedMinutes': '15'
             },
             'entry23': {
-                'date': '16.02.2002',
+                'date': '2002.02.16',
                 'home': 'SC Freiburg',
                 'away': 'Bayern Munich',
                 'result': '0:2 ',
@@ -1362,7 +1362,7 @@ let entries = {
                 'playedMinutes': '8'
             },
             'entry24': {
-                'date': '23.02.2002',
+                'date': '2002.02.23',
                 'home': 'Bayern Munich',
                 'away': 'Energie Cottbus',
                 'result': '6:0 ',
@@ -1377,7 +1377,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry25': {
-                'date': '02.03.2002',
+                'date': '2002.03.02',
                 'home': 'VfB Stuttgart',
                 'away': 'Bayern Munich',
                 'result': '0:2 ',
@@ -1392,7 +1392,7 @@ let entries = {
                 'playedMinutes': '21'
             },
             'entry26': {
-                'date': '09.03.2002',
+                'date': '2002.03.09',
                 'home': 'Bayern Munich',
                 'away': '1860 Munich',
                 'result': '2:1 ',
@@ -1407,7 +1407,7 @@ let entries = {
                 'playedMinutes': '23'
             },
             'entry27': {
-                'date': '16.03.2002',
+                'date': '2002.03.16',
                 'home': '1.FC Kaiserlautern',
                 'away': 'Bayern Munich',
                 'result': '0:0 ',
@@ -1422,7 +1422,7 @@ let entries = {
                 'playedMinutes': '45'
             },
             'entry28': {
-                'date': '23.03.2002',
+                'date': '2002.03.23',
                 'home': 'Bayern Munich',
                 'away': '1.FC Köln',
                 'result': '3:0 ',
@@ -1437,7 +1437,7 @@ let entries = {
                 'playedMinutes': ''
             },
             'entry29': {
-                'date': '30.03.2002',
+                'date': '2002.03.30',
                 'home': 'Hamburger SV',
                 'away': 'Bayern Munich',
                 'result': '0:0 ',
@@ -1452,7 +1452,7 @@ let entries = {
                 'playedMinutes': '19'
             },
             'entry30': {
-                'date': '06.04.2002',
+                'date': '2002.04.06',
                 'home': 'Bayern Munich',
                 'away': 'Werder Bremen',
                 'result': '2:2 ',
@@ -1467,7 +1467,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry31': {
-                'date': '13.04.2002',
+                'date': '2002.04.13',
                 'home': '1.FC Nürnberg',
                 'away': 'Bayern Munich',
                 'result': '1:2 ',
@@ -1482,7 +1482,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry32': {
-                'date': '20.04.2002',
+                'date': '2002.04.20',
                 'home': 'Bayern Munich',
                 'away': 'Hertha BSC',
                 'result': '3:0 ',
@@ -1497,7 +1497,7 @@ let entries = {
                 'playedMinutes': '86'
             },
             'entry33': {
-                'date': '27.04.2002',
+                'date': '2002.04.27',
                 'home': 'VfL Wolfsburg',
                 'away': 'Bayern Munich',
                 'result': '0:1 ',
@@ -1512,7 +1512,7 @@ let entries = {
                 'playedMinutes': '90'
             },
             'entry34': {
-                'date': '04.05.2002',
+                'date': '2002.05.04',
                 'home': 'Bayern Munich',
                 'away': 'Hansa Rostock',
                 'result': '3:2 ',

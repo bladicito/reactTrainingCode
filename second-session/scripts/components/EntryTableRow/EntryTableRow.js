@@ -6,7 +6,7 @@ var EntryTableRow = React.createClass({
     nameToImageShield : function(name) {
         var pathToImage = Helpers.nameToImageShield(name);
         return (
-            <Shield imageSource={pathToImage} altText={name}/>
+            <Shield imageSource={'build/svg/'+pathToImage} altText={name}/>
         )
     },
 
