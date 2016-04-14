@@ -24,6 +24,7 @@ var App = React.createClass({
         this.state.mainImage         = Entries[this.state.currentSeason].mainImage;
         this.state.currentClub       = Entries[this.state.currentSeason].club;
         this.state.currentClubCss    = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
+        this.state.matchesData       = Entries[this.state.currentSeason].matches;
 
 
         this.initSummary(this.state.seasonData);
@@ -33,7 +34,8 @@ var App = React.createClass({
             defaultSeason:  this.state.defaultSeason,
             currentSeason:  this.state.currentSeason,
             currentClub:    this.state.currentClub,
-            currentClubCss: this.state.currentClubCss
+            currentClubCss: this.state.currentClubCss,
+            matchesData:    this.state.matchesData
         });
 
     },
@@ -96,6 +98,7 @@ var App = React.createClass({
         this.state.mainImage            = Entries[this.state.currentSeason].mainImage;
         this.state.currentClub          = Entries[this.state.currentSeason].club;
         this.state.currentClubCss       = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
+        this.state.matchesData          = Entries[this.state.currentSeason].matches;
         this.initSummary(this.state.seasonData);
 
 
@@ -106,7 +109,8 @@ var App = React.createClass({
             currentSeason       : this.state.currentSeason,
             currentClub         : this.state.currentClub,
             currentClubCss      : this.state.currentClubCss,
-            currentSeasonYear   : this.state.currentSeasonYear
+            currentSeasonYear   : this.state.currentSeasonYear,
+            matchesData         : this.state.matchesData
 
         });
 
@@ -146,7 +150,7 @@ var App = React.createClass({
                          updateDataSeason  = {this.updateDataSeason}
                 />
                 <LineChart
-                    seasonMatchesData ={seasonMatchesData}
+                    seasonMatchesData = {this.state.matchesData}
                     currentClub       = {this.state.currentClub}
                     currentClubCss    = {this.state.currentClubCss}
                     currentSeason     = {this.state.currentSeason}
@@ -154,13 +158,17 @@ var App = React.createClass({
                     currentClubColors = {clubColors}
                 />
                 <DonutCharts
-                    seasonMatchesData   = {seasonMatchesData}
+                    seasonMatchesData   = {this.state.matchesData}
                     currentClub         = {this.state.currentClub}
                     currentClubCss      = {this.state.currentClubCss}
                     currentSeasonYear   = {this.state.currentSeasonYear}
                     currentClubColors   = {clubColors}
                 />
-                <EntryTable seasonMatchesData={seasonMatchesData} currentClub={this.state.currentClub} currentClubCss={this.state.currentClubCss}/>
+                <EntryTable
+                    seasonMatchesData   = {this.state.matchesData}
+                    currentClub         = {this.state.currentClub}
+                    currentClubCss      = {this.state.currentClubCss}
+                />
             </div>
         )
     }
