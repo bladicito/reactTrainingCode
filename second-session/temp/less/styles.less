@@ -848,6 +848,11 @@
 @color-pesquero-main         :  #0f60b3;
 @color-pesquero-secondary    :  #fbbb00;
 
+@color-chelsea-main         :  #0B1E5E;
+@color-chelsea-secondary    :  #3064CA;
+
+
+
 
 //////////////////////////////////////////////////////////
 //
@@ -1606,6 +1611,7 @@
 
 
 }
+
 .component-entry-table-row {
     .shield__mini {
         width: 15px;
@@ -1624,7 +1630,6 @@
 
 
 
-
 .component-main-picture {
     display: inline-block;
     width:100%;
@@ -1634,6 +1639,7 @@
     .bayern-munich();
     .alianza-lima();
     .deportivo-pesquero();
+    .chelsea();
 
     .summary__image {
         width: 100%;
@@ -1694,6 +1700,15 @@
         background-color: @color-pesquero-main;
         .summary__title {
             background-color: @color-pesquero-secondary;
+        }
+    }
+}
+
+.chelsea() {
+    &.fc-chelsea {
+        background-color: @color-chelsea-main;
+        .summary__title {
+            background-color: @color-chelsea-secondary;
         }
     }
 }

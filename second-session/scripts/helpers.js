@@ -56,6 +56,10 @@ let helpers = {
                 objColors.main      = '#0f60b3';
                 objColors.secondary = '#fbbb00';
                 break;
+            case 'FC Chelsea' :
+                objColors.main      = '#0B1E5E';
+                objColors.secondary = '#3064CA';
+                break;
         }
 
         return objColors;
@@ -138,6 +142,9 @@ let helpers = {
                 break;
             case 'Alianza Lima' :
                 imagePath = 'alianza-lima.svg';
+                break;
+            case 'FC Chelsea' :
+                imagePath = 'fc-chelsea.svg';
                 break;
         }
         return imagePath;

@@ -406,6 +406,12 @@
 .component-summary.deportivo-pesquero .summary__title {
   background-color: #fbbb00;
 }
+.component-summary.fc-chelsea {
+  background-color: #0B1E5E;
+}
+.component-summary.fc-chelsea .summary__title {
+  background-color: #3064CA;
+}
 .component-summary .summary__image {
   width: 100%;
 }
