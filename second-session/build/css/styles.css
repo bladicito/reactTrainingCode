@@ -8834,16 +8834,6 @@ button.close {
   }
 }
 @color-primary-button #A7A7A7;
-.component-donutchart.werder-bremen {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #006737;
-}
-.component-donutchart.bayern-munich {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #ff0040;
-}
 .component-controls .control {
   position: relative;
   display: inline-block;
@@ -8863,6 +8853,16 @@ button.close {
   top: -12px;
   margin-right: 20px;
   margin-left: 20px;
+}
+.component-donutchart.werder-bremen {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006737;
+}
+.component-donutchart.bayern-munich {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ff0040;
 }
 .component-entry-table .body__data {
   font-size: 12px;
@@ -8996,6 +8996,12 @@ button.close {
 }
 .component-summary.bayern-munich .summary__title {
   background-color: #ff0040;
+}
+.component-summary.alianza-lima {
+  background-color: #0b4784;
+}
+.component-summary.alianza-lima .summary__title {
+  background-color: #0f60b3;
 }
 .component-summary .summary__image {
   width: 100%;

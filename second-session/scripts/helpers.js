@@ -47,6 +47,11 @@ let helpers = {
             case 'Bayern Munich' :
                 objColors.main      = '#c03';
                 objColors.secondary = '#ff0040';
+                break;
+            case 'Alianza Lima' :
+                objColors.main      = '#0b4784';
+                objColors.secondary = '#0f60b3';
+                break;
         }
 
         return objColors;
@@ -111,6 +116,24 @@ let helpers = {
                 break;
             case 'Bor. Monchengladbach' :
                 imagePath = 'borusia_monchengladbach.svg';
+                break;
+            case 'FC St. Pauli' :
+                imagePath = 'st_pauli.svg';
+                break;
+            case 'Energie Cottbus' :
+                imagePath = 'energie_cottbus.svg';
+                break;
+            case '1.FC Nuernberg' :
+                imagePath = 'fc_nuernberg.svg';
+                break;
+            case '1.FC Koeln' :
+                imagePath = 'fc_koeln.svg';
+                break;
+            case 'Deportivo Pesquero' :
+                imagePath = 'pesquero.svg';
+                break;
+            case 'Alianza Lima' :
+                imagePath = 'alianza-lima.svg';
                 break;
         }
         return imagePath;

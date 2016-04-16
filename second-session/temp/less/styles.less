@@ -842,6 +842,9 @@
 @color-bayern-munich-main:      #c03;
 @color-bayern-munich-secondary: #ff0040;
 
+@color-alianza-lima-main:       #0b4784;
+@color-alianza-lima-secondary:  #0f60b3;
+
 
 //////////////////////////////////////////////////////////
 //
@@ -1442,22 +1445,6 @@
 .main-claudio-pizarro{
 
 }
-.component-donutchart {
-
-    &.werder-bremen {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-color: @color-werder-bremen-secondary;
-    }
-
-    &.bayern-munich {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-color: @color-bayern-munich-secondary;
-    }
-
-
-}
 .component-controls {
     .control {
         & > .component-main-picture {
@@ -1481,6 +1468,22 @@
         }
         
     }
+}
+.component-donutchart {
+
+    &.werder-bremen {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: @color-werder-bremen-secondary;
+    }
+
+    &.bayern-munich {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: @color-bayern-munich-secondary;
+    }
+
+
 }
 .component-entry-table {
 
@@ -1626,6 +1629,7 @@
 .component-summary {
     .werder-bremen();
     .bayern-munich();
+    .alianza-lima();
 
     .summary__image {
         width: 100%;
@@ -1670,3 +1674,13 @@
         }
     }
 }
+
+.alianza-lima() {
+    &.alianza-lima {
+        background-color: @color-alianza-lima-main;
+        .summary__title {
+            background-color: @color-alianza-lima-secondary;
+        }
+    }
+}
+

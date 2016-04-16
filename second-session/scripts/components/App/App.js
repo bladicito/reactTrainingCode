@@ -10,13 +10,44 @@ import Entries from     '../../entries';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            currentSeason       : 'season7',
-            nextSeason          : 'season7',
-            prevSeason          : 'season5'
+            currentSeason       : 'season6'
         }
     },
 
+    setCurrentSeasons : function() {
+        var entriesNames        = Object.keys(Entries),
+            currentSeasonIndex  = entriesNames.indexOf(this.state.currentSeason),
+            amountSeasons       = entriesNames.length
+        ;
+
+
+        console.log('amountseasons: ' + amountSeasons);
+        console.log('current index season: ' + currentSeasonIndex);
+        console.log('current index name: ' + entriesNames[currentSeasonIndex]);
+
+
+        if (currentSeasonIndex === 0) {
+            this.state.prevSeason = entriesNames[amountSeasons];
+            this.state.nextSeason = entriesNames[currentSeasonIndex + 1];
+        } else if(currentSeasonIndex === amountSeasons - 1) {
+            this.state.prevSeason = entriesNames[currentSeasonIndex - 1];
+            this.state.nextSeason = entriesNames[0];
+        } else {
+            this.state.prevSeason = entriesNames[currentSeasonIndex - 1];
+            this.state.nextSeason = entriesNames[currentSeasonIndex + 1];
+        }
+
+
+        this.setState({
+            prevSeason : this.state.prevSeason,
+            nextSeason : this.state.nextSeason
+        });
+
+    },
+
     componentWillMount : function () {
+        this.setCurrentSeasons();
+
         google.charts.load("current", {packages:["corechart"]});
 
         this.state.seasonData        = Entries[this.state.currentSeason];
@@ -31,8 +62,6 @@ var App = React.createClass({
         this.setState({
             mainImage :     this.state.mainImage,
             seasonData:     this.state.seasonData,
-            defaultSeason:  this.state.defaultSeason,
-            currentSeason:  this.state.currentSeason,
             currentClub:    this.state.currentClub,
             currentClubCss: this.state.currentClubCss,
             matchesData:    this.state.matchesData
@@ -102,6 +131,8 @@ var App = React.createClass({
         this.initSummary(this.state.seasonData);
 
 
+        this.setCurrentSeasons();
+
         this.setState({
             mainImage           : this.state.mainImage,
             seasonData          : this.state.seasonData,
@@ -116,11 +147,7 @@ var App = React.createClass({
 
     },
 
-    updateCharts : function() {
-        DonutCharts.startChartGeneral();
-        DonutCharts.startChartWithoutPiza();
-        DonutCharts.startChartWithPiza();
-    },
+
     
 
 
