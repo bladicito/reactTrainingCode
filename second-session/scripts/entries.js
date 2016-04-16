@@ -4,7 +4,7 @@ let entries = {
         'country': 'Peru',
         'club': 'Deportivo Pesquero',
         'year': '1996',
-        'mainImage': 'alianza.png',
+        'mainImage': 'alianza1999.png',
         'matches': {}
     },
     
@@ -13,7 +13,7 @@ let entries = {
         'country': 'Peru',
         'club': 'Deportivo Pesquero',
         'year': '1997',
-        'mainImage': 'alianza.png',
+        'mainImage': 'alianza1999.png',
         'matches': {}
     },
     
@@ -22,26 +22,26 @@ let entries = {
         'country': 'Peru',
         'club': 'Alianza Lima',
         'year': '1998',
-        'mainImage': 'alianza.png',
+        'mainImage': 'alianza1999.png',
         'matches': {}
     },
     
     season3: {
-        'season': 'Season 1999',
-        'country': 'Peru',
-        'club': 'Alianza Lima',
-        'year': '1999',
-        'mainImage': 'alianza.png',
-        'matches': {}
+        'season'    : 'Season 1999',
+        'country'   : 'Peru',
+        'club'      : 'Alianza Lima',
+        'year'      : '1999',
+        'mainImage' : 'alianza1999.png',
+        'matches'   : {}
     },
     
     season4: {
-        'season': 'Season 1999 - 2000',
-        'country': 'Germany',
-        'club': 'Werder Bremen',
-        'year': '1999 - 2000',
-        'mainImage': 'werder1999.png',
-        'matches': {
+        'season'    : 'Season 1999 - 2000',
+        'country'   : 'Germany',
+        'club'      : 'Werder Bremen',
+        'year'      : '1999 - 2000',
+        'mainImage' : 'bremen1999.png',
+        'matches'   : {
             entry1: {
                 'assists': '',
                 'away': 'Werder Bremen',
@@ -529,7 +529,7 @@ let entries = {
         'country'   : 'Germany',
         'club'      : 'Werder Bremen',
         'year'      : '2000 - 2001',
-        'mainImage' : 'werder2000.png',
+        'mainImage' : 'bremen2000.png',
         'matches'   : {
             entry1: {
                 'date': '2000.08.12',

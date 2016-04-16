@@ -21,13 +21,8 @@ var App = React.createClass({
         ;
 
 
-        console.log('amountseasons: ' + amountSeasons);
-        console.log('current index season: ' + currentSeasonIndex);
-        console.log('current index name: ' + entriesNames[currentSeasonIndex]);
-
-
         if (currentSeasonIndex === 0) {
-            this.state.prevSeason = entriesNames[amountSeasons];
+            this.state.prevSeason = entriesNames[amountSeasons - 1];
             this.state.nextSeason = entriesNames[currentSeasonIndex + 1];
         } else if(currentSeasonIndex === amountSeasons - 1) {
             this.state.prevSeason = entriesNames[currentSeasonIndex - 1];
@@ -56,6 +51,7 @@ var App = React.createClass({
         this.state.currentClub       = Entries[this.state.currentSeason].club;
         this.state.currentClubCss    = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
         this.state.matchesData       = Entries[this.state.currentSeason].matches;
+        this.state.currentClubColors = Utils.getClubColors(this.state.currentClub);
 
 
         this.initSummary(this.state.seasonData);
@@ -64,7 +60,8 @@ var App = React.createClass({
             seasonData:     this.state.seasonData,
             currentClub:    this.state.currentClub,
             currentClubCss: this.state.currentClubCss,
-            matchesData:    this.state.matchesData
+            matchesData:    this.state.matchesData,
+            currentClubColors: this.state.currentClubColors
         });
 
     },
@@ -128,6 +125,7 @@ var App = React.createClass({
         this.state.currentClub          = Entries[this.state.currentSeason].club;
         this.state.currentClubCss       = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
         this.state.matchesData          = Entries[this.state.currentSeason].matches;
+        this.state.currentClubColors    = Utils.getClubColors(this.state.currentClub);
         this.initSummary(this.state.seasonData);
 
 
@@ -141,7 +139,8 @@ var App = React.createClass({
             currentClub         : this.state.currentClub,
             currentClubCss      : this.state.currentClubCss,
             currentSeasonYear   : this.state.currentSeasonYear,
-            matchesData         : this.state.matchesData
+            matchesData         : this.state.matchesData,
+            currentClubColors   : this.state.currentClubColors
 
         });
 
@@ -152,8 +151,8 @@ var App = React.createClass({
 
 
     render: function() {
-        var seasonMatchesData = Entries[this.state.currentSeason].matches,
-            clubColors        = Utils.getClubColors(this.state.currentClub);
+        var seasonMatchesData = Entries[this.state.currentSeason].matches;
+
 
 
 
@@ -182,14 +181,14 @@ var App = React.createClass({
                     currentClubCss    = {this.state.currentClubCss}
                     currentSeason     = {this.state.currentSeason}
                     currentSeasonYear = {this.state.currentSeasonYear}
-                    currentClubColors = {clubColors}
+                    currentClubColors = {this.state.currentClubColors}
                 />
                 <DonutCharts
                     seasonMatchesData   = {this.state.matchesData}
                     currentClub         = {this.state.currentClub}
                     currentClubCss      = {this.state.currentClubCss}
                     currentSeasonYear   = {this.state.currentSeasonYear}
-                    currentClubColors   = {clubColors}
+                    currentClubColors   = {this.state.currentClubColors}
                 />
                 <EntryTable
                     seasonMatchesData   = {this.state.matchesData}

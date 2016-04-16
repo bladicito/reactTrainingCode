@@ -845,6 +845,9 @@
 @color-alianza-lima-main:       #0b4784;
 @color-alianza-lima-secondary:  #0f60b3;
 
+@color-pesquero-main         :  #0f60b3;
+@color-pesquero-secondary    :  #fbbb00;
+
 
 //////////////////////////////////////////////////////////
 //
@@ -1630,12 +1633,14 @@
     .werder-bremen();
     .bayern-munich();
     .alianza-lima();
+    .deportivo-pesquero();
 
     .summary__image {
         width: 100%;
     }
     .summary-shield {
         margin-top: 40px;
+        max-width:140px;
     }
 
     .summary__numbers {
@@ -1680,6 +1685,15 @@
         background-color: @color-alianza-lima-main;
         .summary__title {
             background-color: @color-alianza-lima-secondary;
+        }
+    }
+}
+
+.deportivo-pesquero() {
+    &.deportivo-pesquero {
+        background-color: @color-pesquero-main;
+        .summary__title {
+            background-color: @color-pesquero-secondary;
         }
     }
 }

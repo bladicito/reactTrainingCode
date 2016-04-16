@@ -52,6 +52,10 @@ let helpers = {
                 objColors.main      = '#0b4784';
                 objColors.secondary = '#0f60b3';
                 break;
+            case 'Deportivo Pesquero' :
+                objColors.main      = '#0f60b3';
+                objColors.secondary = '#fbbb00';
+                break;
         }
 
         return objColors;
