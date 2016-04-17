@@ -4,260 +4,251 @@ import React from 'react';
 var DonutChart = React.createClass({
 
     componentDidMount : function() {
+        var stats = this.gameStats(this.props.seasonMatchesData);
 
-        var clubStats = this.gamesStats(this.props.seasonMatchesData),
-            matchsWithPiza = this.gamesstatsWithPiza(this.props.seasonMatchesData),
-            matchesWithoutPiza = this.gamesstatsWithoutPiza(this.props.seasonMatchesData)
+        var chartGeneral = {
+                data            : stats.generalTeam(),
+                title           : 'Games in current season for ' + this.props.currentClub,
+                outlet          : document.getElementById('donut-chart-general'),
+                isFirstRender   : true
+            },
+            chartWithPizarro = {
+                data            : stats.withPizarro(),
+                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' with Pizarro on the pitch',
+                outlet          : document.getElementById('donut-chart-with-piza'),
+                isFirstRender   : true
+            },
+            chartWithoutPizarro = {
+                data            : stats.withoutPizarro(),
+                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' without Pizarro on the pitch',
+                outlet          : document.getElementById('donut-chart-without-piza'),
+                isFirstRender   : true
+            }
         ;
 
-        this.startChartGeneral(clubStats);
-        this.startChartWithPiza(matchsWithPiza);
-        this.startChartWithoutPiza(matchesWithoutPiza);
+        this.startChart(chartGeneral);
+        this.startChart(chartWithPizarro);
+        this.startChart(chartWithoutPizarro);
 
     },
-    startChartGeneral : function(clubStats) {
-        google.charts.setOnLoadCallback(drawChart);
+
+    componentDidUpdate : function() {
+        var stats = this.gameStats(this.props.seasonMatchesData);
+        var chartGeneral = {
+                data            : stats.generalTeam(),
+                title           : 'Games in current season for ' + this.props.currentClub,
+                outlet          : document.getElementById('donut-chart-general'),
+                isFirstRender   : false
+            },
+            chartWithPizarro = {
+                data            : stats.withPizarro(),
+                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' with Pizarro on the pitch',
+                outlet          : document.getElementById('donut-chart-with-piza'),
+                isFirstRender   : false
+            },
+            chartWithoutPizarro = {
+                data            : stats.withoutPizarro(),
+                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' without Pizarro on the pitch',
+                outlet          : document.getElementById('donut-chart-without-piza'),
+                isFirstRender   : false
+            }
+        ;
+
+        this.startChart(chartGeneral);
+        this.startChart(chartWithPizarro);
+        this.startChart(chartWithoutPizarro);
+    },
+
+    startChart : function(data) {
         var _this = this;
 
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Won',   clubStats.won],
-                ['Lost',  clubStats.lost],
-                ['Draw',  clubStats.draw]
-            ]);
-
-            var options = {
-                title: 'Games in current season for ' + _this.props.currentClub,
-                pieHole: 0.4,
-                backgroundColor: _this.props.currentClubColors.main,
-                legend : {
-                    position: 'bottom'
-                }
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('donut-chart-general'));
-            chart.draw(data, options);
+        if(data.isFirstRender) {
+            google.charts.setOnLoadCallback(function() {
+                _this.drawChart(data);
+            });
+        } else {
+            this.drawChart(data);
         }
+
+
     },
 
-    gamesStats : function(seasonData) {
-
+    drawChart : function(dataSeasons){
+       console.log(dataSeasons);
         var _this = this,
-            result,
-            matchesStats = {
-                draw: 0,
-                lost: 0,
-                won:0,
-                amountGames: 0
-            };
-
-        Object.keys(seasonData).map(function(currentValue) {
-            var currentGame = seasonData[currentValue];
-
-
-
-
-            result = currentGame.result.split(':');
-
-
-            if (currentGame.home === _this.props.currentClub) {
-                if (parseInt(result[0]) > parseInt(result[1])) {
-                    matchesStats.won++;
-                }
-                if (parseInt(result[0]) < parseInt(result[1])) {
-                    matchesStats.lost++;
-
-                } if (parseInt(result[0]) === parseInt(result[1])) {
-                    matchesStats.draw++;
-                }
-            }
-
-            if (currentGame.away === _this.props.currentClub) {
-                if (parseInt(result[0]) < parseInt(result[1])) {
-                    matchesStats.won++;
-                }
-                if (parseInt(result[0]) > parseInt(result[1])) {
-                    matchesStats.lost++;
-
-                } if (parseInt(result[0]) === parseInt(result[1])) {
-                    matchesStats.draw++;
-                }
-            }
-            matchesStats.amountGames++;
-        });
-
-
-
-        return matchesStats;
-
-    },
-
-    gamesstatsWithPiza : function(seasonData) {
-        var _this = this,
-            result,
-            matchesStats = {
-                draw: 0,
-                lost: 0,
-                won:0,
-                amountGames: 0
-            };
-
-        Object.keys(seasonData).map(function(currentValue) {
-            var currentGame = seasonData[currentValue];
-
-            if (currentGame.playedMinutes !== '') {
-
-
-                result = currentGame.result.split(':');
-                if (currentGame.home === _this.props.currentClub) {
-                    if (parseInt(result[0]) > parseInt(result[1])) {
-                        matchesStats.won++;
-                    }
-                    if (parseInt(result[0]) < parseInt(result[1])) {
-                        matchesStats.lost++;
-
-                    } if (parseInt(result[0]) === parseInt(result[1])) {
-                        matchesStats.draw++;
-                    }
-                }
-
-                if (currentGame.away === _this.props.currentClub) {
-                    if (parseInt(result[0]) < parseInt(result[1])) {
-                        matchesStats.won++;
-                    }
-                    if (parseInt(result[0]) > parseInt(result[1])) {
-                        matchesStats.lost++;
-
-                    } if (parseInt(result[0]) === parseInt(result[1])) {
-                        matchesStats.draw++;
-                    }
-                }
-                matchesStats.amountGames++;
-            }
-        });
-
-        return matchesStats;
-
-    },
-
-    gamesstatsWithoutPiza : function(seasonData) {
-        var _this = this,
-            result,
-            matchesStats = {
-                draw: 0,
-                lost: 0,
-                won:0,
-                amountGames: 0
-            };
-
-        Object.keys(seasonData).map(function(currentValue) {
-            var currentGame = seasonData[currentValue];
-
-            if (currentGame.playedMinutes === '') {
-
-
-                result = currentGame.result.split(':');
-                if (currentGame.home === _this.props.currentClub) {
-                    if (parseInt(result[0]) > parseInt(result[1])) {
-                        matchesStats.won++;
-                    }
-                    if (parseInt(result[0]) < parseInt(result[1])) {
-                        matchesStats.lost++;
-
-                    } if (parseInt(result[0]) === parseInt(result[1])) {
-                        matchesStats.draw++;
-                    }
-                }
-
-                if (currentGame.away === _this.props.currentClub) {
-                    if (parseInt(result[0]) < parseInt(result[1])) {
-                        matchesStats.won++;
-                    }
-                    if (parseInt(result[0]) > parseInt(result[1])) {
-                        matchesStats.lost++;
-
-                    } if (parseInt(result[0]) === parseInt(result[1])) {
-                        matchesStats.draw++;
-                    }
-                }
-                matchesStats.amountGames++;
-            }
-        });
-
-        return matchesStats;
-
-    },
-
-
-    startChartWithPiza : function(matchesStats) {
-        google.charts.setOnLoadCallback(drawChart);
-        var _this = this;
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
+            data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
-                ['Won',  matchesStats.won],
-                ['Lost', matchesStats.lost],
-                ['Draw', matchesStats.draw]
+                ['Won',   dataSeasons.data.won],
+                ['Lost',  dataSeasons.data.lost],
+                ['Draw',  dataSeasons.data.draw]
             ]);
 
-            var options = {
-                title: 'Season ' + _this.props.currentSeasonYear + ' for ' + _this.props.currentClub + ' with Pizarro on the pitch',
-                pieHole: 0.4,
-                legend : {
-                    position: 'bottom'
-                },
-                backgroundColor : {
-                    stroke: '#f2f2f2',
-                    fill: _this.props.currentClubColors.main,
-                    strokeWidth: 0
-                },
-                chartArea: {
-                    backgroundColor: {
-                        stroke: 'purple',
-                        strokeWidth: 10
-                    }
-                },
-                height: 200,
+        var options = {
+            title: dataSeasons.title,
+            titleTextStyle:  {
+                color : '#fff'
+            },
+            pieHole: 0.4,
+            backgroundColor: _this.props.currentClubColors.main,
+            legend : {
+                position: 'bottom',
+                textStyle : {
+                    color : '#fff'
+                }
+            }
+        };
 
-            };
+        var chart = new google.visualization.PieChart(dataSeasons.outlet);
+        chart.draw(data, options);
 
-            var chart = new google.visualization.PieChart(document.getElementById('donut-chart-with-piza'));
-            chart.draw(data, options);
-
-        }
     },
 
-    startChartWithoutPiza : function(matchesStats) {
-        google.charts.setOnLoadCallback(drawChart);
-        var _this = this;
 
-        function drawChart() {
 
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Won',  matchesStats.won],
-                ['Lost', matchesStats.lost],
-                ['Draw', matchesStats.draw]
-            ]);
+    gameStats : function(seasonData) {
+        var _this        = this;
 
-            var options = {
-                title: 'Games in current season for ' + _this.props.currentClub + ' without Pizarro',
-                pieHole: 0.4,
-                backgroundColor: _this.props.currentClubColors.main,
-                legend : {
-                    position: 'bottom'
-                }
-            };
+        return {
+            withPizarro : function() {
+                var matchesStats = {
+                    draw: 0,
+                    lost: 0,
+                    won:0,
+                    amountGames: 0
+                };
 
-            var chart = new google.visualization.PieChart(document.getElementById('donut-chart-without-piza'));
-            chart.draw(data, options);
+                Object.keys(seasonData).map(function(currentValue) {
+                    var currentGame = seasonData[currentValue],
+                        result
+                    ;
+
+                    if (currentGame.playedMinutes !== '') {
+
+
+                        result = currentGame.result.split(':');
+                        if (currentGame.home === _this.props.currentClub) {
+                            if (parseInt(result[0]) > parseInt(result[1])) {
+                                matchesStats.won++;
+                            }
+                            if (parseInt(result[0]) < parseInt(result[1])) {
+                                matchesStats.lost++;
+
+                            } if (parseInt(result[0]) === parseInt(result[1])) {
+                                matchesStats.draw++;
+                            }
+                        }
+
+                        if (currentGame.away === _this.props.currentClub) {
+                            if (parseInt(result[0]) < parseInt(result[1])) {
+                                matchesStats.won++;
+                            }
+                            if (parseInt(result[0]) > parseInt(result[1])) {
+                                matchesStats.lost++;
+
+                            } if (parseInt(result[0]) === parseInt(result[1])) {
+                                matchesStats.draw++;
+                            }
+                        }
+                        matchesStats.amountGames++;
+                    }
+                });
+
+                return matchesStats;
+
+            },
+            withoutPizarro : function () {
+                var matchesStats = {
+                    draw: 0,
+                    lost: 0,
+                    won:0,
+                    amountGames: 0
+                };
+
+                Object.keys(seasonData).map(function(currentValue) {
+                    var currentGame = seasonData[currentValue],
+                        result
+                    ;
+
+                    if (currentGame.playedMinutes === '') {
+
+
+                        result = currentGame.result.split(':');
+                        if (currentGame.home === _this.props.currentClub) {
+                            if (parseInt(result[0]) > parseInt(result[1])) {
+                                matchesStats.won++;
+                            }
+                            if (parseInt(result[0]) < parseInt(result[1])) {
+                                matchesStats.lost++;
+
+                            } if (parseInt(result[0]) === parseInt(result[1])) {
+                                matchesStats.draw++;
+                            }
+                        }
+
+                        if (currentGame.away === _this.props.currentClub) {
+                            if (parseInt(result[0]) < parseInt(result[1])) {
+                                matchesStats.won++;
+                            }
+                            if (parseInt(result[0]) > parseInt(result[1])) {
+                                matchesStats.lost++;
+
+                            } if (parseInt(result[0]) === parseInt(result[1])) {
+                                matchesStats.draw++;
+                            }
+                        }
+                        matchesStats.amountGames++;
+                    }
+                });
+
+                return matchesStats;
+
+            },
+            generalTeam : function() {
+                var result;
+                var matchesStats = {
+                    draw: 0,
+                    lost: 0,
+                    won:0,
+                    amountGames: 0
+                };
+
+                Object.keys(seasonData).map(function(currentValue) {
+                    var currentGame = seasonData[currentValue];
+                    result          = currentGame.result.split(':');
+
+
+                    if (currentGame.home === _this.props.currentClub) {
+                        if (parseInt(result[0]) > parseInt(result[1])) {
+                            matchesStats.won++;
+                        }
+                        if (parseInt(result[0]) < parseInt(result[1])) {
+                            matchesStats.lost++;
+
+                        } if (parseInt(result[0]) === parseInt(result[1])) {
+                            matchesStats.draw++;
+                        }
+                    }
+
+                    if (currentGame.away === _this.props.currentClub) {
+                        if (parseInt(result[0]) < parseInt(result[1])) {
+                            matchesStats.won++;
+                        }
+                        if (parseInt(result[0]) > parseInt(result[1])) {
+                            matchesStats.lost++;
+
+                        } if (parseInt(result[0]) === parseInt(result[1])) {
+                            matchesStats.draw++;
+                        }
+                    }
+                    matchesStats.amountGames++;
+                });
+
+                return matchesStats;
+            }
         }
 
     },
-    
+
 
     render: function() {
         return (
