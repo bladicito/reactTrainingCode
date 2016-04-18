@@ -1,3 +1,4 @@
+@breakpoint-mobile : 480px;
 
 //////////////////////////////////////////////////////////
 //
@@ -839,17 +840,17 @@
 @color-werder-bremen-main:      #009252;
 @color-werder-bremen-secondary: #006737;
 
-@color-bayern-munich-main:      #c03;
-@color-bayern-munich-secondary: #ff0040;
+@color-bayern-munich-main:      #ff0040;
+@color-bayern-munich-secondary: #bb002f;
 
-@color-alianza-lima-main:       #0b4784;
-@color-alianza-lima-secondary:  #0f60b3;
+@color-alianza-lima-main:       #0f60b3;
+@color-alianza-lima-secondary:  #0b4784;
 
 @color-pesquero-main         :  #0f60b3;
 @color-pesquero-secondary    :  #fbbb00;
 
-@color-chelsea-main         :  #0B1E5E;
-@color-chelsea-secondary    :  #3064CA;
+@color-chelsea-main         :  #3064CA;
+@color-chelsea-secondary    :  #0B1E5E;
 
 
 
@@ -1488,14 +1489,23 @@
     &.bayern-munich {
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color: @color-bayern-munich-secondary;
+        background-color: @color-bayern-munich-main;
+    }
+
+    &.fc-chelsea {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: @color-chelsea-main;
+    }
+    &.alianza-lima {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: @color-alianza-lima-main;
     }
 
 
 }
 .component-entry-table {
-
-
     .tableGeneral();
     &.werder-bremen {
         background-color: @color-white;
@@ -1515,6 +1525,15 @@
         }
     }
 
+    &.fc-chelsea {
+        background-color: @color-white;
+        .tableColorsForClub(@color-chelsea-secondary, @color-white);
+        .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
     .icon {
         width: 15px;
         height: auto;
@@ -1526,25 +1545,24 @@
 }
 
 .tableColorsForClub(@mainColor, @textColor) {
-    @base: @mainColor;
-    @complement1: spin(@base, 180);
-    @complement2: darken(spin(@base, 180), 5%);
-    @lighten1: lighten(@base, 75%);
-    @lighten2: lighten(@base, 10%);
+    @complement1:   spin(@mainColor, 180);
+    @complement2:   darken(spin(@mainColor, 180), 5%);
+    @lighten1:      lighten(@mainColor, 60%);
+    @lighten2:      lighten(@mainColor, 10%);
 
     tbody tr:nth-child(odd) {
         background-color: @lighten1;
     }
 
     thead {
-        background-color: @base;
+        background-color: @mainColor;
         color: @textColor;
         th {
-            border-left: 1px solid @base;
+            border-left: 1px solid @mainColor;
             border-bottom: 1px solid @mainColor;
         }
         th:last-child {
-            border-right: 1px solid @base;
+            border-right: 1px solid @mainColor;
         }
 
     }
@@ -1611,6 +1629,64 @@
 
 
 }
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .component-entry-table {
+        .header__data--played-mins {
+            display: none;
+        }
+        .header__data--in-min-in {
+            display: none;
+        }
+        .header__data--in-min-out {
+            display: none;
+        }
+
+        .header__data--date {
+            width: 11.11%;
+        }
+        .header__data--local {
+            width: 11.11%;
+        }
+        .header__data--visit {
+            width: 11.11%;
+        }
+        .header__data--score {
+            width: 11.11%;
+        }
+        .header__data--goals {
+            width: 11.11%;
+        }
+        .header__data--assists {
+            width: 11.11%;
+        }
+        .header__data--cards-y {
+            width: 11.11%;
+        }
+        .header__data--cards-ry {
+            width: 11.11%;
+        }
+        .header__data--cards-r {
+            width: 11.11%;
+        }
+
+
+
+
+        .data__cell--played-mins{
+            display: none;
+        }
+        .data__cell--in-min-in{
+            display: none;
+
+        }
+        .data__cell--in-min-out {
+            display: none;
+        }
+    }
+}
+
+
 .component-entry-table-row {
     .shield__mini {
         width: 15px;
@@ -1629,11 +1705,11 @@
 
 
 
-
 .component-main-picture {
     display: inline-block;
     width:100%;
 }
+
 .component-summary {
     .werder-bremen();
     .bayern-munich();

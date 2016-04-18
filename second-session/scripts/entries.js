@@ -8,7 +8,6 @@ let entries = {
         'mainImage': 'alianza1999.png',
         'matches': {}
     },
-    
     season1: {
         'season': 'Season 1997',
         'country': 'Peru',
@@ -17,7 +16,6 @@ let entries = {
         'mainImage': 'alianza1999.png',
         'matches': {}
     },
-    
     season2: {
         'season': 'Season 1998',
         'country': 'Peru',
@@ -26,7 +24,6 @@ let entries = {
         'mainImage': 'alianza1999.png',
         'matches': {}
     },
-    
     season3: {
         'season'    : 'Season 1999',
         'country'   : 'Peru',
@@ -35,7 +32,6 @@ let entries = {
         'mainImage' : 'alianza1999.png',
         'matches'   : {}
     },
-    
     season4: {
         'season'    : 'Season 1999 - 2000',
         'country'   : 'Germany',
@@ -1563,7 +1559,6 @@ let entries = {
             }
         }
     },
-
     season7: {
         'season'    : 'Season 2002 - 2003',
         'country'   : 'Germany',
@@ -2083,7 +2078,6 @@ let entries = {
             }
         }
     },
-
     season8: {
         'season': 'Season 2003 - 2004',
         'country': 'Germany',
@@ -2603,7 +2597,6 @@ let entries = {
             }
         }
     },
-
     season9: {
         'season': 'Season 2007 - 2008',
         'country': 'England',
@@ -3184,6 +3177,5 @@ let entries = {
         }
     }
 };
-
 
 export default entries;

@@ -261,6 +261,16 @@
   padding-bottom: 20px;
   background-color: #ff0040;
 }
+.component-donutchart.fc-chelsea {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #3064CA;
+}
+.component-donutchart.alianza-lima {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #0f60b3;
+}
 .component-entry-table .body__data {
   font-size: 12px;
 }
@@ -308,7 +318,7 @@
   background-color: #FFFFFF;
 }
 .component-entry-table.werder-bremen tbody tr:nth-child(odd) {
-  background-color: #e6fff4;
+  background-color: #9affd0;
 }
 .component-entry-table.werder-bremen thead {
   background-color: #006737;
@@ -338,29 +348,59 @@
   background-color: #FFFFFF;
 }
 .component-entry-table.bayern-munich tbody tr:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: #ffeef2;
 }
 .component-entry-table.bayern-munich thead {
-  background-color: #ff0040;
+  background-color: #bb002f;
   color: #FFFFFF;
 }
 .component-entry-table.bayern-munich thead th {
-  border-left: 1px solid #ff0040;
-  border-bottom: 1px solid #ff0040;
+  border-left: 1px solid #bb002f;
+  border-bottom: 1px solid #bb002f;
 }
 .component-entry-table.bayern-munich thead th:last-child {
-  border-right: 1px solid #ff0040;
+  border-right: 1px solid #bb002f;
 }
 .component-entry-table.bayern-munich tbody tr:last-child td {
-  border-bottom: 1px solid #ff0040;
+  border-bottom: 1px solid #bb002f;
 }
 .component-entry-table.bayern-munich tbody td {
-  border-left: 1px solid #ff0040;
+  border-left: 1px solid #bb002f;
 }
 .component-entry-table.bayern-munich tbody td:last-child {
-  border-right: 1px solid #ff0040;
+  border-right: 1px solid #bb002f;
 }
 .component-entry-table.bayern-munich .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.component-entry-table.fc-chelsea {
+  background-color: #FFFFFF;
+}
+.component-entry-table.fc-chelsea tbody tr:nth-child(odd) {
+  background-color: #a6b8f5;
+}
+.component-entry-table.fc-chelsea thead {
+  background-color: #0B1E5E;
+  color: #FFFFFF;
+}
+.component-entry-table.fc-chelsea thead th {
+  border-left: 1px solid #0B1E5E;
+  border-bottom: 1px solid #0B1E5E;
+}
+.component-entry-table.fc-chelsea thead th:last-child {
+  border-right: 1px solid #0B1E5E;
+}
+.component-entry-table.fc-chelsea tbody tr:last-child td {
+  border-bottom: 1px solid #0B1E5E;
+}
+.component-entry-table.fc-chelsea tbody td {
+  border-left: 1px solid #0B1E5E;
+}
+.component-entry-table.fc-chelsea tbody td:last-child {
+  border-right: 1px solid #0B1E5E;
+}
+.component-entry-table.fc-chelsea .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -368,6 +408,53 @@
   width: 15px;
   height: auto;
   max-height: 15px;
+}
+@media screen and (max-width: 480px) {
+  .component-entry-table .header__data--played-mins {
+    display: none;
+  }
+  .component-entry-table .header__data--in-min-in {
+    display: none;
+  }
+  .component-entry-table .header__data--in-min-out {
+    display: none;
+  }
+  .component-entry-table .header__data--date {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--local {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--visit {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--score {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--goals {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--assists {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--cards-y {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--cards-ry {
+    width: 11.11%;
+  }
+  .component-entry-table .header__data--cards-r {
+    width: 11.11%;
+  }
+  .component-entry-table .data__cell--played-mins {
+    display: none;
+  }
+  .component-entry-table .data__cell--in-min-in {
+    display: none;
+  }
+  .component-entry-table .data__cell--in-min-out {
+    display: none;
+  }
 }
 .component-entry-table-row .shield__mini {
   width: 15px;
@@ -389,16 +476,16 @@
   background-color: #006737;
 }
 .component-summary.bayern-munich {
-  background-color: #c03;
-}
-.component-summary.bayern-munich .summary__title {
   background-color: #ff0040;
 }
+.component-summary.bayern-munich .summary__title {
+  background-color: #bb002f;
+}
 .component-summary.alianza-lima {
-  background-color: #0b4784;
+  background-color: #0f60b3;
 }
 .component-summary.alianza-lima .summary__title {
-  background-color: #0f60b3;
+  background-color: #0b4784;
 }
 .component-summary.deportivo-pesquero {
   background-color: #0f60b3;
@@ -407,10 +494,10 @@
   background-color: #fbbb00;
 }
 .component-summary.fc-chelsea {
-  background-color: #0B1E5E;
+  background-color: #3064CA;
 }
 .component-summary.fc-chelsea .summary__title {
-  background-color: #3064CA;
+  background-color: #0B1E5E;
 }
 .component-summary .summary__image {
   width: 100%;

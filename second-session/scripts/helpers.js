@@ -146,6 +146,27 @@ let helpers = {
             case 'FC Chelsea' :
                 imagePath = 'fc-chelsea.svg';
                 break;
+            case 'Manchester Utd.' :
+                imagePath = 'manchester-united.svg';
+                break;
+            case 'Birmingham City' :
+                imagePath = 'birmingham-city.svg';
+                break;
+            case 'FC Liverpool' :
+                imagePath = 'fc-liverpool.svg';
+                break;
+            case 'Aston Villa' :
+                imagePath = 'aston-villa.svg';
+                break;
+            case 'FC Reading' :
+                imagePath = 'fc-reading.svg';
+                break;
+            case 'FC Portsmouth' :
+                imagePath = 'fc-porstmouth.svg';
+                break;
+            case 'Blackburn Rov.' :
+                imagePath = 'blackburn-roverts.svg';
+                break;
         }
         return imagePath;
     }
