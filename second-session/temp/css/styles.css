@@ -20,7 +20,7 @@
 .main-claudio-pizarro .h3,
 .main-claudio-pizarro h4,
 .main-claudio-pizarro .h4 {
-  font-family: 'HelveticaNeueW01-Thin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
   line-height: 1;
   color: #FFFFFF;
@@ -81,7 +81,7 @@
 .main-claudio-pizarro b,
 .main-claudio-pizarro strong,
 .main-claudio-pizarro .bold {
-  font-family: 'Aeonis LT W01 Thin Extd', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: -0.7px;
 }
@@ -183,7 +183,7 @@
     margin: 0 12px;
   }
   .main-claudio-pizarro .control-label {
-    font-family: 'Aeonis LT W01 Thin Extd', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     letter-spacing: -0.7px;
   }
@@ -250,26 +250,6 @@
   top: -12px;
   margin-right: 20px;
   margin-left: 20px;
-}
-.component-donutchart.werder-bremen {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #006737;
-}
-.component-donutchart.bayern-munich {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #ff0040;
-}
-.component-donutchart.fc-chelsea {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #3064CA;
-}
-.component-donutchart.alianza-lima {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #0f60b3;
 }
 .component-entry-table .body__data {
   font-size: 12px;
@@ -464,6 +444,26 @@
 .component-entry-table-row.data__row td {
   font-size: 10px;
   text-align: center;
+}
+.component-donutchart.werder-bremen {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006737;
+}
+.component-donutchart.bayern-munich {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ff0040;
+}
+.component-donutchart.fc-chelsea {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #3064CA;
+}
+.component-donutchart.alianza-lima {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #0f60b3;
 }
 .component-main-picture {
   display: inline-block;
