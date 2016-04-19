@@ -17,10 +17,10 @@ var EntryTable = React.createClass({
                     <table className="table">
                         <thead>
                         <tr>
-                            <th className="header__data header__data--date">Date</th>
-                            <th className="header__data header__data--local">Local</th>
-                            <th className="header__data header__data--visit">Visit</th>
-                            <th className="header__data header__data--score">Score</th>
+                            <th className="header__data header__data--date">DATE</th>
+                            <th className="header__data header__data--local">LOCAL</th>
+                            <th className="header__data header__data--visit">VISIT</th>
+                            <th className="header__data header__data--score">SCORE</th>
                             <th className="header__data header__data--goals"><img src="build/svg/ball.svg" className="icon icon--goal"/></th>
                             <th className="header__data header__data--assists"><img src="build/svg/goal-icon.svg" className="icon icon--assist"/></th>
                             <th className="header__data header__data--cards-y"><img src="build/svg/yellow-card.svg" className="icon icon--yellow-card"/></th>

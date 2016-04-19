@@ -8,19 +8,19 @@ var DonutChart = React.createClass({
 
         var chartGeneral = {
                 data            : stats.generalTeam(),
-                title           : 'Games in current season for ' + this.props.currentClub,
+                title           : 'GAMES IN CURRENT SEASON FOR ' + this.props.currentClub,
                 outlet          : document.getElementById('donut-chart-general'),
                 isFirstRender   : true
             },
             chartWithPizarro = {
                 data            : stats.withPizarro(),
-                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' with Pizarro on the pitch',
+                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub + ' WITH PIZARRO ON THE PITCH',
                 outlet          : document.getElementById('donut-chart-with-piza'),
                 isFirstRender   : true
             },
             chartWithoutPizarro = {
                 data            : stats.withoutPizarro(),
-                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' without Pizarro on the pitch',
+                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub + ' WITHOUT PIZARRO ON THE PITCH',
                 outlet          : document.getElementById('donut-chart-without-piza'),
                 isFirstRender   : true
             }
@@ -36,19 +36,19 @@ var DonutChart = React.createClass({
         var stats = this.gameStats(this.props.seasonMatchesData);
         var chartGeneral = {
                 data            : stats.generalTeam(),
-                title           : 'Games in current season for ' + this.props.currentClub,
+                title           : 'GAMES IN CURRENT SEASON FOR ' + this.props.currentClub,
                 outlet          : document.getElementById('donut-chart-general'),
                 isFirstRender   : false
             },
             chartWithPizarro = {
                 data            : stats.withPizarro(),
-                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' with Pizarro on the pitch',
+                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub + ' WITH PIZARRO ON THE PITCH',
                 outlet          : document.getElementById('donut-chart-with-piza'),
                 isFirstRender   : false
             },
             chartWithoutPizarro = {
                 data            : stats.withoutPizarro(),
-                title           : 'Season ' + this.props.currentSeasonYear + ' for ' + this.props.currentClub + ' without Pizarro on the pitch',
+                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub + ' WITHOUT PIZARRO ON THE PITCH',
                 outlet          : document.getElementById('donut-chart-without-piza'),
                 isFirstRender   : false
             }

@@ -28,13 +28,13 @@ var LineChart = React.createClass({
     drawChart : function(seasonData, clubColors, currentSeasonYear, chartOutlet) {
         var data = new google.visualization.DataTable();
 
-        data.addColumn('date', 'scored on');
-        data.addColumn('number', 'Goals scored');
+        data.addColumn('date', 'SCORED ON');
+        data.addColumn('number', 'GOALS SCORED');
 
         data.addRows(seasonData);
 
         var options = {
-            title   : 'Goals scored during season ' + currentSeasonYear,
+            title   : 'GOALS SCORED DURING SEASON ' + currentSeasonYear,
 
             colors      : [clubColors.main],
             pointSize   : 10,
