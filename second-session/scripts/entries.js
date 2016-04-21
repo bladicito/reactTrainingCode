@@ -2602,7 +2602,7 @@ let entries = {
         'country': 'Germany',
         'club': 'Bayern Munich',
         'year': '2004 - 2005',
-        'mainImage': 'bayern2003.jpg',
+        'mainImage': 'bayern2004.jpg',
         matches: {
             "1": {
                 "date": "2004.08.07",
