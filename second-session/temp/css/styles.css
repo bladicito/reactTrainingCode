@@ -271,15 +271,6 @@
   padding-bottom: 20px;
   background-color: #0f60b3;
 }
-.component-entry-table-row .shield__mini {
-  width: 15px;
-  height: auto;
-  max-height: 15px;
-}
-.component-entry-table-row.data__row td {
-  font-size: 10px;
-  text-align: center;
-}
 .component-entry-table .body__data {
   font-size: 12px;
 }
@@ -464,6 +455,15 @@
   .component-entry-table .data__cell--in-min-out {
     display: none;
   }
+}
+.component-entry-table-row .shield__mini {
+  width: 15px;
+  height: auto;
+  max-height: 15px;
+}
+.component-entry-table-row.data__row td {
+  font-size: 10px;
+  text-align: center;
 }
 .component-main-picture {
   display: inline-block;
