@@ -72,7 +72,8 @@ var App = React.createClass({
             yellowCards     = 0,
             redCards        = 0,
             playedMinutes   = 0,
-            entries         = seasonData.matches
+            entries         = seasonData.matches,
+            counterGames    = 0
         ;
 
 
@@ -97,7 +98,8 @@ var App = React.createClass({
 
     
             if(typeof(entries[currentValue].playedMinutes) !== 'undefined' && entries[currentValue].playedMinutes.trim() !== '') {
-                playedMinutes += parseInt(entries[currentValue].playedMinutes)
+                playedMinutes += parseInt(entries[currentValue].playedMinutes);
+                counterGames++;
             }
             
         });
@@ -107,7 +109,9 @@ var App = React.createClass({
             goals           : goals,
             yellowCards     : yellowCards,
             redCards        : redCards,
-            playedMinutes   : playedMinutes
+            playedMinutes   : playedMinutes,
+            playedGames     : counterGames,
+            averageGoalsPerMinutes: playedMinutes/goals
         });
 
     },
@@ -160,6 +164,8 @@ var App = React.createClass({
             <div className="main-claudio-pizarro">
                 <Summary goals             = {this.state.goals}
                          assists           = {this.state.assists}
+                         playedGames       = {this.state.playedGames}
+                         averageGoalsPerMinutes = {this.state.averageGoalsPerMinutes}
                          yellowCards       = {this.state.yellowCards}
                          redCards          = {this.state.redCards}
                          playedMinutes     = {this.state.playedMinutes}

@@ -25,20 +25,20 @@ let entries = {
         'matches': {}
     },
     season3: {
-        'season'    : 'Season 1999',
-        'country'   : 'Peru',
-        'club'      : 'Alianza Lima',
-        'year'      : '1999',
-        'mainImage' : 'alianza1999.png',
-        'matches'   : {}
+        'season': 'Season 1999',
+        'country': 'Peru',
+        'club': 'Alianza Lima',
+        'year': '1999',
+        'mainImage': 'alianza1999.png',
+        'matches': {}
     },
     season4: {
-        'season'    : 'Season 1999 - 2000',
-        'country'   : 'Germany',
-        'club'      : 'Werder Bremen',
-        'year'      : '1999 - 2000',
-        'mainImage' : 'bremen1999.png',
-        'matches'   : {
+        'season': 'Season 1999 - 2000',
+        'country': 'Germany',
+        'club': 'Werder Bremen',
+        'year': '1999 - 2000',
+        'mainImage': 'bremen1999.png',
+        'matches': {
             entry1: {
                 'assists': '',
                 'away': 'Werder Bremen',
@@ -522,12 +522,12 @@ let entries = {
         }
     },
     season5: {
-        'season'    : 'Season 2000 - 2001',
-        'country'   : 'Germany',
-        'club'      : 'Werder Bremen',
-        'year'      : '2000 - 2001',
-        'mainImage' : 'bremen2000.png',
-        'matches'   : {
+        'season': 'Season 2000 - 2001',
+        'country': 'Germany',
+        'club': 'Werder Bremen',
+        'year': '2000 - 2001',
+        'mainImage': 'bremen2000.png',
+        'matches': {
             entry1: {
                 'date': '2000.08.12',
                 'home': 'Werder Bremen',
@@ -1560,12 +1560,12 @@ let entries = {
         }
     },
     season7: {
-        'season'    : 'Season 2002 - 2003',
-        'country'   : 'Germany',
-        'club'      : 'Bayern Munich',
-        'year'      : '2002 - 2003',
-        'mainImage' : 'bayern2013.png',
-        'matches'   : {
+        'season': 'Season 2002 - 2003',
+        'country': 'Germany',
+        'club': 'Bayern Munich',
+        'year': '2002 - 2003',
+        'mainImage': 'bayern2013.png',
+        'matches': {
             "1": {
                 "date": "2002.08.10",
                 "home": "Bor. Monchengladbach",
@@ -2598,6 +2598,560 @@ let entries = {
         }
     },
     season9: {
+        'season': 'Season 2004 - 2005',
+        'country': 'Germany',
+        'club': 'Bayern Munich',
+        'year': '2004 - 2005',
+        'mainImage': 'bayern2003.jpg',
+        matches: {
+            "1": {
+                "date": "2004.08.07",
+                "home": "Hamburger SV",
+                "away": "Bayern Munich",
+                "result": "0:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "2": {
+                "date": "2004.08.14",
+                "home": "Bayern Munich",
+                "away": "Hertha BSC",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "3": {
+                "date": "2004.08.28",
+                "home": "Bay. Leverkusen",
+                "away": "Bayern Munich",
+                "result": "4:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "4": {
+                "date": "2004.09.11",
+                "home": "Bayern Munich",
+                "away": "Arm. Bielefeld",
+                "result": "1:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "5": {
+                "date": "2004.09.18",
+                "home": "Bor. Dortmund",
+                "away": "Bayern Munich",
+                "result": "2:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "47",
+                "outGameOnMin": "",
+                "playedMinutes": "43"
+            }
+            ,
+            "6": {
+                "date": "2004.09.25",
+                "home": "Bayern Munich",
+                "away": "SC Freiburg",
+                "result": "3:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "7": {
+                "date": "2004.10.02",
+                "home": "Werder Bremen",
+                "away": "Bayern Munich",
+                "result": "1:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "8": {
+                "date": "2004.10.16",
+                "home": "Bayern Munich",
+                "away": "FC Schalke 04",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "9": {
+                "date": "2004.10.23",
+                "home": "Hansa Rostock",
+                "away": "Bayern Munich",
+                "result": "0:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "10": {
+                "date": "2004.10.26",
+                "home": "Bayern Munich",
+                "away": "VfL Wolfsburg",
+                "result": "2:0 ",
+                "goals": "2",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "11": {
+                "date": "2004.10.30",
+                "home": "Bor. Monchengladbach",
+                "away": "Bayern Munich",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "12": {
+                "date": "2004.11.06",
+                "home": "Bayern Munich",
+                "away": "Hannover 96",
+                "result": "3:0 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "67",
+                "playedMinutes": "67"
+            }
+            ,
+            "13": {
+                "date": "2004.11.14",
+                "home": "VfL Bochum",
+                "away": "Bayern Munich",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "46",
+                "playedMinutes": "45"
+            }
+            ,
+            "14": {
+                "date": "2004.11.20",
+                "home": "Bayern Munich",
+                "away": "1.FC K'lautern",
+                "result": "3:1 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "15": {
+                "date": "2004.11.27",
+                "home": "Bayern Munich",
+                "away": "1.FSV Mainz 05",
+                "result": "4:2 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "16": {
+                "date": "2004.12.04",
+                "home": "1.FC Nuernberg",
+                "away": "Bayern Munich",
+                "result": "2:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "83",
+                "playedMinutes": "83"
+            }
+            ,
+            "17": {
+                "date": "2004.12.11",
+                "home": "Bayern Munich",
+                "away": "VfB Stuttgart",
+                "result": "2:2 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "18": {
+                "date": "2005.01.21",
+                "home": "Bayern Munich",
+                "away": "Hamburger SV",
+                "result": "3:0 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "19": {
+                "date": "2005.01.30",
+                "home": "Hertha BSC",
+                "away": "Bayern Munich",
+                "result": "0:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "46",
+                "playedMinutes": "45"
+            }
+            ,
+            "20": {
+                "date": "2005.02.05",
+                "home": "Bayern Munich",
+                "away": "Bay. Leverkusen",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "21": {
+                "date": "2005.02.13",
+                "home": "Arm. Bielefeld",
+                "away": "Bayern Munich",
+                "result": "3:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "63",
+                "outGameOnMin": "",
+                "playedMinutes": "27"
+            }
+            ,
+            "22": {
+                "date": "2005.02.19",
+                "home": "Bayern Munich",
+                "away": "Bor. Dortmund",
+                "result": "5:0 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "23": {
+                "date": "2005.02.26",
+                "home": "SC Freiburg",
+                "away": "Bayern Munich",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "24": {
+                "date": "2005.03.05",
+                "home": "Bayern Munich",
+                "away": "Werder Bremen",
+                "result": "1:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "55",
+                "playedMinutes": "55"
+            }
+            ,
+            "25": {
+                "date": "2005.03.13",
+                "home": "FC Schalke 04",
+                "away": "Bayern Munich",
+                "result": "1:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "26": {
+                "date": "2005.03.19",
+                "home": "Bayern Munich",
+                "away": "Hansa Rostock",
+                "result": "3:1 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "1",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "27": {
+                "date": "2005.04.02",
+                "home": "VfL Wolfsburg",
+                "away": "Bayern Munich",
+                "result": "0:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "8",
+                "playedMinutes": "8"
+            }
+            ,
+            "28": {
+                "date": "2005.04.29",
+                "home": "Bayern Munich",
+                "away": "Bor. M'gladbach",
+                "result": "2:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "29": {
+                "date": "2005.04.16",
+                "home": "Hannover 96",
+                "away": "Bayern Munich",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "30": {
+                "date": "2005.04.23",
+                "home": "Bayern Munich",
+                "away": "VfL Bochum",
+                "result": "3:1 ",
+                "goals": "1",
+                "assists": "1",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "81",
+                "playedMinutes": "81"
+            }
+            ,
+            "31": {
+                "date": "2005.04.30",
+                "home": "1.FC Kaiserlautern",
+                "away": "Bayern Munich",
+                "result": "0:4 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "32": {
+                "date": "2005.05.07",
+                "home": "1.FSV Mainz 05",
+                "away": "Bayern Munich",
+                "result": "2:4 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+            ,
+            "33": {
+                "date": "2005.05.14",
+                "home": "Bayern Munich",
+                "away": "1.FC Nuernberg",
+                "result": "6:3 ",
+                "goals": "1",
+                "assists": "3",
+                "ownGoal": "",
+                "yellowCard": "1'",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+            ,
+            "34": {
+                "date": "2005.05.21",
+                "home": "VfB Stuttgart",
+                "away": "Bayern Munich",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            }
+        }
+    },
+
+
+    season10: {
         'season': 'Season 2007 - 2008',
         'country': 'England',
         'club': 'FC Chelsea',
