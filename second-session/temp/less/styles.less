@@ -1454,30 +1454,6 @@
 .main-claudio-pizarro{
 
 }
-.component-controls {
-    .control {
-        & > .component-main-picture {
-            width: auto;
-        }
-        position: relative;
-        display: inline-block;
-        width: 50%;
-        i {
-            font-size: 50px;
-        }
-
-        img {
-            width: 40px;
-            height: auto;
-            max-height: 40px;
-            position: relative;
-            top: -12px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-        
-    }
-}
 .component-donutchart {
 
     &.werder-bremen {
@@ -1504,6 +1480,30 @@
     }
 
 
+}
+.component-controls {
+    .control {
+        & > .component-main-picture {
+            width: auto;
+        }
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        i {
+            font-size: 50px;
+        }
+
+        img {
+            width: 40px;
+            height: auto;
+            max-height: 40px;
+            position: relative;
+            top: -12px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+    }
 }
 .component-entry-table {
     .tableGeneral();
@@ -1734,6 +1734,8 @@
 
         .summary__numbers__item {
             color: @color-white;
+            font-family: @font-webfont-text;
+            
         }
         .summary__numbers__item--label {
             font-weight: 200;

@@ -231,26 +231,6 @@
   }
 }
 @color-primary-button #A7A7A7;
-.component-controls .control {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-}
-.component-controls .control > .component-main-picture {
-  width: auto;
-}
-.component-controls .control i {
-  font-size: 50px;
-}
-.component-controls .control img {
-  width: 40px;
-  height: auto;
-  max-height: 40px;
-  position: relative;
-  top: -12px;
-  margin-right: 20px;
-  margin-left: 20px;
-}
 .component-donutchart.werder-bremen {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -270,6 +250,26 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #0f60b3;
+}
+.component-controls .control {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+.component-controls .control > .component-main-picture {
+  width: auto;
+}
+.component-controls .control i {
+  font-size: 50px;
+}
+.component-controls .control img {
+  width: 40px;
+  height: auto;
+  max-height: 40px;
+  position: relative;
+  top: -12px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .component-entry-table .body__data {
   font-size: 12px;
@@ -514,6 +514,7 @@
 }
 .component-summary .summary__numbers .summary__numbers__item {
   color: #FFFFFF;
+  font-family: 'Refrigerator Deluxe W01';
 }
 .component-summary .summary__numbers .summary__numbers__item--label {
   font-weight: 200;
