@@ -74,7 +74,6 @@ var DonutChart = React.createClass({
     },
 
     drawChart : function(dataSeasons){
-       console.log(dataSeasons);
         var _this = this,
             data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],

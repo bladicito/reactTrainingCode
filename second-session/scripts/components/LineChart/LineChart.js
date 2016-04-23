@@ -1,4 +1,6 @@
 import React from 'react';
+import Helpers from '../../helpers'
+import MainImage from '../../components/MainPicture/MainPicture'
 
 var LineChart = React.createClass({
 
@@ -10,15 +12,35 @@ var LineChart = React.createClass({
     },
 
     setGoalsData : function(entries) {
-        var temp = [];
+        var temp = [],
+            played,
+            goals,
+            date,
+            against,
+            goalsCurrentClub,
+            goalsOtherClub,
+            result
+        ;
 
         for(var single in entries) {
             if(entries.hasOwnProperty(single)) {
-                if (entries[single].goals.trim() !== '' &&  typeof(entries[single].goals) !== 'undefined') {
-                    temp.push([new Date(entries[single].date), parseInt(entries[single].goals, 10)]);
+                result = entries[single].result.split(':');
+
+                if(this.props.currentClub === entries[single].home) {
+                    goalsCurrentClub = result[0];
+                    goalsOtherClub   = result[1];
                 } else {
-                    temp.push([new Date(entries[single].date), 0]);
+                    goalsCurrentClub = result[1];
+                    goalsOtherClub   = result[0];
                 }
+
+                played = parseInt(entries[single].playedMinutes, 10);
+                goals  = entries[single].goals.trim() !== '' &&  typeof(entries[single].goals) !== 'undefined' ? parseInt(entries[single].goals, 10) : 0;
+                date   = new Date(entries[single].date);
+                against= entries[single].home === this.props.currentClub ? entries[single].away : entries[single].home;
+
+                temp.push([date, goals, this.customToolTipHTML(goals, played, against,  date, goalsCurrentClub, goalsOtherClub)]);
+
             }
         }
         return temp;
@@ -30,6 +52,7 @@ var LineChart = React.createClass({
 
         data.addColumn('date', 'SCORED ON');
         data.addColumn('number', 'GOALS SCORED');
+        data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
 
         data.addRows(seasonData);
 
@@ -47,11 +70,72 @@ var LineChart = React.createClass({
                 title       : 'Goals',
                 scaleType   : 'continuous',
                 ticks       : [0, 1, 2, 3, 4]
+            },
+            tooltip : {
+                isHtml: true
             }
         };
 
         var chart = new google.visualization.LineChart(chartOutlet);
         chart.draw(data, options);
+    },
+
+    customToolTipHTML : function(goals, played, against, date, goalsCurrentClub, goalsOtherClub) {
+        var shieldSrc           = Helpers.nameToImageShield(against),
+            formattedDate       = Helpers.prettyDate(date),
+            currentClubShield   = Helpers.nameToImageShield(this.props.currentClub),
+            noteNotPlayedMatch  = '',
+            scoredGoals         = '',
+            html                = ''
+        ;
+
+        if (!played) {
+            noteNotPlayedMatch =
+                `<div class="row">
+                    <div class="col-md-12">
+                        <div class="tool__tip__row tool__tip__data--not-played-match">
+                            Claudio did not play this game
+                        </div>  
+                    </div>
+                </div>`
+        }
+
+        if (played) {
+            scoredGoals =   `<div class="row tool__tip__row ">
+                                <div class="col-md-12 tool__tip__data tool__tip__data--text">
+                                    Claudio Scored ${goals} times
+                                </div>
+                            </div>`
+        }
+
+
+
+        html = `<div class="tool__tip">
+                    <div class="row tool__tip__row">
+                        <div class="col-md-12 tool__tip__data tool__tip__data--header">
+                            On ${formattedDate} against ${against}
+                        </div>
+                    </div>
+                    ${scoredGoals}
+                    <div class="row tool__tip__row tool__tip__data--scorer">
+                         <div class="col-md-6 team team--one">
+                             <img src="build/svg/${shieldSrc}" class="tool__tip__img">
+                             <div class="team--score">
+                                    ${goalsOtherClub}
+                             </div>
+                        </div>
+                        <div class="col-md-6 team team--two">
+                             <img src="build/svg/${currentClubShield}" class="tool__tip__img">
+                             <div class="team--score">
+                                    ${goalsCurrentClub}
+                             </div>
+                        </div>
+                    </div>
+                    ${noteNotPlayedMatch}
+                </div>`;
+
+
+        return html;
     },
 
 

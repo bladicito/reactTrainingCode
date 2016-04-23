@@ -3,7 +3,7 @@ let helpers = {
         var weekdays    = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
             months      = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             date        = new Date(utcDateString),
-            prettyDate  = weekdays[date.getUTCDay()] + ' ' + months[date.getUTCMonth()] + ' ' + date.getUTCDate()
+            prettyDate  = weekdays[date.getUTCDay()] + ' ' + date.getUTCDate() +' ' + months[date.getUTCMonth()] + ' ' + date.getUTCFullYear()
         ;
 
 
