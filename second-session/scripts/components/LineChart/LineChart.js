@@ -52,7 +52,7 @@ var LineChart = React.createClass({
     drawChart : function(seasonData, clubColors, currentSeasonYear, chartOutlet) {
         var data = new google.visualization.DataTable();
 
-        data.addColumn('date', 'SCORED ON');
+        data.addColumn('date', 'SCORED');
         data.addColumn('number', 'GOALS');
 
         data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
@@ -73,16 +73,14 @@ var LineChart = React.createClass({
             fontName    : 'Refrigerator Deluxe W01',
             fontSize    : 25,
             hAxis   : {
-                title: 'PLAY DAY',
-                titleTextStyle   : {
-                    color   : clubColors.main
-                }
+                title: 'Spieltag'
             },
             vAxis   : {
                 title       : 'GOALS',
                 titleTextStyle : {
                     color: clubColors.main
                 },
+
                 scaleType   : 'continuous',
                 ticks       : [0, 1, 2, 3, 4],
                 textStyle   : {
