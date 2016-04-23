@@ -2815,7 +2815,7 @@ let entries = {
             "14": {
                 "date": "2004.11.20",
                 "home": "Bayern Munich",
-                "away": "1.FC K'lautern",
+                "away": "1.FC Kaiserlautern",
                 "result": "3:1 ",
                 "goals": "1",
                 "assists": "",

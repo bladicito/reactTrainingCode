@@ -19,12 +19,14 @@ var LineChart = React.createClass({
             against,
             goalsCurrentClub,
             goalsOtherClub,
-            result
+            result,
+            assists
         ;
 
         for(var single in entries) {
             if(entries.hasOwnProperty(single)) {
                 result = entries[single].result.split(':');
+                assists = entries[single].assists === '' && typeof(entries[single].assists) === 'undefined' ? 0 : parseInt(entries[single].assists, 10);
 
                 if(this.props.currentClub === entries[single].home) {
                     goalsCurrentClub = result[0];
@@ -51,29 +53,46 @@ var LineChart = React.createClass({
         var data = new google.visualization.DataTable();
 
         data.addColumn('date', 'SCORED ON');
-        data.addColumn('number', 'GOALS SCORED');
+        data.addColumn('number', 'GOALS');
+
         data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
 
         data.addRows(seasonData);
 
         var options = {
             title   : 'GOALS SCORED DURING SEASON ' + currentSeasonYear,
+            titleTextStyle : {
+                color: clubColors.secondary,
+                fontSize    : 25
+            },
 
-            colors      : [clubColors.main],
+            colors      : [clubColors.main, clubColors.secondary],
             pointSize   : 10,
             pointShape  : 'circle',
             continuous  : 'date',
+            fontName    : 'Refrigerator Deluxe W01',
+            fontSize    : 25,
             hAxis   : {
-                title: 'Spieltag'
+                title: 'PLAY DAY',
+                titleTextStyle   : {
+                    color   : clubColors.main
+                }
             },
             vAxis   : {
-                title       : 'Goals',
+                title       : 'GOALS',
+                titleTextStyle : {
+                    color: clubColors.main
+                },
                 scaleType   : 'continuous',
-                ticks       : [0, 1, 2, 3, 4]
+                ticks       : [0, 1, 2, 3, 4],
+                textStyle   : {
+                    color   : clubColors.main
+                }
             },
             tooltip : {
                 isHtml: true
             }
+
         };
 
         var chart = new google.visualization.LineChart(chartOutlet);
