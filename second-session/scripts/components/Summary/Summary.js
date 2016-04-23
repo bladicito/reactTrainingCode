@@ -59,7 +59,7 @@ var Summary = React.createClass({
                         </div>
                         <div className="col-md-4">
                             <div className="summary__numbers">
-                                <div className="summary__numbers__item summary__numbers__item--goals">
+                                <div className="summary__numbers__item summary__numbers__item--matches-played">
                                     <span className="summary__numbers__item--label">MATCHES PLAYED :</span> {this.props.playedGames}
                                 </div>
                                 <div className="summary__numbers__item summary__numbers__item--goals">
@@ -78,8 +78,11 @@ var Summary = React.createClass({
                                     <span className="summary__numbers__item--label">MINUTES PLAYED:</span> {this.props.playedMinutes}
                                 </div>
 
-                                <div className="summary__numbers__item  summary__numbers__item--played-minutes">
+                                <div className="summary__numbers__item  summary__numbers__item--goals-each-minute">
                                     <span className="summary__numbers__item--label">GOAL SCORED EACH </span> {Math.round(this.props.averageGoalsPerMinutes * 100) / 100} MINUTES
+                                </div>
+                                <div className="summary__numbers__item  summary__numbers__item--avg-goal-match">
+                                    <span className="summary__numbers__item--label">GOAL SCORED EACH </span> {Math.round(this.props.averageGoalsPerMatch * 100) / 100} GAMES
                                 </div>
                             </div>
 

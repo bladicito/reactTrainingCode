@@ -111,7 +111,8 @@ var App = React.createClass({
             redCards        : redCards,
             playedMinutes   : playedMinutes,
             playedGames     : counterGames,
-            averageGoalsPerMinutes: playedMinutes/goals
+            averageGoalsPerMinutes: playedMinutes/goals,
+            averageGoalsPerMatch : counterGames/goals
         });
 
     },
@@ -180,6 +181,7 @@ var App = React.createClass({
                          currentClub       = {this.state.currentClub}
                          currentClubCss    = {this.state.currentClubCss}
                          updateDataSeason  = {this.updateDataSeason}
+                         averageGoalsPerMatch = {this.state.averageGoalsPerMatch}
                 />
                 <LineChart
                     seasonMatchesData = {this.state.matchesData}
