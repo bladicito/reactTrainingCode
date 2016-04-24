@@ -6403,7 +6403,12 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "86",
-                "playedMinutes": "86"
+                "playedMinutes": "86",
+                "goalsVideos" : {
+                    'allGoals' : 'yWfnviGNSd8'
+                }
+
+
             },
             "6": {
                 "date": "2011.09.17",
@@ -6508,7 +6513,12 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90"
+                "playedMinutes": "90",
+                "goalsVideos" : {
+                    'allGoals' : '5PK-FI1BDeI'
+                }
+
+
             },
             "13": {
                 "date": "2011.11.19",
@@ -7868,7 +7878,11 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "73",
                 "outGameOnMin": "",
-                "playedMinutes": "17"
+                "playedMinutes": "17",
+                "goalsVideos" : {
+                    'allGoals' : 'bIa5XTyZmuM'
+                }
+
             },
             "34": {
                 "date": "2014.05.10",
@@ -7883,7 +7897,11 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "64",
                 "outGameOnMin": "",
-                "playedMinutes": "26"
+                "playedMinutes": "26",
+                "goalsVideos" : {
+                    'allGoals' : 'SrYpyj8Ib-I'
+                }
+
             }
         }
     }
