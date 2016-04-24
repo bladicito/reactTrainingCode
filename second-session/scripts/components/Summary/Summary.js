@@ -54,10 +54,10 @@ var Summary = React.createClass({
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-xs-12">
                             {this.getPicture(this.props.mainImage, 'summary__image', '/build/img/')}
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-xs-12">
                             <div className="summary__numbers">
                                 <div className="summary__numbers__item summary__numbers__item--matches-played">
                                     <span className="summary__numbers__item--label">MATCHES PLAYED :</span> {this.props.playedGames}
@@ -81,13 +81,13 @@ var Summary = React.createClass({
                                 <div className="summary__numbers__item  summary__numbers__item--goals-each-minute">
                                     <span className="summary__numbers__item--label">GOAL SCORED EACH </span> {Math.round(this.props.averageGoalsPerMinutes * 100) / 100} MINUTES
                                 </div>
-                                <div className="summary__numbers__item  summary__numbers__item--avg-goal-match">
-                                    <span className="summary__numbers__item--label">GOAL SCORED EACH </span> {Math.round(this.props.averageGoalsPerMatch * 100) / 100} GAMES
+                                <div className="summary__numbers__item  summary__numbers__item--effectiveness">
+                                    <span className="summary__numbers__item--label">EFFECTIVENESS:</span> {Math.round(this.props.averageGoalsPerMatch * 100) / 100} GOALS/GAME
                                 </div>
                             </div>
 
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-xs-12">
                             {this.getPicture(Helpers.nameToImageShield(this.props.currentClub), 'summary-shield', '/build/svg/')}
                         </div>
                     </div>

@@ -3,6 +3,7 @@ import Summary from     '../Summary/Summary';
 import EntryTable from  '../EntryTable/EntryTable';
 import LineChart from  '../LineChart/LineChart';
 import DonutCharts from  '../DonutCharts/DonutCharts';
+import YoutubePlayer from  '../YoutubePlayer/YoutubePlayer';
 import Utils from       '../../helpers';
 import Entries from     '../../entries';
 
@@ -10,7 +11,7 @@ import Entries from     '../../entries';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            currentSeason       : 'season9'
+            currentSeason       : 'season17'
         }
     },
 
@@ -61,7 +62,8 @@ var App = React.createClass({
             currentClub:    this.state.currentClub,
             currentClubCss: this.state.currentClubCss,
             matchesData:    this.state.matchesData,
-            currentClubColors: this.state.currentClubColors
+            currentClubColors: this.state.currentClubColors,
+            youtubeVideoID   : 'none'
         });
 
     },
@@ -111,8 +113,8 @@ var App = React.createClass({
             redCards        : redCards,
             playedMinutes   : playedMinutes,
             playedGames     : counterGames,
-            averageGoalsPerMinutes: playedMinutes/goals,
-            averageGoalsPerMatch : counterGames/goals
+            averageGoalsPerMinutes: playedMinutes / goals,
+            averageGoalsPerMatch : goals / counterGames
         });
 
     },
@@ -152,37 +154,56 @@ var App = React.createClass({
     },
 
 
+    videoIdUpdate : function(goalData) {
+
+        this.setState({
+            youtubeVideoID:goalData.goalsVideos.allGoals
+        })
+    },
+
+    videoIdReset : function() {
+
+        this.setState({
+            youtubeVideoID: 'none'
+        })
+    },
+
+
     
 
 
     render: function() {
-        var seasonMatchesData = Entries[this.state.currentSeason].matches;
-
-
-
 
         return (
             <div className="main-claudio-pizarro">
-                <Summary goals             = {this.state.goals}
-                         assists           = {this.state.assists}
-                         playedGames       = {this.state.playedGames}
-                         averageGoalsPerMinutes = {this.state.averageGoalsPerMinutes}
-                         yellowCards       = {this.state.yellowCards}
-                         redCards          = {this.state.redCards}
-                         playedMinutes     = {this.state.playedMinutes}
-                         mainImage         = {this.state.mainImage}
-                         season            = {this.state.season}
-                         clubShieldPicture = {this.state.clubShieldPicture}
-                         seasonData        = {this.state.seasonData}
-                         currentSeason     = {this.state.currentSeason}
-                         currentSeasonYear = {this.state.currentSeasonYear}
-                         nextSeason        = {this.state.nextSeason}
-                         prevSeason        = {this.state.prevSeason}
-                         currentClub       = {this.state.currentClub}
-                         currentClubCss    = {this.state.currentClubCss}
-                         updateDataSeason  = {this.updateDataSeason}
-                         averageGoalsPerMatch = {this.state.averageGoalsPerMatch}
-                />
+                <div className="linked-components">
+                    <Summary goals             = {this.state.goals}
+                             assists           = {this.state.assists}
+                             playedGames       = {this.state.playedGames}
+                             averageGoalsPerMinutes = {this.state.averageGoalsPerMinutes}
+                             yellowCards       = {this.state.yellowCards}
+                             redCards          = {this.state.redCards}
+                             playedMinutes     = {this.state.playedMinutes}
+                             mainImage         = {this.state.mainImage}
+                             season            = {this.state.season}
+                             clubShieldPicture = {this.state.clubShieldPicture}
+                             seasonData        = {this.state.seasonData}
+                             currentSeason     = {this.state.currentSeason}
+                             currentSeasonYear = {this.state.currentSeasonYear}
+                             nextSeason        = {this.state.nextSeason}
+                             prevSeason        = {this.state.prevSeason}
+                             currentClub       = {this.state.currentClub}
+                             currentClubCss    = {this.state.currentClubCss}
+                             updateDataSeason  = {this.updateDataSeason}
+                             averageGoalsPerMatch = {this.state.averageGoalsPerMatch}
+                    />
+                    <YoutubePlayer 
+                        videoID         = {this.state.youtubeVideoID}
+                        videoIdReset    = {this.videoIdReset}
+                    />
+                </div>
+
+
                 <LineChart
                     seasonMatchesData = {this.state.matchesData}
                     currentClub       = {this.state.currentClub}
@@ -190,6 +211,8 @@ var App = React.createClass({
                     currentSeason     = {this.state.currentSeason}
                     currentSeasonYear = {this.state.currentSeasonYear}
                     currentClubColors = {this.state.currentClubColors}
+                    videoIdUpdate     = {this.videoIdUpdate}
+                    
                 />
                 <DonutCharts
                     seasonMatchesData   = {this.state.matchesData}

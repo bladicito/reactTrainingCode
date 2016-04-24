@@ -7252,7 +7252,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90"
+                "playedMinutes": "90",
+                "goalsVideos" : {
+                    'allGoals' : 'gagVFTP4LHA'
+                }
             },
             "28": {
                 "date": "2013.04.06",
@@ -7297,7 +7300,11 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90"
+                "playedMinutes": "90",
+                "goalsVideos" : {
+                    'allGoals' : 'kt_iRJIuyyA'
+                }
+
             },
             "31": {
                 "date": "2013.04.27",
@@ -7346,7 +7353,7 @@ let entries = {
             },
             "34": {
                 "date": "2013.05.18",
-                "home": "Bor. M'gladbach",
+                "home": "Bor. Monchengladbach",
                 "away": "Bayern Munich",
                 "result": "3:4 ",
                 "goals": "",

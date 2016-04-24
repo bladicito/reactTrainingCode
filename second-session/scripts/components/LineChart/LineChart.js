@@ -1,6 +1,7 @@
 import React from 'react';
 import Helpers from '../../helpers'
 import MainImage from '../../components/MainPicture/MainPicture'
+import ToolTip from '../../components/ToolTip/ToolTip'
 
 var LineChart = React.createClass({
 
@@ -36,6 +37,10 @@ var LineChart = React.createClass({
                     goalsOtherClub   = result[0];
                 }
 
+                if (typeof(entries[single].goalsVideos) !== 'undefined') {
+
+                }
+
                 played = parseInt(entries[single].playedMinutes, 10);
                 goals  = entries[single].goals.trim() !== '' &&  typeof(entries[single].goals) !== 'undefined' ? parseInt(entries[single].goals, 10) : 0;
                 date   = new Date(entries[single].date);
@@ -50,7 +55,10 @@ var LineChart = React.createClass({
     },
 
     drawChart : function(seasonData, clubColors, currentSeasonYear, chartOutlet) {
-        var data = new google.visualization.DataTable();
+
+        var data = new google.visualization.DataTable(),
+            _this = this
+        ;
 
         data.addColumn('date', 'SCORED');
         data.addColumn('number', 'GOALS');
@@ -60,10 +68,10 @@ var LineChart = React.createClass({
         data.addRows(seasonData);
 
         var options = {
-            title   : 'GOALS SCORED DURING SEASON ' + currentSeasonYear,
+            title   : 'GOALS SCORED ON ' + currentSeasonYear,
             titleTextStyle : {
                 color: clubColors.secondary,
-                fontSize    : 25
+                fontSize    : 18
             },
 
             colors      : [clubColors.main, clubColors.secondary],
@@ -89,12 +97,34 @@ var LineChart = React.createClass({
             },
             tooltip : {
                 isHtml: true
+
             }
 
         };
 
         var chart = new google.visualization.LineChart(chartOutlet);
+
         chart.draw(data, options);
+
+
+        google.visualization.events.addListener(chart, 'select', selectHandler);
+
+        function selectHandler(e) {
+
+            if (typeof (chart.getSelection()) !== 'undefined') {
+                var matchEntry = _this.props.seasonMatchesData[(chart.getSelection()[0].row + 1)];
+                if (typeof (matchEntry.goalsVideos) !== 'undefined') {
+                    _this.testingEvent(_this.props.seasonMatchesData[chart.getSelection()[0].row + 1]);
+                }
+            }
+        }
+    },
+
+    testingEvent : function(selectedPoint) {
+
+        if (selectedPoint.hasOwnProperty('goalsVideos')) {
+            this.props.videoIdUpdate(selectedPoint);
+        }
     },
 
     customToolTipHTML : function(goals, played, against, date, goalsCurrentClub, goalsOtherClub) {
@@ -103,7 +133,8 @@ var LineChart = React.createClass({
             currentClubShield   = Helpers.nameToImageShield(this.props.currentClub),
             noteNotPlayedMatch  = '',
             scoredGoals         = '',
-            html                = ''
+            html                = '',
+            _this               = this
         ;
 
         if (!played) {

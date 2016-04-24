@@ -625,3 +625,12 @@
   font-weight: 200;
   color: #fff5cf;
 }
+.linked-components {
+  position: relative;
+}
+.component-youtube-player {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
