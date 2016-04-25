@@ -147,7 +147,8 @@ var App = React.createClass({
             currentClubCss      : this.state.currentClubCss,
             currentSeasonYear   : this.state.currentSeasonYear,
             matchesData         : this.state.matchesData,
-            currentClubColors   : this.state.currentClubColors
+            currentClubColors   : this.state.currentClubColors,
+            youtubeVideoID      : 'none'
 
         });
 
