@@ -39,7 +39,7 @@ let entries = {
         'year'      : '1999 - 2000',
         'mainImage' : 'bremen1999.png',
         'matches'   : {
-            entry1: {
+            1: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-08-28',
@@ -54,7 +54,7 @@ let entries = {
                 'result': '1:1 ',
                 'yellowCard': ''
             },
-            entry2: {
+            2: {
                 'assists': '1',
                 'away': '1.FC Kaiserlautern',
                 'date': '1999-09-12',
@@ -69,7 +69,7 @@ let entries = {
                 'result': '5:0 ',
                 'yellowCard': ''
             },
-            entry3: {
+            3: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-09-19',
@@ -84,7 +84,7 @@ let entries = {
                 'result': '2:7 ',
                 'yellowCard': ''
             },
-            entry4: {
+            4: {
                 'assists': '',
                 'away': 'SSV Ulm 1846',
                 'date': '1999-09-25',
@@ -99,7 +99,7 @@ let entries = {
                 'result': '2:2 ',
                 'yellowCard': ''
             },
-            entry5: {
+            5: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-10-03',
@@ -114,7 +114,7 @@ let entries = {
                 'result': '2:1 ',
                 'yellowCard': ''
             },
-            entry6: {
+            6: {
                 'assists': '1',
                 'away': '1860 Munich',
                 'date': '1999-10-16',
@@ -129,7 +129,7 @@ let entries = {
                 'result': '1:3 ',
                 'yellowCard': ''
             },
-            entry7: {
+            7: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-10-24',
@@ -144,7 +144,7 @@ let entries = {
                 'result': '1:3 ',
                 'yellowCard': ''
             },
-            entry8: {
+            8: {
                 'assists': '',
                 'away': 'Hansa Rostock',
                 'date': '1999-10-29',
@@ -159,7 +159,7 @@ let entries = {
                 'result': '2:1 ',
                 'yellowCard': ''
             },
-            entry9: {
+            9: {
                 'assists': '',
                 'away': 'E. Frankfurt',
                 'date': '1999-11-19',
@@ -174,7 +174,7 @@ let entries = {
                 'result': '3:1 ',
                 'yellowCard': ''
             },
-            entry10: {
+            10: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-11-07',
@@ -189,7 +189,7 @@ let entries = {
                 'result': '2:2 ',
                 'yellowCard': ''
             },
-            entry11: {
+            11: {
                 'assists': '',
                 'away': 'Hamburger SV',
                 'date': '1999-11-28',
@@ -204,7 +204,7 @@ let entries = {
                 'result': '2:1 ',
                 'yellowCard': ''
             },
-            entry12: {
+            12: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-12-04',
@@ -219,7 +219,7 @@ let entries = {
                 'result': '3:2 ',
                 'yellowCard': ''
             },
-            entry13: {
+            13: {
                 'assists': '1',
                 'away': 'Unterhaching',
                 'date': '1999-12-10',
@@ -234,7 +234,7 @@ let entries = {
                 'result': '2:2 ',
                 'yellowCard': ''
             },
-            entry14: {
+            14: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '1999-12-14',
@@ -249,7 +249,7 @@ let entries = {
                 'result': '0:1 ',
                 'yellowCard': '1'
             },
-            entry15: {
+            15: {
                 'assists': '',
                 'away': 'Bayern Munich',
                 'date': '1999-12-17',
@@ -264,7 +264,7 @@ let entries = {
                 'result': '0:2 ',
                 'yellowCard': '1'
             },
-            entry16: {
+            16: {
                 'assists': '',
                 'away': 'VfB Stuttgart',
                 'date': '2000-02-05',
@@ -279,7 +279,7 @@ let entries = {
                 'result': '2:1 ',
                 'yellowCard': '1'
             },
-            entry17: {
+            17: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-02-08',
@@ -294,7 +294,7 @@ let entries = {
                 'result': '3:1 ',
                 'yellowCard': ''
             },
-            entry18: {
+            18: {
                 'assists': '',
                 'away': 'Hertha BSC',
                 'date': '2000-02-11',
@@ -309,7 +309,7 @@ let entries = {
                 'result': '4:1 ',
                 'yellowCard': ''
             },
-            entry19: {
+            19: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-02-19',
@@ -324,7 +324,7 @@ let entries = {
                 'result': '4:3 ',
                 'yellowCard': ''
             },
-            entry20: {
+            20: {
                 'assists': '',
                 'away': 'VfL Wolfsburg',
                 'date': '2000-02-26',
@@ -339,7 +339,7 @@ let entries = {
                 'result': '2:2 ',
                 'yellowCard': ''
             },
-            entry21: {
+            21: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-03-05',
@@ -354,7 +354,7 @@ let entries = {
                 'result': '2:1 ',
                 'yellowCard': '1'
             },
-            entry22: {
+            22: {
                 'assists': '1',
                 'away': 'SC Freiburg',
                 'date': '2000-03-12',
@@ -369,7 +369,7 @@ let entries = {
                 'result': '5:2 ',
                 'yellowCard': ''
             },
-            entry23: {
+            23: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-03-19',
@@ -384,7 +384,7 @@ let entries = {
                 'result': '1:0 ',
                 'yellowCard': ''
             },
-            entry24: {
+            24: {
                 'assists': '',
                 'away': 'Bor. Dortmund',
                 'date': '2000-03-26',
@@ -399,7 +399,7 @@ let entries = {
                 'result': '3:2 ',
                 'yellowCard': ''
             },
-            entry25: {
+            25: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-04-02',
@@ -414,7 +414,7 @@ let entries = {
                 'result': '1:1 ',
                 'yellowCard': ''
             },
-            entry26: {
+            26: {
                 'assists': '',
                 'away': 'Arm. Bielefeld',
                 'date': '2000-04-09',
@@ -429,7 +429,7 @@ let entries = {
                 'result': '3:1 ',
                 'yellowCard': ''
             },
-            entry27: {
+            27: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-04-12',
@@ -444,7 +444,7 @@ let entries = {
                 'result': '1:0 ',
                 'yellowCard': ''
             },
-            entry28: {
+            28: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-04-15',
@@ -459,7 +459,7 @@ let entries = {
                 'result': '0:0 ',
                 'yellowCard': '1'
             },
-            entry29: {
+            29: {
                 'assists': '',
                 'away': 'Bay. Leverkusen',
                 'date': '2000-04-20',
@@ -474,7 +474,7 @@ let entries = {
                 'result': '1:3 ',
                 'yellowCard': ''
             },
-            entry30: {
+            30: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-04-30',
@@ -489,7 +489,7 @@ let entries = {
                 'result': '1:0 ',
                 'yellowCard': ''
             },
-            entry31: {
+            31: {
                 'assists': '1',
                 'away': 'MSV Duisburg',
                 'date': '2000-05-13',
@@ -504,7 +504,7 @@ let entries = {
                 'result': '4:0 ',
                 'yellowCard': ''
             },
-            entry32: {
+            32: {
                 'assists': '',
                 'away': 'Werder Bremen',
                 'date': '2000-05-20',
@@ -528,7 +528,7 @@ let entries = {
         'year': '2000 - 2001',
         'mainImage': 'bremen2000.png',
         'matches': {
-            entry1: {
+            1: {
                 'date': '2000/08/12',
                 'home': 'Werder Bremen',
                 'away': 'Energie Cottbus',
@@ -543,7 +543,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry2': {
+            '2': {
                 'date': '2000/08/19',
                 'home': '1860 Munich',
                 'away': 'Werder Bremen',
@@ -558,7 +558,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': ''
             },
-            'entry3': {
+            '3': {
                 'date': '2000/09/06',
                 'home': 'Hamburger SV',
                 'away': 'Werder Bremen',
@@ -573,7 +573,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '23'
             },
-            'entry4': {
+            '4': {
                 'date': '2000/09/09',
                 'home': 'Werder Bremen',
                 'away': 'Bor. Dortmund',
@@ -588,7 +588,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry5': {
+            '5': {
                 'date': '2000/09/17',
                 'home': 'FC Schalke 04',
                 'away': 'Werder Bremen',
@@ -603,7 +603,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry6': {
+            '6': {
                 'date': '2000/09/23',
                 'home': 'Werder Bremen',
                 'away': 'E. Frankfurt',
@@ -618,7 +618,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry7': {
+            '7': {
                 'date': '2000/10/01',
                 'home': 'SC Freiburg',
                 'away': 'Werder Bremen',
@@ -633,7 +633,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '19'
             },
-            'entry8': {
+            '8': {
                 'date': '2000/10/14',
                 'home': 'Werder Bremen',
                 'away': 'Bay. Leverkusen',
@@ -648,7 +648,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '45'
             },
-            'entry9': {
+            '9': {
                 'date': '2000/10/20',
                 'home': '1.FC Kaiserlautern',
                 'away': 'Werder Bremen',
@@ -663,7 +663,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '26'
             },
-            'entry10': {
+            '10': {
                 'date': '2000/10/28',
                 'home': 'Werder Bremen',
                 'away': 'Bayern Munich',
@@ -678,7 +678,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': ''
             },
-            'entry11': {
+            '11': {
                 'date': '2000/11/04',
                 'home': 'Hertha BSC',
                 'away': 'Werder Bremen',
@@ -693,7 +693,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '45'
             },
-            'entry12': {
+            '12': {
                 'date': '2000/11/11',
                 'home': 'Werder Bremen',
                 'away': 'VfL Bochum',
@@ -708,7 +708,7 @@ let entries = {
                 'outGameOnMin': '90',
                 'playedMinutes': '90'
             },
-            'entry13': {
+            '13': {
                 'date': '2000/11/18',
                 'home': 'VfL Wolfsburg',
                 'away': 'Werder Bremen',
@@ -723,7 +723,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry14': {
+            '14': {
                 'date': '2000/11/26',
                 'home': 'Werder Bremen',
                 'away': 'VfB Stuttgart',
@@ -738,7 +738,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry15': {
+            '15': {
                 'date': '2000/12/20',
                 'home': 'Unterhaching',
                 'away': 'Werder Bremen',
@@ -753,7 +753,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': ''
             },
-            'entry16': {
+            '16': {
                 'date': '2000/12/10',
                 'home': 'Werder Bremen',
                 'away': '1.FC Koeln',
@@ -768,7 +768,7 @@ let entries = {
                 'outGameOnMin': '90',
                 'playedMinutes': '90'
             },
-            'entry17': {
+            '17': {
                 'date': '2000/12/13',
                 'home': 'Hansa Rostock',
                 'away': 'Werder Bremen',
@@ -783,7 +783,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '32'
             },
-            'entry18': {
+            '18': {
                 'date': '2000/12/17',
                 'home': 'Energie Cottbus',
                 'away': 'Werder Bremen',
@@ -798,7 +798,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '30'
             },
-            'entry19': {
+            '19': {
                 'date': '2001/01/27',
                 'home': 'Werder Bremen',
                 'away': '1860 Munich',
@@ -813,7 +813,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry20': {
+            '20': {
                 'date': '2001/02/03',
                 'home': 'Werder Bremen',
                 'away': 'Hamburger SV',
@@ -828,7 +828,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry21': {
+            '21': {
                 'date': '2001/02/11',
                 'home': 'Bor. Dortmund',
                 'away': 'Werder Bremen',
@@ -843,7 +843,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry22': {
+            '22': {
                 'date': '2001/02/17',
                 'home': 'Werder Bremen',
                 'away': 'FC Schalke 04',
@@ -858,7 +858,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry23': {
+            '23': {
                 'date': '2001/02/24',
                 'home': 'E. Frankfurt',
                 'away': 'Werder Bremen',
@@ -873,7 +873,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry24': {
+            '24': {
                 'date': '2001/03/03',
                 'home': 'Werder Bremen',
                 'away': 'SC Freiburg',
@@ -888,7 +888,7 @@ let entries = {
                 'outGameOnMin': '87',
                 'playedMinutes': '87'
             },
-            'entry25': {
+            '25': {
                 'date': '2001/03/09',
                 'home': 'Bay. Leverkusen',
                 'away': 'Werder Bremen',
@@ -903,7 +903,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry26': {
+            '26': {
                 'date': '2001/03/18',
                 'home': 'Werder Bremen',
                 'away': '1.FC Kaiserlautern',
@@ -918,7 +918,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry27': {
+            '27': {
                 'date': '2001/03/31',
                 'home': 'Bayern Munich',
                 'away': 'Werder Bremen',
@@ -933,7 +933,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry28': {
+            '28': {
                 'date': '2001/04/07',
                 'home': 'Werder Bremen',
                 'away': 'Hertha BSC',
@@ -948,7 +948,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry29': {
+            '29': {
                 'date': '2001/04/14',
                 'home': 'VfL Bochum',
                 'away': 'Werder Bremen',
@@ -963,7 +963,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry30': {
+            '30': {
                 'date': '2001/04/21',
                 'home': 'Werder Bremen',
                 'away': 'VfL Wolfsburg',
@@ -978,7 +978,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry31': {
+            '31': {
                 'date': '2001/04/28',
                 'home': 'VfB Stuttgart',
                 'away': 'Werder Bremen',
@@ -993,7 +993,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry32': {
+            '32': {
                 'date': '2001/05/06',
                 'home': 'Werder Bremen',
                 'away': 'Unterhaching',
@@ -1008,7 +1008,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry33': {
+            '33': {
                 'date': '2001/05/12',
                 'home': '1.FC Koeln',
                 'away': 'Werder Bremen',
@@ -1023,7 +1023,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            'entry34': {
+            '34': {
                 'date': '2001/05/19',
                 'home': 'Werder Bremen',
                 'away': 'Hansa Rostock',
@@ -1047,7 +1047,7 @@ let entries = {
         'year': '2001 - 2002',
         'mainImage': 'bayern2001.jpg',
         'matches': {
-            entry1: {
+            1: {
                 'date': '2001/07/28',
                 'home': 'Bor. Monchengladbach',
                 'away': 'Bayern Munich',
@@ -1062,7 +1062,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': ''
             },
-            entry2: {
+            2: {
                 'date': '2001/08/04',
                 'home': 'Bayern Munich',
                 'away': 'FC Schalke 04',
@@ -1077,7 +1077,7 @@ let entries = {
                 'outGameOnMin': '85',
                 'playedMinutes': '85'
             },
-            entry3: {
+            3: {
                 'date': '2001/08/11',
                 'home': 'Bay. Leverkusen',
                 'away': 'Bayern Munich',
@@ -1092,7 +1092,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry4: {
+            4: {
                 'date': '2001/08/18',
                 'home': 'Bayern Munich',
                 'away': 'FC St. Pauli',
@@ -1107,7 +1107,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': ''
             },
-            'entry5': {
+            '5': {
                 'date': '2001/09/08',
                 'home': 'Bor. Dortmund',
                 'away': 'Bayern Munich',
@@ -1122,7 +1122,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '12'
             },
-            entry6: {
+            6: {
                 'date': '2001/09/15',
                 'home': 'Bayern Munich',
                 'away': 'SC Freiburg',
@@ -1137,7 +1137,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry7: {
+            7: {
                 'date': '2001/09/22',
                 'home': 'Energie Cottbus',
                 'away': 'Bayern Munich',
@@ -1152,7 +1152,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry8: {
+            8: {
                 'date': '2001/09/30',
                 'home': 'Bayern Munich',
                 'away': 'VfB Stuttgart',
@@ -1167,7 +1167,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry9: {
+            9: {
                 'date': '2001/10/13',
                 'home': '1860 Munich',
                 'away': 'Bayern Munich',
@@ -1182,7 +1182,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '15'
             },
-            entry10: {
+            10: {
                 'date': '2001/10/20',
                 'home': 'Bayern Munich',
                 'away': '1.FC Kaiserlautern',
@@ -1197,7 +1197,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '21'
             },
-            entry11: {
+            11: {
                 'date': '2001/10/27',
                 'home': '1.FC Koeln',
                 'away': 'Bayern Munich',
@@ -1212,7 +1212,7 @@ let entries = {
                 'outGameOnMin': '90',
                 'playedMinutes': '90'
             },
-            entry12: {
+            12: {
                 'date': '2001/11/03',
                 'home': 'Bayern Munich',
                 'away': 'Hamburger SV',
@@ -1227,7 +1227,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry13: {
+            13: {
                 'date': '2001/11/17',
                 'home': 'Werder Bremen',
                 'away': 'Bayern Munich',
@@ -1242,7 +1242,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry14: {
+            14: {
                 'date': '2001/11/24',
                 'home': 'Bayern Munich',
                 'away': '1.FC Nuernberg',
@@ -1257,7 +1257,7 @@ let entries = {
                 'outGameOnMin': '70',
                 'playedMinutes': '70'
             },
-            entry15: {
+            15: {
                 'date': '2001/12/02',
                 'home': 'Hertha BSC',
                 'away': 'Bayern Munich',
@@ -1272,7 +1272,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '17'
             },
-            entry16: {
+            16: {
                 'date': '2001/12/08',
                 'home': 'Bayern Munich',
                 'away': 'VfL Wolfsburg',
@@ -1287,7 +1287,7 @@ let entries = {
                 'outGameOnMin': '69',
                 'playedMinutes': '69'
             },
-            entry17: {
+            17: {
                 'date': '2001/12/15',
                 'home': 'Hansa Rostock',
                 'away': 'Bayern Munich',
@@ -1302,7 +1302,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry18: {
+            18: {
                 'date': '2001/12/18',
                 'home': 'Bayern Munich',
                 'away': 'Bor. Monchengladbach',
@@ -1317,7 +1317,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry19: {
+            19: {
                 'date': '2002/01/26',
                 'home': 'FC Schalke 04',
                 'away': 'Bayern Munich',
@@ -1332,7 +1332,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '22'
             },
-            entry20: {
+            20: {
                 'date': '2002/02/03',
                 'home': 'Bayern Munich',
                 'away': 'Bay. Leverkusen',
@@ -1347,7 +1347,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '12'
             },
-            entry21: {
+            21: {
                 'date': '2002/02/06',
                 'home': 'FC St. Pauli',
                 'away': 'Bayern Munich',
@@ -1362,7 +1362,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry22: {
+            22: {
                 'date': '2002/02/09',
                 'home': 'Bayern Munich',
                 'away': 'Bor. Dortmund',
@@ -1377,7 +1377,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '15'
             },
-            entry23: {
+            23: {
                 'date': '2002/02/16',
                 'home': 'SC Freiburg',
                 'away': 'Bayern Munich',
@@ -1392,7 +1392,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '8'
             },
-            entry24: {
+            24: {
                 'date': '2002/02/23',
                 'home': 'Bayern Munich',
                 'away': 'Energie Cottbus',
@@ -1407,7 +1407,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry25: {
+            25: {
                 'date': '2002/03/02',
                 'home': 'VfB Stuttgart',
                 'away': 'Bayern Munich',
@@ -1422,7 +1422,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '21'
             },
-            entry26: {
+            26: {
                 'date': '2002/03/09',
                 'home': 'Bayern Munich',
                 'away': '1860 Munich',
@@ -1437,7 +1437,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '23'
             },
-            entry27: {
+            27: {
                 'date': '2002/03/16',
                 'home': '1.FC Kaiserlautern',
                 'away': 'Bayern Munich',
@@ -1452,7 +1452,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '45'
             },
-            entry28: {
+            28: {
                 'date': '2002/03/23',
                 'home': 'Bayern Munich',
                 'away': '1.FC Koeln',
@@ -1467,7 +1467,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': ''
             },
-            entry29: {
+            29: {
                 'date': '2002/03/30',
                 'home': 'Hamburger SV',
                 'away': 'Bayern Munich',
@@ -1482,7 +1482,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '19'
             },
-            entry30: {
+            30: {
                 'date': '2002/04/06',
                 'home': 'Bayern Munich',
                 'away': 'Werder Bremen',
@@ -1497,7 +1497,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry31: {
+            31: {
                 'date': '2002/04/13',
                 'home': '1.FC Nuernberg',
                 'away': 'Bayern Munich',
@@ -1512,7 +1512,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry32: {
+            32: {
                 'date': '2002/04/20',
                 'home': 'Bayern Munich',
                 'away': 'Hertha BSC',
@@ -1527,7 +1527,7 @@ let entries = {
                 'outGameOnMin': '86',
                 'playedMinutes': '86'
             },
-            entry33: {
+            33: {
                 'date': '2002/04/27',
                 'home': 'VfL Wolfsburg',
                 'away': 'Bayern Munich',
@@ -1542,7 +1542,7 @@ let entries = {
                 'outGameOnMin': '',
                 'playedMinutes': '90'
             },
-            entry34: {
+            34: {
                 'date': '2002/05/04',
                 'home': 'Bayern Munich',
                 'away': 'Hansa Rostock',
@@ -7903,6 +7903,955 @@ let entries = {
                 }
 
             }
+        }
+    },
+    season19 : {
+        'season': 'Season 2014 - 2015',
+        'country': 'Germany',
+        'club': 'Bayern Munich',
+        'year': '2014 - 2015',
+        'mainImage': 'bayern2015.jpg',
+        "matches": {
+            "1": {
+                "date": "2014/08/22",
+                "home": "Bayern Munich",
+                "away": "VfL Wolfsburg",
+                "result": "2:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "2": {
+                "date": "2014/08/30",
+                "home": "FC Schalke 04",
+                "away": "Bayern Munich",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "3": {
+                "date": "2014/09/13",
+                "home": "Bayern Munich",
+                "away": "VfB Stuttgart",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "87",
+                "outGameOnMin": "",
+                "playedMinutes": "3"
+            },
+            "4": {
+                "date": "2014/09/20",
+                "home": "Hamburger SV",
+                "away": "Bayern Munich",
+                "result": "0:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "5": {
+                "date": "2014/09/23",
+                "home": "Bayern Munich",
+                "away": "SC Paderborn",
+                "result": "4:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "6": {
+                "date": "2014/09/27",
+                "home": "1.FC Koeln",
+                "away": "Bayern Munich",
+                "result": "0:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "7": {
+                "date": "2014/10/04",
+                "home": "Bayern Munich",
+                "away": "Hannover 96",
+                "result": "4:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "60",
+                "outGameOnMin": "",
+                "playedMinutes": "30"
+            },
+            "8": {
+                "date": "2014/10/18",
+                "home": "Bayern Munich",
+                "away": "Werder Bremen",
+                "result": "6:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "9": {
+                "date": "2014/10/26",
+                "home": "Bor. Monchengladbach",
+                "away": "Bayern Munich",
+                "result": "0:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "75",
+                "outGameOnMin": "",
+                "playedMinutes": "15"
+            },
+            "10": {
+                "date": "2014/11/01",
+                "home": "Bayern Munich",
+                "away": "Bor. Dortmund",
+                "result": "2:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "81",
+                "outGameOnMin": "",
+                "playedMinutes": "9"
+            },
+            "11": {
+                "date": "2014/11/08",
+                "home": "E. Frankfurt",
+                "away": "Bayern Munich",
+                "result": "0:4 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "12": {
+                "date": "2014/11/22",
+                "home": "Bayern Munich",
+                "away": "TSG Hoffenheim",
+                "result": "4:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "13": {
+                "date": "2014/11/29",
+                "home": "Hertha BSC",
+                "away": "Bayern Munich",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "14": {
+                "date": "2014/12/06",
+                "home": "Bayern Munich",
+                "away": "Bay. Leverkusen",
+                "result": "1:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "15": {
+                "date": "2014/12/13",
+                "home": "FC Augsburg",
+                "away": "Bayern Munich",
+                "result": "0:4 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "16": {
+                "date": "2014/12/16",
+                "home": "Bayern Munich",
+                "away": "SC Freiburg",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "17": {
+                "date": "2014/12/19",
+                "home": "1.FSV Mainz 05",
+                "away": "Bayern Munich",
+                "result": "1:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "77",
+                "outGameOnMin": "",
+                "playedMinutes": "13"
+            },
+            "18": {
+                "date": "2015/01/30",
+                "home": "VfL Wolfsburg",
+                "away": "Bayern Munich",
+                "result": "4:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "71",
+                "outGameOnMin": "",
+                "playedMinutes": "19"
+            },
+            "19": {
+                "date": "2015/02/03",
+                "home": "Bayern Munich",
+                "away": "FC Schalke 04",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "20": {
+                "date": "2015/02/07",
+                "home": "VfB Stuttgart",
+                "away": "Bayern Munich",
+                "result": "0:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "21": {
+                "date": "2015/02/14",
+                "home": "Bayern Munich",
+                "away": "Hamburger SV",
+                "result": "8:0 ",
+                "goals": "",
+                "assists": "1",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "71",
+                "outGameOnMin": "",
+                "playedMinutes": "19"
+            },
+            "22": {
+                "date": "2015/02/21",
+                "home": "SC Paderborn",
+                "away": "Bayern Munich",
+                "result": "0:6 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "23": {
+                "date": "2015/02/27",
+                "home": "Bayern Munich",
+                "away": "1.FC Koeln",
+                "result": "4:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "24": {
+                "date": "2015/03/07",
+                "home": "Hannover 96",
+                "away": "Bayern Munich",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "25": {
+                "date": "2015/03/14",
+                "home": "Werder Bremen",
+                "away": "Bayern Munich",
+                "result": "0:4 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "26": {
+                "date": "2015/03/22",
+                "home": "Bayern Munich",
+                "away": "Bor. Monchengladbach",
+                "result": "0:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "27": {
+                "date": "2015/04/04",
+                "home": "Bor. Dortmund",
+                "away": "Bayern Munich",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "28": {
+                "date": "2015/04/11",
+                "home": "Bayern Munich",
+                "away": "E. Frankfurt",
+                "result": "3:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "29": {
+                "date": "2015/04/18",
+                "home": "TSG Hoffenheim",
+                "away": "Bayern Munich",
+                "result": "0:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "89",
+                "outGameOnMin": "",
+                "playedMinutes": "1"
+            },
+            "30": {
+                "date": "2015/04/25",
+                "home": "Bayern Munich",
+                "away": "Hertha BSC",
+                "result": "1:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "75",
+                "outGameOnMin": "",
+                "playedMinutes": "15"
+            },
+            "31": {
+                "date": "2015/05/02",
+                "home": "Bay. Leverkusen",
+                "away": "Bayern Munich",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "72",
+                "playedMinutes": "72"
+            },
+            "32": {
+                "date": "2015/05/09",
+                "home": "Bayern Munich",
+                "away": "FC Augsburg",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "74",
+                "outGameOnMin": "",
+                "playedMinutes": "16"
+            },
+            "33": {
+                "date": "2015/05/16",
+                "home": "SC Freiburg",
+                "away": "Bayern Munich",
+                "result": "2:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "34": {
+                "date": "2015/05/23",
+                "home": "Bayern Munich",
+                "away": "1.FSV Mainz 05",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "73",
+                "outGameOnMin": "",
+                "playedMinutes": "17"
+            }
+        }
+    },
+    season20 : {
+        'season': 'Season 2015 - 2016',
+        'country': 'Germany',
+        'club': 'Werder Bremen',
+        'year': '2015 - 2016',
+        'mainImage': 'werder2016.jpg',
+        "matches": {
+            "4": {
+                "date": "2015/09/13",
+                "home": "TSG Hoffenheim",
+                "away": "Werder Bremen",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "1",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "82",
+                "outGameOnMin": "",
+                "playedMinutes": "8"
+            },
+            "5": {
+                "date": "2015/09/19",
+                "home": "Werder Bremen",
+                "away": "FC Ingolstadt",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "1",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "46",
+                "outGameOnMin": "",
+                "playedMinutes": "45"
+            },
+            "6": {
+                "date": "2015/09/22",
+                "home": "SV Darmstadt 98",
+                "away": "Werder Bremen",
+                "result": "2:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "82",
+                "outGameOnMin": "",
+                "playedMinutes": "8"
+            },
+            "7": {
+                "date": "2015/09/26",
+                "home": "Werder Bremen",
+                "away": "Bay. Leverkusen",
+                "result": "0:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "8": {
+                "date": "2015/10/03",
+                "home": "Hannover 96",
+                "away": "Werder Bremen",
+                "result": "1:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "59",
+                "outGameOnMin": "",
+                "playedMinutes": "31"
+            },
+            "9": {
+                "date": "2015/10/17",
+                "home": "Werder Bremen",
+                "away": "Bayern Munich",
+                "result": "0:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "78",
+                "outGameOnMin": "",
+                "playedMinutes": "12"
+            },
+            "10": {
+                "date": "2015/10/24",
+                "home": "1.FSV Mainz 05",
+                "away": "Werder Bremen",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "82",
+                "outGameOnMin": "",
+                "playedMinutes": "8"
+            },
+            "11": {
+                "date": "2015/10/31",
+                "home": "Werder Bremen",
+                "away": "Bor. Dortmund",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "83",
+                "outGameOnMin": "",
+                "playedMinutes": "7"
+            },
+            "12": {
+                "date": "2015/11/08",
+                "home": "FC Augsburg",
+                "away": "Werder Bremen",
+                "result": "1:2 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "46",
+                "outGameOnMin": "",
+                "playedMinutes": "45"
+            },
+            "13": {
+                "date": "2015/11/21",
+                "home": "VfL Wolfsburg",
+                "away": "Werder Bremen",
+                "result": "6:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "46",
+                "outGameOnMin": "",
+                "playedMinutes": "45"
+            },
+            "14": {
+                "date": "2015/11/28",
+                "home": "Werder Bremen",
+                "away": "Hamburger SV",
+                "result": "1:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "77",
+                "playedMinutes": "77"
+            },
+            "15": {
+                "date": "2015/12/06",
+                "home": "VfB Stuttgart",
+                "away": "Werder Bremen",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "67",
+                "outGameOnMin": "",
+                "playedMinutes": "23"
+            },
+            "16": {
+                "date": "2015/12/12",
+                "home": "Werder Bremen",
+                "away": "1.FC Koeln",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "64",
+                "outGameOnMin": "",
+                "playedMinutes": "26"
+            },
+            "17": {
+                "date": "2015/12/19",
+                "home": "E. Frankfurt",
+                "away": "Werder Bremen",
+                "result": "2:1 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "18": {
+                "date": "2016/01/24",
+                "home": "FC Schalke 04",
+                "away": "Werder Bremen",
+                "result": "1:3 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "1",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "85",
+                "playedMinutes": "85"
+            },
+            "19": {
+                "date": "2016/01/30",
+                "home": "Werder Bremen",
+                "away": "Hertha BSC",
+                "result": "3:3 ",
+                "goals": "2",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "20": {
+                "date": "2016/02/05",
+                "home": "Bor. Monchengladbach",
+                "away": "Werder Bremen",
+                "result": "5:1 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "21": {
+                "date": "2016/02/13",
+                "home": "Werder Bremen",
+                "away": "TSG Hoffenheim",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "22": {
+                "date": "2016/02/20",
+                "home": "FC Ingolstadt",
+                "away": "Werder Bremen",
+                "result": "2:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "72'",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "23": {
+                "date": "2016/02/27",
+                "home": "Werder Bremen",
+                "away": "SV Darmstadt 98",
+                "result": "2:2 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "24": {
+                "date": "2016/03/02",
+                "home": "Bay. Leverkusen",
+                "away": "Werder Bremen",
+                "result": "1:4 ",
+                "goals": "3",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "84",
+                "playedMinutes": "84"
+            },
+            "25": {
+                "date": "2016/03/05",
+                "home": "Werder Bremen",
+                "away": "Hannover 96",
+                "result": "4:1 ",
+                "goals": "1",
+                "assists": "1",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "26": {
+                "date": "2016/03/12",
+                "home": "Bayern Munich",
+                "away": "Werder Bremen",
+                "result": "5:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "27": {
+                "date": "2016/03/19",
+                "home": "Werder Bremen",
+                "away": "1.FSV Mainz 05",
+                "result": "1:1 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "81",
+                "playedMinutes": "81"
+            },
+            "28": {
+                "date": "2016/04/02",
+                "home": "Bor. Dortmund",
+                "away": "Werder Bremen",
+                "result": "3:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "29": {
+                "date": "2016/04/09",
+                "home": "Werder Bremen",
+                "away": "FC Ausburg",
+                "result": "1:2 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "30": {
+                "date": "2016/04/16",
+                "home": "Werder Bremen",
+                "away": "VfL Wolfsburg",
+                "result": "3:2 ",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "84",
+                "playedMinutes": "84"
+            },
+            "31": {
+                "date": "2016/04/22",
+                "home": "Hamburger SV",
+                "away": "Werder Bremen",
+                "result": "2:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            }
+
         }
     }
 };
