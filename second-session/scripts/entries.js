@@ -52,7 +52,10 @@ let entries = {
                 'playedMinutes': '32',
                 'redCard': '',
                 'result': '1:1 ',
-                'yellowCard': ''
+                'yellowCard': '',
+                'goalsVideos' : {
+                    'allGoals' : 'b0O7ht86-ws'
+                }
             },
             2: {
                 'assists': '1',
@@ -3334,7 +3337,10 @@ let entries = {
                 'redCard': '',
                 'inGameOnMin': '',
                 'outGameOnMin': '',
-                'playedMinutes': '90'
+                'playedMinutes': '90',
+                'goalsVideos' : {
+                    'allGoals': '2r155PCCwbo'
+                }
             },
             '13': {
                 'date': '2005/11/19',
@@ -4936,7 +4942,10 @@ let entries = {
             'redCard': '',
             'inGameOnMin': '',
             'outGameOnMin': '',
-            'playedMinutes': '90'
+            'playedMinutes': '90',
+            'goalsVideos' : {
+                'allGoals' : '4s3YO-R_flw?t=2m20s'
+            }
     },
     '12': {
         'date': '2008/11/08',
@@ -5395,7 +5404,10 @@ let entries = {
                 'redCard': '',
                 'inGameOnMin': '',
                 'outGameOnMin': '',
-                'playedMinutes': '90'
+                'playedMinutes': '90',
+                'goalsVideos' : {
+                    'allGoals' : 'fKdm8E793aI'
+                }
             },
             '8': {
                 'date': '2009/10/04',
@@ -6124,7 +6136,10 @@ let entries = {
                 'redCard': '',
                 'inGameOnMin': '',
                 'outGameOnMin': '',
-                'playedMinutes': '90'
+                'playedMinutes': '90',
+                'goalsVideos' : {
+                    'allGoals' : 'MhtneKb1410'
+                }
             },
             '22': {
                 'date': '2011/02/13',
@@ -6438,7 +6453,10 @@ let entries = {
                 'redCard': '',
                 'inGameOnMin': '',
                 'outGameOnMin': '',
-                'playedMinutes': '90'
+                'playedMinutes': '90',
+                'goalsVideos': {
+                    'allGoals' : 'DqCKFz3szdo'
+                }
             },
             '8': {
                 'date': '2011/10/02',
@@ -7026,7 +7044,7 @@ let entries = {
             },
             '12': {
                 'date': '2012/11/17',
-                'home': '1.FC Nürnberg',
+                'home': '1.FC Nuernberg',
                 'away': 'Bayern Munich',
                 'result': '1:1 ',
                 'goals': '',
@@ -8808,7 +8826,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90"
+                "playedMinutes": "90",
+                'goalsVideos' : {
+                    'allGoals' : 'q73cVRaIDL0'
+                }
             },
             "26": {
                 "date": "2016/03/12",
@@ -8883,7 +8904,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "84",
-                "playedMinutes": "84"
+                "playedMinutes": "84",
+                'goalsVideos' : {
+                    'allGoals' : 'zxRcn7Y4Ebo'
+                }
             },
             "31": {
                 "date": "2016/04/22",

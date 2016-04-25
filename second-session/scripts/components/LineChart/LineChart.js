@@ -112,7 +112,7 @@ var LineChart = React.createClass({
         function selectHandler(e) {
             console.log(chart.getSelection());
 
-            if (typeof (chart.getSelection()) !== 'undefined') {
+            if (typeof (chart.getSelection()) !== 'undefined' && chart.getSelection().length !== 0) {
                 var matchEntry = _this.props.seasonMatchesData[(chart.getSelection()[0].row + 1)];
                 if (typeof (matchEntry.goalsVideos) !== 'undefined') {
                     _this.testingEvent(_this.props.seasonMatchesData[chart.getSelection()[0].row + 1]);
