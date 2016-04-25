@@ -110,6 +110,7 @@ var LineChart = React.createClass({
         google.visualization.events.addListener(chart, 'select', selectHandler);
 
         function selectHandler(e) {
+            console.log(chart.getSelection());
 
             if (typeof (chart.getSelection()) !== 'undefined') {
                 var matchEntry = _this.props.seasonMatchesData[(chart.getSelection()[0].row + 1)];

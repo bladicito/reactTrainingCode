@@ -8431,6 +8431,52 @@ let entries = {
         'year': '2015 - 2016',
         'mainImage': 'werder2016.jpg',
         "matches": {
+            "1": {
+                "date": "2015/08/15",
+                "home": "Werder Bremen",
+                "away": "FC Schalke 04",
+                "result": "0:3 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "2": {
+                "date": "2015/08/21",
+                "home": "Hertha BSC",
+                "away": "Werder Bremen",
+                "result": "1:1 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+            "3": {
+                "date": "2015/08/30",
+                "home": "Werder Bremen",
+                "away": "Bor. M'gladbach",
+                "result": "2:1",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": ""
+            },
+
             "4": {
                 "date": "2015/09/13",
                 "home": "TSG Hoffenheim",
@@ -8564,7 +8610,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "46",
                 "outGameOnMin": "",
-                "playedMinutes": "45"
+                "playedMinutes": "45",
+                'goalsVideos' : {
+                    'allGoals' : 'dTO5VeEo97o'
+                }
             },
             "13": {
                 "date": "2015/11/21",
