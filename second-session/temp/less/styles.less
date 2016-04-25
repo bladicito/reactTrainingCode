@@ -1505,6 +1505,239 @@
 
 
 }
+.component-entry-table-row {
+    .shield__mini {
+        width: 15px;
+        height: auto;
+        max-height: 15px;
+    }
+
+    &.data__row {
+        td {
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+.component-header {
+    .werder-bremen();
+    .bayern-munich();
+    .alianza-lima();
+    .deportivo-pesquero();
+    .chelsea();
+
+}
+
+
+.werder-bremen() {
+    &.werder-bremen {
+        background-color: @color-werder-bremen-main;
+        .summary__title {
+            background-color: @color-werder-bremen-secondary;
+        }
+    }
+}
+
+.bayern-munich() {
+    &.bayern-munich {
+        background-color: @color-bayern-munich-main;
+        .summary__title {
+            background-color: @color-bayern-munich-secondary;
+        }
+    }
+}
+
+.alianza-lima() {
+    &.alianza-lima {
+        background-color: @color-alianza-lima-main;
+        .summary__title {
+            background-color: @color-alianza-lima-secondary;
+        }
+    }
+}
+
+.deportivo-pesquero() {
+    &.deportivo-pesquero {
+        background-color: @color-pesquero-main;
+        .summary__title {
+            background-color: @color-pesquero-secondary;
+        }
+    }
+}
+
+.chelsea() {
+    &.fc-chelsea {
+        background-color: @color-chelsea-main;
+        .summary__title {
+            background-color: @color-chelsea-secondary;
+        }
+    }
+}
+
+.google-visualization-tooltip {
+    width: 300px;
+}
+.toolTip(@mainColor, @secondaryColor) {
+    .tool__tip {
+        font-family: @font-webfont-headings;
+        outline: 3px solid white;
+        .radius(8px);
+        border: 7px solid @secondaryColor;
+        padding: 10px;
+        .tool__tip__data{
+
+        }
+        .tool__tip__data--header {
+            color: @mainColor;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center;
+
+        }
+
+        .tool__tip__data--text {
+            color: @secondaryColor;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .tool__tip__data--scorer {
+            .team {
+                text-align: center;
+            }
+            .team--score {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .tool__tip__img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+.component-linechart{
+    &.bayern-munich {
+        .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
+    }
+    &.werder-bremen {
+        .toolTip(@color-werder-bremen-main, @color-werder-bremen-secondary);
+    }
+    &.fc-chelsea {
+        .toolTip(@color-chelsea-main, @color-chelsea-secondary);
+    }
+
+}
+
+
+
+
+.component-main-picture {
+    display: inline-block;
+    width:100%;
+}
+.component-summary {
+    .werder-bremen();
+    .bayern-munich();
+    .alianza-lima();
+    .deportivo-pesquero();
+    .chelsea();
+
+    .summary__image {
+        
+    }
+    .summary-shield {
+        margin-top: 40px;
+        max-width:140px;
+    }
+
+    .summary__numbers {
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 30px;
+        padding-left: 30px;
+
+
+        .summary__numbers__item {
+            color: @color-white;
+            font-family: @font-webfont-text;
+
+        }
+        .summary__numbers__item--label {
+            font-weight: 200;
+            color: @color-orange-10;
+        }
+    }
+
+}
+
+
+.werder-bremen() {
+    &.werder-bremen {
+        background-color: @color-werder-bremen-main;
+        .summary__title {
+            background-color: @color-werder-bremen-secondary;
+        }
+    }
+}
+
+.bayern-munich() {
+    &.bayern-munich {
+        background-color: @color-bayern-munich-main;
+        .summary__title {
+            background-color: @color-bayern-munich-secondary;
+        }
+    }
+}
+
+.alianza-lima() {
+    &.alianza-lima {
+        background-color: @color-alianza-lima-main;
+        .summary__title {
+            background-color: @color-alianza-lima-secondary;
+        }
+    }
+}
+
+.deportivo-pesquero() {
+    &.deportivo-pesquero {
+        background-color: @color-pesquero-main;
+        .summary__title {
+            background-color: @color-pesquero-secondary;
+        }
+    }
+}
+
+.chelsea() {
+    &.fc-chelsea {
+        background-color: @color-chelsea-main;
+        .summary__title {
+            background-color: @color-chelsea-secondary;
+        }
+    }
+}
+
+
+
+.linked-components {
+    position: relative;
+}
+
+.component-youtube-player {
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
 .component-entry-table {
     .tableGeneral();
     &.werder-bremen {
@@ -1686,182 +1919,3 @@
     }
 }
 
-
-.component-entry-table-row {
-    .shield__mini {
-        width: 15px;
-        height: auto;
-        max-height: 15px;
-    }
-
-    &.data__row {
-        td {
-            font-size: 10px;
-            text-align: center;
-        }
-    }
-}
-
-
-
-
-.google-visualization-tooltip {
-    width: 300px;
-}
-.toolTip(@mainColor, @secondaryColor) {
-    .tool__tip {
-        font-family: @font-webfont-headings;
-        outline: 3px solid white;
-        .radius(8px);
-        border: 7px solid @secondaryColor;
-        padding: 10px;
-        .tool__tip__data{
-
-        }
-        .tool__tip__data--header {
-            color: @mainColor;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-align: center;
-
-        }
-
-        .tool__tip__data--text {
-            color: @secondaryColor;
-            font-size: 16px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .tool__tip__data--scorer {
-            .team {
-                text-align: center;
-            }
-            .team--score {
-                font-size: 20px;
-                font-weight: 600;
-            }
-        }
-
-        .tool__tip__img {
-            width: 30px;
-            height: 30px;
-        }
-    }
-}
-
-
-.component-linechart{
-    &.bayern-munich {
-        .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
-    }
-    &.werder-bremen {
-        .toolTip(@color-werder-bremen-main, @color-werder-bremen-secondary);
-    }
-    &.fc-chelsea {
-        .toolTip(@color-chelsea-main, @color-chelsea-secondary);
-    }
-
-}
-
-
-
-
-.component-main-picture {
-    display: inline-block;
-    width:100%;
-}
-.component-summary {
-    .werder-bremen();
-    .bayern-munich();
-    .alianza-lima();
-    .deportivo-pesquero();
-    .chelsea();
-
-    .summary__image {
-        width: 100%;
-    }
-    .summary-shield {
-        margin-top: 40px;
-        max-width:140px;
-    }
-
-    .summary__numbers {
-        font-size: 20px;
-        font-weight: 200;
-        margin-top: 30px;
-        padding-left: 30px;
-
-
-        .summary__numbers__item {
-            color: @color-white;
-            font-family: @font-webfont-text;
-
-        }
-        .summary__numbers__item--label {
-            font-weight: 200;
-            color: @color-orange-10;
-        }
-    }
-
-}
-
-
-.werder-bremen() {
-    &.werder-bremen {
-        background-color: @color-werder-bremen-main;
-        .summary__title {
-            background-color: @color-werder-bremen-secondary;
-        }
-    }
-}
-
-.bayern-munich() {
-    &.bayern-munich {
-        background-color: @color-bayern-munich-main;
-        .summary__title {
-            background-color: @color-bayern-munich-secondary;
-        }
-    }
-}
-
-.alianza-lima() {
-    &.alianza-lima {
-        background-color: @color-alianza-lima-main;
-        .summary__title {
-            background-color: @color-alianza-lima-secondary;
-        }
-    }
-}
-
-.deportivo-pesquero() {
-    &.deportivo-pesquero {
-        background-color: @color-pesquero-main;
-        .summary__title {
-            background-color: @color-pesquero-secondary;
-        }
-    }
-}
-
-.chelsea() {
-    &.fc-chelsea {
-        background-color: @color-chelsea-main;
-        .summary__title {
-            background-color: @color-chelsea-secondary;
-        }
-    }
-}
-
-
-
-.linked-components {
-    position: relative;
-}
-
-.component-youtube-player {
-    width: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-}

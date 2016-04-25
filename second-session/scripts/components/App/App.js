@@ -1,11 +1,12 @@
-import React from       'react';
-import Summary from     '../Summary/Summary';
-import EntryTable from  '../EntryTable/EntryTable';
-import LineChart from  '../LineChart/LineChart';
-import DonutCharts from  '../DonutCharts/DonutCharts';
-import YoutubePlayer from  '../YoutubePlayer/YoutubePlayer';
-import Utils from       '../../helpers';
-import Entries from     '../../entries';
+import React from           'react';
+import Summary from         '../Summary/Summary';
+import EntryTable from      '../EntryTable/EntryTable';
+import LineChart from       '../LineChart/LineChart';
+import DonutCharts from     '../DonutCharts/DonutCharts';
+import YoutubePlayer from   '../YoutubePlayer/YoutubePlayer';
+import Header from          '../Header/Header';
+import Utils from           '../../helpers';
+import Entries from         '../../entries';
 
 
 var App = React.createClass({
@@ -135,7 +136,6 @@ var App = React.createClass({
         this.state.currentClubColors    = Utils.getClubColors(this.state.currentClub);
         this.initSummary(this.state.seasonData);
 
-
         this.setCurrentSeasons();
 
         this.setState({
@@ -176,6 +176,14 @@ var App = React.createClass({
 
         return (
             <div className="main-claudio-pizarro">
+                <Header
+                    currentClubCss      = {this.state.currentClubCss}
+                    currentSeasonYear   = {this.state.currentSeasonYear}
+                    currentClub         = {this.state.currentClub}
+                    prevSeason          = {this.state.prevSeason}
+                    nextSeason          = {this.state.nextSeason}
+                    updateDataSeason    = {this.updateDataSeason}
+                />
                 <div className="linked-components">
                     <Summary goals             = {this.state.goals}
                              assists           = {this.state.assists}
