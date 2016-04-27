@@ -167,6 +167,15 @@ let helpers = {
             case 'Blackburn Rov.' :
                 imagePath = 'blackburn-roverts.svg';
                 break;
+            case '1.FSV Mainz 05' :
+                imagePath = 'mainz.svg';
+                break;
+            case 'Hannover 96' :
+                imagePath = 'hannover96.svg';
+                break;
+            case 'FC Augsburg' :
+                imagePath = 'ausburg.svg';
+                break;
         }
         return imagePath;
     }

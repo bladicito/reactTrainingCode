@@ -1509,7 +1509,7 @@
     .tableGeneral();
     &.werder-bremen {
         background-color: @color-white;
-        .tableColorsForClub(@color-werder-bremen-secondary, @color-white);
+        .tableColorsForClub(@color-werder-bremen-secondary, @color-werder-bremen-main);
         .container {
             padding-top: 20px;
             padding-bottom: 20px;
@@ -1518,7 +1518,7 @@
 
     &.bayern-munich {
         background-color: @color-white;
-        .tableColorsForClub(@color-bayern-munich-secondary, @color-white);
+        .tableColorsForClub(@color-bayern-munich-secondary, @color-bayern-munich-main);
         .container {
             padding-top: 20px;
             padding-bottom: 20px;
@@ -1527,7 +1527,7 @@
 
     &.fc-chelsea {
         background-color: @color-white;
-        .tableColorsForClub(@color-chelsea-secondary, @color-white);
+        .tableColorsForClub(@color-chelsea-secondary, @color-chelsea-main);
         .container {
             padding-top: 20px;
             padding-bottom: 20px;
@@ -1544,19 +1544,18 @@
 
 }
 
-.tableColorsForClub(@mainColor, @textColor) {
+.tableColorsForClub(@mainColor, @secondaryColor) {
     @complement1:   spin(@mainColor, 180);
     @complement2:   darken(spin(@mainColor, 180), 5%);
     @lighten1:      lighten(@mainColor, 60%);
     @lighten2:      lighten(@mainColor, 10%);
 
-    tbody tr:nth-child(odd) {
-        background-color: @lighten1;
-    }
+   background-color: @mainColor;
 
     thead {
         background-color: @mainColor;
-        color: @textColor;
+        color: @color-white;
+        font-size: 20px;
         th {
             border-left: 1px solid @mainColor;
             border-bottom: 1px solid @mainColor;
@@ -1567,27 +1566,31 @@
 
     }
     tbody {
-        tr:last-child {
+        background-color: @secondaryColor;
+        color: @color-white;
+        td {
+            padding: 13px 15px;
+        }
+
+        tr:hover {
             td {
-                border-bottom: 1px solid @mainColor;
+                background-color: @lighten2;
             }
         }
-        td {
-            border-left: 1px solid @mainColor;
-        }
-        td:last-child {
-            border-right: 1px solid @mainColor;
-        }
+    }
+
+    .data__cell--goals {
+        background-color: darken(@secondaryColor, 4%);
     }
 }
 
 .tableGeneral () {
 
     .body__data {
-        font-size: 12px;
+        font-size: 16px;
     }
     .header__data {
-        font-size: 13px;
+        font-size: 15px;
         text-align: center;
     }
     .header__data--date {
@@ -1689,15 +1692,16 @@
 
 .component-entry-table-row {
     .shield__mini {
-        width: 15px;
+        width: 25px;
         height: auto;
-        max-height: 15px;
+        max-height: 25px;
     }
 
     &.data__row {
         td {
-            font-size: 10px;
+            font-size: 15px;
             text-align: center;
+            border:none;
         }
     }
 }

@@ -272,10 +272,10 @@
   background-color: #0f60b3;
 }
 .component-entry-table .body__data {
-  font-size: 12px;
+  font-size: 16px;
 }
 .component-entry-table .header__data {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
 }
 .component-entry-table .header__data--date {
@@ -316,13 +316,12 @@
 }
 .component-entry-table.werder-bremen {
   background-color: #FFFFFF;
-}
-.component-entry-table.werder-bremen tbody tr:nth-child(odd) {
-  background-color: #9affd0;
+  background-color: #006737;
 }
 .component-entry-table.werder-bremen thead {
   background-color: #006737;
   color: #FFFFFF;
+  font-size: 20px;
 }
 .component-entry-table.werder-bremen thead th {
   border-left: 1px solid #006737;
@@ -331,14 +330,18 @@
 .component-entry-table.werder-bremen thead th:last-child {
   border-right: 1px solid #006737;
 }
-.component-entry-table.werder-bremen tbody tr:last-child td {
-  border-bottom: 1px solid #006737;
+.component-entry-table.werder-bremen tbody {
+  background-color: #009252;
+  color: #FFFFFF;
 }
 .component-entry-table.werder-bremen tbody td {
-  border-left: 1px solid #006737;
+  padding: 13px 15px;
 }
-.component-entry-table.werder-bremen tbody td:last-child {
-  border-right: 1px solid #006737;
+.component-entry-table.werder-bremen tbody tr:hover td {
+  background-color: #009a52;
+}
+.component-entry-table.werder-bremen .data__cell--goals {
+  background-color: #007e47;
 }
 .component-entry-table.werder-bremen .container {
   padding-top: 20px;
@@ -346,13 +349,12 @@
 }
 .component-entry-table.bayern-munich {
   background-color: #FFFFFF;
-}
-.component-entry-table.bayern-munich tbody tr:nth-child(odd) {
-  background-color: #ffeef2;
+  background-color: #bb002f;
 }
 .component-entry-table.bayern-munich thead {
   background-color: #bb002f;
   color: #FFFFFF;
+  font-size: 20px;
 }
 .component-entry-table.bayern-munich thead th {
   border-left: 1px solid #bb002f;
@@ -361,14 +363,18 @@
 .component-entry-table.bayern-munich thead th:last-child {
   border-right: 1px solid #bb002f;
 }
-.component-entry-table.bayern-munich tbody tr:last-child td {
-  border-bottom: 1px solid #bb002f;
+.component-entry-table.bayern-munich tbody {
+  background-color: #ff0040;
+  color: #FFFFFF;
 }
 .component-entry-table.bayern-munich tbody td {
-  border-left: 1px solid #bb002f;
+  padding: 13px 15px;
 }
-.component-entry-table.bayern-munich tbody td:last-child {
-  border-right: 1px solid #bb002f;
+.component-entry-table.bayern-munich tbody tr:hover td {
+  background-color: #ee003c;
+}
+.component-entry-table.bayern-munich .data__cell--goals {
+  background-color: #eb003b;
 }
 .component-entry-table.bayern-munich .container {
   padding-top: 20px;
@@ -376,13 +382,12 @@
 }
 .component-entry-table.fc-chelsea {
   background-color: #FFFFFF;
-}
-.component-entry-table.fc-chelsea tbody tr:nth-child(odd) {
-  background-color: #a6b8f5;
+  background-color: #0B1E5E;
 }
 .component-entry-table.fc-chelsea thead {
   background-color: #0B1E5E;
   color: #FFFFFF;
+  font-size: 20px;
 }
 .component-entry-table.fc-chelsea thead th {
   border-left: 1px solid #0B1E5E;
@@ -391,14 +396,18 @@
 .component-entry-table.fc-chelsea thead th:last-child {
   border-right: 1px solid #0B1E5E;
 }
-.component-entry-table.fc-chelsea tbody tr:last-child td {
-  border-bottom: 1px solid #0B1E5E;
+.component-entry-table.fc-chelsea tbody {
+  background-color: #3064CA;
+  color: #FFFFFF;
 }
 .component-entry-table.fc-chelsea tbody td {
-  border-left: 1px solid #0B1E5E;
+  padding: 13px 15px;
 }
-.component-entry-table.fc-chelsea tbody td:last-child {
-  border-right: 1px solid #0B1E5E;
+.component-entry-table.fc-chelsea tbody tr:hover td {
+  background-color: #102d8c;
+}
+.component-entry-table.fc-chelsea .data__cell--goals {
+  background-color: #2c5cba;
 }
 .component-entry-table.fc-chelsea .container {
   padding-top: 20px;
@@ -457,13 +466,14 @@
   }
 }
 .component-entry-table-row .shield__mini {
-  width: 15px;
+  width: 25px;
   height: auto;
-  max-height: 15px;
+  max-height: 25px;
 }
 .component-entry-table-row.data__row td {
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
+  border: none;
 }
 .component-header.werder-bremen {
   background-color: #006737;
