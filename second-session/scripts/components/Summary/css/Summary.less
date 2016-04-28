@@ -1,3 +1,14 @@
+@color1 : `Math.floor(Math.random() * 20) + 1`;
+@color2 : `Math.floor(Math.random() * 20) + 1`;
+@color3 : `Math.floor(Math.random() * 20) + 1`;
+@color4 : `Math.floor(Math.random() * 20) + 1`;
+@color5 : `Math.floor(Math.random() * 20) + 1`;
+@color5 : `Math.floor(Math.random() * 20) + 1`;
+@color6: `Math.floor(Math.random() *  20) + 1`;
+@color7 : `Math.floor(Math.random() * 20) + 1`;
+@color8 : `Math.floor(Math.random() * 20) + 1`;
+@color9 : `Math.floor(Math.random() * 20) + 1`;
+
 .component-summary {
     .werder-bremen();
     .bayern-munich();
@@ -7,36 +18,48 @@
 
     .summary__image {}
     .summary-shield {
-        margin-top: 40px;
-        max-width:140px;
+        max-width: 115px;
     }
 
     .summary__numbers {
         font-size: 20px;
         font-weight: 200;
-        margin-top: 30px;
+        margin-top: 0;
 
 
         .summary__numbers__item {
             padding: 15px;
             color: @color-white;
             font-family: @font-webfont-text;
+            float: left;
+            width:33.3%;
+            height:142.3px;
             &:hover {
                 .summary__numbers__item--label, .summary__numbers__item--text {
                     opacity: 1;
                     font-weight: 600;
+                    .transition(all 50ms linear);
                 }
             }
         }
         .summary__numbers__item--label {
+            text-align: center;
+            display: block;
             font-weight: 200;
             opacity: 0.9;
 
         }
 
         .summary__numbers__item--text {
+            text-align: center;
+            display: block;
             font-weight: 400;
+            font-size: 40px;
             opacity: 0.9;
+            .transition(all 50ms linear);
+        }
+        .component-main-picture {
+            text-align: center;
         }
     }
 
@@ -49,6 +72,7 @@
         .summary__title {
             background-color: @color-werder-bremen-secondary;
         }
+        .setGridColors(@color-werder-bremen-main);
     }
 }
 
@@ -58,6 +82,8 @@
         .summary__title {
             background-color: @color-bayern-munich-secondary;
         }
+
+        .setGridColors(@color-bayern-munich-main);
     }
 }
 
@@ -67,6 +93,7 @@
         .summary__title {
             background-color: @color-alianza-lima-secondary;
         }
+        .setGridColors(@color-alianza-lima-main);
     }
 }
 
@@ -76,6 +103,7 @@
         .summary__title {
             background-color: @color-pesquero-secondary;
         }
+        .setGridColors(@color-pesquero-main);
     }
 }
 
@@ -85,6 +113,50 @@
         .summary__title {
             background-color: @color-chelsea-secondary;
         }
+
+        .setGridColors(@color-chelsea-main);
     }
 }
 
+
+
+.setGridColors(@colorSelected) {
+
+
+    .summary__numbers__item--matches-played {
+        background-color: darken(@colorSelected, 5%);
+
+    }
+
+    .summary__numbers__item--goals {
+        background-color: darken(@colorSelected, 16%);
+    }
+
+    .summary__numbers__item--assists {
+        background-color: darken(@colorSelected, 17%);
+    }
+
+    .summary__numbers__item--yellow-cards {
+        background-color: darken(@colorSelected, 9%);
+    }
+
+    .summary__numbers__item--red-cards {
+        background-color: darken(@colorSelected, 11%);
+    }
+
+    .summary__numbers__item--played-minutes {
+        background-color: darken(@colorSelected, 14%);
+    }
+    .summary__numbers__item--goals-each-minute {
+        background-color: darken(@colorSelected, 14%);
+    }
+
+    .summary__numbers__item--effectiveness{
+        background-color: darken(@colorSelected, 3%);
+    }
+
+    .summary__numbers__item--club-logo{
+        background-color: darken(@colorSelected, 7%);
+    }
+
+}

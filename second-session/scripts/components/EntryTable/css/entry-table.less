@@ -28,9 +28,9 @@
     }
 
     .icon {
-        width: 15px;
+        width: 20px;
         height: auto;
-        max-height: 15px;
+        max-height: 20px;
     }
 
 
@@ -61,14 +61,18 @@
     tbody {
         background-color: @secondaryColor;
         color: @color-white;
+
         td {
-            padding: 13px 15px;
+            padding: 17px 15px;
+            .shield__mini {
+
+            }
         }
 
         tr:hover {
             td {
-                color:@lighten2;
-                background-color: @color-white;
+                color: @color-white;
+                background-color: @lighten2;
                 .transform(background-color 1000ms linear;);
 
             }
@@ -80,7 +84,7 @@
     }
 
     .data__cell--goals {
-        background-color: darken(@secondaryColor, 4%);
+
     }
 }
 
@@ -165,12 +169,30 @@
         }
         .header__data--cards-y {
             width: 11.11%;
+            display: none;
         }
         .header__data--cards-ry {
             width: 11.11%;
+            display: none;
         }
         .header__data--cards-r {
             width: 11.11%;
+            display: none;
+        }
+
+
+
+        .data__cell--cards-y {
+            
+            display: none;
+        }
+        .data__cell--cards-ry {
+
+            display: none;
+        }
+        .data__cell--cards-r {
+
+            display: none;
         }
 
 
