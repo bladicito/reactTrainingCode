@@ -29,22 +29,28 @@ var Summary = React.createClass({
                         <div className="col-md-8 col-xs-12">
                             <div className="summary__numbers">
                                 <div className="summary__numbers__item summary__numbers__item--matches-played">
-                                    <span className="summary__numbers__item--label">MATCHES PLAYED :</span>&nbsp;<span className="summary__numbers__item--text">{this.props.playedGames}</span>
+                                    <span className="summary__numbers__item--label">MATCHES PLAYED :</span>
+                                    <span className="summary__numbers__item--text">{this.props.playedGames}</span>
                                 </div>
                                 <div className="summary__numbers__item summary__numbers__item--goals">
-                                    <span className="summary__numbers__item--label">GOALS SCORED:</span>&nbsp;<span className="summary__numbers__item--text">{this.props.goals}</span>
+                                    <span className="summary__numbers__item--label">GOALS SCORED:</span>
+                                    <span className="summary__numbers__item--text">{this.props.goals}</span>
                                 </div>
                                 <div className="summary__numbers__item  summary__numbers__item--assists">
-                                    <span className="summary__numbers__item--label">ASSISTS IN SEASON:</span>&nbsp;<span className="summary__numbers__item--text"> {this.props.assists}</span>
+                                    <span className="summary__numbers__item--label">ASSISTS IN SEASON:</span>
+                                    <span className="summary__numbers__item--text"> {this.props.assists}</span>
                                 </div>
                                 <div className="summary__numbers__item  summary__numbers__item--yellow-cards">
-                                    <span className="summary__numbers__item--label">YELLOW CARDS IN SEASON:</span> &nbsp;<span className="summary__numbers__item--text">{this.props.yellowCards}</span>
+                                    <span className="summary__numbers__item--label">YELLOW CARDS IN SEASON:</span>
+                                    <span className="summary__numbers__item--text">{this.props.yellowCards}</span>
                                 </div>
                                 <div className="summary__numbers__item summary__numbers__item--red-cards">
-                                    <span className="summary__numbers__item--label">RED CARDS IN SEASON:</span>&nbsp;<span className="summary__numbers__item--text"> {this.props.redCards}</span>
+                                    <span className="summary__numbers__item--label">RED CARDS IN SEASON:</span>
+                                    <span className="summary__numbers__item--text"> {this.props.redCards}</span>
                                 </div>
                                 <div className="summary__numbers__item  summary__numbers__item--played-minutes">
-                                    <span className="summary__numbers__item--label">MINUTES PLAYED:</span>&nbsp;<span className="summary__numbers__item--text">{this.props.playedMinutes}</span>
+                                    <span className="summary__numbers__item--label">MINUTES PLAYED:</span>
+                                    <span className="summary__numbers__item--text">{this.props.playedMinutes}</span>
                                 </div>
 
                                 <div className="summary__numbers__item  summary__numbers__item--goals-each-minute">
