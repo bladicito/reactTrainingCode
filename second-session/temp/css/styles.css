@@ -679,15 +679,24 @@
   font-size: 20px;
   font-weight: 200;
   margin-top: 30px;
-  padding-left: 30px;
 }
 .component-summary .summary__numbers .summary__numbers__item {
+  padding: 15px;
   color: #FFFFFF;
   font-family: 'Refrigerator Deluxe W01';
 }
+.component-summary .summary__numbers .summary__numbers__item:hover .summary__numbers__item--label,
+.component-summary .summary__numbers .summary__numbers__item:hover .summary__numbers__item--text {
+  opacity: 1;
+  font-weight: 600;
+}
 .component-summary .summary__numbers .summary__numbers__item--label {
   font-weight: 200;
-  color: #fff5cf;
+  opacity: 0.9;
+}
+.component-summary .summary__numbers .summary__numbers__item--text {
+  font-weight: 400;
+  opacity: 0.9;
 }
 .linked-components {
   position: relative;
