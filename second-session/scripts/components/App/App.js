@@ -12,7 +12,7 @@ import Entries from         '../../entries';
 var App = React.createClass({
     getInitialState: function() {
         return {
-            currentSeason       : 'season17'
+            currentSeason       : 'season18'
         }
     },
 

@@ -338,7 +338,21 @@
   padding: 13px 15px;
 }
 .component-entry-table.werder-bremen tbody tr:hover td {
-  background-color: #009a52;
+  color: #009a52;
+  background-color: #FFFFFF;
+  -webkit-transform: background-color 1000ms linear;
+  -ms-transform: background-color 1000ms linear;
+  -moz-transform: background-color 1000ms linear;
+  -o-transform: background-color 1000ms linear;
+  transform: background-color 1000ms linear;
+}
+.component-entry-table.werder-bremen tbody tr {
+  background-color: transparent;
+  -webkit-transform: background-color 1000ms linear;
+  -ms-transform: background-color 1000ms linear;
+  -moz-transform: background-color 1000ms linear;
+  -o-transform: background-color 1000ms linear;
+  transform: background-color 1000ms linear;
 }
 .component-entry-table.werder-bremen .data__cell--goals {
   background-color: #007e47;
@@ -371,7 +385,21 @@
   padding: 13px 15px;
 }
 .component-entry-table.bayern-munich tbody tr:hover td {
-  background-color: #ee003c;
+  color: #ee003c;
+  background-color: #FFFFFF;
+  -webkit-transform: background-color 1000ms linear;
+  -ms-transform: background-color 1000ms linear;
+  -moz-transform: background-color 1000ms linear;
+  -o-transform: background-color 1000ms linear;
+  transform: background-color 1000ms linear;
+}
+.component-entry-table.bayern-munich tbody tr {
+  background-color: transparent;
+  -webkit-transform: background-color 1000ms linear;
+  -ms-transform: background-color 1000ms linear;
+  -moz-transform: background-color 1000ms linear;
+  -o-transform: background-color 1000ms linear;
+  transform: background-color 1000ms linear;
 }
 .component-entry-table.bayern-munich .data__cell--goals {
   background-color: #eb003b;
@@ -404,7 +432,21 @@
   padding: 13px 15px;
 }
 .component-entry-table.fc-chelsea tbody tr:hover td {
-  background-color: #102d8c;
+  color: #102d8c;
+  background-color: #FFFFFF;
+  -webkit-transform: background-color 1000ms linear;
+  -ms-transform: background-color 1000ms linear;
+  -moz-transform: background-color 1000ms linear;
+  -o-transform: background-color 1000ms linear;
+  transform: background-color 1000ms linear;
+}
+.component-entry-table.fc-chelsea tbody tr {
+  background-color: transparent;
+  -webkit-transform: background-color 1000ms linear;
+  -ms-transform: background-color 1000ms linear;
+  -moz-transform: background-color 1000ms linear;
+  -o-transform: background-color 1000ms linear;
+  transform: background-color 1000ms linear;
 }
 .component-entry-table.fc-chelsea .data__cell--goals {
   background-color: #2c5cba;

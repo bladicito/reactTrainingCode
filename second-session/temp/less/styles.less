@@ -1574,8 +1574,15 @@
 
         tr:hover {
             td {
-                background-color: @lighten2;
+                color:@lighten2;
+                background-color: @color-white;
+                .transform(background-color 1000ms linear;);
+
             }
+        }
+        tr {
+            background-color: transparent;
+            .transform(background-color 1000ms linear;);
         }
     }
 

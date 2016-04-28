@@ -7135,7 +7135,7 @@ let entries = {
             "18": {
                 "date": "2013/01/19",
                 "home": "Bayern Munich",
-                "away": "Greuther Fürth",
+                "away": "Greuther Fuerth",
                 "result": "2:0 ",
                 "goals": "",
                 "assists": "",

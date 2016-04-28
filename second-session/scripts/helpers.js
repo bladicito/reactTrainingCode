@@ -176,6 +176,18 @@ let helpers = {
             case 'FC Augsburg' :
                 imagePath = 'ausburg.svg';
                 break;
+            case 'TSG Hoffenheim' :
+                imagePath = 'hoffenheim.svg';
+                break;
+            case 'F. Duesseldorf' :
+                imagePath = 'duesseldorf.svg';
+                break;
+            case 'Greuther Fuerth' :
+                imagePath = 'greuther_f.svg';
+                break;
+            case 'E. Braunschweig' :
+                imagePath = 'braunschweiger.svg';
+                break;
         }
         return imagePath;
     }
