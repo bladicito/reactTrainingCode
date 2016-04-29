@@ -8879,7 +8879,7 @@ let entries = {
             "29": {
                 "date": "2016/04/09",
                 "home": "Werder Bremen",
-                "away": "FC Ausburg",
+                "away": "FC Augsburg",
                 "result": "1:2 ",
                 "goals": "",
                 "assists": "",

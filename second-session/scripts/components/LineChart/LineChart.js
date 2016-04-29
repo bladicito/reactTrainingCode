@@ -214,13 +214,11 @@ var LineChart = React.createClass({
     render: function() {
         return (
             <div className={'component component-linechart ' + this.props.currentClubCss} >
-                <div className="container">
                     <div className="row">
                         <div className="col-md-12">
                             <div id="chart_div"></div>
                         </div>
                     </div>
-                </div>
             </div>
         )
     }

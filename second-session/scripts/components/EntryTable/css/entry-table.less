@@ -1,7 +1,11 @@
 .component-entry-table {
+    padding-top: 70px;
+
     .tableGeneral();
     &.werder-bremen {
+
         background-color: @color-white;
+        color: @color-werder-bremen-secondary
         .tableColorsForClub(@color-werder-bremen-secondary, @color-werder-bremen-main);
         .container {
             padding-top: 20px;
@@ -10,7 +14,11 @@
     }
 
     &.bayern-munich {
-        background-color: @color-white;
+        h2 {
+            color: @color-bayern-munich-secondary!important;
+        }
+
+        background-color: @color-white!important;
         .tableColorsForClub(@color-bayern-munich-secondary, @color-bayern-munich-main);
         .container {
             padding-top: 20px;
@@ -98,7 +106,8 @@
     .header__data {
         font-size: 15px;
         text-align: center;
-        line-height: 3em;
+        line-height: 1em;
+        vertical-align: middle;
     }
     .header__data--date {
         width: 9%;

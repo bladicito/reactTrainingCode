@@ -18,13 +18,16 @@
 
     .summary__image {}
     .summary-shield {
-        max-width: 115px;
+        max-width: 80%;
+
     }
 
     .summary__numbers {
         font-size: 20px;
         font-weight: 200;
         margin-top: 0;
+        position: relative;
+        .clearfix();
 
 
         .summary__numbers__item {
@@ -32,36 +35,56 @@
             color: @color-white;
             font-family: @font-webfont-text;
             float: left;
-            width:33.3%;
-            height:142.3px;
-            &:hover {
-                .summary__numbers__item--label, .summary__numbers__item--text {
-                    opacity: 1;
-                    font-weight: 600;
-                    .transition(all 50ms linear);
-                }
+            width: 33.3%;
+            position: relative;
+            overflow: hidden;
+            padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+
+
+            .summary__numbers__content {
+                position:absolute;
+                height:90%; /* = 100% - 2*5% padding */
+                width:90%; /* = 100% - 2*5% padding */
+                padding: 5%;
+                vertical-align: center;
+                text-align: center;
             }
+
+
+
+            .summary__numbers__item--label, .summary__numbers__item--text {
+                opacity: 1;
+                font-weight: 600;
+                .transition(all 500ms ease-in);
+            }
+
         }
         .summary__numbers__item--label {
             text-align: center;
-            display: block;
             font-weight: 200;
             opacity: 0.9;
             font-size: 16px;
-            letter-spacing: 1.5px
+            letter-spacing: 1.5px;
+            display: block;
+            padding-top: 35%;
+        }
 
+        .summary__numbers__item--label-second{
+            padding-top: 0;
+            display: inline-block;
         }
 
         .summary__numbers__item--text {
             text-align: center;
-            display: block;
             font-weight: 400;
-            font-size: 40px;
+            font-size: 60px;
             opacity: 0.9;
-            .transition(all 50ms linear);
+            display: inline-block;
+            .transition(all 500ms ease-in );
         }
         .component-main-picture {
             text-align: center;
+            vertical-align: center;
         }
     }
 
@@ -75,7 +98,13 @@
             background-color: @color-werder-bremen-secondary;
         }
         .setGridColors(@color-werder-bremen-main);
+
+        .summary__numbers__item:hover {
+            background-color: @color-werder-bremen-secondary;
+        }
     }
+
+
 }
 
 .bayern-munich() {
@@ -86,7 +115,16 @@
         }
 
         .setGridColors(@color-bayern-munich-main);
+
+        .summary__numbers__item:hover {
+            background-color: @color-bayern-munich-secondary;
+        }
+        .summary__numbers__item:hover {
+            .transition(all 500ms ease);
+        }
     }
+
+
 }
 
 .alianza-lima() {
@@ -96,6 +134,13 @@
             background-color: @color-alianza-lima-secondary;
         }
         .setGridColors(@color-alianza-lima-main);
+
+        .summary__numbers__item:hover {
+            background-color: @color-alianza-lima-secondary;
+        }
+        .summary__numbers__item:hover {
+            .transition(all 500ms ease);
+        }
     }
 }
 
@@ -106,6 +151,13 @@
             background-color: @color-pesquero-secondary;
         }
         .setGridColors(@color-pesquero-main);
+
+        .summary__numbers__item:hover {
+            background-color: @color-pesquero-secondary;
+        }
+        .summary__numbers__item:hover {
+            .transition(all 500ms ease);
+        }
     }
 }
 
@@ -117,6 +169,14 @@
         }
 
         .setGridColors(@color-chelsea-main);
+
+        .summary__numbers__item:hover {
+            .transition(all 600ms ease);
+            background-color: @color-chelsea-secondary;
+        }
+        .summary__numbers__item:hover {
+            .transition(all 600ms ease);
+        }
     }
 }
 
@@ -127,38 +187,46 @@
 
     .summary__numbers__item--matches-played {
         background-color: darken(@colorSelected, 2%);
-
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--goals {
         background-color: darken(@colorSelected, 4%);
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--assists {
         background-color: darken(@colorSelected, 2%);
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--yellow-cards {
         background-color: darken(@colorSelected, 4%);
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--red-cards {
         background-color: darken(@colorSelected, 2%);
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--played-minutes {
         background-color: darken(@colorSelected, 4%);
+        .transition(all 700ms ease);
     }
     .summary__numbers__item--goals-each-minute {
         background-color: darken(@colorSelected, 2%);
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--effectiveness{
         background-color: darken(@colorSelected, 4%);
+        .transition(all 700ms ease);
     }
 
     .summary__numbers__item--club-logo{
         background-color: darken(@colorSelected, 2%);
+        .transition(all 700ms ease);
     }
 
 }

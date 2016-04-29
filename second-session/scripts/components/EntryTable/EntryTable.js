@@ -13,6 +13,7 @@ var EntryTable = React.createClass({
         var entries = this.props.seasonMatchesData.matches;
         return (
             <div className={'component component-entry-table ' + this.props.currentClubCss}>
+                <h2>Matches Stats</h2> 
                 <table className="table">
                     <thead>
                     <tr>
