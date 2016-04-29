@@ -20,14 +20,14 @@ var EntryTable = React.createClass({
                         <th className="header__data header__data--local">LOCAL</th>
                         <th className="header__data header__data--visit">VISIT</th>
                         <th className="header__data header__data--score">SCORE</th>
-                        <th className="header__data header__data--goals"><img src="build/svg/ball.svg" className="icon icon--goal"/></th>
-                        <th className="header__data header__data--assists"><img src="build/svg/goal-icon.svg" className="icon icon--assist"/></th>
-                        <th className="header__data header__data--cards-y"><img src="build/svg/yellow-card.svg" className="icon icon--yellow-card"/></th>
-                        <th className="header__data header__data--cards-ry"><img src="build/svg/yellow-red-card.svg" className="icon icon--yellow-card"/></th>
-                        <th className="header__data header__data--cards-r"><img src="build/svg/red-card.svg" className="icon icon--yellow-card"/></th>
-                        <th className="header__data header__data--played-mins"><i className="fa fa-clock-o"></i></th>
-                        <th className="header__data header__data--in-min-in"><i className="fa fa-arrow-right"></i>&nbsp;<i className="fa fa-clock-o"></i></th>
-                        <th className="header__data header__data--in-min-out"><i className="fa fa-arrow-left"></i>&nbsp;<i className="fa fa-clock-o"></i></th>
+                        <th className="header__data header__data--goals">GOALS</th>
+                        <th className="header__data header__data--assists">ASSISTS</th>
+                        <th className="header__data header__data--cards-y">YELLOW CARDS</th>
+                        <th className="header__data header__data--cards-ry">2X YELLOW CARDS</th>
+                        <th className="header__data header__data--cards-r">RED CARDS</th>
+                        <th className="header__data header__data--played-mins">MINUTES PLAYED</th>
+                        <th className="header__data header__data--in-min-in">IN GAME MIN</th>
+                        <th className="header__data header__data--in-min-out">OUT GAME MIN</th>
                     </tr>
                     </thead>
                     <tbody>

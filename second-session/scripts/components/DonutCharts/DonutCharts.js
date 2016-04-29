@@ -252,7 +252,6 @@ var DonutChart = React.createClass({
     render: function() {
         return (
             <div className={'component component-donutchart ' + this.props.currentClubCss}>
-                <div className="container">
                     <h2>How did Claudio and the team do during season {this.props.currentSeasonYear} ?</h2>
                     <div className="row">
                         <div className="col-md-4">
@@ -265,7 +264,6 @@ var DonutChart = React.createClass({
                             <div className="chart chart__donut" id="donut-chart-without-piza"></div>
                         </div>
                     </div>
-                </div>
             </div>
         )
     }

@@ -231,6 +231,26 @@
   }
 }
 @color-primary-button #A7A7A7;
+.component-controls .control {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+.component-controls .control > .component-main-picture {
+  width: auto;
+}
+.component-controls .control i {
+  font-size: 50px;
+}
+.component-controls .control img {
+  width: 40px;
+  height: auto;
+  max-height: 40px;
+  position: relative;
+  top: -12px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
 .component-donutchart.werder-bremen {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -252,47 +272,49 @@
   background-color: #0f60b3;
 }
 .component-entry-table .body__data {
-  font-size: 16px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
 }
 .component-entry-table .header__data {
   font-size: 15px;
   text-align: center;
+  line-height: 3em;
 }
 .component-entry-table .header__data--date {
-  width: 8.33%;
+  width: 9%;
 }
 .component-entry-table .header__data--local {
-  width: 8.33%;
+  width: 7%;
 }
 .component-entry-table .header__data--visit {
-  width: 8.33%;
+  width: 7%;
 }
 .component-entry-table .header__data--score {
-  width: 8.33%;
+  width: 7%;
 }
 .component-entry-table .header__data--goals {
-  width: 8.33%;
+  width: 5%;
 }
 .component-entry-table .header__data--assists {
-  width: 8.33%;
+  width: 5%;
 }
 .component-entry-table .header__data--cards-y {
-  width: 8.33%;
+  width: 10%;
 }
 .component-entry-table .header__data--cards-ry {
-  width: 8.33%;
+  width: 10%;
 }
 .component-entry-table .header__data--cards-r {
-  width: 8.33%;
+  width: 10%;
 }
 .component-entry-table .header__data--played-mins {
-  width: 8.33%;
+  width: 10%;
 }
 .component-entry-table .header__data--in-min-in {
-  width: 8.33%;
+  width: 10%;
 }
 .component-entry-table .header__data--in-min-out {
-  width: 8.33%;
+  width: 10%;
 }
 .component-entry-table.werder-bremen {
   background-color: #FFFFFF;
@@ -321,19 +343,19 @@
 .component-entry-table.werder-bremen tbody tr:hover td {
   color: #FFFFFF;
   background-color: #009a52;
-  -webkit-transform: background-color 1000ms linear;
-  -ms-transform: background-color 1000ms linear;
-  -moz-transform: background-color 1000ms linear;
-  -o-transform: background-color 1000ms linear;
-  transform: background-color 1000ms linear;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
 }
 .component-entry-table.werder-bremen tbody tr {
   background-color: transparent;
-  -webkit-transform: background-color 1000ms linear;
-  -ms-transform: background-color 1000ms linear;
-  -moz-transform: background-color 1000ms linear;
-  -o-transform: background-color 1000ms linear;
-  transform: background-color 1000ms linear;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
 }
 .component-entry-table.werder-bremen .container {
   padding-top: 20px;
@@ -366,19 +388,19 @@
 .component-entry-table.bayern-munich tbody tr:hover td {
   color: #FFFFFF;
   background-color: #ee003c;
-  -webkit-transform: background-color 1000ms linear;
-  -ms-transform: background-color 1000ms linear;
-  -moz-transform: background-color 1000ms linear;
-  -o-transform: background-color 1000ms linear;
-  transform: background-color 1000ms linear;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
 }
 .component-entry-table.bayern-munich tbody tr {
   background-color: transparent;
-  -webkit-transform: background-color 1000ms linear;
-  -ms-transform: background-color 1000ms linear;
-  -moz-transform: background-color 1000ms linear;
-  -o-transform: background-color 1000ms linear;
-  transform: background-color 1000ms linear;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
 }
 .component-entry-table.bayern-munich .container {
   padding-top: 20px;
@@ -411,19 +433,19 @@
 .component-entry-table.fc-chelsea tbody tr:hover td {
   color: #FFFFFF;
   background-color: #102d8c;
-  -webkit-transform: background-color 1000ms linear;
-  -ms-transform: background-color 1000ms linear;
-  -moz-transform: background-color 1000ms linear;
-  -o-transform: background-color 1000ms linear;
-  transform: background-color 1000ms linear;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
 }
 .component-entry-table.fc-chelsea tbody tr {
   background-color: transparent;
-  -webkit-transform: background-color 1000ms linear;
-  -ms-transform: background-color 1000ms linear;
-  -moz-transform: background-color 1000ms linear;
-  -o-transform: background-color 1000ms linear;
-  transform: background-color 1000ms linear;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
 }
 .component-entry-table.fc-chelsea .container {
   padding-top: 20px;
@@ -524,218 +546,6 @@
 .component-main-picture {
   display: inline-block;
   width: 100%;
-}
-.component-summary.werder-bremen {
-  background-color: #009252;
-}
-.component-summary.werder-bremen .summary__title {
-  background-color: #006737;
-}
-.component-summary.werder-bremen .summary__numbers__item--matches-played {
-  background-color: #006438;
-}
-.component-summary.werder-bremen .summary__numbers__item--goals {
-  background-color: #008d4f;
-}
-.component-summary.werder-bremen .summary__numbers__item--assists {
-  background-color: #00884c;
-}
-.component-summary.werder-bremen .summary__numbers__item--yellow-cards {
-  background-color: #008349;
-}
-.component-summary.werder-bremen .summary__numbers__item--red-cards {
-  background-color: #00693b;
-}
-.component-summary.werder-bremen .summary__numbers__item--played-minutes {
-  background-color: #006e3e;
-}
-.component-summary.werder-bremen .summary__numbers__item--goals-each-minute {
-  background-color: #007341;
-}
-.component-summary.werder-bremen .summary__numbers__item--effectiveness {
-  background-color: #007944;
-}
-.component-summary.werder-bremen .summary__numbers__item--club-logo {
-  background-color: #007e47;
-}
-.component-summary.bayern-munich {
-  background-color: #ff0040;
-}
-.component-summary.bayern-munich .summary__title {
-  background-color: #bb002f;
-}
-.component-summary.bayern-munich .summary__numbers__item--matches-played {
-  background-color: #d10034;
-}
-.component-summary.bayern-munich .summary__numbers__item--goals {
-  background-color: #fa003f;
-}
-.component-summary.bayern-munich .summary__numbers__item--assists {
-  background-color: #f5003d;
-}
-.component-summary.bayern-munich .summary__numbers__item--yellow-cards {
-  background-color: #f0003c;
-}
-.component-summary.bayern-munich .summary__numbers__item--red-cards {
-  background-color: #d60036;
-}
-.component-summary.bayern-munich .summary__numbers__item--played-minutes {
-  background-color: #db0037;
-}
-.component-summary.bayern-munich .summary__numbers__item--goals-each-minute {
-  background-color: #e00038;
-}
-.component-summary.bayern-munich .summary__numbers__item--effectiveness {
-  background-color: #e6003a;
-}
-.component-summary.bayern-munich .summary__numbers__item--club-logo {
-  background-color: #eb003b;
-}
-.component-summary.alianza-lima {
-  background-color: #0f60b3;
-}
-.component-summary.alianza-lima .summary__title {
-  background-color: #0b4784;
-}
-.component-summary.alianza-lima .summary__numbers__item--matches-played {
-  background-color: #0b4989;
-}
-.component-summary.alianza-lima .summary__numbers__item--goals {
-  background-color: #0f5dae;
-}
-.component-summary.alianza-lima .summary__numbers__item--assists {
-  background-color: #0e5baa;
-}
-.component-summary.alianza-lima .summary__numbers__item--yellow-cards {
-  background-color: #0e58a5;
-}
-.component-summary.alianza-lima .summary__numbers__item--red-cards {
-  background-color: #0c4c8d;
-}
-.component-summary.alianza-lima .summary__numbers__item--played-minutes {
-  background-color: #0c4e92;
-}
-.component-summary.alianza-lima .summary__numbers__item--goals-each-minute {
-  background-color: #0d5197;
-}
-.component-summary.alianza-lima .summary__numbers__item--effectiveness {
-  background-color: #0d539b;
-}
-.component-summary.alianza-lima .summary__numbers__item--club-logo {
-  background-color: #0d56a0;
-}
-.component-summary.deportivo-pesquero {
-  background-color: #0f60b3;
-}
-.component-summary.deportivo-pesquero .summary__title {
-  background-color: #fbbb00;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--matches-played {
-  background-color: #0b4989;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--goals {
-  background-color: #0f5dae;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--assists {
-  background-color: #0e5baa;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--yellow-cards {
-  background-color: #0e58a5;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--red-cards {
-  background-color: #0c4c8d;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--played-minutes {
-  background-color: #0c4e92;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--goals-each-minute {
-  background-color: #0d5197;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--effectiveness {
-  background-color: #0d539b;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--club-logo {
-  background-color: #0d56a0;
-}
-.component-summary.fc-chelsea {
-  background-color: #3064CA;
-}
-.component-summary.fc-chelsea .summary__title {
-  background-color: #0B1E5E;
-}
-.component-summary.fc-chelsea .summary__numbers__item--matches-played {
-  background-color: #2752a5;
-}
-.component-summary.fc-chelsea .summary__numbers__item--goals {
-  background-color: #2f62c6;
-}
-.component-summary.fc-chelsea .summary__numbers__item--assists {
-  background-color: #2e60c2;
-}
-.component-summary.fc-chelsea .summary__numbers__item--yellow-cards {
-  background-color: #2d5ebe;
-}
-.component-summary.fc-chelsea .summary__numbers__item--red-cards {
-  background-color: #2854a9;
-}
-.component-summary.fc-chelsea .summary__numbers__item--played-minutes {
-  background-color: #2956ad;
-}
-.component-summary.fc-chelsea .summary__numbers__item--goals-each-minute {
-  background-color: #2a58b1;
-}
-.component-summary.fc-chelsea .summary__numbers__item--effectiveness {
-  background-color: #2b5ab5;
-}
-.component-summary.fc-chelsea .summary__numbers__item--club-logo {
-  background-color: #2c5cba;
-}
-.component-summary .summary-shield {
-  max-width: 115px;
-}
-.component-summary .summary__numbers {
-  font-size: 20px;
-  font-weight: 200;
-  margin-top: 0;
-}
-.component-summary .summary__numbers .summary__numbers__item {
-  padding: 15px;
-  color: #FFFFFF;
-  font-family: 'Refrigerator Deluxe W01';
-  float: left;
-  width: 33.3%;
-  height: 142.3px;
-}
-.component-summary .summary__numbers .summary__numbers__item:hover .summary__numbers__item--label,
-.component-summary .summary__numbers .summary__numbers__item:hover .summary__numbers__item--text {
-  opacity: 1;
-  font-weight: 600;
-  -webkit-transition: all 50ms linear;
-  -moz-transition: all 50ms linear;
-  -ms-transition: all 50ms linear;
-  -o-transition: all 50ms linear;
-  transition: all 50ms linear;
-}
-.component-summary .summary__numbers .summary__numbers__item--label {
-  text-align: center;
-  display: block;
-  font-weight: 200;
-  opacity: 0.9;
-}
-.component-summary .summary__numbers .summary__numbers__item--text {
-  text-align: center;
-  display: block;
-  font-weight: 400;
-  font-size: 40px;
-  opacity: 0.9;
-  -webkit-transition: all 50ms linear;
-  -moz-transition: all 50ms linear;
-  -ms-transition: all 50ms linear;
-  -o-transition: all 50ms linear;
-  transition: all 50ms linear;
-}
-.component-summary .summary__numbers .component-main-picture {
-  text-align: center;
 }
 .google-visualization-tooltip {
   width: 300px;
@@ -842,6 +652,220 @@
   width: 30px;
   height: 30px;
 }
+.component-summary.werder-bremen {
+  background-color: #009252;
+}
+.component-summary.werder-bremen .summary__title {
+  background-color: #006737;
+}
+.component-summary.werder-bremen .summary__numbers__item--matches-played {
+  background-color: #00884c;
+}
+.component-summary.werder-bremen .summary__numbers__item--goals {
+  background-color: #007e47;
+}
+.component-summary.werder-bremen .summary__numbers__item--assists {
+  background-color: #00884c;
+}
+.component-summary.werder-bremen .summary__numbers__item--yellow-cards {
+  background-color: #007e47;
+}
+.component-summary.werder-bremen .summary__numbers__item--red-cards {
+  background-color: #00884c;
+}
+.component-summary.werder-bremen .summary__numbers__item--played-minutes {
+  background-color: #007e47;
+}
+.component-summary.werder-bremen .summary__numbers__item--goals-each-minute {
+  background-color: #00884c;
+}
+.component-summary.werder-bremen .summary__numbers__item--effectiveness {
+  background-color: #007e47;
+}
+.component-summary.werder-bremen .summary__numbers__item--club-logo {
+  background-color: #00884c;
+}
+.component-summary.bayern-munich {
+  background-color: #ff0040;
+}
+.component-summary.bayern-munich .summary__title {
+  background-color: #bb002f;
+}
+.component-summary.bayern-munich .summary__numbers__item--matches-played {
+  background-color: #f5003d;
+}
+.component-summary.bayern-munich .summary__numbers__item--goals {
+  background-color: #eb003b;
+}
+.component-summary.bayern-munich .summary__numbers__item--assists {
+  background-color: #f5003d;
+}
+.component-summary.bayern-munich .summary__numbers__item--yellow-cards {
+  background-color: #eb003b;
+}
+.component-summary.bayern-munich .summary__numbers__item--red-cards {
+  background-color: #f5003d;
+}
+.component-summary.bayern-munich .summary__numbers__item--played-minutes {
+  background-color: #eb003b;
+}
+.component-summary.bayern-munich .summary__numbers__item--goals-each-minute {
+  background-color: #f5003d;
+}
+.component-summary.bayern-munich .summary__numbers__item--effectiveness {
+  background-color: #eb003b;
+}
+.component-summary.bayern-munich .summary__numbers__item--club-logo {
+  background-color: #f5003d;
+}
+.component-summary.alianza-lima {
+  background-color: #0f60b3;
+}
+.component-summary.alianza-lima .summary__title {
+  background-color: #0b4784;
+}
+.component-summary.alianza-lima .summary__numbers__item--matches-played {
+  background-color: #0e5baa;
+}
+.component-summary.alianza-lima .summary__numbers__item--goals {
+  background-color: #0d56a0;
+}
+.component-summary.alianza-lima .summary__numbers__item--assists {
+  background-color: #0e5baa;
+}
+.component-summary.alianza-lima .summary__numbers__item--yellow-cards {
+  background-color: #0d56a0;
+}
+.component-summary.alianza-lima .summary__numbers__item--red-cards {
+  background-color: #0e5baa;
+}
+.component-summary.alianza-lima .summary__numbers__item--played-minutes {
+  background-color: #0d56a0;
+}
+.component-summary.alianza-lima .summary__numbers__item--goals-each-minute {
+  background-color: #0e5baa;
+}
+.component-summary.alianza-lima .summary__numbers__item--effectiveness {
+  background-color: #0d56a0;
+}
+.component-summary.alianza-lima .summary__numbers__item--club-logo {
+  background-color: #0e5baa;
+}
+.component-summary.deportivo-pesquero {
+  background-color: #0f60b3;
+}
+.component-summary.deportivo-pesquero .summary__title {
+  background-color: #fbbb00;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--matches-played {
+  background-color: #0e5baa;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--goals {
+  background-color: #0d56a0;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--assists {
+  background-color: #0e5baa;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--yellow-cards {
+  background-color: #0d56a0;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--red-cards {
+  background-color: #0e5baa;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--played-minutes {
+  background-color: #0d56a0;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--goals-each-minute {
+  background-color: #0e5baa;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--effectiveness {
+  background-color: #0d56a0;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--club-logo {
+  background-color: #0e5baa;
+}
+.component-summary.fc-chelsea {
+  background-color: #3064CA;
+}
+.component-summary.fc-chelsea .summary__title {
+  background-color: #0B1E5E;
+}
+.component-summary.fc-chelsea .summary__numbers__item--matches-played {
+  background-color: #2e60c2;
+}
+.component-summary.fc-chelsea .summary__numbers__item--goals {
+  background-color: #2c5cba;
+}
+.component-summary.fc-chelsea .summary__numbers__item--assists {
+  background-color: #2e60c2;
+}
+.component-summary.fc-chelsea .summary__numbers__item--yellow-cards {
+  background-color: #2c5cba;
+}
+.component-summary.fc-chelsea .summary__numbers__item--red-cards {
+  background-color: #2e60c2;
+}
+.component-summary.fc-chelsea .summary__numbers__item--played-minutes {
+  background-color: #2c5cba;
+}
+.component-summary.fc-chelsea .summary__numbers__item--goals-each-minute {
+  background-color: #2e60c2;
+}
+.component-summary.fc-chelsea .summary__numbers__item--effectiveness {
+  background-color: #2c5cba;
+}
+.component-summary.fc-chelsea .summary__numbers__item--club-logo {
+  background-color: #2e60c2;
+}
+.component-summary .summary-shield {
+  max-width: 115px;
+}
+.component-summary .summary__numbers {
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 0;
+}
+.component-summary .summary__numbers .summary__numbers__item {
+  padding: 15px;
+  color: #FFFFFF;
+  font-family: 'Refrigerator Deluxe W01';
+  float: left;
+  width: 33.3%;
+  height: 142.3px;
+}
+.component-summary .summary__numbers .summary__numbers__item:hover .summary__numbers__item--label,
+.component-summary .summary__numbers .summary__numbers__item:hover .summary__numbers__item--text {
+  opacity: 1;
+  font-weight: 600;
+  -webkit-transition: all 50ms linear;
+  -moz-transition: all 50ms linear;
+  -ms-transition: all 50ms linear;
+  -o-transition: all 50ms linear;
+  transition: all 50ms linear;
+}
+.component-summary .summary__numbers .summary__numbers__item--label {
+  text-align: center;
+  display: block;
+  font-weight: 200;
+  opacity: 0.9;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+.component-summary .summary__numbers .summary__numbers__item--text {
+  text-align: center;
+  display: block;
+  font-weight: 400;
+  font-size: 40px;
+  opacity: 0.9;
+  -webkit-transition: all 50ms linear;
+  -moz-transition: all 50ms linear;
+  -ms-transition: all 50ms linear;
+  -o-transition: all 50ms linear;
+  transition: all 50ms linear;
+}
+.component-summary .summary__numbers .component-main-picture {
+  text-align: center;
+}
 .linked-components {
   position: relative;
 }
@@ -850,24 +874,4 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-.component-controls .control {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-}
-.component-controls .control > .component-main-picture {
-  width: auto;
-}
-.component-controls .control i {
-  font-size: 50px;
-}
-.component-controls .control img {
-  width: 40px;
-  height: auto;
-  max-height: 40px;
-  position: relative;
-  top: -12px;
-  margin-right: 20px;
-  margin-left: 20px;
 }

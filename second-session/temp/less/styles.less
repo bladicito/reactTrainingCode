@@ -1454,6 +1454,30 @@
 .main-claudio-pizarro{
 
 }
+.component-controls {
+    .control {
+        & > .component-main-picture {
+            width: auto;
+        }
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        i {
+            font-size: 50px;
+        }
+
+        img {
+            width: 40px;
+            height: auto;
+            max-height: 40px;
+            position: relative;
+            top: -12px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+    }
+}
 .component-donutchart {
 
     &.werder-bremen {
@@ -1557,13 +1581,13 @@
             td {
                 color: @color-white;
                 background-color: @lighten2;
-                .transform(background-color 1000ms linear;);
+                .transform(background-color 1500ms linear;);
 
             }
         }
         tr {
             background-color: transparent;
-            .transform(background-color 1000ms linear;);
+            .transform(background-color 1500ms linear;);
         }
     }
 
@@ -1575,47 +1599,49 @@
 .tableGeneral () {
 
     .body__data {
-        font-size: 16px;
+        font-size: 13px;
+        letter-spacing: 1.5px;
     }
     .header__data {
         font-size: 15px;
         text-align: center;
+        line-height: 3em;
     }
     .header__data--date {
-        width: 8.33%;
+        width: 9%;
     }
     .header__data--local {
-        width: 8.33%;
+        width:7%;
     }
     .header__data--visit {
-        width: 8.33%;
+        width: 7%;
     }
     .header__data--score {
-        width: 8.33%;
+        width:7%;
     }
     .header__data--goals {
-        width: 8.33%;
+        width: 5%;
     }
     .header__data--assists {
-        width: 8.33%;
+        width: 5%;
     }
     .header__data--cards-y {
-        width: 8.33%;
+        width: 10%;
     }
     .header__data--cards-ry {
-        width: 8.33%;
+        width: 10%;
     }
     .header__data--cards-r {
-        width: 8.33%;
+        width: 10%;
     }
     .header__data--played-mins {
-        width: 8.33%;
+        width: 10%;
     }
     .header__data--in-min-in {
-        width: 8.33%;
+        width: 10%;
     }
     .header__data--in-min-out {
-        width: 8.33%;
+        width: 10%;
     }
 
 
@@ -1738,6 +1764,69 @@
     display: inline-block;
     width:100%;
 }
+.google-visualization-tooltip {
+    width: 300px;
+}
+.toolTip(@mainColor, @secondaryColor) {
+    .tool__tip {
+        font-family: @font-webfont-headings;
+        outline: 3px solid white;
+        .radius(8px);
+        border: 7px solid @secondaryColor;
+        padding: 10px;
+        .tool__tip__data{
+
+        }
+        .tool__tip__data--header {
+            color: @mainColor;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center;
+
+        }
+
+        .tool__tip__data--text {
+            color: @secondaryColor;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .tool__tip__data--scorer {
+            .team {
+                text-align: center;
+            }
+            .team--score {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .tool__tip__img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+.component-linechart{
+    &.bayern-munich {
+        .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
+    }
+    &.werder-bremen {
+        .toolTip(@color-werder-bremen-main, @color-werder-bremen-secondary);
+    }
+    &.fc-chelsea {
+        .toolTip(@color-chelsea-main, @color-chelsea-secondary);
+    }
+
+}
+
+
+
+
 @color1 : `Math.floor(Math.random() * 20) + 1`;
 @color2 : `Math.floor(Math.random() * 20) + 1`;
 @color3 : `Math.floor(Math.random() * 20) + 1`;
@@ -1787,6 +1876,8 @@
             display: block;
             font-weight: 200;
             opacity: 0.9;
+            font-size: 16px;
+            letter-spacing: 1.5px
 
         }
 
@@ -1864,12 +1955,12 @@
 
 
     .summary__numbers__item--matches-played {
-        background-color: darken(@colorSelected, 9%);
+        background-color: darken(@colorSelected, 2%);
 
     }
 
     .summary__numbers__item--goals {
-        background-color: darken(@colorSelected, 1%);
+        background-color: darken(@colorSelected, 4%);
     }
 
     .summary__numbers__item--assists {
@@ -1877,91 +1968,29 @@
     }
 
     .summary__numbers__item--yellow-cards {
-        background-color: darken(@colorSelected, 3%);
-    }
-
-    .summary__numbers__item--red-cards {
-        background-color: darken(@colorSelected, 8%);
-    }
-
-    .summary__numbers__item--played-minutes {
-        background-color: darken(@colorSelected, 7%);
-    }
-    .summary__numbers__item--goals-each-minute {
-        background-color: darken(@colorSelected, 6%);
-    }
-
-    .summary__numbers__item--effectiveness{
-        background-color: darken(@colorSelected, 5%);
-    }
-
-    .summary__numbers__item--club-logo{
         background-color: darken(@colorSelected, 4%);
     }
 
-}
-
-.google-visualization-tooltip {
-    width: 300px;
-}
-.toolTip(@mainColor, @secondaryColor) {
-    .tool__tip {
-        font-family: @font-webfont-headings;
-        outline: 3px solid white;
-        .radius(8px);
-        border: 7px solid @secondaryColor;
-        padding: 10px;
-        .tool__tip__data{
-
-        }
-        .tool__tip__data--header {
-            color: @mainColor;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-align: center;
-
-        }
-
-        .tool__tip__data--text {
-            color: @secondaryColor;
-            font-size: 16px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .tool__tip__data--scorer {
-            .team {
-                text-align: center;
-            }
-            .team--score {
-                font-size: 20px;
-                font-weight: 600;
-            }
-        }
-
-        .tool__tip__img {
-            width: 30px;
-            height: 30px;
-        }
+    .summary__numbers__item--red-cards {
+        background-color: darken(@colorSelected, 2%);
     }
-}
 
+    .summary__numbers__item--played-minutes {
+        background-color: darken(@colorSelected, 4%);
+    }
+    .summary__numbers__item--goals-each-minute {
+        background-color: darken(@colorSelected, 2%);
+    }
 
-.component-linechart{
-    &.bayern-munich {
-        .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
+    .summary__numbers__item--effectiveness{
+        background-color: darken(@colorSelected, 4%);
     }
-    &.werder-bremen {
-        .toolTip(@color-werder-bremen-main, @color-werder-bremen-secondary);
-    }
-    &.fc-chelsea {
-        .toolTip(@color-chelsea-main, @color-chelsea-secondary);
+
+    .summary__numbers__item--club-logo{
+        background-color: darken(@colorSelected, 2%);
     }
 
 }
-
-
 
 
 .linked-components {
@@ -1973,29 +2002,4 @@
     position: absolute;
     top:0;
     left: 0;
-}
-
-.component-controls {
-    .control {
-        & > .component-main-picture {
-            width: auto;
-        }
-        position: relative;
-        display: inline-block;
-        width: 50%;
-        i {
-            font-size: 50px;
-        }
-
-        img {
-            width: 40px;
-            height: auto;
-            max-height: 40px;
-            position: relative;
-            top: -12px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-        
-    }
 }

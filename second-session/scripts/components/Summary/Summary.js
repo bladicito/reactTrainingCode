@@ -21,7 +21,6 @@ var Summary = React.createClass({
     render: function() {
         return (
             <div className={'component component-summary ' + this.props.currentClubCss}>
-                <div className="container">
                     <div className="row">
                         <div className="col-md-4 col-xs-12">
                             {this.getPicture(this.props.mainImage, 'summary__image', '/build/img/')}
@@ -81,7 +80,6 @@ var Summary = React.createClass({
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         )
     }
