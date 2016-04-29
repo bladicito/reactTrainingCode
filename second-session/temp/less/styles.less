@@ -1454,30 +1454,6 @@
 .main-claudio-pizarro{
 
 }
-.component-controls {
-    .control {
-        & > .component-main-picture {
-            width: auto;
-        }
-        position: relative;
-        display: inline-block;
-        width: 50%;
-        i {
-            font-size: 50px;
-        }
-
-        img {
-            width: 40px;
-            height: auto;
-            max-height: 40px;
-            position: relative;
-            top: -12px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-        
-    }
-}
 .component-donutchart {
 
     &.werder-bremen {
@@ -1559,6 +1535,7 @@
         th {
             border-left: 1px solid @mainColor;
             border-bottom: 1px solid @mainColor;
+            padding: 3px 15px;
         }
         th:last-child {
             border-right: 1px solid @mainColor;
@@ -1757,69 +1734,6 @@
     }
 }
 
-.google-visualization-tooltip {
-    width: 300px;
-}
-.toolTip(@mainColor, @secondaryColor) {
-    .tool__tip {
-        font-family: @font-webfont-headings;
-        outline: 3px solid white;
-        .radius(8px);
-        border: 7px solid @secondaryColor;
-        padding: 10px;
-        .tool__tip__data{
-
-        }
-        .tool__tip__data--header {
-            color: @mainColor;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-align: center;
-
-        }
-
-        .tool__tip__data--text {
-            color: @secondaryColor;
-            font-size: 16px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .tool__tip__data--scorer {
-            .team {
-                text-align: center;
-            }
-            .team--score {
-                font-size: 20px;
-                font-weight: 600;
-            }
-        }
-
-        .tool__tip__img {
-            width: 30px;
-            height: 30px;
-        }
-    }
-}
-
-
-.component-linechart{
-    &.bayern-munich {
-        .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
-    }
-    &.werder-bremen {
-        .toolTip(@color-werder-bremen-main, @color-werder-bremen-secondary);
-    }
-    &.fc-chelsea {
-        .toolTip(@color-chelsea-main, @color-chelsea-secondary);
-    }
-
-}
-
-
-
-
 .component-main-picture {
     display: inline-block;
     width:100%;
@@ -1987,6 +1901,68 @@
 
 }
 
+.google-visualization-tooltip {
+    width: 300px;
+}
+.toolTip(@mainColor, @secondaryColor) {
+    .tool__tip {
+        font-family: @font-webfont-headings;
+        outline: 3px solid white;
+        .radius(8px);
+        border: 7px solid @secondaryColor;
+        padding: 10px;
+        .tool__tip__data{
+
+        }
+        .tool__tip__data--header {
+            color: @mainColor;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center;
+
+        }
+
+        .tool__tip__data--text {
+            color: @secondaryColor;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .tool__tip__data--scorer {
+            .team {
+                text-align: center;
+            }
+            .team--score {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .tool__tip__img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+.component-linechart{
+    &.bayern-munich {
+        .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
+    }
+    &.werder-bremen {
+        .toolTip(@color-werder-bremen-main, @color-werder-bremen-secondary);
+    }
+    &.fc-chelsea {
+        .toolTip(@color-chelsea-main, @color-chelsea-secondary);
+    }
+
+}
+
+
+
 
 .linked-components {
     position: relative;
@@ -1997,4 +1973,29 @@
     position: absolute;
     top:0;
     left: 0;
+}
+
+.component-controls {
+    .control {
+        & > .component-main-picture {
+            width: auto;
+        }
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        i {
+            font-size: 50px;
+        }
+
+        img {
+            width: 40px;
+            height: auto;
+            max-height: 40px;
+            position: relative;
+            top: -12px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+    }
 }

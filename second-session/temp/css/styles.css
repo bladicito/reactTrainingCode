@@ -231,26 +231,6 @@
   }
 }
 @color-primary-button #A7A7A7;
-.component-controls .control {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-}
-.component-controls .control > .component-main-picture {
-  width: auto;
-}
-.component-controls .control i {
-  font-size: 50px;
-}
-.component-controls .control img {
-  width: 40px;
-  height: auto;
-  max-height: 40px;
-  position: relative;
-  top: -12px;
-  margin-right: 20px;
-  margin-left: 20px;
-}
 .component-donutchart.werder-bremen {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -326,6 +306,7 @@
 .component-entry-table.werder-bremen thead th {
   border-left: 1px solid #006737;
   border-bottom: 1px solid #006737;
+  padding: 3px 15px;
 }
 .component-entry-table.werder-bremen thead th:last-child {
   border-right: 1px solid #006737;
@@ -370,6 +351,7 @@
 .component-entry-table.bayern-munich thead th {
   border-left: 1px solid #bb002f;
   border-bottom: 1px solid #bb002f;
+  padding: 3px 15px;
 }
 .component-entry-table.bayern-munich thead th:last-child {
   border-right: 1px solid #bb002f;
@@ -414,6 +396,7 @@
 .component-entry-table.fc-chelsea thead th {
   border-left: 1px solid #0B1E5E;
   border-bottom: 1px solid #0B1E5E;
+  padding: 3px 15px;
 }
 .component-entry-table.fc-chelsea thead th:last-child {
   border-right: 1px solid #0B1E5E;
@@ -537,111 +520,6 @@
 }
 .component-header.fc-chelsea {
   background-color: #0B1E5E;
-}
-.google-visualization-tooltip {
-  width: 300px;
-}
-.component-linechart.bayern-munich .tool__tip {
-  font-family: 'Refrigerator Deluxe W01';
-  outline: 3px solid white;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border: 7px solid #bb002f;
-  padding: 10px;
-}
-.component-linechart.bayern-munich .tool__tip .tool__tip__data--header {
-  color: #ff0040;
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.component-linechart.bayern-munich .tool__tip .tool__tip__data--text {
-  color: #bb002f;
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.component-linechart.bayern-munich .tool__tip .tool__tip__data--scorer .team {
-  text-align: center;
-}
-.component-linechart.bayern-munich .tool__tip .tool__tip__data--scorer .team--score {
-  font-size: 20px;
-  font-weight: 600;
-}
-.component-linechart.bayern-munich .tool__tip .tool__tip__img {
-  width: 30px;
-  height: 30px;
-}
-.component-linechart.werder-bremen .tool__tip {
-  font-family: 'Refrigerator Deluxe W01';
-  outline: 3px solid white;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border: 7px solid #006737;
-  padding: 10px;
-}
-.component-linechart.werder-bremen .tool__tip .tool__tip__data--header {
-  color: #009252;
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.component-linechart.werder-bremen .tool__tip .tool__tip__data--text {
-  color: #006737;
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.component-linechart.werder-bremen .tool__tip .tool__tip__data--scorer .team {
-  text-align: center;
-}
-.component-linechart.werder-bremen .tool__tip .tool__tip__data--scorer .team--score {
-  font-size: 20px;
-  font-weight: 600;
-}
-.component-linechart.werder-bremen .tool__tip .tool__tip__img {
-  width: 30px;
-  height: 30px;
-}
-.component-linechart.fc-chelsea .tool__tip {
-  font-family: 'Refrigerator Deluxe W01';
-  outline: 3px solid white;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border: 7px solid #0B1E5E;
-  padding: 10px;
-}
-.component-linechart.fc-chelsea .tool__tip .tool__tip__data--header {
-  color: #3064CA;
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.component-linechart.fc-chelsea .tool__tip .tool__tip__data--text {
-  color: #0B1E5E;
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.component-linechart.fc-chelsea .tool__tip .tool__tip__data--scorer .team {
-  text-align: center;
-}
-.component-linechart.fc-chelsea .tool__tip .tool__tip__data--scorer .team--score {
-  font-size: 20px;
-  font-weight: 600;
-}
-.component-linechart.fc-chelsea .tool__tip .tool__tip__img {
-  width: 30px;
-  height: 30px;
 }
 .component-main-picture {
   display: inline-block;
@@ -859,6 +737,111 @@
 .component-summary .summary__numbers .component-main-picture {
   text-align: center;
 }
+.google-visualization-tooltip {
+  width: 300px;
+}
+.component-linechart.bayern-munich .tool__tip {
+  font-family: 'Refrigerator Deluxe W01';
+  outline: 3px solid white;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border: 7px solid #bb002f;
+  padding: 10px;
+}
+.component-linechart.bayern-munich .tool__tip .tool__tip__data--header {
+  color: #ff0040;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.bayern-munich .tool__tip .tool__tip__data--text {
+  color: #bb002f;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.bayern-munich .tool__tip .tool__tip__data--scorer .team {
+  text-align: center;
+}
+.component-linechart.bayern-munich .tool__tip .tool__tip__data--scorer .team--score {
+  font-size: 20px;
+  font-weight: 600;
+}
+.component-linechart.bayern-munich .tool__tip .tool__tip__img {
+  width: 30px;
+  height: 30px;
+}
+.component-linechart.werder-bremen .tool__tip {
+  font-family: 'Refrigerator Deluxe W01';
+  outline: 3px solid white;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border: 7px solid #006737;
+  padding: 10px;
+}
+.component-linechart.werder-bremen .tool__tip .tool__tip__data--header {
+  color: #009252;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.werder-bremen .tool__tip .tool__tip__data--text {
+  color: #006737;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.werder-bremen .tool__tip .tool__tip__data--scorer .team {
+  text-align: center;
+}
+.component-linechart.werder-bremen .tool__tip .tool__tip__data--scorer .team--score {
+  font-size: 20px;
+  font-weight: 600;
+}
+.component-linechart.werder-bremen .tool__tip .tool__tip__img {
+  width: 30px;
+  height: 30px;
+}
+.component-linechart.fc-chelsea .tool__tip {
+  font-family: 'Refrigerator Deluxe W01';
+  outline: 3px solid white;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border: 7px solid #0B1E5E;
+  padding: 10px;
+}
+.component-linechart.fc-chelsea .tool__tip .tool__tip__data--header {
+  color: #3064CA;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.fc-chelsea .tool__tip .tool__tip__data--text {
+  color: #0B1E5E;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.fc-chelsea .tool__tip .tool__tip__data--scorer .team {
+  text-align: center;
+}
+.component-linechart.fc-chelsea .tool__tip .tool__tip__data--scorer .team--score {
+  font-size: 20px;
+  font-weight: 600;
+}
+.component-linechart.fc-chelsea .tool__tip .tool__tip__img {
+  width: 30px;
+  height: 30px;
+}
 .linked-components {
   position: relative;
 }
@@ -867,4 +850,24 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+.component-controls .control {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+.component-controls .control > .component-main-picture {
+  width: auto;
+}
+.component-controls .control i {
+  font-size: 50px;
+}
+.component-controls .control img {
+  width: 40px;
+  height: auto;
+  max-height: 40px;
+  position: relative;
+  top: -12px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
