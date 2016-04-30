@@ -662,6 +662,40 @@
   width: 30px;
   height: 30px;
 }
+.component-linechart.alianza-lima .tool__tip {
+  font-family: 'Refrigerator Deluxe W01';
+  outline: 3px solid white;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border: 7px solid #0b4784;
+  padding: 10px;
+}
+.component-linechart.alianza-lima .tool__tip .tool__tip__data--header {
+  color: #0f60b3;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.alianza-lima .tool__tip .tool__tip__data--text {
+  color: #0b4784;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.component-linechart.alianza-lima .tool__tip .tool__tip__data--scorer .team {
+  text-align: center;
+}
+.component-linechart.alianza-lima .tool__tip .tool__tip__data--scorer .team--score {
+  font-size: 20px;
+  font-weight: 600;
+}
+.component-linechart.alianza-lima .tool__tip .tool__tip__img {
+  width: 30px;
+  height: 30px;
+}
 .component-main-picture {
   display: inline-block;
   width: 100%;

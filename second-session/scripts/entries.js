@@ -30,7 +30,44 @@ let entries = {
         "club": "Alianza Lima",
         "year": "1999",
         "mainImage": "alianza1999.png",
-        "matches": {}
+        "matches": {
+            "1": {
+                "date": "1999/03/03",
+                "home": "Union Minas",
+                "away": "Alianza Lima",
+                "result": "1:3",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "1",
+                "redCard": "1",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "60"
+
+            },
+
+            "2": {
+                "date": "1999/08/08",
+                "home": "Union Minas",
+                "away": "Alianza Lima",
+                "result": "1:7",
+                "goals": "5",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90",
+                "goalsVideos": {
+                    "allVideos" : "n6lr5ZWtSd4"
+                }
+            }
+
+        }
     },
     "season4"  : {
         "season"    : "Season 1999 - 2000",
