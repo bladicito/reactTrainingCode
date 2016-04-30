@@ -1479,6 +1479,9 @@
     }
 }
 .component-donutchart {
+    .chart__donut {
+        height: 500px;
+    }
 
     &.werder-bremen {
         padding-top: 20px;
@@ -1512,7 +1515,7 @@
     &.werder-bremen {
 
         background-color: @color-white;
-        color: @color-werder-bremen-secondary
+        color: @color-werder-bremen-secondary;
         .tableColorsForClub(@color-werder-bremen-secondary, @color-werder-bremen-main);
         .container {
             padding-top: 20px;
@@ -1731,25 +1734,6 @@
 }
 
 
-.component-header {
-    padding-top: 20px;
-    &.werder-bremen {
-        background-color: @color-werder-bremen-secondary;
-    }
-    &.bayern-munich {
-        background-color: @color-bayern-munich-secondary;
-    }
-    &.alianza-lima {
-        background-color: @color-alianza-lima-secondary;
-    }
-    &.deportivo-pesquero {
-        background-color: @color-pesquero-secondary;
-    }
-    &.fc-chelsea {
-        background-color: @color-chelsea-secondary;
-    }
-}
-
 .component-entry-table-row {
     .shield__mini {
         width: 32px;
@@ -1768,6 +1752,25 @@
 
 
 
+
+.component-header {
+    padding-top: 20px;
+    &.werder-bremen {
+        background-color: @color-werder-bremen-secondary;
+    }
+    &.bayern-munich {
+        background-color: @color-bayern-munich-secondary;
+    }
+    &.alianza-lima {
+        background-color: @color-alianza-lima-secondary;
+    }
+    &.deportivo-pesquero {
+        background-color: @color-pesquero-secondary;
+    }
+    &.fc-chelsea {
+        background-color: @color-chelsea-secondary;
+    }
+}
 
 .google-visualization-tooltip {
     width: 300px;
@@ -1817,6 +1820,7 @@
 
 
 .component-linechart{
+    height: 400px;
     &.bayern-munich {
         .toolTip(@color-bayern-munich-main, @color-bayern-munich-secondary);
     }

@@ -60,7 +60,7 @@ var LineChart = React.createClass({
             _this = this
         ;
 
-        data.addColumn('date', 'SCORED');
+        data.addColumn('date', 'Date');
         data.addColumn('number', 'GOALS');
 
         data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
@@ -68,20 +68,37 @@ var LineChart = React.createClass({
         data.addRows(seasonData);
 
         var options = {
-            title   : 'GOALS SCORED ON ' + currentSeasonYear,
-            titleTextStyle : {
-                color: clubColors.secondary,
-                fontSize    : 18
+            title           : 'GOALS SCORED IN ' + currentSeasonYear,
+            titleTextStyle  : {
+                color       : clubColors.main,
+                fontSize    : 35,
+                bold        : false
             },
+            curveType       : 'function',
+            legend          : {
+                position    : 'bottom'
+            },
+            axisTitlesPosition: 'in',
 
             colors      : [clubColors.main, clubColors.secondary],
-            pointSize   : 10,
+            pointSize   : 15,
             pointShape  : 'circle',
             continuous  : 'date',
             fontName    : 'Refrigerator Deluxe W01',
             fontSize    : 25,
+            height      : 400,
+            lineWidth   : 1,
             hAxis   : {
-                title: 'Spieltag'
+                title: 'MATCHES',
+                scaleType   : 'continuous',
+                titleTextStyle : {
+                    color: clubColors.main
+                },
+                textPosition:'out',
+                slantedText: false,
+                maxAlternation: 8,
+                showTextEvery: 1,
+                baselineColor: clubColors.main
             },
             vAxis   : {
                 title       : 'GOALS',
@@ -110,7 +127,6 @@ var LineChart = React.createClass({
         google.visualization.events.addListener(chart, 'select', selectHandler);
 
         function selectHandler(e) {
-            console.log(chart.getSelection());
 
             if (typeof (chart.getSelection()) !== 'undefined' && chart.getSelection().length !== 0) {
                 var matchEntry = _this.props.seasonMatchesData[(chart.getSelection()[0].row + 1)];

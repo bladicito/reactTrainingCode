@@ -84,16 +84,23 @@ var DonutChart = React.createClass({
 
         var options = {
             title: dataSeasons.title,
+            fontSize : 20,
             titleTextStyle:  {
                 color : '#fff'
             },
-            pieHole: 0.4,
+            fontName    : 'Refrigerator Deluxe W01',
+            pieHole: 0.2,
             backgroundColor: _this.props.currentClubColors.main,
             legend : {
                 position: 'bottom',
                 textStyle : {
                     color : '#fff'
                 }
+            },
+            slices: {
+                0: { color: '#cd2823' },
+                1: { color: '#002085' },
+                2: { color: '#ffffff'}
             }
         };
 

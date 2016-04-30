@@ -251,6 +251,9 @@
   margin-right: 20px;
   margin-left: 20px;
 }
+.component-donutchart .chart__donut {
+  height: 500px;
+}
 .component-donutchart.werder-bremen {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -322,6 +325,7 @@
 }
 .component-entry-table.werder-bremen {
   background-color: #FFFFFF;
+  color: #006737;
   background-color: #006737;
 }
 .component-entry-table.werder-bremen thead {
@@ -368,6 +372,9 @@
 .component-entry-table.bayern-munich {
   background-color: #FFFFFF !important;
   background-color: #bb002f;
+}
+.component-entry-table.bayern-munich h2 {
+  color: #bb002f !important;
 }
 .component-entry-table.bayern-munich thead {
   background-color: #bb002f;
@@ -549,6 +556,9 @@
 }
 .google-visualization-tooltip {
   width: 300px;
+}
+.component-linechart {
+  height: 400px;
 }
 .component-linechart.bayern-munich .tool__tip {
   font-family: 'Refrigerator Deluxe W01';
