@@ -4213,7 +4213,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "64",
-                "playedMinutes": "64"
+                "playedMinutes": "64",
+                "goalsVideos" : {
+                    "allGoals" : "7QjCFgMyhSs"
+                }
             },
             "2": {
                 "date": "2007/08/15",
@@ -4543,7 +4546,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "29",
                 "outGameOnMin": "",
-                "playedMinutes": "61"
+                "playedMinutes": "61",
+                "goalsVideos" : {
+                    "allGoals" : "7QjCFgMyhSs"
+                }
             },
             "24": {
                 "date": "2008/01/30",

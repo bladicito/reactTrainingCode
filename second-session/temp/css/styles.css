@@ -1181,6 +1181,8 @@
 .component-summary .summary__numbers .component-main-picture {
   text-align: center;
   vertical-align: center;
+  width: 100%;
+  line-height: 100%;
 }
 .linked-components {
   position: relative;

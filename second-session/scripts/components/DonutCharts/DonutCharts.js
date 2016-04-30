@@ -36,19 +36,19 @@ var DonutChart = React.createClass({
         var stats = this.gameStats(this.props.seasonMatchesData);
         var chartGeneral = {
                 data            : stats.generalTeam(),
-                title           : 'GAMES IN CURRENT SEASON FOR ' + this.props.currentClub,
+                title           : 'GAMES IN CURRENT SEASON FOR ' + this.props.currentClub.toUpperCase(),
                 outlet          : document.getElementById('donut-chart-general'),
                 isFirstRender   : false
             },
             chartWithPizarro = {
                 data            : stats.withPizarro(),
-                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub + ' WITH PIZARRO ON THE PITCH',
+                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub.toUpperCase() + ' WITH PIZARRO ON THE PITCH',
                 outlet          : document.getElementById('donut-chart-with-piza'),
                 isFirstRender   : false
             },
             chartWithoutPizarro = {
                 data            : stats.withoutPizarro(),
-                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub + ' WITHOUT PIZARRO ON THE PITCH',
+                title           : 'SEASON ' + this.props.currentSeasonYear + ' FOR ' + this.props.currentClub.toUpperCase() + ' WITHOUT PIZARRO ON THE PITCH',
                 outlet          : document.getElementById('donut-chart-without-piza'),
                 isFirstRender   : false
             }
