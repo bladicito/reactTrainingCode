@@ -370,11 +370,7 @@
   padding-bottom: 20px;
 }
 .component-entry-table.bayern-munich {
-  background-color: #FFFFFF !important;
   background-color: #bb002f;
-}
-.component-entry-table.bayern-munich h2 {
-  color: #bb002f !important;
 }
 .component-entry-table.bayern-munich thead {
   background-color: #bb002f;
@@ -459,6 +455,51 @@
   transform: background-color 1500ms linear;
 }
 .component-entry-table.fc-chelsea .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.component-entry-table.alianza-lima {
+  background-color: #FFFFFF;
+  background-color: #0b4784;
+}
+.component-entry-table.alianza-lima thead {
+  background-color: #0b4784;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.component-entry-table.alianza-lima thead th {
+  border-left: 1px solid #0b4784;
+  border-bottom: 1px solid #0b4784;
+  padding: 3px 15px;
+}
+.component-entry-table.alianza-lima thead th:last-child {
+  border-right: 1px solid #0b4784;
+}
+.component-entry-table.alianza-lima tbody {
+  background-color: #0f60b3;
+  color: #FFFFFF;
+}
+.component-entry-table.alianza-lima tbody td {
+  padding: 17px 15px;
+}
+.component-entry-table.alianza-lima tbody tr:hover td {
+  color: #FFFFFF;
+  background-color: #0f60b3;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
+}
+.component-entry-table.alianza-lima tbody tr {
+  background-color: transparent;
+  -webkit-transform: background-color 1500ms linear;
+  -ms-transform: background-color 1500ms linear;
+  -moz-transform: background-color 1500ms linear;
+  -o-transform: background-color 1500ms linear;
+  transform: background-color 1500ms linear;
+}
+.component-entry-table.alianza-lima .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }

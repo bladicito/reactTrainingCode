@@ -97,11 +97,7 @@ var DonutChart = React.createClass({
                     color : '#fff'
                 }
             },
-            slices: {
-                0: { color: '#cd2823' },
-                1: { color: '#002085' },
-                2: { color: '#ffffff'}
-            }
+            slices: _this.slidesChartColors(_this.props.currentClub)
         };
 
         var chart = new google.visualization.PieChart(dataSeasons.outlet);
@@ -251,6 +247,40 @@ var DonutChart = React.createClass({
 
                 return matchesStats;
             }
+        }
+
+    },
+
+    slidesChartColors : function(club) {
+        var colorOne,
+            colorTwo,
+            colorThree
+        ;
+
+        switch (club) {
+            case 'Bayern Munich' :
+                colorOne =  '#cd2823';
+                colorTwo = '#002085';
+                colorThree = '#ffffff';
+                break;
+            case 'Werder Bremen' :
+                colorOne   = '#e55c14';
+                colorTwo   = '#1c254e';
+                colorThree = '#ffffff';
+                break;
+            case 'FC Chelsea' :
+                colorOne   = '#d99808';
+                colorTwo   = '#cddb44';
+                colorThree = '#000000';
+
+                break;
+
+        }
+
+        return  {
+            0: { color: colorOne },
+            1: { color: colorTwo },
+            2: { color: colorThree}
         }
 
     },

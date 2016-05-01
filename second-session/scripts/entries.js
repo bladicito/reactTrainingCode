@@ -32,28 +32,11 @@ let entries = {
         "mainImage": "alianza1999.png",
         "matches": {
             "1": {
-                "date": "1999/03/03",
-                "home": "Union Minas",
-                "away": "Alianza Lima",
-                "result": "1:3",
-                "goals": "",
-                "assists": "",
-                "ownGoal": "",
-                "yellowCard": "",
-                "doubleYellowCard": "1",
-                "redCard": "1",
-                "inGameOnMin": "",
-                "outGameOnMin": "",
-                "playedMinutes": "60"
-
-            },
-
-            "2": {
-                "date": "1999/08/08",
-                "home": "Union Minas",
-                "away": "Alianza Lima",
-                "result": "1:7",
-                "goals": "5",
+                "date": "1999/02/06",
+                "home": "Alianza Lima",
+                "away": "IMI F.C.",
+                "result": "5:0",
+                "goals": "1",
                 "assists": "",
                 "ownGoal": "",
                 "yellowCard": "",
@@ -61,10 +44,368 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90",
-                "goalsVideos": {
-                    "allVideos" : "n6lr5ZWtSd4"
-                }
+                "playedMinutes": "90"
+
+            },
+
+            "2": {
+                "date": "1999/02/13",
+                "home": "Deportivo Pesquero",
+                "away": "Alianza Lima",
+                "result": "0:0",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "4": {
+                "date": "1999/02/27",
+                "home": "Sport Boys",
+                "away": "Alianza Lima",
+                "result": "0:1",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+
+
+
+            "3": {
+                "date": "1999/03/03",
+                "home": "Alianza Lima",
+                "away": "Union Minas",
+                "result": "1:2",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+
+
+
+
+
+            "5": {
+                "date": "1999/03/06",
+                "home": "Sporting Cristal",
+                "away": "Alianza Lima",
+                "result": "2:2",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "6": {
+                "date": "1999/03/13",
+                "home": "Melgar",
+                "away": "Alianza Lima",
+                "result": "1:2",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+            "7": {
+                "date": "1999/03/20",
+                "home": "Juan Aurich",
+                "away": "Alianza Lima",
+                "result": "1:1",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+            "8": {
+                "date": "1999/03/27",
+                "home": "Universitario",
+                "away": "Alianza Lima",
+                "result": "2:1",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+
+            "9": {
+                "date": "1999/04/01",
+                "home": "Alianza Atletico",
+                "away": "Alianza Lima",
+                "result": "2:1",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "10": {
+                "date": "1999/04/03",
+                "home": "Deportivo Municipal",
+                "away": "Alianza Lima",
+                "result": "2:1",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "11": {
+                "date": "1999/04/11",
+                "home": "Cienciano",
+                "away": "Alianza Lima",
+                "result": "2:1",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+            "12": {
+                "date": "1999/04/17",
+                "home": "IMI FC",
+                "away": "Alianza Lima",
+                "result": "2:4",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "13": {
+                "date": "1999/04/24",
+                "home": "Alianza Lima",
+                "away": "Deportivo Pesquero",
+                "result": "2:4",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+            "14": {
+                "date": "1999/04/29",
+                "home": "Alianza Lima",
+                "away": "Union Minas",
+                "result": "4:1",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "15": {
+                "date": "1999/05/02",
+                "home": "Alianza Lima",
+                "away": "Sport Boys",
+                "result": "1:0",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "16": {
+                "date": "1999/05/08",
+                "home": "Alianza Lima",
+                "away": "Sporting Cristal",
+                "result": "3:2",
+                "goals": "0",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "17": {
+                "date": "1999/05/15",
+                "home": "Alianza Lima",
+                "away": "Melgar",
+                "result": "5:0",
+                "goals": "2",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "18": {
+                "date": "1999/05/22",
+                "home": "Alianza Lima",
+                "away": "Juan Aurich",
+                "result": "3:1",
+                "goals": "1",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "19": {
+                "date": "1999/05/29",
+                "home": "Alianza Lima",
+                "away": "Universitario",
+                "result": "0:1",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "20": {
+                "date": "1999/06/05",
+                "home": "Alianza Lima",
+                "away": "Alianzya Atletico",
+                "result": "2:0",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "21": {
+                "date": "1999/06/13",
+                "home": "Alianza Lima",
+                "away": "Deportivo Municipal",
+                "result": "3:0",
+                "goals": "3",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
+            },
+
+            "22": {
+                "date": "1999/06/16",
+                "home": "Alianza Lima",
+                "away": "Cienciano",
+                "result": "2:1",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
             }
 
         }

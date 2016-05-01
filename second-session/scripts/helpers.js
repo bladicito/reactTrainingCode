@@ -188,6 +188,25 @@ let helpers = {
             case 'E. Braunschweig' :
                 imagePath = 'braunschweiger.svg';
                 break;
+            case 'Sporting Cristal' :
+                imagePath = 'sporting-cristal.svg';
+                break;
+            case 'Universitario' :
+                imagePath = 'universitario.svg';
+                break;
+            case 'Sport Boys' :
+                imagePath = 'sport-boys.svg';
+                break;
+            case 'Cienciano' :
+                imagePath = 'cienciano.svg';
+                break;
+    
+            case 'Deportivo Municipal' :
+                imagePath = 'municipal.svg';
+                break;
+            case 'Melgar' :
+                imagePath = 'melgar.svg';
+                break;
         }
         return imagePath;
     }

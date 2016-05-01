@@ -1524,11 +1524,9 @@
     }
 
     &.bayern-munich {
-        h2 {
-            color: @color-bayern-munich-secondary!important;
-        }
 
-        background-color: @color-white!important;
+
+
         .tableColorsForClub(@color-bayern-munich-secondary, @color-bayern-munich-main);
         .container {
             padding-top: 20px;
@@ -1539,6 +1537,15 @@
     &.fc-chelsea {
         background-color: @color-white;
         .tableColorsForClub(@color-chelsea-secondary, @color-chelsea-main);
+        .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &.alianza-lima {
+        background-color: @color-white;
+        .tableColorsForClub(@color-alianza-lima-secondary, @color-alianza-lima-main);
         .container {
             padding-top: 20px;
             padding-bottom: 20px;
