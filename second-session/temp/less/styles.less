@@ -1455,7 +1455,11 @@
 
 }
 .component-controls {
+    padding-bottom: 14px;
+
+
     .control {
+        color: @color-white;
         & > .component-main-picture {
             width: auto;
         }
@@ -1464,6 +1468,9 @@
         width: 50%;
         i {
             font-size: 50px;
+        }
+        a {
+            text-decoration: none;
         }
 
         img {
@@ -1475,7 +1482,21 @@
             margin-right: 20px;
             margin-left: 20px;
         }
+        div {
+            opacity:0.6;
+            font-family: @font-webfont-text;
+            text-transform: uppercase;
+        }
         
+    }
+    .control:hover {
+        div {
+            opacity:1;
+        }
+    }
+
+    .control--right {
+        text-align: right;
     }
 }
 .component-donutchart {
@@ -1849,6 +1870,12 @@
 .component-main-picture {
     display: inline-block;
     width:100%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 .component-summary {
     .werder-bremen();
@@ -1880,6 +1907,7 @@
             position: relative;
             overflow: hidden;
             padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+            z-index:10;
 
 
             .summary__numbers__content {
@@ -2075,13 +2103,39 @@
 }
 
 
+@media screen and (max-width: @breakpoint-mobile) {
+    .component-summary {
+
+        .summary__numbers {
+            .summary__numbers__item--label {
+                font-size: 13px;
+            }
+            .summary__numbers__item--text {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
 .linked-components {
     position: relative;
 }
 
 .component-youtube-player {
-    width: 100%;
+    width: 65.5%;
     position: absolute;
     top:0;
-    left: 0;
+    left: 34.3%;
+    height:100%;
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .component-youtube-player {
+        width: 100%;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        height:50%;
+    }
 }

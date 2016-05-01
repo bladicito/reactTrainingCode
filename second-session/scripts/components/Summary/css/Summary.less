@@ -28,6 +28,7 @@
             position: relative;
             overflow: hidden;
             padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+            z-index:10;
 
 
             .summary__numbers__content {
@@ -220,4 +221,19 @@
         .transition(all 700ms ease);
     }
 
+}
+
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .component-summary {
+
+        .summary__numbers {
+            .summary__numbers__item--label {
+                font-size: 13px;
+            }
+            .summary__numbers__item--text {
+                font-size: 25px;
+            }
+        }
+    }
 }

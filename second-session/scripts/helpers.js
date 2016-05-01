@@ -207,6 +207,12 @@ let helpers = {
             case 'Melgar' :
                 imagePath = 'melgar.svg';
                 break;
+            case 'Juan Aurich' :
+                imagePath = 'juan-aurich.svg';
+                break;
+            case 'Alianza Atletico' :
+                imagePath = 'sullana.png';
+                break;
         }
         return imagePath;
     }

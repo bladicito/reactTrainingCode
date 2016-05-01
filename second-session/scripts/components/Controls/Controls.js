@@ -32,10 +32,15 @@ var Controls = React.createClass({
                 <a href="#" className="control control--left" onClick={this.handleClickPrevSeason}>
                     <i className="fa fa-angle-left controls__arrow controls__arrow--left"></i>
                     {this.getPicture(imagePrev,  'controls--shield', '/build/svg/')}
+                    <div>Prev Season</div>
                 </a>
+
+
+
                 <a href="#"  className="control control--right"  onClick={this.handleClickNextSeason}>
                     {this.getPicture(imageNext,  'controls--shield', '/build/svg/')}
                     <i className="fa fa-angle-right controls__arrow controls__arrow--right"></i>
+                    <div>Next Season</div>
                 </a>
             </div>
         )

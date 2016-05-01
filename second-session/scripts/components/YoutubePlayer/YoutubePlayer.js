@@ -45,7 +45,7 @@ var YoutubePlayer = React.createClass({
         ;
 
             player = new YT.Player('youtube-player', {
-                height: '427',
+                height: '100%',
                 width: '100%',
                 videoId: videoID,
                 events: {

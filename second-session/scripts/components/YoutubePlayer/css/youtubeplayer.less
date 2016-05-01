@@ -3,8 +3,19 @@
 }
 
 .component-youtube-player {
-    width: 100%;
+    width: 65.5%;
     position: absolute;
     top:0;
-    left: 0;
+    left: 34.3%;
+    height:100%;
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .component-youtube-player {
+        width: 100%;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        height:50%;
+    }
 }

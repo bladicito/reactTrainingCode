@@ -231,7 +231,11 @@
   }
 }
 @color-primary-button #A7A7A7;
+.component-controls {
+  padding-bottom: 14px;
+}
 .component-controls .control {
+  color: #FFFFFF;
   position: relative;
   display: inline-block;
   width: 50%;
@@ -242,6 +246,9 @@
 .component-controls .control i {
   font-size: 50px;
 }
+.component-controls .control a {
+  text-decoration: none;
+}
 .component-controls .control img {
   width: 40px;
   height: auto;
@@ -250,6 +257,17 @@
   top: -12px;
   margin-right: 20px;
   margin-left: 20px;
+}
+.component-controls .control div {
+  opacity: 0.6;
+  font-family: 'Refrigerator Deluxe W01';
+  text-transform: uppercase;
+}
+.component-controls .control:hover div {
+  opacity: 1;
+}
+.component-controls .control--right {
+  text-align: right;
 }
 .component-donutchart .chart__donut {
   height: 500px;
@@ -740,6 +758,11 @@
 .component-main-picture {
   display: inline-block;
   width: 100%;
+  height: auto;
+}
+.component-main-picture img {
+  width: 100%;
+  height: auto;
 }
 .component-summary.werder-bremen {
   background-color: #009252;
@@ -1207,6 +1230,7 @@
   overflow: hidden;
   padding-bottom: 30%;
   /* = width for a 1:1 aspect ratio */
+  z-index: 10;
 }
 .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content {
   position: absolute;
@@ -1259,12 +1283,30 @@
   width: 100%;
   line-height: 100%;
 }
+@media screen and (max-width: 480px) {
+  .component-summary .summary__numbers .summary__numbers__item--label {
+    font-size: 13px;
+  }
+  .component-summary .summary__numbers .summary__numbers__item--text {
+    font-size: 25px;
+  }
+}
 .linked-components {
   position: relative;
 }
 .component-youtube-player {
-  width: 100%;
+  width: 65.5%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 34.3%;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .component-youtube-player {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+  }
 }
