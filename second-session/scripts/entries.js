@@ -5,7 +5,7 @@ let entries = {
         "country": "Peru",
         "club": "Deportivo Pesquero",
         "year": "1996",
-        "mainImage": "alianza1999.png",
+        "mainImage": "pesquero1996.jpg",
         "matches": {}
     },
     "season1"  : {

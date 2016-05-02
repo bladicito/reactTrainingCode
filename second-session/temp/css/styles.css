@@ -269,31 +269,11 @@
 .component-controls .control--right {
   text-align: right;
 }
-.component-donutchart .chart__donut {
-  height: 500px;
-}
-.component-donutchart.werder-bremen {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #006737;
-}
-.component-donutchart.bayern-munich {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #ff0040;
-}
-.component-donutchart.fc-chelsea {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #3064CA;
-}
-.component-donutchart.alianza-lima {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #0f60b3;
-}
 .component-entry-table {
   padding-top: 70px;
+}
+.component-entry-table table {
+  font-family: "Refrigerator Deluxe W01";
 }
 .component-entry-table .body__data {
   font-size: 13px;
@@ -585,6 +565,29 @@
     display: none;
   }
 }
+.component-donutchart .chart__donut {
+  height: 500px;
+}
+.component-donutchart.werder-bremen {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006737;
+}
+.component-donutchart.bayern-munich {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ff0040;
+}
+.component-donutchart.fc-chelsea {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #3064CA;
+}
+.component-donutchart.alianza-lima {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #0f60b3;
+}
 .component-entry-table-row .shield__mini {
   width: 32px;
   height: auto;
@@ -770,6 +773,14 @@
 .component-summary.werder-bremen .summary__title {
   background-color: #006737;
 }
+.component-summary.werder-bremen .summary__numbers__item--picture {
+  background-color: #007e47;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
 .component-summary.werder-bremen .summary__numbers__item--matches-played {
   background-color: #00884c;
   -webkit-transition: all 700ms ease;
@@ -850,6 +861,14 @@
 }
 .component-summary.bayern-munich .summary__title {
   background-color: #bb002f;
+}
+.component-summary.bayern-munich .summary__numbers__item--picture {
+  background-color: #eb003b;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
 .component-summary.bayern-munich .summary__numbers__item--matches-played {
   background-color: #f5003d;
@@ -939,6 +958,14 @@
 .component-summary.alianza-lima .summary__title {
   background-color: #0b4784;
 }
+.component-summary.alianza-lima .summary__numbers__item--picture {
+  background-color: #0d56a0;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
 .component-summary.alianza-lima .summary__numbers__item--matches-played {
   background-color: #0e5baa;
   -webkit-transition: all 700ms ease;
@@ -1027,6 +1054,14 @@
 .component-summary.deportivo-pesquero .summary__title {
   background-color: #fbbb00;
 }
+.component-summary.deportivo-pesquero .summary__numbers__item--picture {
+  background-color: #0d56a0;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
 .component-summary.deportivo-pesquero .summary__numbers__item--matches-played {
   background-color: #0e5baa;
   -webkit-transition: all 700ms ease;
@@ -1114,6 +1149,14 @@
 }
 .component-summary.fc-chelsea .summary__title {
   background-color: #0B1E5E;
+}
+.component-summary.fc-chelsea .summary__numbers__item--picture {
+  background-color: #2c5cba;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
 .component-summary.fc-chelsea .summary__numbers__item--matches-played {
   background-color: #2e60c2;
@@ -1221,26 +1264,28 @@
   clear: both;
 }
 .component-summary .summary__numbers .summary__numbers__item {
-  padding: 15px;
   color: #FFFFFF;
   font-family: 'Refrigerator Deluxe W01';
   float: left;
-  width: 33.3%;
+  width: 20%;
   position: relative;
   overflow: hidden;
-  padding-bottom: 30%;
+  padding-bottom: 19%;
   /* = width for a 1:1 aspect ratio */
   z-index: 10;
 }
 .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content {
   position: absolute;
-  height: 90%;
+  height: 100%;
   /* = 100% - 2*5% padding */
-  width: 90%;
+  width: 100%;
   /* = 100% - 2*5% padding */
-  padding: 5%;
+  padding: 0%;
   vertical-align: center;
   text-align: center;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 .component-summary .summary__numbers .summary__numbers__item .summary__numbers__item--label,
 .component-summary .summary__numbers .summary__numbers__item .summary__numbers__item--text {
@@ -1281,7 +1326,11 @@
   text-align: center;
   vertical-align: center;
   width: 100%;
-  line-height: 100%;
+  height: 100%;
+  line-height: 80%;
+}
+.component-summary .summary__numbers .component-main-picture img {
+  height: 100%;
 }
 @media screen and (max-width: 480px) {
   .component-summary .summary__numbers .summary__numbers__item--label {
@@ -1295,10 +1344,10 @@
   position: relative;
 }
 .component-youtube-player {
-  width: 65.5%;
+  width: 100%;
   position: absolute;
   top: 0;
-  left: 34.3%;
+  left: 0;
   height: 100%;
 }
 .component-youtube-player iframe {
@@ -1311,6 +1360,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 50%;
+    height: 100%;
   }
 }
