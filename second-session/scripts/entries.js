@@ -9636,7 +9636,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "84",
-                "playedMinutes": "84"
+                "playedMinutes": "84",
+                "goalsVideos":{
+                    'allGoals' : "j7NnbrUlZko"
+                }
             },
             "25": {
                 "date": "2016/03/05",
@@ -9684,7 +9687,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "81",
-                "playedMinutes": "81"
+                "playedMinutes": "81",
+                "goalsVideos" : {
+                    "allVideos" :"ZJaqCfSQ0Pc"
+                }
             },
             "28": {
                 "date": "2016/04/02",
@@ -9747,7 +9753,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90"
+                "playedMinutes": "90",
+                "goalsVideos" : {
+                    "allGoals" : "94gs6RXtkVM" 
+                }
             },
             "32": {
                 "date": "2016/05/02",
@@ -9764,7 +9773,7 @@ let entries = {
                 "outGameOnMin": "",
                 "playedMinutes": "82",
                 "goalsVideos" : {
-                    "allGoals" : "DsPhkdkOqCU"
+                    "allGoals" : "1NsG68DVCy0"
                 }
             }
 
