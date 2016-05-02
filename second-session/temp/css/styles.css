@@ -269,6 +269,29 @@
 .component-controls .control--right {
   text-align: right;
 }
+.component-donutchart .chart__donut {
+  height: 500px;
+}
+.component-donutchart.werder-bremen {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006737;
+}
+.component-donutchart.bayern-munich {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ff0040;
+}
+.component-donutchart.fc-chelsea {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #3064CA;
+}
+.component-donutchart.alianza-lima {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #0f60b3;
+}
 .component-entry-table {
   padding-top: 70px;
 }
@@ -546,7 +569,14 @@
     width: 11.11%;
     display: none;
   }
+  .component-entry-table .header__data--assists {
+    width: 11.11%;
+    display: none;
+  }
   .component-entry-table .data__cell--cards-y {
+    display: none;
+  }
+  .component-entry-table .data__cell--assists {
     display: none;
   }
   .component-entry-table .data__cell--cards-ry {
@@ -564,29 +594,6 @@
   .component-entry-table .data__cell--in-min-out {
     display: none;
   }
-}
-.component-donutchart .chart__donut {
-  height: 500px;
-}
-.component-donutchart.werder-bremen {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #006737;
-}
-.component-donutchart.bayern-munich {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #ff0040;
-}
-.component-donutchart.fc-chelsea {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #3064CA;
-}
-.component-donutchart.alianza-lima {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #0f60b3;
 }
 .component-entry-table-row .shield__mini {
   width: 32px;
@@ -773,79 +780,28 @@
 .component-summary.werder-bremen .summary__title {
   background-color: #006737;
 }
-.component-summary.werder-bremen .summary__numbers__item--picture {
-  background-color: #007e47;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--matches-played {
-  background-color: #00884c;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--goals {
-  background-color: #007e47;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--assists {
-  background-color: #00884c;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--yellow-cards {
-  background-color: #007e47;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--red-cards {
-  background-color: #00884c;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--played-minutes {
-  background-color: #007e47;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--goals-each-minute {
-  background-color: #00884c;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.werder-bremen .summary__numbers__item--effectiveness {
-  background-color: #007e47;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
+.component-summary.werder-bremen .summary__numbers__item--effectiveness,
+.component-summary.werder-bremen .summary__numbers__item--played-minutes,
+.component-summary.werder-bremen .summary__numbers__item--yellow-cards,
+.component-summary.werder-bremen .summary__numbers__item--goals,
+.component-summary.werder-bremen .summary__numbers__item--picture,
+.component-summary.werder-bremen .summary__numbers__item--others1,
+.component-summary.werder-bremen .summary__numbers__item--others3,
 .component-summary.werder-bremen .summary__numbers__item--club-logo {
+  background-color: #007e47;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+.component-summary.werder-bremen .summary__numbers__item--matches-played,
+.component-summary.werder-bremen .summary__numbers__item--assists,
+.component-summary.werder-bremen .summary__numbers__item--red-cards,
+.component-summary.werder-bremen .summary__numbers__item--goals-each-minute,
+.component-summary.werder-bremen .summary__numbers__item--tshirt,
+.component-summary.werder-bremen .summary__numbers__item--others2,
+.component-summary.werder-bremen .summary__numbers__item--others4 {
   background-color: #00884c;
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -862,79 +818,28 @@
 .component-summary.bayern-munich .summary__title {
   background-color: #bb002f;
 }
-.component-summary.bayern-munich .summary__numbers__item--picture {
-  background-color: #eb003b;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--matches-played {
-  background-color: #f5003d;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--goals {
-  background-color: #eb003b;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--assists {
-  background-color: #f5003d;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--yellow-cards {
-  background-color: #eb003b;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--red-cards {
-  background-color: #f5003d;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--played-minutes {
-  background-color: #eb003b;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--goals-each-minute {
-  background-color: #f5003d;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.bayern-munich .summary__numbers__item--effectiveness {
-  background-color: #eb003b;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
+.component-summary.bayern-munich .summary__numbers__item--effectiveness,
+.component-summary.bayern-munich .summary__numbers__item--played-minutes,
+.component-summary.bayern-munich .summary__numbers__item--yellow-cards,
+.component-summary.bayern-munich .summary__numbers__item--goals,
+.component-summary.bayern-munich .summary__numbers__item--picture,
+.component-summary.bayern-munich .summary__numbers__item--others1,
+.component-summary.bayern-munich .summary__numbers__item--others3,
 .component-summary.bayern-munich .summary__numbers__item--club-logo {
+  background-color: #eb003b;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+.component-summary.bayern-munich .summary__numbers__item--matches-played,
+.component-summary.bayern-munich .summary__numbers__item--assists,
+.component-summary.bayern-munich .summary__numbers__item--red-cards,
+.component-summary.bayern-munich .summary__numbers__item--goals-each-minute,
+.component-summary.bayern-munich .summary__numbers__item--tshirt,
+.component-summary.bayern-munich .summary__numbers__item--others2,
+.component-summary.bayern-munich .summary__numbers__item--others4 {
   background-color: #f5003d;
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -958,79 +863,28 @@
 .component-summary.alianza-lima .summary__title {
   background-color: #0b4784;
 }
-.component-summary.alianza-lima .summary__numbers__item--picture {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--matches-played {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--goals {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--assists {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--yellow-cards {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--red-cards {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--played-minutes {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--goals-each-minute {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.alianza-lima .summary__numbers__item--effectiveness {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
+.component-summary.alianza-lima .summary__numbers__item--effectiveness,
+.component-summary.alianza-lima .summary__numbers__item--played-minutes,
+.component-summary.alianza-lima .summary__numbers__item--yellow-cards,
+.component-summary.alianza-lima .summary__numbers__item--goals,
+.component-summary.alianza-lima .summary__numbers__item--picture,
+.component-summary.alianza-lima .summary__numbers__item--others1,
+.component-summary.alianza-lima .summary__numbers__item--others3,
 .component-summary.alianza-lima .summary__numbers__item--club-logo {
+  background-color: #0d56a0;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+.component-summary.alianza-lima .summary__numbers__item--matches-played,
+.component-summary.alianza-lima .summary__numbers__item--assists,
+.component-summary.alianza-lima .summary__numbers__item--red-cards,
+.component-summary.alianza-lima .summary__numbers__item--goals-each-minute,
+.component-summary.alianza-lima .summary__numbers__item--tshirt,
+.component-summary.alianza-lima .summary__numbers__item--others2,
+.component-summary.alianza-lima .summary__numbers__item--others4 {
   background-color: #0e5baa;
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -1054,79 +908,28 @@
 .component-summary.deportivo-pesquero .summary__title {
   background-color: #fbbb00;
 }
-.component-summary.deportivo-pesquero .summary__numbers__item--picture {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--matches-played {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--goals {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--assists {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--yellow-cards {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--red-cards {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--played-minutes {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--goals-each-minute {
-  background-color: #0e5baa;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.deportivo-pesquero .summary__numbers__item--effectiveness {
-  background-color: #0d56a0;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
+.component-summary.deportivo-pesquero .summary__numbers__item--effectiveness,
+.component-summary.deportivo-pesquero .summary__numbers__item--played-minutes,
+.component-summary.deportivo-pesquero .summary__numbers__item--yellow-cards,
+.component-summary.deportivo-pesquero .summary__numbers__item--goals,
+.component-summary.deportivo-pesquero .summary__numbers__item--picture,
+.component-summary.deportivo-pesquero .summary__numbers__item--others1,
+.component-summary.deportivo-pesquero .summary__numbers__item--others3,
 .component-summary.deportivo-pesquero .summary__numbers__item--club-logo {
+  background-color: #0d56a0;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+.component-summary.deportivo-pesquero .summary__numbers__item--matches-played,
+.component-summary.deportivo-pesquero .summary__numbers__item--assists,
+.component-summary.deportivo-pesquero .summary__numbers__item--red-cards,
+.component-summary.deportivo-pesquero .summary__numbers__item--goals-each-minute,
+.component-summary.deportivo-pesquero .summary__numbers__item--tshirt,
+.component-summary.deportivo-pesquero .summary__numbers__item--others2,
+.component-summary.deportivo-pesquero .summary__numbers__item--others4 {
   background-color: #0e5baa;
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -1150,79 +953,28 @@
 .component-summary.fc-chelsea .summary__title {
   background-color: #0B1E5E;
 }
-.component-summary.fc-chelsea .summary__numbers__item--picture {
-  background-color: #2c5cba;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--matches-played {
-  background-color: #2e60c2;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--goals {
-  background-color: #2c5cba;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--assists {
-  background-color: #2e60c2;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--yellow-cards {
-  background-color: #2c5cba;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--red-cards {
-  background-color: #2e60c2;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--played-minutes {
-  background-color: #2c5cba;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--goals-each-minute {
-  background-color: #2e60c2;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-.component-summary.fc-chelsea .summary__numbers__item--effectiveness {
-  background-color: #2c5cba;
-  -webkit-transition: all 700ms ease;
-  -moz-transition: all 700ms ease;
-  -ms-transition: all 700ms ease;
-  -o-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
+.component-summary.fc-chelsea .summary__numbers__item--effectiveness,
+.component-summary.fc-chelsea .summary__numbers__item--played-minutes,
+.component-summary.fc-chelsea .summary__numbers__item--yellow-cards,
+.component-summary.fc-chelsea .summary__numbers__item--goals,
+.component-summary.fc-chelsea .summary__numbers__item--picture,
+.component-summary.fc-chelsea .summary__numbers__item--others1,
+.component-summary.fc-chelsea .summary__numbers__item--others3,
 .component-summary.fc-chelsea .summary__numbers__item--club-logo {
+  background-color: #2c5cba;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
+}
+.component-summary.fc-chelsea .summary__numbers__item--matches-played,
+.component-summary.fc-chelsea .summary__numbers__item--assists,
+.component-summary.fc-chelsea .summary__numbers__item--red-cards,
+.component-summary.fc-chelsea .summary__numbers__item--goals-each-minute,
+.component-summary.fc-chelsea .summary__numbers__item--tshirt,
+.component-summary.fc-chelsea .summary__numbers__item--others2,
+.component-summary.fc-chelsea .summary__numbers__item--others4 {
   background-color: #2e60c2;
   -webkit-transition: all 700ms ease;
   -moz-transition: all 700ms ease;
@@ -1244,9 +996,6 @@
   -ms-transition: all 600ms ease;
   -o-transition: all 600ms ease;
   transition: all 600ms ease;
-}
-.component-summary .summary-shield {
-  max-width: 80%;
 }
 .component-summary .summary__numbers {
   font-size: 20px;
@@ -1332,9 +1081,28 @@
 .component-summary .summary__numbers .component-main-picture img {
   height: 100%;
 }
+.component-summary .summary__numbers .component-main-picture img.summary-shield {
+  width: 50%;
+  height: 70%;
+  padding-top: 30%;
+}
 @media screen and (max-width: 480px) {
+  .component-summary .summary__numbers .summary__numbers__item {
+    width: 33.3%;
+    padding-bottom: 30%;
+    /* = width for a 1:1 aspect ratio */
+  }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content {
+    padding: 0 5%;
+  }
+  .component-summary .summary__numbers .summary__numbers__item--others1,
+  .component-summary .summary__numbers .summary__numbers__item--others3,
+  .component-summary .summary__numbers .summary__numbers__item--others4 {
+    display: none;
+  }
   .component-summary .summary__numbers .summary__numbers__item--label {
     font-size: 13px;
+    padding-top: 20%;
   }
   .component-summary .summary__numbers .summary__numbers__item--text {
     font-size: 25px;
@@ -1344,11 +1112,11 @@
   position: relative;
 }
 .component-youtube-player {
-  width: 100%;
+  width: 60%;
   position: absolute;
   top: 0;
-  left: 0;
-  height: 100%;
+  left: 20%;
+  height: 66.6%;
 }
 .component-youtube-player iframe {
   position: relative;

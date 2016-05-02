@@ -6,10 +6,6 @@
     .chelsea();
 
     .summary__image {}
-    .summary-shield {
-        max-width: 80%;
-
-    }
 
     .summary__numbers {
         font-size: 20px;
@@ -82,6 +78,13 @@
             line-height: 80%;
             img {
                 height:100%;
+            }
+
+            img.summary-shield {
+                width: 50%;
+                height: 70%;
+                padding-top: 30%;
+
             }
         }
     }
@@ -182,55 +185,31 @@
 
 .setGridColors(@colorSelected) {
 
-    .summary__numbers__item--picture {
+
+    .summary__numbers__item--effectiveness,
+    .summary__numbers__item--played-minutes,
+    .summary__numbers__item--yellow-cards,
+    .summary__numbers__item--goals,
+    .summary__numbers__item--picture,
+    .summary__numbers__item--others1,
+    .summary__numbers__item--others3,
+    .summary__numbers__item--club-logo {
         background-color: darken(@colorSelected, 4%);
         .transition(all 700ms ease);
     }
 
-    .summary__numbers__item--matches-played {
+
+    .summary__numbers__item--matches-played,
+    .summary__numbers__item--assists,
+    .summary__numbers__item--red-cards,
+    .summary__numbers__item--goals-each-minute,
+    .summary__numbers__item--tshirt,
+    .summary__numbers__item--others2,
+    .summary__numbers__item--others4
+    {
         background-color: darken(@colorSelected, 2%);
         .transition(all 700ms ease);
     }
-
-    .summary__numbers__item--goals {
-        background-color: darken(@colorSelected, 4%);
-        .transition(all 700ms ease);
-    }
-
-    .summary__numbers__item--assists {
-        background-color: darken(@colorSelected, 2%);
-        .transition(all 700ms ease);
-    }
-
-    .summary__numbers__item--yellow-cards {
-        background-color: darken(@colorSelected, 4%);
-        .transition(all 700ms ease);
-    }
-
-    .summary__numbers__item--red-cards {
-        background-color: darken(@colorSelected, 2%);
-        .transition(all 700ms ease);
-    }
-
-    .summary__numbers__item--played-minutes {
-        background-color: darken(@colorSelected, 4%);
-        .transition(all 700ms ease);
-    }
-    .summary__numbers__item--goals-each-minute {
-        background-color: darken(@colorSelected, 2%);
-        .transition(all 700ms ease);
-    }
-
-    .summary__numbers__item--effectiveness{
-        background-color: darken(@colorSelected, 4%);
-        .transition(all 700ms ease);
-    }
-
-    .summary__numbers__item--club-logo{
-        background-color: darken(@colorSelected, 2%);
-        .transition(all 700ms ease);
-    }
-
 }
 
 
@@ -238,8 +217,23 @@
     .component-summary {
 
         .summary__numbers {
+
+            .summary__numbers__item {
+                width: 33.3%;
+                padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+                .summary__numbers__content {
+                    padding: 0 5%;
+                }
+            }
+            .summary__numbers__item--others1,
+            .summary__numbers__item--others3,
+            .summary__numbers__item--others4 {
+                display: none;
+            }
+
             .summary__numbers__item--label {
                 font-size: 13px;
+                padding-top: 20%;
             }
             .summary__numbers__item--text {
                 font-size: 25px;

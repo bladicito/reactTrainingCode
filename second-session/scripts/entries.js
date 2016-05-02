@@ -9748,6 +9748,24 @@ let entries = {
                 "inGameOnMin": "",
                 "outGameOnMin": "",
                 "playedMinutes": "90"
+            },
+            "32": {
+                "date": "2016/05/02",
+                "home": "Werder Bremen",
+                "away": "Sttutgart",
+                "result": "5:2 ",
+                "goals": "1",
+                "assists": "1",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "82",
+                "goalsVideos" : {
+                    "allGoals" : "DsPhkdkOqCU"
+                }
             }
 
         }

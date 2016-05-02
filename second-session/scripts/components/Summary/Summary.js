@@ -97,6 +97,63 @@ var Summary = React.createClass({
                             </span>
                         </div>
                     </div>
+
+                    <div className="summary__numbers__item  summary__numbers__item--tshirt-number">
+                        <div className="summary__numbers__content">
+                            <span className="summary__numbers__item--label">
+                                WORN T-SHIRT
+                            </span>
+                            <span className="summary__numbers__item--text">
+                                14
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="summary__numbers__item  summary__numbers__item--others1">
+                        <div className="summary__numbers__content">
+                            <span className="summary__numbers__item--label">
+                               OTHERS
+                            </span>
+                            <span className="summary__numbers__item--text">
+                                EXAMPLE
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="summary__numbers__item  summary__numbers__item--others2">
+                        <div className="summary__numbers__content">
+                            <span className="summary__numbers__item--label">
+                               OTHERS
+                            </span>
+                            <span className="summary__numbers__item--text">
+                                EXAMPLE
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div className="summary__numbers__item  summary__numbers__item--others3">
+                        <div className="summary__numbers__content">
+                            <span className="summary__numbers__item--label">
+                               OTHERS
+                            </span>
+                            <span className="summary__numbers__item--text">
+                                EXAMPLE
+                            </span>
+                        </div>
+                    </div>
+                    <div className="summary__numbers__item  summary__numbers__item--others4">
+                        <div className="summary__numbers__content">
+                            <span className="summary__numbers__item--label">
+                               OTHERS
+                            </span>
+                            <span className="summary__numbers__item--text">
+                                EXAMPLE
+                            </span>
+                        </div>
+                    </div>
+
+
                     <div className="summary__numbers__item  summary__numbers__item--club-logo">
                         <div className="summary__numbers__content">
                             {this.getPicture(Helpers.nameToImageShield(this.props.currentClub), 'summary-shield', '/build/svg/')}
