@@ -7,6 +7,7 @@ import YoutubePlayer from   '../YoutubePlayer/YoutubePlayer';
 import Header from          '../Header/Header';
 import Utils from           '../../helpers';
 import Entries from         '../../entries';
+import Firebase from        'firebase'
 
 
 var App = React.createClass({
@@ -67,6 +68,36 @@ var App = React.createClass({
             youtubeVideoID   : 'none'
         });
 
+
+
+
+        //var _this = this,
+        //    seasonsKeys = []
+        //    ;
+        //
+        //this.firebaseRef = new Firebase('https://claudiopizarro.firebaseIO.com'),
+        //    this.firebaseRef.on('value', function(dataSnapshot) {
+        //        dataSnapshot.forEach(function(data) {
+        //            var key = data.key()
+        //                ;
+        //
+        //            if (key !== 'undefined' || typeof(key !== 'undefined')) {
+        //                seasonsKeys.push(key)
+        //            }
+        //
+        //            if(key === _this.state.currentSeason) {
+        //                _this.updateState(data.val(), true);
+        //            }
+        //        });
+        //
+        //        _this.setState({
+        //            seasonsKeys : seasonsKeys
+        //        })
+        //    });
+
+
+
+
     },
 
     initSummary : function(seasonData) {
@@ -97,9 +128,7 @@ var App = React.createClass({
             if(typeof(entries[currentValue].redCards) !== 'undefined' && entries[currentValue].redCards.trim() !== '') {
                 redCards ++;
             }
-    
 
-    
             if(typeof(entries[currentValue].playedMinutes) !== 'undefined' && entries[currentValue].playedMinutes.trim() !== '') {
                 playedMinutes += parseInt(entries[currentValue].playedMinutes);
                 counterGames++;
@@ -126,6 +155,10 @@ var App = React.createClass({
     },
 
     updateDataSeason : function(newSeason) {
+
+        //this.updateState(newSeason);
+
+
         this.state.currentSeason        = newSeason;
         this.state.currentSeasonYear    = Entries[this.state.currentSeason].year;
         this.state.seasonData           = Entries[this.state.currentSeason];
@@ -154,6 +187,35 @@ var App = React.createClass({
 
     },
 
+    updateState : function(newSeason, initialLoad) {
+        if (initialLoad) {
+            google.charts.load("current", {packages:["corechart"]});
+
+        }
+
+
+
+        this.state.seasonData        = newSeason;
+        this.state.currentSeasonYear = newSeason.year;
+        this.state.mainImage         = newSeason.mainImage;
+        this.state.currentClub       = newSeason.club;
+        this.state.currentClubCss    = newSeason.club.toLowerCase().replace(' ', '-');
+        this.state.matchesData       = newSeason.matches;
+        this.state.currentClubColors = Utils.getClubColors(this.state.currentClub);
+
+
+        this.initSummary(newSeason);
+        this.setState({
+            mainImage           : this.state.mainImage,
+            seasonData          : this.state.seasonData,
+            currentClub         : this.state.currentClub,
+            currentClubCss      : this.state.currentClubCss,
+            matchesData         : this.state.matchesData,
+            currentClubColors   : this.state.currentClubColors,
+            youtubeVideoID      : 'none'
+        });
+
+    },
 
     videoIdUpdate : function(goalData) {
 
@@ -168,10 +230,6 @@ var App = React.createClass({
             youtubeVideoID: 'none'
         })
     },
-
-
-    
-
 
     render: function() {
 

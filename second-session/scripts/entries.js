@@ -9755,7 +9755,7 @@ let entries = {
                 "outGameOnMin": "",
                 "playedMinutes": "90",
                 "goalsVideos" : {
-                    "allGoals" : "94gs6RXtkVM" 
+                    "allGoals" : "94gs6RXtkVM"
                 }
             },
             "32": {
