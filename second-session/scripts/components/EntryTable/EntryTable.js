@@ -10,7 +10,9 @@ var EntryTable = React.createClass({
         )
     },
     render: function() {
-        var entries = this.props.seasonMatchesData.matches;
+
+        console.log(this.props);
+
         return (
             <div className={'component component-entry-table ' + this.props.currentClubCss}>
                 <h2>Matches Stats</h2> 
@@ -32,7 +34,8 @@ var EntryTable = React.createClass({
                     </tr>
                     </thead>
                     <tbody>
-                    {Object.keys(this.props.seasonMatchesData).map(this.renderEntryTableRow)}
+
+                    
                     </tbody>
                 </table>
             </div>

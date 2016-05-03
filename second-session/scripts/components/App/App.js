@@ -6,20 +6,32 @@ import DonutCharts from     '../DonutCharts/DonutCharts';
 import YoutubePlayer from   '../YoutubePlayer/YoutubePlayer';
 import Header from          '../Header/Header';
 import Utils from           '../../helpers';
-import Entries from         '../../entries';
 import Firebase from        'firebase'
+import defaultSeason from   '../../entries'
 
 
 var App = React.createClass({
     getInitialState: function() {
+        var _this = this;
+
+        console.log(defaultSeason);
+
         return {
-            currentSeason       : 'season18'
+            currentSeason       : 'season18',
+            prevSeason          : 'season17',
+            nextSeason          : 'season19',
+            youtubeVideoID      : 'none',
+            currentClub         : 'Bayern Munich',
+            currentClubCss      : 'bayern-munich',
+            matchesData         : defaultSeason.matches
+
         }
+
     },
 
-    setCurrentSeasons : function() {
-        var entriesNames        = Object.keys(Entries),
-            currentSeasonIndex  = entriesNames.indexOf(this.state.currentSeason),
+    setCurrentSeasons : function(newCurrentSeason) {
+        var entriesNames        = this.state.availableSeasons,
+            currentSeasonIndex  = entriesNames.indexOf(newCurrentSeason),
             amountSeasons       = entriesNames.length
         ;
 
@@ -41,64 +53,49 @@ var App = React.createClass({
             nextSeason : this.state.nextSeason
         });
 
+        this.updateSeasonData(newCurrentSeason, false);
+
     },
+
+    
 
     componentWillMount : function () {
-        this.setCurrentSeasons();
+        var _this = this;
+        this.firebaseRef = Utils.getDbRef();
+        this.firebaseRef.once('value', function(dataSnapshot) {
+            var newSeason = dataSnapshot.val()[_this.state.currentSeason];
+            this.getAvailableSeasons(dataSnapshot.val());
+            this.updateSeasonData(newSeason, true);
 
-        google.charts.load("current", {packages:["corechart"]});
-
-        this.state.seasonData        = Entries[this.state.currentSeason];
-        this.state.currentSeasonYear = Entries[this.state.currentSeason].year;
-        this.state.mainImage         = Entries[this.state.currentSeason].mainImage;
-        this.state.currentClub       = Entries[this.state.currentSeason].club;
-        this.state.currentClubCss    = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
-        this.state.matchesData       = Entries[this.state.currentSeason].matches;
-        this.state.currentClubColors = Utils.getClubColors(this.state.currentClub);
-
-
-        this.initSummary(this.state.seasonData);
-        this.setState({
-            mainImage :     this.state.mainImage,
-            seasonData:     this.state.seasonData,
-            currentClub:    this.state.currentClub,
-            currentClubCss: this.state.currentClubCss,
-            matchesData:    this.state.matchesData,
-            currentClubColors: this.state.currentClubColors,
-            youtubeVideoID   : 'none'
-        });
-
-
-
-
-        //var _this = this,
-        //    seasonsKeys = []
-        //    ;
-        //
-        //this.firebaseRef = new Firebase('https://claudiopizarro.firebaseIO.com'),
-        //    this.firebaseRef.on('value', function(dataSnapshot) {
-        //        dataSnapshot.forEach(function(data) {
-        //            var key = data.key()
-        //                ;
-        //
-        //            if (key !== 'undefined' || typeof(key !== 'undefined')) {
-        //                seasonsKeys.push(key)
-        //            }
-        //
-        //            if(key === _this.state.currentSeason) {
-        //                _this.updateState(data.val(), true);
-        //            }
-        //        });
-        //
-        //        _this.setState({
-        //            seasonsKeys : seasonsKeys
-        //        })
-        //    });
-
-
-
+        }.bind(this));
 
     },
+
+    getAvailableSeasons : function(dataSeasons) {
+        var elements = Object.keys(dataSeasons),
+            temp = [],
+            sortNumbers = function sortNumber(a,b) {
+                return a - b;
+            }
+        ;
+
+        elements.map(function(currentItem) {
+            temp.push(parseInt(currentItem.replace('season', '')));
+        });
+
+        var newArray = [];
+        temp.sort(sortNumbers);
+        temp.map((current) => {
+            newArray.push('season' + current);
+        });
+
+        this.setState({
+            availableSeasons : newArray
+        });
+
+    },
+
+
 
     initSummary : function(seasonData) {
         var assists         = 0,
@@ -149,72 +146,61 @@ var App = React.createClass({
 
     },
 
-    componentDidMount: function() {
 
 
-    },
 
-    updateDataSeason : function(newSeason) {
-
-        //this.updateState(newSeason);
-
-
-        this.state.currentSeason        = newSeason;
-        this.state.currentSeasonYear    = Entries[this.state.currentSeason].year;
-        this.state.seasonData           = Entries[this.state.currentSeason];
-        this.state.mainImage            = Entries[this.state.currentSeason].mainImage;
-        this.state.currentClub          = Entries[this.state.currentSeason].club;
-        this.state.currentClubCss       = Entries[this.state.currentSeason].club.toLowerCase().replace(' ', '-');
-        this.state.matchesData          = Entries[this.state.currentSeason].matches;
-        this.state.currentClubColors    = Utils.getClubColors(this.state.currentClub);
-        this.initSummary(this.state.seasonData);
-
-        this.setCurrentSeasons();
-
-        this.setState({
-            mainImage           : this.state.mainImage,
-            seasonData          : this.state.seasonData,
-            defaultSeason       : this.state.defaultSeason,
-            currentSeason       : this.state.currentSeason,
-            currentClub         : this.state.currentClub,
-            currentClubCss      : this.state.currentClubCss,
-            currentSeasonYear   : this.state.currentSeasonYear,
-            matchesData         : this.state.matchesData,
-            currentClubColors   : this.state.currentClubColors,
-            youtubeVideoID      : 'none'
-
-        });
-
-    },
-
-    updateState : function(newSeason, initialLoad) {
+    updateSeasonData : function(newSeason, initialLoad) {
         if (initialLoad) {
             google.charts.load("current", {packages:["corechart"]});
-
         }
 
+        if (typeof(newSeason) === 'string') {
+            var _this = this;
+            this.firebaseRef = Utils.getDbRef(newSeason);
+            this.firebaseRef.once('value', function(dataSnapshot) {
+                var newSeason = dataSnapshot.val();
 
 
-        this.state.seasonData        = newSeason;
-        this.state.currentSeasonYear = newSeason.year;
-        this.state.mainImage         = newSeason.mainImage;
-        this.state.currentClub       = newSeason.club;
-        this.state.currentClubCss    = newSeason.club.toLowerCase().replace(' ', '-');
-        this.state.matchesData       = newSeason.matches;
-        this.state.currentClubColors = Utils.getClubColors(this.state.currentClub);
+                this.state.currentSeasonYear = newSeason.year;
+                this.state.mainImage         = newSeason.mainImage;
+                this.state.currentClub       = newSeason.club;
+                this.state.currentClubCss    = newSeason.club.toLowerCase().replace(' ', '-');
+                this.state.matchesData       = newSeason.matches;
+                this.state.currentClubColors = Utils.getClubColors(this.state.currentClub);
 
 
-        this.initSummary(newSeason);
-        this.setState({
-            mainImage           : this.state.mainImage,
-            seasonData          : this.state.seasonData,
-            currentClub         : this.state.currentClub,
-            currentClubCss      : this.state.currentClubCss,
-            matchesData         : this.state.matchesData,
-            currentClubColors   : this.state.currentClubColors,
-            youtubeVideoID      : 'none'
-        });
+                this.initSummary(newSeason);
+                this.setState({
+                    mainImage           : this.state.mainImage,
+                    currentClub         : this.state.currentClub,
+                    currentClubCss      : this.state.currentClubCss,
+                    matchesData         : this.state.matchesData,
+                    currentClubColors   : this.state.currentClubColors,
+                    youtubeVideoID      : 'none'
+                });
 
+            }.bind(this));
+
+        } else {
+            this.state.currentSeasonYear = newSeason.year;
+            this.state.mainImage         = newSeason.mainImage;
+            this.state.currentClub       = newSeason.club;
+            this.state.currentClubCss    = newSeason.club.toLowerCase().replace(' ', '-');
+            this.state.matchesData       = newSeason.matches;
+            this.state.currentClubColors = Utils.getClubColors(this.state.currentClub);
+
+
+            this.initSummary(newSeason);
+            this.setState({
+                mainImage           : this.state.mainImage,
+                currentClub         : this.state.currentClub,
+                currentClubCss      : this.state.currentClubCss,
+                matchesData         : this.state.matchesData,
+                currentClubColors   : this.state.currentClubColors,
+                youtubeVideoID      : 'none'
+            });
+
+        }
     },
 
     videoIdUpdate : function(goalData) {
@@ -241,7 +227,7 @@ var App = React.createClass({
                     currentClub         = {this.state.currentClub}
                     prevSeason          = {this.state.prevSeason}
                     nextSeason          = {this.state.nextSeason}
-                    updateDataSeason    = {this.updateDataSeason}
+                    updateDataSeason    = {this.setCurrentSeasons}
                 />
                 <div className="linked-components">
                     <Summary goals             = {this.state.goals}
@@ -254,14 +240,13 @@ var App = React.createClass({
                              mainImage         = {this.state.mainImage}
                              season            = {this.state.season}
                              clubShieldPicture = {this.state.clubShieldPicture}
-                             seasonData        = {this.state.seasonData}
                              currentSeason     = {this.state.currentSeason}
                              currentSeasonYear = {this.state.currentSeasonYear}
                              nextSeason        = {this.state.nextSeason}
                              prevSeason        = {this.state.prevSeason}
                              currentClub       = {this.state.currentClub}
                              currentClubCss    = {this.state.currentClubCss}
-                             updateDataSeason  = {this.updateDataSeason}
+                             updateDataSeason  = {this.updateSeasonData}
                              averageGoalsPerMatch = {this.state.averageGoalsPerMatch}
                     />
                     <YoutubePlayer 
@@ -271,23 +256,7 @@ var App = React.createClass({
                 </div>
 
 
-                <LineChart
-                    seasonMatchesData = {this.state.matchesData}
-                    currentClub       = {this.state.currentClub}
-                    currentClubCss    = {this.state.currentClubCss}
-                    currentSeason     = {this.state.currentSeason}
-                    currentSeasonYear = {this.state.currentSeasonYear}
-                    currentClubColors = {this.state.currentClubColors}
-                    videoIdUpdate     = {this.videoIdUpdate}
-                    
-                />
-                <DonutCharts
-                    seasonMatchesData   = {this.state.matchesData}
-                    currentClub         = {this.state.currentClub}
-                    currentClubCss      = {this.state.currentClubCss}
-                    currentSeasonYear   = {this.state.currentSeasonYear}
-                    currentClubColors   = {this.state.currentClubColors}
-                />
+
                 <EntryTable
                     seasonMatchesData   = {this.state.matchesData}
                     currentClub         = {this.state.currentClub}

@@ -1,6 +1,5 @@
 import React from 'react';
 import MainPicture from '../MainPicture/MainPicture';
-import Entries from     '../../entries';
 import Helpers from       '../../helpers';
 
 
@@ -24,8 +23,8 @@ var Controls = React.createClass({
     },
 
     render: function() {
-        var imagePrev = Helpers.nameToImageShield(Entries[this.props.prevSeason].club),
-            imageNext = Helpers.nameToImageShield(Entries[this.props.nextSeason].club)
+        var imagePrev = Helpers.nameToImageShield(this.props.prevSeason.club),
+            imageNext = Helpers.nameToImageShield(this.props.nextSeason.club)
         ;
         return (
             <div className="component component-controls">

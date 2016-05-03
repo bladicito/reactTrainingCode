@@ -14,7 +14,7 @@ var YoutubePlayer = React.createClass({
     },
 
     loadVideo : function() {
-        var youtubeComponentHolder = document.getElementsByClassName('component-youtube-player');
+        var youtubeComponentHolder = document.getElementsByClassName('component-youtube-player')[0];
 
 
         if (this.props.videoID !== 'none') {
