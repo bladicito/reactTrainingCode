@@ -19,23 +19,7 @@ let helpers = {
 
         return dateString;
     },
-
-    caloriesRemaining : function(entries, selectedDate) {
-        var entryKeys   = Object.key(entries),
-            calories    = 0,
-            maxCalories = 2000,
-            key
-        ;
-
-        for(var i = 0; i < entryKeys.length; i++) {
-            key = entryKeys[i];
-            if (entries[key].date == selectedDate) {
-                calories += entries[key].calories;
-            }
-        }
-
-        return maxCalories - calories;
-    },
+    
 
     getClubColors : function(name) {
         var objColors = {};

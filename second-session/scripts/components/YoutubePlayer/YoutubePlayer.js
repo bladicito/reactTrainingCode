@@ -56,12 +56,14 @@ var YoutubePlayer = React.createClass({
             });
 
         function onPlayerReady(event) {
+            document.getElementsByClassName('linked-components')[0].className += ' playing-video';
             event.target.playVideo();
         }
 
         function onPlayerStateChange(event) {
-            console.log(event);
             if (event.data == YT.PlayerState.ENDED) {
+                var classesCSS = document.getElementsByClassName('linked-components')[0].className;
+                document.getElementsByClassName('linked-components')[0].className = classesCSS.replace('playing-video', '');
                 _this.cleanYTHolder();
             }
 
@@ -86,7 +88,9 @@ var YoutubePlayer = React.createClass({
     render: function() {
         return (
             <div className="component component-youtube-player">
-                <div id="youtube-player"></div>
+                <div className="container">
+                    <div id="youtube-player"></div>
+                </div>
             </div>
 
         )

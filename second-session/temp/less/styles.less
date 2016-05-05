@@ -1451,6 +1451,9 @@
 // Large screen / wide desktop
 @container-lg-desktop:        ((1140px + @grid-gutter-width));
 
+.main-claudio-pizarro{
+
+}
 .component-controls {
     padding-bottom: 14px;
 
@@ -1495,9 +1498,6 @@
     .control--right {
         text-align: right;
     }
-}
-.main-claudio-pizarro{
-
 }
 .component-donutchart {
     .chart__donut {
@@ -1888,6 +1888,39 @@
         height: auto;
     }
 }
+.linked-components {
+    position: relative;
+    &.playing-video {
+        background-color: black;
+        .component-youtube-player {
+            background-color: black;
+        }
+        .component-summary {
+            background-color: black;
+            .summary__numbers {
+                .summary__numbers__item {
+                    background-color: black;
+                    color:@color-dark-grey_text_black;
+                }
+                .summary__numbers__item--close-video {
+                    a {
+                        color: @color-white;
+                        text-decoration: none;
+                    }
+                    display: block;
+
+                }
+                .summary__numbers__item--others1{
+                    display: none;
+
+                }
+            }
+        }
+    }
+
+}
+
+
 .component-summary {
     .werder-bremen();
     .bayern-munich();
@@ -1905,6 +1938,9 @@
         .clearfix();
 
 
+        .summary__numbers__item--close-video {
+            display: none;
+        }
         .summary__numbers__item {
             color: @color-white;
             font-family: @font-webfont-text;
@@ -2093,7 +2129,7 @@
     .summary__numbers__item--assists,
     .summary__numbers__item--red-cards,
     .summary__numbers__item--goals-each-minute,
-    .summary__numbers__item--tshirt,
+    .summary__numbers__item--tshirt-number,
     .summary__numbers__item--others2,
     .summary__numbers__item--others4
     {
@@ -2117,7 +2153,8 @@
             }
             .summary__numbers__item--others1,
             .summary__numbers__item--others3,
-            .summary__numbers__item--others4 {
+            .summary__numbers__item--others4,
+            .summary__numbers__item--others2 {
                 display: none;
             }
 
@@ -2132,28 +2169,35 @@
     }
 }
 
-.linked-components {
-    position: relative;
-}
+
 
 .component-youtube-player {
-    width: 60%;
+    width: 100%;
     position: absolute;
     top:0;
-    left: 20%;
-    height:66.6%;
+    height:100%;
     iframe {
-        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .transform(translate(-50%, -50%));
+        width: 50%;
         z-index: 11;
     }
 }
 
 @media screen and (max-width: @breakpoint-mobile) {
     .component-youtube-player {
-        width: 100%;
         position: absolute;
-        bottom:0;
         left: 0;
-        height:100%;
+        top:0;
+        height:66.6%;
+        iframe {
+            width: 100%;
+            top:auto;
+            left: auto;
+            .transform(none);
+            z-index: 110;
+        }
     }
 }

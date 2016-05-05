@@ -69,35 +69,6 @@ var App = React.createClass({
         });
 
 
-
-
-        //var _this = this,
-        //    seasonsKeys = []
-        //    ;
-        //
-        //this.firebaseRef = new Firebase('https://claudiopizarro.firebaseIO.com'),
-        //    this.firebaseRef.on('value', function(dataSnapshot) {
-        //        dataSnapshot.forEach(function(data) {
-        //            var key = data.key()
-        //                ;
-        //
-        //            if (key !== 'undefined' || typeof(key !== 'undefined')) {
-        //                seasonsKeys.push(key)
-        //            }
-        //
-        //            if(key === _this.state.currentSeason) {
-        //                _this.updateState(data.val(), true);
-        //            }
-        //        });
-        //
-        //        _this.setState({
-        //            seasonsKeys : seasonsKeys
-        //        })
-        //    });
-
-
-
-
     },
 
     initSummary : function(seasonData) {
@@ -157,7 +128,8 @@ var App = React.createClass({
     updateDataSeason : function(newSeason) {
 
         //this.updateState(newSeason);
-
+        var classesCSS = document.getElementsByClassName('linked-components')[0].className;
+        document.getElementsByClassName('linked-components')[0].className = classesCSS.replace('playing-video', '');
 
         this.state.currentSeason        = newSeason;
         this.state.currentSeasonYear    = Entries[this.state.currentSeason].year;
@@ -225,7 +197,8 @@ var App = React.createClass({
     },
 
     videoIdReset : function() {
-
+        var classesCSS = document.getElementsByClassName('linked-components')[0].className;
+        document.getElementsByClassName('linked-components')[0].className = classesCSS.replace('playing-video', '');
         this.setState({
             youtubeVideoID: 'none'
         })
@@ -262,6 +235,7 @@ var App = React.createClass({
                              currentClub       = {this.state.currentClub}
                              currentClubCss    = {this.state.currentClubCss}
                              updateDataSeason  = {this.updateDataSeason}
+                             videoIdReset      = {this.videoIdReset}
                              averageGoalsPerMatch = {this.state.averageGoalsPerMatch}
                     />
                     <YoutubePlayer 

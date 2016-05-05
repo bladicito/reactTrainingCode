@@ -774,6 +774,32 @@
   width: 100%;
   height: auto;
 }
+.linked-components {
+  position: relative;
+}
+.linked-components.playing-video {
+  background-color: black;
+}
+.linked-components.playing-video .component-youtube-player {
+  background-color: black;
+}
+.linked-components.playing-video .component-summary {
+  background-color: black;
+}
+.linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item {
+  background-color: black;
+  color: #474747;
+}
+.linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--close-video {
+  display: block;
+}
+.linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--close-video a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--others1 {
+  display: none;
+}
 .component-summary.werder-bremen {
   background-color: #009252;
 }
@@ -799,7 +825,7 @@
 .component-summary.werder-bremen .summary__numbers__item--assists,
 .component-summary.werder-bremen .summary__numbers__item--red-cards,
 .component-summary.werder-bremen .summary__numbers__item--goals-each-minute,
-.component-summary.werder-bremen .summary__numbers__item--tshirt,
+.component-summary.werder-bremen .summary__numbers__item--tshirt-number,
 .component-summary.werder-bremen .summary__numbers__item--others2,
 .component-summary.werder-bremen .summary__numbers__item--others4 {
   background-color: #00884c;
@@ -837,7 +863,7 @@
 .component-summary.bayern-munich .summary__numbers__item--assists,
 .component-summary.bayern-munich .summary__numbers__item--red-cards,
 .component-summary.bayern-munich .summary__numbers__item--goals-each-minute,
-.component-summary.bayern-munich .summary__numbers__item--tshirt,
+.component-summary.bayern-munich .summary__numbers__item--tshirt-number,
 .component-summary.bayern-munich .summary__numbers__item--others2,
 .component-summary.bayern-munich .summary__numbers__item--others4 {
   background-color: #f5003d;
@@ -882,7 +908,7 @@
 .component-summary.alianza-lima .summary__numbers__item--assists,
 .component-summary.alianza-lima .summary__numbers__item--red-cards,
 .component-summary.alianza-lima .summary__numbers__item--goals-each-minute,
-.component-summary.alianza-lima .summary__numbers__item--tshirt,
+.component-summary.alianza-lima .summary__numbers__item--tshirt-number,
 .component-summary.alianza-lima .summary__numbers__item--others2,
 .component-summary.alianza-lima .summary__numbers__item--others4 {
   background-color: #0e5baa;
@@ -927,7 +953,7 @@
 .component-summary.deportivo-pesquero .summary__numbers__item--assists,
 .component-summary.deportivo-pesquero .summary__numbers__item--red-cards,
 .component-summary.deportivo-pesquero .summary__numbers__item--goals-each-minute,
-.component-summary.deportivo-pesquero .summary__numbers__item--tshirt,
+.component-summary.deportivo-pesquero .summary__numbers__item--tshirt-number,
 .component-summary.deportivo-pesquero .summary__numbers__item--others2,
 .component-summary.deportivo-pesquero .summary__numbers__item--others4 {
   background-color: #0e5baa;
@@ -972,7 +998,7 @@
 .component-summary.fc-chelsea .summary__numbers__item--assists,
 .component-summary.fc-chelsea .summary__numbers__item--red-cards,
 .component-summary.fc-chelsea .summary__numbers__item--goals-each-minute,
-.component-summary.fc-chelsea .summary__numbers__item--tshirt,
+.component-summary.fc-chelsea .summary__numbers__item--tshirt-number,
 .component-summary.fc-chelsea .summary__numbers__item--others2,
 .component-summary.fc-chelsea .summary__numbers__item--others4 {
   background-color: #2e60c2;
@@ -1011,6 +1037,9 @@
 }
 .component-summary .summary__numbers:after {
   clear: both;
+}
+.component-summary .summary__numbers .summary__numbers__item--close-video {
+  display: none;
 }
 .component-summary .summary__numbers .summary__numbers__item {
   color: #FFFFFF;
@@ -1097,7 +1126,8 @@
   }
   .component-summary .summary__numbers .summary__numbers__item--others1,
   .component-summary .summary__numbers .summary__numbers__item--others3,
-  .component-summary .summary__numbers .summary__numbers__item--others4 {
+  .component-summary .summary__numbers .summary__numbers__item--others4,
+  .component-summary .summary__numbers .summary__numbers__item--others2 {
     display: none;
   }
   .component-summary .summary__numbers .summary__numbers__item--label {
@@ -1108,26 +1138,40 @@
     font-size: 25px;
   }
 }
-.linked-components {
-  position: relative;
-}
 .component-youtube-player {
-  width: 60%;
+  width: 100%;
   position: absolute;
   top: 0;
-  left: 20%;
-  height: 66.6%;
+  height: 100%;
 }
 .component-youtube-player iframe {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50%;
   z-index: 11;
 }
 @media screen and (max-width: 480px) {
   .component-youtube-player {
-    width: 100%;
     position: absolute;
-    bottom: 0;
     left: 0;
-    height: 100%;
+    top: 0;
+    height: 66.6%;
+  }
+  .component-youtube-player iframe {
+    width: 100%;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    z-index: 110;
   }
 }
