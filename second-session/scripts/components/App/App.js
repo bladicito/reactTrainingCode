@@ -12,9 +12,31 @@ import Firebase from        'firebase'
 
 var App = React.createClass({
     getInitialState: function() {
+        var indicatorHolder         = document.createElement('div');
+        indicatorHolder.className   = 'state-indicator';
+        document.body.appendChild(indicatorHolder);
+        var viewPort = parseInt(window.getComputedStyle(indicatorHolder).getPropertyValue('z-index'), 10);
+        this.setViewportObserver(indicatorHolder);
         return {
-            currentSeason       : 'season18'
+            currentSeason       : 'season18',
+            currentViewport     : viewPort
         }
+    },
+
+    setViewportObserver : function(indicatorHolder) {
+
+        var _this = this;
+        window.addEventListener('resize', function() {
+            var viewport = parseInt(window.getComputedStyle(indicatorHolder).getPropertyValue('z-index'), 10);
+
+
+            _this.setState({
+                currentViewport : viewport
+            });
+
+        });
+
+
     },
 
     setCurrentSeasons : function() {
@@ -253,6 +275,7 @@ var App = React.createClass({
                     currentSeasonYear = {this.state.currentSeasonYear}
                     currentClubColors = {this.state.currentClubColors}
                     videoIdUpdate     = {this.videoIdUpdate}
+                    currentViewport   = {this.state.currentViewport}
                     
                 />
                 <DonutCharts

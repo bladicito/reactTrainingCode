@@ -46,7 +46,14 @@ var LineChart = React.createClass({
                 date   = new Date(entries[single].date);
                 against= entries[single].home === this.props.currentClub ? entries[single].away : entries[single].home;
 
-                temp.push([date, goals, this.customToolTipHTML(goals, played, against,  date, goalsCurrentClub, goalsOtherClub)]);
+
+                if(this.props.currentViewport === 4) {
+                    temp.push([goals, date, this.customToolTipHTML(goals, played, against,  date, goalsCurrentClub, goalsOtherClub)]);
+                } else {
+                    temp.push([date, goals, this.customToolTipHTML(goals, played, against,  date, goalsCurrentClub, goalsOtherClub)]);
+                }
+
+
 
             }
         }
@@ -60,12 +67,26 @@ var LineChart = React.createClass({
             _this = this
         ;
 
-        data.addColumn('date', 'Date');
-        data.addColumn('number', 'GOALS');
+        if(this.props.currentViewport === 4) {
+            data.addColumn('number', 'GOALS');
+            data.addColumn('date', 'Date');
+            data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
 
-        data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
+        } else {
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'GOALS');
+            data.addColumn({'type': 'string', 'role': 'tooltip', 'p': {'html': true}});
+        }
 
         data.addRows(seasonData);
+
+        if(this.props.currentViewport === 4) {
+            var arrayDates = [];
+            data.getDistinctValues(1).map(function(current) {
+                arrayDates.push(new Date(current.getFullYear() + '/' + current.getMonth() + '/' + current.getDay()));
+            });
+        }
+
 
         var options = {
             title           : 'GOALS SCORED IN ' + currentSeasonYear,
@@ -86,7 +107,7 @@ var LineChart = React.createClass({
             continuous  : 'date',
             fontName    : 'Refrigerator Deluxe W01',
             fontSize    : 25,
-            height      : 400,
+            height      : this.props.currentViewport === 4 ? 1600 : 400,
             lineWidth   : 1,
             hAxis   : {
                 title: 'MATCHES',
@@ -99,6 +120,7 @@ var LineChart = React.createClass({
                 maxAlternation: 8,
                 showTextEvery: 1,
                 baselineColor: clubColors.main
+
             },
             vAxis   : {
                 title       : 'GOALS',
@@ -107,7 +129,7 @@ var LineChart = React.createClass({
                 },
 
                 scaleType   : 'continuous',
-                ticks       : [0, 1, 2, 3, 4],
+                ticks       : this.props.currentViewport === 4 ? arrayDates : [0,1,2,3,4,5],
                 textStyle   : {
                     color   : clubColors.main
                 }

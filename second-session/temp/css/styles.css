@@ -131,7 +131,7 @@
 .main-claudio-pizarro .text-center {
   text-align: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 794px) {
   .main-claudio-pizarro p {
     letter-spacing: 1px;
     font-size: 15px;
@@ -209,7 +209,7 @@
 .is-hidden {
   display: none !important;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 794px) {
   .mobile-is-hidden {
     display: none !important;
   }
@@ -231,6 +231,30 @@
   }
 }
 @color-primary-button #A7A7A7;
+.state-indicator {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+  z-index: 1;
+}
+/* small desktop */
+@media all and (max-width: 1200px) {
+  .state-indicator {
+    z-index: 2;
+  }
+}
+/* tablet */
+@media all and (max-width: 1024px) {
+  .state-indicator {
+    z-index: 3;
+  }
+}
+/* mobile phone */
+@media all and (max-width: 768px) {
+  .state-indicator {
+    z-index: 4;
+  }
+}
 .component-controls {
   padding-bottom: 14px;
 }
@@ -529,7 +553,7 @@
   height: auto;
   max-height: 20px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 794px) {
   .component-entry-table .header__data--played-mins {
     display: none;
   }
@@ -627,7 +651,7 @@
   width: 300px;
 }
 .component-linechart {
-  height: 400px;
+  height: auto;
 }
 .component-linechart.bayern-munich .tool__tip {
   font-family: 'Refrigerator Deluxe W01';
@@ -799,6 +823,12 @@
 }
 .linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--others1 {
   display: none;
+}
+.component-summary .container-fluid {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 .component-summary.werder-bremen {
   background-color: #009252;
@@ -1059,14 +1089,13 @@
   width: 100%;
   /* = 100% - 2*5% padding */
   padding: 0%;
-  vertical-align: center;
   text-align: center;
   top: 0;
   left: 0;
   overflow: hidden;
 }
-.component-summary .summary__numbers .summary__numbers__item .summary__numbers__item--label,
-.component-summary .summary__numbers .summary__numbers__item .summary__numbers__item--text {
+.component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--label,
+.component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--text {
   opacity: 1;
   font-weight: 600;
   -webkit-transition: all 500ms ease-in;
@@ -1075,7 +1104,7 @@
   -o-transition: all 500ms ease-in;
   transition: all 500ms ease-in;
 }
-.component-summary .summary__numbers .summary__numbers__item--label {
+.component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--label {
   text-align: center;
   font-weight: 200;
   opacity: 0.9;
@@ -1084,11 +1113,7 @@
   display: block;
   padding-top: 35%;
 }
-.component-summary .summary__numbers .summary__numbers__item--label-second {
-  padding-top: 0;
-  display: inline-block;
-}
-.component-summary .summary__numbers .summary__numbers__item--text {
+.component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--text {
   text-align: center;
   font-weight: 400;
   font-size: 60px;
@@ -1102,7 +1127,6 @@
 }
 .component-summary .summary__numbers .component-main-picture {
   text-align: center;
-  vertical-align: center;
   width: 100%;
   height: 100%;
   line-height: 80%;
@@ -1115,7 +1139,58 @@
   height: 70%;
   padding-top: 30%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
+  .component-summary .summary__numbers .summary__numbers__item {
+    width: 25%;
+    padding-bottom: 18%;
+    /* = width for a 1:1 aspect ratio */
+  }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content {
+    padding: 0 8%;
+  }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--label {
+    font-size: 16px;
+    padding-top: 20%;
+  }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--text {
+    font-size: 30px;
+  }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--label-second {
+    padding-top: 2%;
+  }
+  .component-summary .summary__numbers .summary__numbers__item--others1,
+  .component-summary .summary__numbers .summary__numbers__item--others3,
+  .component-summary .summary__numbers .summary__numbers__item--others4,
+  .component-summary .summary__numbers .summary__numbers__item--others2 {
+    display: none;
+  }
+  .linked-components.playing-video .component-summary .summary__numbers {
+    position: relative;
+  }
+  .linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--close-video {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+  }
+  .linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--close-video a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .linked-components.playing-video .component-summary .summary__numbers .summary__numbers__item--club-logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 794px) {
+  .component-summary .container-fluid {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
   .component-summary .summary__numbers .summary__numbers__item {
     width: 33.3%;
     padding-bottom: 30%;
@@ -1124,18 +1199,18 @@
   .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content {
     padding: 0 5%;
   }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--label {
+    font-size: 13px;
+    padding-top: 20%;
+  }
+  .component-summary .summary__numbers .summary__numbers__item .summary__numbers__content .summary__numbers__item--text {
+    font-size: 25px;
+  }
   .component-summary .summary__numbers .summary__numbers__item--others1,
   .component-summary .summary__numbers .summary__numbers__item--others3,
   .component-summary .summary__numbers .summary__numbers__item--others4,
   .component-summary .summary__numbers .summary__numbers__item--others2 {
     display: none;
-  }
-  .component-summary .summary__numbers .summary__numbers__item--label {
-    font-size: 13px;
-    padding-top: 20%;
-  }
-  .component-summary .summary__numbers .summary__numbers__item--text {
-    font-size: 25px;
   }
 }
 .component-youtube-player {
@@ -1156,7 +1231,7 @@
   width: 50%;
   z-index: 11;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 794px) {
   .component-youtube-player {
     position: absolute;
     left: 0;

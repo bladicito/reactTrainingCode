@@ -23,7 +23,7 @@ var Summary = React.createClass({
     render: function() {
         return (
             <div className={'component component-summary ' + this.props.currentClubCss}>
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="summary__numbers">
@@ -54,7 +54,7 @@ var Summary = React.createClass({
                             <div className="summary__numbers__item  summary__numbers__item--assists">
                                 <div className="summary__numbers__content">
                                     <span className="summary__numbers__item--label">ASSISTS IN SEASON:</span>
-                                    <span className="summary__numbers__item--text"> {this.props.assists}</span>
+                                    <span className="summary__numbers__item--text">{this.props.assists}</span>
                                 </div>
                             </div>
                             <div className="summary__numbers__item  summary__numbers__item--yellow-cards">
@@ -66,7 +66,7 @@ var Summary = React.createClass({
                             <div className="summary__numbers__item summary__numbers__item--red-cards">
                                 <div className="summary__numbers__content">
                                     <span className="summary__numbers__item--label">RED CARDS IN SEASON:</span>
-                                    <span className="summary__numbers__item--text"> {this.props.redCards}</span>
+                                    <span className="summary__numbers__item--text">{this.props.redCards}</span>
                                 </div>
                             </div>
                             <div className="summary__numbers__item  summary__numbers__item--played-minutes">

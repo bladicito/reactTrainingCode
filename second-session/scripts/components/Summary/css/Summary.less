@@ -32,6 +32,14 @@
 
 
 .component-summary {
+    .container-fluid {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
     .werder-bremen();
     .bayern-munich();
     .alianza-lima();
@@ -67,48 +75,39 @@
                 height:100%; /* = 100% - 2*5% padding */
                 width:100%; /* = 100% - 2*5% padding */
                 padding: 0%;
-                vertical-align: center;
                 text-align: center;
                 top:0;
                 left:0;
                 overflow: hidden;
+                .summary__numbers__item--label, .summary__numbers__item--text {
+                    opacity: 1;
+                    font-weight: 600;
+                    .transition(all 500ms ease-in);
+                }
+                .summary__numbers__item--label {
+                    text-align: center;
+                    font-weight: 200;
+                    opacity: 0.9;
+                    font-size: 16px;
+                    letter-spacing: 1.5px;
+                    display: block;
+                    padding-top: 35%;
+                }
+
+
+                .summary__numbers__item--text {
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 60px;
+                    opacity: 0.9;
+                    display: inline-block;
+                    .transition(all 500ms ease-in );
+                }
             }
-
-
-
-            .summary__numbers__item--label, .summary__numbers__item--text {
-                opacity: 1;
-                font-weight: 600;
-                .transition(all 500ms ease-in);
-            }
-
-        }
-        .summary__numbers__item--label {
-            text-align: center;
-            font-weight: 200;
-            opacity: 0.9;
-            font-size: 16px;
-            letter-spacing: 1.5px;
-            display: block;
-            padding-top: 35%;
         }
 
-        .summary__numbers__item--label-second{
-            padding-top: 0;
-            display: inline-block;
-        }
-
-        .summary__numbers__item--text {
-            text-align: center;
-            font-weight: 400;
-            font-size: 60px;
-            opacity: 0.9;
-            display: inline-block;
-            .transition(all 500ms ease-in );
-        }
         .component-main-picture {
             text-align: center;
-            vertical-align: center;
             width: 100%;
             height:100%;
             line-height: 80%;
@@ -249,17 +248,27 @@
 }
 
 
-@media screen and (max-width: @breakpoint-mobile) {
+
+@media screen and (max-width: @breakpoint-tablet) {
     .component-summary {
-
         .summary__numbers {
-
             .summary__numbers__item {
-                width: 33.3%;
-                padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+                width: 25%;
+                padding-bottom : 18%; /* = width for a 1:1 aspect ratio */
                 .summary__numbers__content {
-                    padding: 0 5%;
+                    padding: 0 8%;
+                    .summary__numbers__item--label {
+                        font-size: 16px;
+                        padding-top: 20%;
+                    }
+                    .summary__numbers__item--text {
+                        font-size: 30px;
+                    }
+                    .summary__numbers__item--label-second {
+                        padding-top: 2%;
+                    }
                 }
+
             }
             .summary__numbers__item--others1,
             .summary__numbers__item--others3,
@@ -267,14 +276,67 @@
             .summary__numbers__item--others2 {
                 display: none;
             }
-
-            .summary__numbers__item--label {
-                font-size: 13px;
-                padding-top: 20%;
-            }
-            .summary__numbers__item--text {
-                font-size: 25px;
+        }
+    }
+    .linked-components {
+        &.playing-video {
+            .component-summary {
+                .summary__numbers {
+                    position: relative;
+                    .summary__numbers__item--close-video {
+                        a {
+                            color: @color-white;
+                            text-decoration: none;
+                        }
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        z-index: 200;
+                    }
+                    .summary__numbers__item--club-logo {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
             }
         }
     }
 }
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .component-summary {
+        .container-fluid {
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .summary__numbers {
+
+            .summary__numbers__item {
+                width: 33.3%;
+                padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+                .summary__numbers__content {
+                    padding: 0 5%;
+                    .summary__numbers__item--label {
+                        font-size: 13px;
+                        padding-top: 20%;
+                    }
+                    .summary__numbers__item--text {
+                        font-size: 25px;
+                    }
+                }
+
+            }
+            .summary__numbers__item--others1,
+            .summary__numbers__item--others3,
+            .summary__numbers__item--others4,
+            .summary__numbers__item--others2 {
+                display: none;
+            }
+        }
+    }
+}
+
