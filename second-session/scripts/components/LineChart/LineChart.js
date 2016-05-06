@@ -83,9 +83,12 @@ var LineChart = React.createClass({
         if(this.props.currentViewport === 4) {
             var arrayDates = [];
             data.getDistinctValues(1).map(function(current) {
-                arrayDates.push(new Date(current.getFullYear() + '/' + current.getMonth() + '/' + current.getDay()));
+                var tempDate = new Date(current.getUTCFullYear() + '/' + (current.getUTCMonth() + 1) + '/' + current.getUTCDate());
+
+                arrayDates.push(tempDate);
             });
         }
+
 
 
         var options = {
@@ -119,7 +122,10 @@ var LineChart = React.createClass({
                 slantedText: false,
                 maxAlternation: 8,
                 showTextEvery: 1,
-                baselineColor: clubColors.main
+                baselineColor: clubColors.main,
+                gridlines : {
+                    count : -1
+                }
 
             },
             vAxis   : {
@@ -140,6 +146,8 @@ var LineChart = React.createClass({
             }
 
         };
+
+
 
         var chart = new google.visualization.LineChart(chartOutlet);
 

@@ -8706,7 +8706,10 @@ let entries = {
                 "redCard": "",
                 "inGameOnMin": "",
                 "outGameOnMin": "",
-                "playedMinutes": "90"
+                "playedMinutes": "90",
+                "goalsVideos" : {
+                    "allGoals" : "bs0twJTOY4Q"
+                }
             },
             "33": {
                 "date": "2014/05/03",
