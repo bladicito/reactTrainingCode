@@ -1608,6 +1608,11 @@
     }
 
 
+    .shield__mini {
+        width: 32px;
+        height: auto;
+        max-height: 32px;
+    }
 
 }
 
@@ -1615,9 +1620,48 @@
     @complement1:   spin(@mainColor, 180);
     @complement2:   darken(spin(@mainColor, 180), 5%);
     @lighten1:      lighten(@mainColor, 60%);
-    @lighten2:      lighten(@mainColor, 10%);
+    @lighten2:      lighten(@mainColor, 2%);
 
    background-color: @mainColor;
+
+    .fixedDataTableLayout_main {
+        border:none;
+        color:@color-white;
+    }
+
+    .public_fixedDataTableRow_fixedColumnsDivider {
+        border:none;
+    }
+
+    .public_fixedDataTableRow_odd, .public_fixedDataTableRow_even {
+        &:hover {
+            background-color: @lighten2;
+        }
+        background-color: transparent;
+    }
+
+    .public_fixedDataTable_header, .public_fixedDataTable_header .public_fixedDataTableCell_main {
+        background-color: @mainColor;
+        background-image: none;
+        color: @color-white;
+        border:none;
+        font-family: "Refrigerator Deluxe W01";
+        font-size: 20px;
+    }
+
+    .public_fixedDataTable_hasBottomBorder {
+        border:none;
+    }
+    .public_fixedDataTableCell_cellContent {
+        font-family: "Refrigerator Deluxe W01";
+    }
+
+    .public_fixedDataTableCell_main {
+        background-color: transparent;
+        border:none;
+    }
+
+
 
     thead {
         background-color: @mainColor;
@@ -1955,6 +1999,17 @@
         margin-right: 0;
         padding-right: 0;
         padding-left: 0;
+
+        .row {
+            padding-right: 0;
+            padding-left: 0;
+            margin-left: 0;
+            margin-right: 0;
+            div[class^="col-"] {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
     }
 
 
@@ -2264,6 +2319,7 @@
 .component-youtube-player {
     width: 100%;
     position: absolute;
+    overflow: hidden;
     top:0;
     height:100%;
     iframe {

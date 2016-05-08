@@ -1,6 +1,7 @@
 import React from 'react';
 import Shield from '../Shield/Shield';
 import Helpers from '../../helpers';
+import {Table, Column, Cell} from 'fixed-data-table';
 
 var EntryTableRow = React.createClass({
     nameToImageShield : function(name) {
@@ -14,8 +15,17 @@ var EntryTableRow = React.createClass({
     render: function() {
         var entry = this.props.entry;
 
+        console.log(entry);
+
         return (
-            <tr className="component component-entry-table-row data__row">
+
+            <Column
+                cell={<Cell>entry.date</Cell>}
+                width={200}
+            />
+
+
+           /* <tr className="component component-entry-table-row data__row">
                 <td className="data__cell data__cell--date">{entry.date}</td>
                 <td className="data__cell data__cell--home">{this.nameToImageShield(entry.home)}</td>
                 <td className="data__cell data__cell--visit">{this.nameToImageShield(entry.away)}</td>
@@ -28,7 +38,7 @@ var EntryTableRow = React.createClass({
                 <td className="data__cell data__cell--played-mins">{entry.playedMinutes}</td>
                 <td className="data__cell data__cell--in-min-in">{entry.inGameOnMin}</td>
                 <td className="data__cell data__cell--in-min-out">{entry.outGameOnMin}</td>
-            </tr>
+            </tr>*/
         )
     }
 });

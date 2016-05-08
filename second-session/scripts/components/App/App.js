@@ -4,6 +4,7 @@ import EntryTable from      '../EntryTable/EntryTable';
 import LineChart from       '../LineChart/LineChart';
 import DonutCharts from     '../DonutCharts/DonutCharts';
 import YoutubePlayer from   '../YoutubePlayer/YoutubePlayer';
+import ToolTip from          '../ToolTip/ToolTip';
 import Header from          '../Header/Header';
 import Utils from           '../../helpers';
 import Entries from         '../../entries';
@@ -141,6 +142,8 @@ var App = React.createClass({
         });
 
     },
+
+
 
     componentDidMount: function() {
 
@@ -289,6 +292,7 @@ var App = React.createClass({
                     seasonMatchesData   = {this.state.matchesData}
                     currentClub         = {this.state.currentClub}
                     currentClubCss      = {this.state.currentClubCss}
+                    currentViewport   = {this.state.currentViewport}
                 />
             </div>
         )

@@ -9764,7 +9764,7 @@ let entries = {
             "32": {
                 "date": "2016/05/02",
                 "home": "Werder Bremen",
-                "away": "Sttutgart",
+                "away": "VfB Stuttgart",
                 "result": "5:2 ",
                 "goals": "1",
                 "assists": "1",
