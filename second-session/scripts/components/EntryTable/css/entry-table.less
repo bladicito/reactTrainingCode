@@ -78,7 +78,7 @@
         &:hover {
             background-color: @lighten2;
         }
-        background-color: transparent;
+        background-color: @mainColor;
     }
 
     .public_fixedDataTable_header, .public_fixedDataTable_header .public_fixedDataTableCell_main {
@@ -98,50 +98,14 @@
     }
 
     .public_fixedDataTableCell_main {
-        background-color: transparent;
+        background-color: @mainColor;
         border:none;
     }
 
 
 
-    thead {
-        background-color: @mainColor;
-        color: @color-white;
-        font-size: 20px;
-        th {
-            border-left: 1px solid @mainColor;
-            border-bottom: 1px solid @mainColor;
-            padding: 3px 15px;
-        }
-        th:last-child {
-            border-right: 1px solid @mainColor;
-        }
 
-    }
-    tbody {
-        background-color: @secondaryColor;
-        color: @color-white;
 
-        td {
-            padding: 17px 15px;
-            .shield__mini {
-
-            }
-        }
-
-        tr:hover {
-            td {
-                color: @color-white;
-                background-color: @lighten2;
-                .transform(background-color 1500ms linear;);
-
-            }
-        }
-        tr {
-            background-color: transparent;
-            .transform(background-color 1500ms linear;);
-        }
-    }
 
     .data__cell--goals {
 

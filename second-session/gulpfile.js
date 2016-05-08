@@ -116,10 +116,10 @@ function buildScript(file, watch) {
             .on('error', handleErrors)
             .pipe(source(file))
             .pipe(gulp.dest('./build/'))
-            //.pipe(buffer())
-            //.pipe(uglify())
-            //.pipe(rename('main.min.js'))
-            //.pipe(gulp.dest('./build'))
+            .pipe(buffer())
+            .pipe(uglify())
+            .pipe(rename('main.min.js'))
+            .pipe(gulp.dest('./build'))
             .pipe(reload({stream:true}))
     }
 

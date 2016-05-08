@@ -382,7 +382,7 @@
 }
 .component-entry-table.werder-bremen .public_fixedDataTableRow_odd,
 .component-entry-table.werder-bremen .public_fixedDataTableRow_even {
-  background-color: transparent;
+  background-color: #006737;
 }
 .component-entry-table.werder-bremen .public_fixedDataTableRow_odd:hover,
 .component-entry-table.werder-bremen .public_fixedDataTableRow_even:hover {
@@ -404,45 +404,8 @@
   font-family: "Refrigerator Deluxe W01";
 }
 .component-entry-table.werder-bremen .public_fixedDataTableCell_main {
-  background-color: transparent;
-  border: none;
-}
-.component-entry-table.werder-bremen thead {
   background-color: #006737;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-.component-entry-table.werder-bremen thead th {
-  border-left: 1px solid #006737;
-  border-bottom: 1px solid #006737;
-  padding: 3px 15px;
-}
-.component-entry-table.werder-bremen thead th:last-child {
-  border-right: 1px solid #006737;
-}
-.component-entry-table.werder-bremen tbody {
-  background-color: #009252;
-  color: #FFFFFF;
-}
-.component-entry-table.werder-bremen tbody td {
-  padding: 17px 15px;
-}
-.component-entry-table.werder-bremen tbody tr:hover td {
-  color: #FFFFFF;
-  background-color: #00713c;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
-}
-.component-entry-table.werder-bremen tbody tr {
-  background-color: transparent;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
+  border: none;
 }
 .component-entry-table.werder-bremen .container {
   padding-top: 20px;
@@ -460,7 +423,7 @@
 }
 .component-entry-table.bayern-munich .public_fixedDataTableRow_odd,
 .component-entry-table.bayern-munich .public_fixedDataTableRow_even {
-  background-color: transparent;
+  background-color: #bb002f;
 }
 .component-entry-table.bayern-munich .public_fixedDataTableRow_odd:hover,
 .component-entry-table.bayern-munich .public_fixedDataTableRow_even:hover {
@@ -482,45 +445,8 @@
   font-family: "Refrigerator Deluxe W01";
 }
 .component-entry-table.bayern-munich .public_fixedDataTableCell_main {
-  background-color: transparent;
-  border: none;
-}
-.component-entry-table.bayern-munich thead {
   background-color: #bb002f;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-.component-entry-table.bayern-munich thead th {
-  border-left: 1px solid #bb002f;
-  border-bottom: 1px solid #bb002f;
-  padding: 3px 15px;
-}
-.component-entry-table.bayern-munich thead th:last-child {
-  border-right: 1px solid #bb002f;
-}
-.component-entry-table.bayern-munich tbody {
-  background-color: #ff0040;
-  color: #FFFFFF;
-}
-.component-entry-table.bayern-munich tbody td {
-  padding: 17px 15px;
-}
-.component-entry-table.bayern-munich tbody tr:hover td {
-  color: #FFFFFF;
-  background-color: #c50032;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
-}
-.component-entry-table.bayern-munich tbody tr {
-  background-color: transparent;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
+  border: none;
 }
 .component-entry-table.bayern-munich .container {
   padding-top: 20px;
@@ -539,7 +465,7 @@
 }
 .component-entry-table.fc-chelsea .public_fixedDataTableRow_odd,
 .component-entry-table.fc-chelsea .public_fixedDataTableRow_even {
-  background-color: transparent;
+  background-color: #0B1E5E;
 }
 .component-entry-table.fc-chelsea .public_fixedDataTableRow_odd:hover,
 .component-entry-table.fc-chelsea .public_fixedDataTableRow_even:hover {
@@ -561,45 +487,8 @@
   font-family: "Refrigerator Deluxe W01";
 }
 .component-entry-table.fc-chelsea .public_fixedDataTableCell_main {
-  background-color: transparent;
-  border: none;
-}
-.component-entry-table.fc-chelsea thead {
   background-color: #0B1E5E;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-.component-entry-table.fc-chelsea thead th {
-  border-left: 1px solid #0B1E5E;
-  border-bottom: 1px solid #0B1E5E;
-  padding: 3px 15px;
-}
-.component-entry-table.fc-chelsea thead th:last-child {
-  border-right: 1px solid #0B1E5E;
-}
-.component-entry-table.fc-chelsea tbody {
-  background-color: #3064CA;
-  color: #FFFFFF;
-}
-.component-entry-table.fc-chelsea tbody td {
-  padding: 17px 15px;
-}
-.component-entry-table.fc-chelsea tbody tr:hover td {
-  color: #FFFFFF;
-  background-color: #0c2167;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
-}
-.component-entry-table.fc-chelsea tbody tr {
-  background-color: transparent;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
+  border: none;
 }
 .component-entry-table.fc-chelsea .container {
   padding-top: 20px;
@@ -618,7 +507,7 @@
 }
 .component-entry-table.alianza-lima .public_fixedDataTableRow_odd,
 .component-entry-table.alianza-lima .public_fixedDataTableRow_even {
-  background-color: transparent;
+  background-color: #0b4784;
 }
 .component-entry-table.alianza-lima .public_fixedDataTableRow_odd:hover,
 .component-entry-table.alianza-lima .public_fixedDataTableRow_even:hover {
@@ -640,45 +529,8 @@
   font-family: "Refrigerator Deluxe W01";
 }
 .component-entry-table.alianza-lima .public_fixedDataTableCell_main {
-  background-color: transparent;
-  border: none;
-}
-.component-entry-table.alianza-lima thead {
   background-color: #0b4784;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-.component-entry-table.alianza-lima thead th {
-  border-left: 1px solid #0b4784;
-  border-bottom: 1px solid #0b4784;
-  padding: 3px 15px;
-}
-.component-entry-table.alianza-lima thead th:last-child {
-  border-right: 1px solid #0b4784;
-}
-.component-entry-table.alianza-lima tbody {
-  background-color: #0f60b3;
-  color: #FFFFFF;
-}
-.component-entry-table.alianza-lima tbody td {
-  padding: 17px 15px;
-}
-.component-entry-table.alianza-lima tbody tr:hover td {
-  color: #FFFFFF;
-  background-color: #0c4c8d;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
-}
-.component-entry-table.alianza-lima tbody tr {
-  background-color: transparent;
-  -webkit-transform: background-color 1500ms linear;
-  -ms-transform: background-color 1500ms linear;
-  -moz-transform: background-color 1500ms linear;
-  -o-transform: background-color 1500ms linear;
-  transform: background-color 1500ms linear;
+  border: none;
 }
 .component-entry-table.alianza-lima .container {
   padding-top: 20px;

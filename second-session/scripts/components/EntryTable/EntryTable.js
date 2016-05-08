@@ -33,6 +33,10 @@ var EntryTable = React.createClass({
     componentWillMount : function() {
         this.width = parseInt($('#wrapper').css('width'),10) - 40;
         this.cellWidth = Math.floor(this.width/ 12);
+
+        if (this.props.currentViewport === 4) {
+            this.cellWidth = 100;
+        }
         
     },
 
@@ -93,7 +97,7 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].assists}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
                         <Column
@@ -104,7 +108,7 @@ var EntryTable = React.createClass({
                                          {_this.nameToImageShield(dataList[rowIndex + 1].home)}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
                         <Column
@@ -115,7 +119,7 @@ var EntryTable = React.createClass({
                                           {_this.nameToImageShield(dataList[rowIndex + 1].away)}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
                         <Column
@@ -126,7 +130,7 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].yellowCard}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
@@ -138,7 +142,7 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].result}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
@@ -150,7 +154,7 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].redCard}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
@@ -162,7 +166,7 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].doubleYellowCard}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
@@ -174,19 +178,19 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].playedMinutes}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
                         <Column
-                            header  = {<Cell>IN GAME IN MIN.</Cell>}
+                            header  = {<Cell>IN GAME IN</Cell>}
                             align   = "center"
                             cell    = {({rowIndex, ...props}) => (
                                         <Cell {...props}>
-                                         {dataList[rowIndex + 1].inGameOnMin}
+                                         {dataList[rowIndex + 1].inGameOnMin !=='' ? dataList[rowIndex + 1].inGameOnMin + "'" : '' }
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
@@ -198,7 +202,7 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].outGameOnMin}
                                         </Cell>
                                     )}
-                            fixed={true}
+                            fixed={false}
                             width={_this.cellWidth}
                         />
 
