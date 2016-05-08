@@ -319,55 +319,6 @@
 .component-entry-table {
   padding-top: 70px;
 }
-.component-entry-table table {
-  font-family: "Refrigerator Deluxe W01";
-}
-.component-entry-table .body__data {
-  font-size: 13px;
-  letter-spacing: 1.5px;
-}
-.component-entry-table .header__data {
-  font-size: 15px;
-  text-align: center;
-  line-height: 1em;
-  vertical-align: middle;
-}
-.component-entry-table .header__data--date {
-  width: 9%;
-}
-.component-entry-table .header__data--local {
-  width: 7%;
-}
-.component-entry-table .header__data--visit {
-  width: 7%;
-}
-.component-entry-table .header__data--score {
-  width: 7%;
-}
-.component-entry-table .header__data--goals {
-  width: 5%;
-}
-.component-entry-table .header__data--assists {
-  width: 5%;
-}
-.component-entry-table .header__data--cards-y {
-  width: 10%;
-}
-.component-entry-table .header__data--cards-ry {
-  width: 10%;
-}
-.component-entry-table .header__data--cards-r {
-  width: 10%;
-}
-.component-entry-table .header__data--played-mins {
-  width: 10%;
-}
-.component-entry-table .header__data--in-min-in {
-  width: 10%;
-}
-.component-entry-table .header__data--in-min-out {
-  width: 10%;
-}
 .component-entry-table.werder-bremen {
   background-color: #FFFFFF;
   color: #006737;
@@ -396,6 +347,12 @@
   border: none;
   font-family: "Refrigerator Deluxe W01";
   font-size: 20px;
+}
+@media screen and (max-width: 794px) {
+  .component-entry-table.werder-bremen .public_fixedDataTable_header,
+  .component-entry-table.werder-bremen .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    font-size: 17px;
+  }
 }
 .component-entry-table.werder-bremen .public_fixedDataTable_hasBottomBorder {
   border: none;
@@ -437,6 +394,12 @@
   border: none;
   font-family: "Refrigerator Deluxe W01";
   font-size: 20px;
+}
+@media screen and (max-width: 794px) {
+  .component-entry-table.bayern-munich .public_fixedDataTable_header,
+  .component-entry-table.bayern-munich .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    font-size: 17px;
+  }
 }
 .component-entry-table.bayern-munich .public_fixedDataTable_hasBottomBorder {
   border: none;
@@ -480,6 +443,12 @@
   font-family: "Refrigerator Deluxe W01";
   font-size: 20px;
 }
+@media screen and (max-width: 794px) {
+  .component-entry-table.fc-chelsea .public_fixedDataTable_header,
+  .component-entry-table.fc-chelsea .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    font-size: 17px;
+  }
+}
 .component-entry-table.fc-chelsea .public_fixedDataTable_hasBottomBorder {
   border: none;
 }
@@ -522,6 +491,12 @@
   font-family: "Refrigerator Deluxe W01";
   font-size: 20px;
 }
+@media screen and (max-width: 794px) {
+  .component-entry-table.alianza-lima .public_fixedDataTable_header,
+  .component-entry-table.alianza-lima .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    font-size: 17px;
+  }
+}
 .component-entry-table.alianza-lima .public_fixedDataTable_hasBottomBorder {
   border: none;
 }
@@ -545,72 +520,6 @@
   width: 32px;
   height: auto;
   max-height: 32px;
-}
-@media screen and (max-width: 794px) {
-  .component-entry-table .header__data--played-mins {
-    display: none;
-  }
-  .component-entry-table .header__data--in-min-in {
-    display: none;
-  }
-  .component-entry-table .header__data--in-min-out {
-    display: none;
-  }
-  .component-entry-table .header__data--date {
-    width: 11.11%;
-  }
-  .component-entry-table .header__data--local {
-    width: 11.11%;
-  }
-  .component-entry-table .header__data--visit {
-    width: 11.11%;
-  }
-  .component-entry-table .header__data--score {
-    width: 11.11%;
-  }
-  .component-entry-table .header__data--goals {
-    width: 11.11%;
-  }
-  .component-entry-table .header__data--assists {
-    width: 11.11%;
-  }
-  .component-entry-table .header__data--cards-y {
-    width: 11.11%;
-    display: none;
-  }
-  .component-entry-table .header__data--cards-ry {
-    width: 11.11%;
-    display: none;
-  }
-  .component-entry-table .header__data--cards-r {
-    width: 11.11%;
-    display: none;
-  }
-  .component-entry-table .header__data--assists {
-    width: 11.11%;
-    display: none;
-  }
-  .component-entry-table .data__cell--cards-y {
-    display: none;
-  }
-  .component-entry-table .data__cell--assists {
-    display: none;
-  }
-  .component-entry-table .data__cell--cards-ry {
-    display: none;
-  }
-  .component-entry-table .data__cell--cards-r {
-    display: none;
-  }
-  .component-entry-table .data__cell--played-mins {
-    display: none;
-  }
-  .component-entry-table .data__cell--in-min-in {
-    display: none;
-  }
-  .component-entry-table .data__cell--in-min-out {
-    display: none;
-  }
 }
 .component-entry-table-row .shield__mini {
   width: 32px;

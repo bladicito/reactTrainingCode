@@ -292,7 +292,7 @@ var App = React.createClass({
                     seasonMatchesData   = {this.state.matchesData}
                     currentClub         = {this.state.currentClub}
                     currentClubCss      = {this.state.currentClubCss}
-                    currentViewport   = {this.state.currentViewport}
+                    currentViewport     = {this.state.currentViewport}
                 />
             </div>
         )

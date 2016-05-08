@@ -1648,6 +1648,11 @@
         font-family: "Refrigerator Deluxe W01";
         font-size: 20px;
     }
+    @media screen and (max-width: @breakpoint-mobile) {
+        .public_fixedDataTable_header, .public_fixedDataTable_header .public_fixedDataTableCell_main {
+            font-size: 17px;
+        }
+    }
 
     .public_fixedDataTable_hasBottomBorder {
         border:none;
@@ -1661,150 +1666,18 @@
         border:none;
     }
 
-
-
-
-
-
-    .data__cell--goals {
-
-    }
 }
 
 .tableGeneral () {
 
-    table {
-        font-family: "Refrigerator Deluxe W01";
-    }
-    .body__data {
-        font-size: 13px;
-        letter-spacing: 1.5px;
-    }
-    .header__data {
-        font-size: 15px;
-        text-align: center;
-        line-height: 1em;
-        vertical-align: middle;
-    }
-    .header__data--date {
-        width: 9%;
-    }
-    .header__data--local {
-        width:7%;
-    }
-    .header__data--visit {
-        width: 7%;
-    }
-    .header__data--score {
-        width:7%;
-    }
-    .header__data--goals {
-        width: 5%;
-    }
-    .header__data--assists {
-        width: 5%;
-    }
-    .header__data--cards-y {
-        width: 10%;
-    }
-    .header__data--cards-ry {
-        width: 10%;
-    }
-    .header__data--cards-r {
-        width: 10%;
-    }
-    .header__data--played-mins {
-        width: 10%;
-    }
-    .header__data--in-min-in {
-        width: 10%;
-    }
-    .header__data--in-min-out {
-        width: 10%;
-    }
 
 
 }
 
 @media screen and (max-width: @breakpoint-mobile) {
     .component-entry-table {
-        .header__data--played-mins {
-            display: none;
-        }
-        .header__data--in-min-in {
-            display: none;
-        }
-        .header__data--in-min-out {
-            display: none;
-        }
-
-        .header__data--date {
-            width: 11.11%;
-        }
-        .header__data--local {
-            width: 11.11%;
-        }
-        .header__data--visit {
-            width: 11.11%;
-        }
-        .header__data--score {
-            width: 11.11%;
-        }
-        .header__data--goals {
-            width: 11.11%;
-        }
-        .header__data--assists {
-            width: 11.11%;
-        }
-        .header__data--cards-y {
-            width: 11.11%;
-            display: none;
-        }
-        .header__data--cards-ry {
-            width: 11.11%;
-            display: none;
-        }
-        .header__data--cards-r {
-            width: 11.11%;
-            display: none;
-        }
-        .header__data--assists {
-            width: 11.11%;
-            display: none;
-        }
 
 
-
-        .data__cell--cards-y {
-            
-            display: none;
-        }
-        .data__cell--assists {
-
-            display: none;
-        }
-        .data__cell--cards-ry {
-
-            display: none;
-        }
-        .data__cell--cards-r {
-
-            display: none;
-        }
-
-
-
-
-        .data__cell--played-mins{
-            display: none;
-        }
-        .data__cell--in-min-in{
-            display: none;
-
-        }
-        .data__cell--in-min-out {
-            display: none;
-        }
     }
 }
 

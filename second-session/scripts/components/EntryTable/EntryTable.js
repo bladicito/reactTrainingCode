@@ -29,14 +29,13 @@ var EntryTable = React.createClass({
         return amount
     },
 
+    componentDidUpdate : function() {
+        
+    },
+
 
     componentWillMount : function() {
-        this.width = parseInt($('#wrapper').css('width'),10) - 40;
-        this.cellWidth = Math.floor(this.width/ 12);
 
-        if (this.props.currentViewport === 4) {
-            this.cellWidth = 100;
-        }
         
     },
 
@@ -51,21 +50,28 @@ var EntryTable = React.createClass({
 
     render: function() {
         var dataList = this.props.seasonMatchesData,
-            _this    = this
+            _this    = this,
+            tableWidth = parseInt($('#wrapper').css('width'),10) - 40,
+            cellWidth  = Math.floor(tableWidth/ 12)
         ;
 
+
+        
+        if (this.props.currentViewport === 4) {
+            cellWidth = 130;
+        }
 
         return (
             <div className={'component component-entry-table ' + this.props.currentClubCss}>
                 <div className="container-fluid">
 
-                    <h2>Matches Stats</h2>
+                    <h2>Matches Stats {this.props.currentViewport}</h2>
                     <Table
                         rowHeight       = {50}
                         headerHeight    = {50}
                         rowsCount       = {_this.getAmountMatches()}
                         height          = {500}
-                        width           = {_this.width}
+                        width           = {tableWidth}
                         {...this.props}>
                         <Column
                             header  = {<Cell>DATE</Cell>}
@@ -76,7 +82,7 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={true}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
                         <Column
                             header  = {<Cell>GOALS</Cell>}
@@ -86,8 +92,8 @@ var EntryTable = React.createClass({
                                          {dataList[rowIndex + 1].goals}
                                         </Cell>
                                     )}
-                            fixed={true}
-                            width={_this.cellWidth}
+                            fixed={false}
+                            width={cellWidth}
                         />
                         <Column
                             header  = {<Cell>ASSISTS</Cell>}
@@ -98,7 +104,7 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
                         <Column
                             header  = {<Cell>HOME</Cell>}
@@ -109,7 +115,18 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
+                        />
+                        <Column
+                            header  = {<Cell>RESULT</Cell>}
+                            align   = "center"
+                            cell    = {({rowIndex, ...props}) => (
+                                        <Cell {...props}>
+                                         {dataList[rowIndex + 1].result}
+                                        </Cell>
+                                    )}
+                            fixed={false}
+                            width={cellWidth}
                         />
                         <Column
                             header  = {<Cell>AWAY</Cell>}
@@ -120,7 +137,7 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
                         <Column
                             header  = {<Cell>YELLOW CARDS</Cell>}
@@ -131,20 +148,10 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
 
-                        <Column
-                            header  = {<Cell>RESULT</Cell>}
-                            align   = "center"
-                            cell    = {({rowIndex, ...props}) => (
-                                        <Cell {...props}>
-                                         {dataList[rowIndex + 1].result}
-                                        </Cell>
-                                    )}
-                            fixed={false}
-                            width={_this.cellWidth}
-                        />
+
 
                         <Column
                             header  = {<Cell>RED CARDS</Cell>}
@@ -155,7 +162,7 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
 
                         <Column
@@ -167,11 +174,11 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
 
                         <Column
-                            header  = {<Cell>PLAYED MINUTES</Cell>}
+                            header  = {<Cell>PLAYED MINS</Cell>}
                             align   = "center"
                             cell    = {({rowIndex, ...props}) => (
                                         <Cell {...props}>
@@ -179,7 +186,7 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
 
                         <Column
@@ -191,11 +198,11 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
 
                         <Column
-                            header  = {<Cell>OUT IN MIN.</Cell>}
+                            header  = {<Cell>OUT IN</Cell>}
                             align   = "center"
                             cell    = {({rowIndex, ...props}) => (
                                         <Cell {...props}>
@@ -203,7 +210,7 @@ var EntryTable = React.createClass({
                                         </Cell>
                                     )}
                             fixed={false}
-                            width={_this.cellWidth}
+                            width={cellWidth}
                         />
 
                     </Table>
