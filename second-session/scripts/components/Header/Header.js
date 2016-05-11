@@ -1,5 +1,6 @@
 import React from 'react';
 import Controls from '../Controls/Controls';
+import Menu from '../Menu/menu';
 
 var Header = React.createClass({
 
@@ -15,8 +16,11 @@ var Header = React.createClass({
             <div className={'component component-header ' + this.props.currentClubCss}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-6">
                             <h1>CLAUDIO PIZARRO</h1>
+                        </div>
+                        <div className="col-md-6">
+                            <Menu currentClubCss={this.props.currentClubCss}/>
                         </div>
                     </div>
                     <div className="row">

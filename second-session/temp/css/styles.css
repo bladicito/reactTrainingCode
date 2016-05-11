@@ -1,16 +1,24 @@
 .main-claudio-pizarro {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.4;
   color: #474747;
   letter-spacing: 0.4px;
 }
 .main-claudio-pizarro table {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.4;
   color: #474747;
   letter-spacing: 0.4px;
+}
+.main-claudio-pizarro a {
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #474747;
+  letter-spacing: 0.4px;
+  color: #FFFFFF;
 }
 .main-claudio-pizarro h1,
 .main-claudio-pizarro .h1,
@@ -60,7 +68,7 @@
   word-spacing: 6px;
 }
 .main-claudio-pizarro p {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.4;
   color: #474747;
@@ -132,6 +140,13 @@
   text-align: center;
 }
 @media screen and (max-width: 794px) {
+  .main-claudio-pizarro {
+    font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #474747;
+    letter-spacing: 0.4px;
+  }
   .main-claudio-pizarro p {
     letter-spacing: 1px;
     font-size: 15px;
@@ -193,7 +208,7 @@
     font-weight: 300;
   }
   .main-claudio-pizarro table {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.4;
     color: #474747;
@@ -231,6 +246,13 @@
   }
 }
 @color-primary-button #A7A7A7;
+.main-claudio-pizarro {
+  font-family: 'Refrigerator Deluxe W01', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #474747;
+  letter-spacing: 0.4px;
+}
 .state-indicator {
   position: absolute;
   top: -999em;
@@ -691,14 +713,8 @@
   width: 30px;
   height: 30px;
 }
-.component-main-picture {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-}
-.component-main-picture img {
-  width: 100%;
-  height: auto;
+.component-menu ul {
+  list-style: none;
 }
 .linked-components {
   position: relative;
@@ -1124,6 +1140,15 @@
   .component-summary .summary__numbers .summary__numbers__item--others2 {
     display: none;
   }
+}
+.component-main-picture {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+.component-main-picture img {
+  width: 100%;
+  height: auto;
 }
 .component-youtube-player {
   width: 100%;

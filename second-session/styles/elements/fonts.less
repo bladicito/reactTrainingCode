@@ -82,11 +82,11 @@
 //
 //////////////////////////////////////////////////////////
 .font-default() {
-	font-family: @font-family-base;
-	font-size: @font-size-base;
-	line-height: @font-line-h-base;
-	color: @font-color-dark;
-	letter-spacing: 0.4px;
+    font-family       : @font-family-base;
+    font-size         : @font-size-base;
+	line-height       : @font-line-h-base;
+	color             : @font-color-dark;
+	letter-spacing    : 0.4px;
 }
 
 .font-default-headings() {
@@ -182,6 +182,12 @@
         .font-default();
     }
 
+    a {
+        .font-default();
+        color: @color-white;
+
+    }
+
     h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         .font-default-headings();
     }
@@ -238,6 +244,7 @@
 @media screen and (max-width: @breakpoint-mobile) {
 
     .main-claudio-pizarro {
+        .font-default();
 
         p {
             letter-spacing: 1px;

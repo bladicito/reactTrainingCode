@@ -84,11 +84,11 @@
 //
 //////////////////////////////////////////////////////////
 .font-default() {
-	font-family: @font-family-base;
-	font-size: @font-size-base;
-	line-height: @font-line-h-base;
-	color: @font-color-dark;
-	letter-spacing: 0.4px;
+    font-family       : @font-family-base;
+    font-size         : @font-size-base;
+	line-height       : @font-line-h-base;
+	color             : @font-color-dark;
+	letter-spacing    : 0.4px;
 }
 
 .font-default-headings() {
@@ -184,6 +184,12 @@
         .font-default();
     }
 
+    a {
+        .font-default();
+        color: @color-white;
+
+    }
+
     h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         .font-default-headings();
     }
@@ -240,6 +246,7 @@
 @media screen and (max-width: @breakpoint-mobile) {
 
     .main-claudio-pizarro {
+        .font-default();
 
         p {
             letter-spacing: 1px;
@@ -897,10 +904,7 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
-@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+
 
 @font-size-base:          @font-size-p;
 @font-size-base-h1:       @font-size-h1;
@@ -1451,8 +1455,8 @@
 // Large screen / wide desktop
 @container-lg-desktop:        ((1140px + @grid-gutter-width));
 
-.main-claudio-pizarro{
-
+.main-claudio-pizarro {
+    .font-default();
 }
 .state-indicator {
      position: absolute;
@@ -1787,14 +1791,16 @@
 
 
 
-.component-main-picture {
-    display: inline-block;
-    width:100%;
-    height: auto;
+.component-menu {
+    ul {
+        list-style: none;
 
-    img {
-        width: 100%;
-        height: auto;
+    }
+}
+
+@media all and (max-width: @breakpoint-mobile) {
+    .component-menu {
+
     }
 }
 .linked-components {
@@ -2151,7 +2157,16 @@
 }
 
 
+.component-main-picture {
+    display: inline-block;
+    width:100%;
+    height: auto;
 
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
 
 .component-youtube-player {
     width: 100%;
