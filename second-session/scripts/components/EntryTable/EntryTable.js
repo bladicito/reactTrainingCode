@@ -55,7 +55,7 @@ var EntryTable = React.createClass({
             cellWidth  = Math.floor(tableWidth/ 12)
         ;
 
-
+        
         
         if (this.props.currentViewport === 4) {
             cellWidth = 130;
@@ -68,7 +68,7 @@ var EntryTable = React.createClass({
                     <h2>Matches Stats {this.props.currentViewport}</h2>
                     <Table
                         rowHeight       = {50}
-                        headerHeight    = {50}
+                        headerHeight    = {70}
                         rowsCount       = {_this.getAmountMatches()}
                         height          = {500}
                         width           = {tableWidth}

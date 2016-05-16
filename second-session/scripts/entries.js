@@ -8226,7 +8226,7 @@ let entries = {
         "country": "Germany",
         "club": "Bayern Munich",
         "year": "2013 - 2014",
-        "mainImage": "bayern2014.png",
+        "mainImage": "bayern2014_1_1.jpg",
         "matches": {
             "1": {
                 "date": "2013/08/09",
@@ -9778,6 +9778,37 @@ let entries = {
                 "goalsVideos" : {
                     "allGoals" : "vI2zJLUHCUU"
                 }
+            },
+            "33": {
+                "date": "2016/05/07",
+                "home": "1.FC Koeln",
+                "away": "Werder Bremen",
+                "result": "0:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+            },
+            "34": {
+                "date": "2016/05/14",
+                "home": "Werder Bremen",
+                "away": "E. Frankfurt",
+                "result": "0:0 ",
+                "goals": "",
+                "assists": "",
+                "ownGoal": "",
+                "yellowCard": "",
+                "doubleYellowCard": "",
+                "redCard": "",
+                "inGameOnMin": "",
+                "outGameOnMin": "",
+                "playedMinutes": "90"
+
             }
 
         }

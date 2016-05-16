@@ -1705,6 +1705,20 @@
 
 
 
+.component-footer {
+    ul {
+        list-style: none;
+        .clearfix();
+        li {
+            float: left;
+            margin-right: 30px;
+            img {
+                max-height: 50px;
+            }
+        }
+
+    }
+}
 .component-header {
     padding-top: 20px;
     &.werder-bremen {
@@ -1721,6 +1735,12 @@
     }
     &.fc-chelsea {
         background-color: @color-chelsea-secondary;
+    }
+}
+
+.component-intro {
+    h1 {
+        color: @color-bayern-munich-secondary;
     }
 }
 
@@ -1791,10 +1811,29 @@
 
 
 
+.component-main-picture {
+    display: inline-block;
+    width:100%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
 .component-menu {
     ul {
         list-style: none;
+        .clearfix();
+    }
 
+    li {
+        float: left;
+    }
+
+    a {
+        display: block;
+        padding: 0 20px;
     }
 }
 
@@ -2157,16 +2196,7 @@
 }
 
 
-.component-main-picture {
-    display: inline-block;
-    width:100%;
-    height: auto;
 
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
 
 .component-youtube-player {
     width: 100%;

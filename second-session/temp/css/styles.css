@@ -553,6 +553,25 @@
   text-align: center;
   border: none;
 }
+.component-footer ul {
+  list-style: none;
+  zoom: 1;
+}
+.component-footer ul:before,
+.component-footer ul:after {
+  content: "";
+  display: table;
+}
+.component-footer ul:after {
+  clear: both;
+}
+.component-footer ul li {
+  float: left;
+  margin-right: 30px;
+}
+.component-footer ul li img {
+  max-height: 50px;
+}
 .component-header {
   padding-top: 20px;
 }
@@ -570,6 +589,9 @@
 }
 .component-header.fc-chelsea {
   background-color: #0B1E5E;
+}
+.component-intro h1 {
+  color: #bb002f;
 }
 .google-visualization-tooltip {
   width: 300px;
@@ -713,8 +735,33 @@
   width: 30px;
   height: 30px;
 }
+.component-main-picture {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+.component-main-picture img {
+  width: 100%;
+  height: auto;
+}
 .component-menu ul {
   list-style: none;
+  zoom: 1;
+}
+.component-menu ul:before,
+.component-menu ul:after {
+  content: "";
+  display: table;
+}
+.component-menu ul:after {
+  clear: both;
+}
+.component-menu li {
+  float: left;
+}
+.component-menu a {
+  display: block;
+  padding: 0 20px;
 }
 .linked-components {
   position: relative;
@@ -1140,15 +1187,6 @@
   .component-summary .summary__numbers .summary__numbers__item--others2 {
     display: none;
   }
-}
-.component-main-picture {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-}
-.component-main-picture img {
-  width: 100%;
-  height: auto;
 }
 .component-youtube-player {
   width: 100%;

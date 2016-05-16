@@ -6,6 +6,8 @@ import DonutCharts from     '../DonutCharts/DonutCharts';
 import YoutubePlayer from   '../YoutubePlayer/YoutubePlayer';
 import ToolTip from          '../ToolTip/ToolTip';
 import Header from          '../Header/Header';
+import Intro from          '../Intro/Intro';
+import Footer from          '../Footer/Footer';
 import Utils from           '../../helpers';
 import Entries from         '../../entries';
 import Firebase from        'firebase'
@@ -241,59 +243,11 @@ var App = React.createClass({
                     nextSeason          = {this.state.nextSeason}
                     updateDataSeason    = {this.updateDataSeason}
                 />
-                <div className="linked-components">
-                    <Summary goals             = {this.state.goals}
-                             assists           = {this.state.assists}
-                             playedGames       = {this.state.playedGames}
-                             averageGoalsPerMinutes = {this.state.averageGoalsPerMinutes}
-                             yellowCards       = {this.state.yellowCards}
-                             redCards          = {this.state.redCards}
-                             playedMinutes     = {this.state.playedMinutes}
-                             mainImage         = {this.state.mainImage}
-                             season            = {this.state.season}
-                             clubShieldPicture = {this.state.clubShieldPicture}
-                             seasonData        = {this.state.seasonData}
-                             currentSeason     = {this.state.currentSeason}
-                             currentSeasonYear = {this.state.currentSeasonYear}
-                             nextSeason        = {this.state.nextSeason}
-                             prevSeason        = {this.state.prevSeason}
-                             currentClub       = {this.state.currentClub}
-                             currentClubCss    = {this.state.currentClubCss}
-                             updateDataSeason  = {this.updateDataSeason}
-                             videoIdReset      = {this.videoIdReset}
-                             averageGoalsPerMatch = {this.state.averageGoalsPerMatch}
-                    />
-                    <YoutubePlayer 
-                        videoID         = {this.state.youtubeVideoID}
-                        videoIdReset    = {this.videoIdReset}
-                    />
-                </div>
+                <Intro introVideoID="TYO1BXr5ytY"/>
+                
+                {this.props.children}
 
-
-                <LineChart
-                    seasonMatchesData = {this.state.matchesData}
-                    currentClub       = {this.state.currentClub}
-                    currentClubCss    = {this.state.currentClubCss}
-                    currentSeason     = {this.state.currentSeason}
-                    currentSeasonYear = {this.state.currentSeasonYear}
-                    currentClubColors = {this.state.currentClubColors}
-                    videoIdUpdate     = {this.videoIdUpdate}
-                    currentViewport   = {this.state.currentViewport}
-                    
-                />
-                <DonutCharts
-                    seasonMatchesData   = {this.state.matchesData}
-                    currentClub         = {this.state.currentClub}
-                    currentClubCss      = {this.state.currentClubCss}
-                    currentSeasonYear   = {this.state.currentSeasonYear}
-                    currentClubColors   = {this.state.currentClubColors}
-                />
-                <EntryTable
-                    seasonMatchesData   = {this.state.matchesData}
-                    currentClub         = {this.state.currentClub}
-                    currentClubCss      = {this.state.currentClubCss}
-                    currentViewport     = {this.state.currentViewport}
-                />
+                <Footer currentClubCss      = {this.state.currentClubCss}></Footer>
             </div>
         )
     }
